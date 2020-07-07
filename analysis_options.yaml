@@ -1,0 +1,7 @@
+include: package:flutter_analysis_options/analysis_options.yaml
+
+linter:
+  rules:
+    public_member_api_docs: false
+    prefer_relative_imports: false
+    always_use_package_imports: true
