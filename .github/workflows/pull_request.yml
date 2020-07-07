@@ -1,5 +1,5 @@
 name: pull_request
-on: push
+on: pull_request
 jobs:
   lint-unit-test:
     name: Lint + Unit Tests

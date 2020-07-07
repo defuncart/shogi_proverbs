@@ -1,0 +1,32 @@
+name: publish_github_pages
+# on:
+#   push:
+#     branches:
+#       - master
+on: push
+jobs:
+  build:
+    name: Build for Web
+    env:
+      my_secret: ${{secrets.commit}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'beta'
+      - run: flutter config --enable-web
+      - run: flutter pub get
+      - name: Build + Commit
+        run: |
+          flutter build web --release
+          cd build/web
+          git init
+          git config --global user.email defuncart@gmail.com
+          git config --global user.name "James Leahy"
+          git status
+          git remote add origin https://${{secrets.commit}}@github.com/defuncart/shogi_proverbs.git
+          git checkout -b gh-pages
+          git add -A
+          git commit -m "`date`"
+          git push origin gh-pages -f
