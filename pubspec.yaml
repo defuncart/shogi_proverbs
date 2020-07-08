@@ -1,5 +1,5 @@
 name: shogi_proverbs
-description: A mobile application for iOS and Android containing various Shogi proverbs.
+description: A mobile application containing various Shogi proverbs.
 publish_to: 'none'
 version: 0.0.1+1
 

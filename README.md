@@ -1,6 +1,6 @@
 # Shogi Proverbs
 
-A mobile application for iOS and Android containing various Shogi proverbs.
+A mobile application containing various Shogi proverbs.
 
 ## About
 
@@ -18,6 +18,9 @@ If you would like to build the app yourself, then you simply need:
 - Dart >= 2.8
 - Xcode >= 11.5
 - Android SDK >= 29.0.4
+- Chrome
+
+A web version of the app can be found at [http://defuncart.com/shogi_proverbs](http://defuncart.com/shogi_proverbs).
 
 ## Contributing
 
