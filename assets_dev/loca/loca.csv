@@ -1,2 +1,5 @@
-keys;description;en
-appTitle;The app title;Shogi Proverbs
+keys;en
+appTitle;Shogi Proverbs
+homeScreenProversTabTitleText;Proverbs
+homeScreenSettingsTabTitleText;Settings
+settingsTabDarkModeLabel;Dark Mode

@@ -9,10 +9,22 @@ import 'package:flutter/material.dart';
 class AppLocalizations {
   static String get appTitle => _getText('appTitle');
 
+  static String get homeScreenProversTabTitleText =>
+      _getText('homeScreenProversTabTitleText');
+
+  static String get homeScreenSettingsTabTitleText =>
+      _getText('homeScreenSettingsTabTitleText');
+
+  static String get settingsTabDarkModeLabel =>
+      _getText('settingsTabDarkModeLabel');
+
   static Map<String, String> _localizedValues;
 
   static Map<String, String> _enValues = {
     'appTitle': 'Shogi Proverbs',
+    'homeScreenProversTabTitleText': 'Proverbs',
+    'homeScreenSettingsTabTitleText': 'Settings',
+    'settingsTabDarkModeLabel': 'Dark Mode',
   };
 
   static Map<String, Map<String, String>> _allValues = {
