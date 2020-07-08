@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shogi_proverbs/localizations.dart';
 
-class SettingsTab extends StatelessWidget {
+final isDarkModeProvider = StateProvider((_) => false);
+
+class SettingsTab extends HookWidget {
   const SettingsTab({Key key}) : super(key: key);
 
   @override
@@ -18,8 +22,9 @@ class SettingsTab extends StatelessWidget {
                 children: <Widget>[
                   Text(AppLocalizations.settingsTabDarkModeLabel),
                   Switch(
-                    value: false,
-                    onChanged: (_) {},
+                    value: useProvider(isDarkModeProvider).state,
+                    onChanged: (value) =>
+                        isDarkModeProvider.read(context).state = value,
                   ),
                 ],
               ),
