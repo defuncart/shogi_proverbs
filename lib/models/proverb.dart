@@ -1,4 +1,6 @@
+import 'package:meta/meta.dart';
 import 'package:shogi_proverbs/enums/proverb_type.dart';
+import 'package:shogi_proverbs/models/sections/i_section.dart';
 
 /// A model representing a shogi proverb
 class Proverb {
@@ -11,9 +13,13 @@ class Proverb {
   /// The title in japanese
   final String japaneseTitle;
 
+  /// A list of sections
+  final List<ISection> sections;
+
   const Proverb({
-    this.type,
-    this.title,
-    this.japaneseTitle,
+    @required this.type,
+    @required this.title,
+    @required this.japaneseTitle,
+    @required this.sections,
   });
 }
