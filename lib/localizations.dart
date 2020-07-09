@@ -18,6 +18,18 @@ class AppLocalizations {
   static String get settingsTabDarkModeLabel =>
       _getText('settingsTabDarkModeLabel');
 
+  static String get settingsTabPieceLanguageLabel =>
+      _getText('settingsTabPieceLanguageLabel');
+
+  static String get settingsTabShowCoordIndicatorsLabel =>
+      _getText('settingsTabShowCoordIndicatorsLabel');
+
+  static String get settingsTabCoordIndicatorTypeLabel =>
+      _getText('settingsTabCoordIndicatorTypeLabel');
+
+  static String get settingsTabAboutButtonText =>
+      _getText('settingsTabAboutButtonText');
+
   static Map<String, String> _localizedValues;
 
   static Map<String, String> _enValues = {
@@ -25,6 +37,10 @@ class AppLocalizations {
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
     'settingsTabDarkModeLabel': 'Dark Mode',
+    'settingsTabPieceLanguageLabel': 'Piece Language',
+    'settingsTabShowCoordIndicatorsLabel': 'Show Coordinate Indicators',
+    'settingsTabCoordIndicatorTypeLabel': 'Coordinate Indicator',
+    'settingsTabAboutButtonText': 'About',
   };
 
   static Map<String, Map<String, String>> _allValues = {

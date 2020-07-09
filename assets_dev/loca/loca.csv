@@ -3,3 +3,7 @@ appTitle;Shogi Proverbs
 homeScreenProversTabTitleText;Proverbs
 homeScreenSettingsTabTitleText;Settings
 settingsTabDarkModeLabel;Dark Mode
+settingsTabPieceLanguageLabel;Piece Language
+settingsTabShowCoordIndicatorsLabel;Show Coordinate Indicators
+settingsTabCoordIndicatorTypeLabel;Coordinate Indicator
+settingsTabAboutButtonText;About

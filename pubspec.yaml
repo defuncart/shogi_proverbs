@@ -18,6 +18,7 @@ dependencies:
   hive: ^1.4.1+1
   flutter_riverpod: ^0.3.0
   get_it: ^4.0.2
+  grouped_buttons: ^1.0.4
 
 dev_dependencies:
   flutter_test:
