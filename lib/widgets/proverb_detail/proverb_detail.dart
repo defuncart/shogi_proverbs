@@ -1,11 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Page;
 import 'package:shogi_proverbs/models/proverb.dart';
-import 'package:shogi_proverbs/models/sections/diagram.dart';
-import 'package:shogi_proverbs/models/sections/move_sequence.dart';
-import 'package:shogi_proverbs/models/sections/paragraph.dart';
-import 'package:shogi_proverbs/widgets/proverb_detail/sections/diagram_detail.dart';
-import 'package:shogi_proverbs/widgets/proverb_detail/sections/move_sequence_detail.dart';
-import 'package:shogi_proverbs/widgets/proverb_detail/sections/paragraphy_detail.dart';
+import 'package:shogi_proverbs/widgets/proverb_detail/multi_page_detail.dart';
+import 'package:shogi_proverbs/widgets/proverb_detail/page_detail.dart';
 
 class ProverbDetail extends StatelessWidget {
   final Proverb proverb;
@@ -22,24 +18,7 @@ class ProverbDetail extends StatelessWidget {
         title: Text(proverb.title),
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: [
-                for (final section in proverb.pages.first.sections)
-                  Column(
-                    children: [
-                      if (section is Paragraph) ParagraphDetail(paragraph: section),
-                      if (section is Diagram) DiagramDetail(diagram: section),
-                      if (section is MoveSequence) MoveSequenceDetail(moveSequence: section),
-                      Container(height: 16),
-                    ],
-                  )
-              ],
-            ),
-          ),
-        ),
+        child: proverb.isMultiPage ? MultiPageDetail(pages: proverb.pages) : PageDetail(page: proverb.pages.first),
       ),
     );
   }
