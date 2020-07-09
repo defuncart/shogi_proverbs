@@ -7,3 +7,6 @@ settingsTabPieceLanguageLabel;Piece Language
 settingsTabShowCoordIndicatorsLabel;Show Coordinate Indicators
 settingsTabCoordIndicatorTypeLabel;Coordinate Indicator
 settingsTabAboutButtonText;About
+aboutPopupText1;Concept, Design and Programming by James Leahy.
+aboutPopupText2;All content is taken from Takako Tombo Noda's website, which in turn contains translations of Masahiko Urano's book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).
+aboutPopupText3;Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.

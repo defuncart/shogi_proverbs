@@ -70,8 +70,34 @@ class SettingsTab extends StatelessWidget {
               Center(
                 child: RaisedButton(
                   color: Theme.of(context).accentColor,
-                  child: Text(AppLocalizations.settingsTabAboutButtonText),
-                  onPressed: () {},
+                  child: Text(
+                    AppLocalizations.settingsTabAboutButtonText,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () => showAboutDialog(
+                    context: context,
+                    applicationName: AppLocalizations.appTitle,
+                    applicationVersion: '0.0.1', //TODO use getVersion
+                    applicationIcon: Image.asset('assets/images/app_icon.png'),
+                    children: [
+                      for (final text in [
+                        AppLocalizations.aboutPopupText1,
+                        AppLocalizations.aboutPopupText2,
+                        AppLocalizations.aboutPopupText3,
+                      ])
+                        Column(
+                          children: [
+                            Text(
+                              text,
+                              textAlign: TextAlign.justify,
+                            ),
+                            Container(height: 8),
+                          ],
+                        ),
+                    ],
+                  ),
                 ),
               ),
             ],

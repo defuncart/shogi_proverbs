@@ -33,6 +33,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
 
 flappy_translator:
   input_file_path: "assets_dev/loca/loca.csv"
