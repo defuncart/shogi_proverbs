@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 
-final isDarkModeProvider = StateProvider((_) => false);
+final isDarkModeProvider = StateProvider((_) => DIContainer.get<ISettingsDatabase>().isDarkMode);
 
-class SettingsTab extends HookWidget {
+class SettingsTab extends StatelessWidget {
   const SettingsTab({Key key}) : super(key: key);
 
   @override
@@ -21,11 +22,13 @@ class SettingsTab extends HookWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(AppLocalizations.settingsTabDarkModeLabel),
-                  Switch(
-                    value: useProvider(isDarkModeProvider).state,
-                    onChanged: (value) =>
-                        isDarkModeProvider.read(context).state = value,
-                  ),
+                  Consumer((_, read) => Switch(
+                        value: read(isDarkModeProvider).state,
+                        onChanged: (value) {
+                          isDarkModeProvider.read(context).state = value;
+                          DIContainer.get<ISettingsDatabase>().isDarkMode = value;
+                        },
+                      )),
                 ],
               ),
             ),
