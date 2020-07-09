@@ -27,7 +27,7 @@ class ProverbDetail extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                for (final section in proverb.sections)
+                for (final section in proverb.pages.first.sections)
                   Column(
                     children: [
                       if (section is Paragraph) ParagraphDetail(paragraph: section),
