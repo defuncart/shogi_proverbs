@@ -22,9 +22,9 @@ class ProverbDetail extends StatelessWidget {
         title: Text(proverb.title),
       ),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: SingleChildScrollView(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
                 for (final section in proverb.sections)
