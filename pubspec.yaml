@@ -18,6 +18,7 @@ dependencies:
   hive: ^1.4.1+1
   flutter_hooks: ^0.11.0
   hooks_riverpod: ^0.3.1
+  get_it: ^4.0.2
 
 dev_dependencies:
   flutter_test:
