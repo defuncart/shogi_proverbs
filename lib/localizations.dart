@@ -9,10 +9,49 @@ import 'package:flutter/material.dart';
 class AppLocalizations {
   static String get appTitle => _getText('appTitle');
 
+  static String get proverbTypepawn => _getText('proverbTypepawn');
+
+  static String get proverbTypelance => _getText('proverbTypelance');
+
+  static String get proverbTypeknight => _getText('proverbTypeknight');
+
+  static String get proverbTypesilver => _getText('proverbTypesilver');
+
+  static String get proverbTypegold => _getText('proverbTypegold');
+
+  static String get proverbTypebishop => _getText('proverbTypebishop');
+
+  static String get proverbTypehorse => _getText('proverbTypehorse');
+
+  static String get proverbTypedragon => _getText('proverbTypedragon');
+
+  static String get proverbTypetokin => _getText('proverbTypetokin');
+
+  static String get proverbTypeopening => _getText('proverbTypeopening');
+
+  static String get proverbTypemiddle => _getText('proverbTypemiddle');
+
+  static String get proverbTypeend => _getText('proverbTypeend');
+
+  static String get proverbTypeother => _getText('proverbTypeother');
+
   static Map<String, String> _localizedValues;
 
   static Map<String, String> _enValues = {
     'appTitle': 'Shogi Proverbs',
+    'proverbTypepawn': 'Pawn',
+    'proverbTypelance': 'lance',
+    'proverbTypeknight': 'Knight',
+    'proverbTypesilver': 'Silver',
+    'proverbTypegold': 'Gold',
+    'proverbTypebishop': 'Bishop',
+    'proverbTypehorse': 'Horse',
+    'proverbTypedragon': 'Dragon',
+    'proverbTypetokin': 'Tokin',
+    'proverbTypeopening': 'Opening',
+    'proverbTypemiddle': 'Middlegame',
+    'proverbTypeend': 'Endgame',
+    'proverbTypeother': 'Other',
   };
 
   static Map<String, Map<String, String>> _allValues = {

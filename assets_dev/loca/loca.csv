@@ -1,2 +1,15 @@
-keys;description;en
-appTitle;The app title;Shogi Proverbs
+keys;en
+appTitle;Shogi Proverbs
+proverbTypepawn;Pawn
+proverbTypelance;lance
+proverbTypeknight;Knight
+proverbTypesilver;Silver
+proverbTypegold;Gold
+proverbTypebishop;Bishop
+proverbTypehorse;Horse
+proverbTypedragon;Dragon
+proverbTypetokin;Tokin
+proverbTypeopening;Opening
+proverbTypemiddle;Middlegame
+proverbTypeend;Endgame
+proverbTypeother;Other
