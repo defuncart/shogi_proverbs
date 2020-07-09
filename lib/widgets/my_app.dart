@@ -39,15 +39,30 @@ class _HomeScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Center(
-          child: RaisedButton(
-            child: Text('Proverb'),
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => ProverbDetail(
-                  proverb: ProverbService.proverbs.first,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RaisedButton(
+                child: Text('Proverb Single Page'),
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => ProverbDetail(
+                      proverb: ProverbService.proverbs.first,
+                    ),
+                  ),
                 ),
               ),
-            ),
+              RaisedButton(
+                child: Text('Proverb Multi Page'),
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => ProverbDetail(
+                      proverb: ProverbService.proverbs.last,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
