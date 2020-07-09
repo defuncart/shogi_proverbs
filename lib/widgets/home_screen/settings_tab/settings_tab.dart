@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';

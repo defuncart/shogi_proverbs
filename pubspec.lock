@@ -150,20 +150,13 @@ packages:
       url: "https://github.com/defuncart/flutter_analysis_options"
     source: git
     version: "0.0.1"
-  flutter_hooks:
-    dependency: "direct main"
-    description:
-      name: flutter_hooks
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.11.0"
   flutter_localizations:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
   flutter_riverpod:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: flutter_riverpod
       url: "https://pub.dartlang.org"
@@ -209,13 +202,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.1+1"
-  hooks_riverpod:
-    dependency: "direct main"
-    description:
-      name: hooks_riverpod
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.1"
   html:
     dependency: transitive
     description:

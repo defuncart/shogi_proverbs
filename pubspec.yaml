@@ -16,8 +16,7 @@ dependencies:
   flutter_shogi_board: ^0.0.5
   path_provider: ^1.6.11
   hive: ^1.4.1+1
-  flutter_hooks: ^0.11.0
-  hooks_riverpod: ^0.3.1
+  flutter_riverpod: ^0.3.0
   get_it: ^4.0.2
 
 dev_dependencies:

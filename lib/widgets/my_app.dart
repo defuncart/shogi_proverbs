@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shogi_proverbs/configs/app_themes.dart';
 import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/localizations.dart';
