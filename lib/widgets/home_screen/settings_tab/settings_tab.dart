@@ -38,6 +38,7 @@ class SettingsTab extends StatelessWidget {
               SizedBox(height: 16.0),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(AppLocalizations.settingsTabPieceLanguageLabel),
                   RadioButtonGroup(
