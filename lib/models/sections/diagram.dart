@@ -11,6 +11,6 @@ class Diagram implements ISection {
 
   const Diagram({
     @required this.sfenString,
-    @required this.label,
-  });
+    this.label,
+  }) : assert(sfenString != null);
 }

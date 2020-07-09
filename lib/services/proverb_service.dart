@@ -2,7 +2,7 @@ import 'package:shogi/shogi.dart';
 import 'package:shogi_proverbs/enums/proverb_type.dart';
 import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/models/sections/diagram.dart';
-import 'package:shogi_proverbs/models/sections/moves_list.dart';
+import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 class ProverbService {

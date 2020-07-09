@@ -13,5 +13,6 @@ class MoveSequence implements ISection {
   const MoveSequence({
     @required this.moves,
     @required this.playerFirstMove,
-  });
+  })  : assert(moves != null),
+        assert(playerFirstMove != null);
 }

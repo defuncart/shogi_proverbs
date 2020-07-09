@@ -8,5 +8,5 @@ class Paragraph implements ISection {
 
   const Paragraph({
     @required this.text,
-  });
+  }) : assert(text != null);
 }
