@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:grouped_buttons/grouped_buttons.dart';
 import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/localizations.dart';
@@ -48,24 +47,6 @@ class SettingsTab extends StatelessWidget {
                     // picked: ,
                   ),
                 ],
-              ),
-              SizedBox(height: 16.0),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(AppLocalizations.settingsTabShowCoordIndicatorsLabel),
-                  Switch(
-                    value: false,
-                    onChanged: (value) {},
-                  ),
-                ],
-              ),
-              SizedBox(height: 16.0),
-              Text(AppLocalizations.settingsTabCoordIndicatorTypeLabel),
-              RadioButtonGroup(
-                labels: CoordIndicatorType.values.map(describeEnum).toList(),
-                onChange: (_, selectedIndex) {},
-                // picked: ,
               ),
               SizedBox(height: 16.0),
               Center(

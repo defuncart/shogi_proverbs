@@ -24,19 +24,6 @@ class SettingsDatabase implements ISettingsDatabase {
   /// Sets whether piece langauge is japanese
   set isPieceLanguageJapanese(bool value) => _box.put(_Keys.isPieceLanguageJapanese, value);
 
-  /// Returns whether coordinate indicators are enabled
-  bool get shouldShowCoordinateIndicators =>
-      _box.get(_Keys.shouldShowCoordinateIndicators, defaultValue: _Defaults.shouldShowCoordinateIndicators);
-
-  /// Sets whether coordinate indicators are enabled
-  set shouldShowCoordinateIndicators(bool value) => _box.put(_Keys.shouldShowCoordinateIndicators, value);
-
-  /// Returns the selected coordinate indicator
-  int get coordinateIndicator => _box.get(_Keys.coordinateIndicator, defaultValue: _Defaults.coordinateIndicator);
-
-  /// Sets the selected coordinate indicator
-  set coordinateIndicator(int value) => _box.put(_Keys.coordinateIndicator, value);
-
   /// Initializes the database
   Future<void> initialize() async {
     if (!kIsWeb) {
@@ -47,16 +34,6 @@ class SettingsDatabase implements ISettingsDatabase {
     if (_box == null) {
       _box = await Hive.openBox<dynamic>(_boxName);
     }
-
-    // final defaults = {
-    //   _Keys.isDarkMode: _Defaults.isDarkMode,
-    // };
-
-    // for (final kvp in defaults.entries) {
-    //   if (!_box.containsKey(kvp.key)) {
-    //     await _box.put(kvp.key, kvp.value);
-    //   }
-    // }
   }
 }
 
@@ -64,14 +41,10 @@ class SettingsDatabase implements ISettingsDatabase {
 class _Keys {
   static const isDarkMode = 'isDarkMode';
   static const isPieceLanguageJapanese = 'isPieceLanguageJapanese';
-  static const shouldShowCoordinateIndicators = 'shouldShowCoordinateIndicators';
-  static const coordinateIndicator = 'coordinateIndicator';
 }
 
 /// A class of defaults for each key
 class _Defaults {
   static const isDarkMode = false;
   static const isPieceLanguageJapanese = true;
-  static const shouldShowCoordinateIndicators = true;
-  static const coordinateIndicator = 1;
 }
