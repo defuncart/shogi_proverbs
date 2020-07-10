@@ -24,6 +24,7 @@ class PageDetail extends StatelessWidget {
           children: [
             for (final section in page.sections)
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (section is Paragraph) ParagraphDetail(paragraph: section),
                   if (section is Diagram) DiagramDetail(diagram: section),

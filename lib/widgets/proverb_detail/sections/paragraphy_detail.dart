@@ -10,6 +10,9 @@ class ParagraphDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(paragraph.text);
+    return Text(
+      paragraph.text,
+      textAlign: TextAlign.justify,
+    );
   }
 }

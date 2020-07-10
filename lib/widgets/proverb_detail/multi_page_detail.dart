@@ -31,9 +31,12 @@ class _MultiPageDetailState extends State<MultiPageDetail> {
         Positioned(
           child: Align(
             alignment: Alignment.bottomCenter,
-            child: _PageIndicator(
-              currentIndex: _currentIndex,
-              totalNumPages: widget.pages.length,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: _PageIndicator(
+                currentIndex: _currentIndex,
+                totalNumPages: widget.pages.length,
+              ),
             ),
           ),
         ),
