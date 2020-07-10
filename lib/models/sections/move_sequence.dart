@@ -16,3 +16,23 @@ class MoveSequence implements ISection {
   })  : assert(moves != null),
         assert(playerFirstMove != null);
 }
+
+/// Extension methods for MoveSequence
+extension MoveSequenceExtensions on MoveSequence {
+  /// Determines the player icon for a given move index
+  String playerIconForMoveIndex(int index) {
+    final playerToMove = index % 2 == 0 ? playerFirstMove : playerFirstMove.flip();
+    return playerToMove.icon;
+  }
+}
+
+// TODO move to shogi package
+extension PlayerTypeExtensions on PlayerType {
+  static const _mapPlayerTypeStringIcon = {
+    PlayerType.sente: BoardConfig.sente,
+    PlayerType.gote: BoardConfig.gote,
+  };
+
+  /// Returns the player icon for the player type
+  String get icon => _mapPlayerTypeStringIcon[this];
+}

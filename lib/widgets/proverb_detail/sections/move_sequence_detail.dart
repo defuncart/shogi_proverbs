@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shogi/shogi.dart';
 import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 
 class MoveSequenceDetail extends StatelessWidget {
@@ -19,10 +18,7 @@ class MoveSequenceDetail extends StatelessWidget {
         runSpacing: 4.0,
         children: <Widget>[
           for (int i = 0; i < moveSequence.moves.length; i++)
-            Text((i % 2 == 0 && moveSequence.playerFirstMove == PlayerType.sente
-                    ? BoardConfig.sente
-                    : BoardConfig.gote) +
-                moveSequence.moves[i]),
+            Text('${moveSequence.playerIconForMoveIndex(i)}${moveSequence.moves[i]}'),
         ],
       ),
     );
