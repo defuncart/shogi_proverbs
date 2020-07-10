@@ -76,12 +76,18 @@ class ProverbService {
                   'The Lance dropped on the first rank has eight squares to go to. If dropped on the second rank, it can only go to one square. When in doubt, drop the lance as far back as you can.',
             ),
             Diagram(
-              sfenString: 'ln3k1nl/1r3bg2/p1ppsgspp/1p2ppp2/7P1/2PPPSP2/PPS2P2P/2G1G2R1/LNB1K2NL b -',
+              sfenString: 'ln1g4+R/1ks1gp3/1pp1p3n/5Pppp/p8/2P1P1P1P/PP2+s1+b2/LSG3+r1L/KNG6 b BNL3Ps',
               label: 'Diagram 1',
             ),
             Paragraph(
               text:
                   'Diagram 1 is from the endgame between the static Rook anaguma (Black) and the ranging Rook (White). How should Black play next? Where would you drop your Lance?',
+            ),
+            MoveSequence(
+              moves: [
+                'L*6i',
+              ],
+              playerFirstMove: PlayerType.sente,
             ),
             Paragraph(
               text:
@@ -100,7 +106,7 @@ class ProverbService {
         Page(
           sections: [
             Diagram(
-              sfenString: 'ln3k1nl/1r3bg2/p1ppsgspp/1p2ppp2/7P1/2PPPSP2/PPS2P2P/2G1G2R1/LNB1K2NL b -',
+              sfenString: '9/5bgk1/5gsp1/4ppp2/7P1/4P1P2/5P3/8R/9 b Lp',
               label: 'Diagram 2',
             ),
             Paragraph(
@@ -121,7 +127,7 @@ class ProverbService {
         Page(
           sections: [
             Diagram(
-              sfenString: 'ln3k1nl/1r3bg2/p1ppsgspp/1p2ppp2/7P1/2PPPSP2/PPS2P2P/2G1G2R1/LNB1K2NL b -',
+              sfenString: 'ln5nl/1r3bgk1/p2s1gspp/2ppppp2/1p6P/2PPP1PP1/PPS2PN1L/2G1GS2R/LNBK5 b -',
               label: 'Diagram 3',
             ),
             Paragraph(
@@ -141,15 +147,15 @@ class ProverbService {
                 'Rx1d',
                 'L*1a',
               ],
-              playerFirstMove: PlayerType.gote,
+              playerFirstMove: PlayerType.sente,
             ),
             Diagram(
-              sfenString: 'ln3k1nl/1r3bg2/p1ppsgspp/1p2ppp2/7P1/2PPPSP2/PPS2P2P/2G1G2R1/LNB1K2NL b -',
+              sfenString: 'ln5nl/1r3bgk1/p2s1g1p1/2ppppp1R/1p7/2PPP1PP1/PPS2P3/2G1GS3/LNBK5 b SLPnp',
               label: 'Diagram 4',
             ),
             Paragraph(
               text:
-                  "With N-2e, Black begins to attack the 1st file. If White plays S-2d after Black's P-1d, there will follow: P-2e, Sx2e, P-1c+---good for Black. So White has to play Sx1d. Then after Lx1d, Lx1d, Rx1d, White drops a Lance on 1a, which looks quite promising on White's part.",
+                  "With N-2e, Black begins to attack the 1st file. If White plays S-2d after Black's P-1d, there will follow: P-2e, Sx2e, P-1c+, good for Black. So White has to play Sx1d. Then after Lx1d, Lx1d, Rx1d, White drops a Lance on 1a, which looks quite promising on White's part.",
             ),
             MoveSequence(
               moves: [
@@ -159,10 +165,10 @@ class ProverbService {
                 'Nx1c',
                 'L*3i',
               ],
-              playerFirstMove: PlayerType.gote,
+              playerFirstMove: PlayerType.sente,
             ),
             Diagram(
-              sfenString: 'ln3k1nl/1r3bg2/p1ppsgspp/1p2ppp2/7P1/2PPPSP2/PPS2P2P/2G1G2R1/LNB1K2NL b -',
+              sfenString: 'ln7/1r3bgk1/p2s1g1pn/2ppppp1R/1p7/2PPP1PP1/PPS2P3/2G1GS3/LN1K2L2 w SLbn2p',
               label: 'Diagram 5',
             ),
             Paragraph(
@@ -178,7 +184,11 @@ class ProverbService {
                 'N*3c',
                 'Lx3e',
               ],
-              playerFirstMove: PlayerType.sente,
+              playerFirstMove: PlayerType.gote,
+            ),
+            Diagram(
+              sfenString: 'l8/1r3bgk1/p1ns1gnpn/2ppppL1R/1p4L2/2PPP2P1/PPS2P3/2G1GS3/LN1K5 w SPb3p',
+              label: 'Diagram 6',
             ),
             Paragraph(
               text:
