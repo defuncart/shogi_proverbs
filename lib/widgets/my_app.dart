@@ -8,19 +8,19 @@ import 'package:shogi_proverbs/widgets/proverb_detail/proverb_detail.dart';
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      localizationsDelegates: [
-        const AppLocalizationsDelegate(),
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: AppLocalizationsDelegate.supportedLocals,
-      home: DefaultShogiBoardStyle(
-        style: ShogiBoardStyle(
-          coordIndicatorType: CoordIndicatorType.arabic,
-        ),
-        child: _HomeScreen(),
+    return DefaultShogiBoardStyle(
+      style: ShogiBoardStyle(
+        coordIndicatorType: CoordIndicatorType.arabic,
+      ),
+      child: MaterialApp(
+        localizationsDelegates: [
+          const AppLocalizationsDelegate(),
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizationsDelegate.supportedLocals,
+        home: _HomeScreen(),
       ),
     );
   }
