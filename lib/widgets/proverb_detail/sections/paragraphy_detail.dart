@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
+/// A detail widget for a [Paragraph]
 class ParagraphDetail extends StatelessWidget {
   final Paragraph paragraph;
 

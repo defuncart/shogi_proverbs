@@ -17,8 +17,9 @@ enum ProverbType {
   other,
 }
 
+/// A class of extension methods for ProverbType
 extension ProverbTypeExtensions on ProverbType {
-  // TODO update to use getText
+  // TODO consider using getText from open PRs
   static final _mapProverTypeLocaString = {
     ProverbType.pawn: AppLocalizations.proverbTypepawn,
     ProverbType.lance: AppLocalizations.proverbTypelance,
@@ -35,5 +36,6 @@ extension ProverbTypeExtensions on ProverbType {
     ProverbType.other: AppLocalizations.proverbTypeother,
   };
 
+  /// Returns a localized string for the [ProverbType]
   String get locaString => _mapProverTypeLocaString[this];
 }

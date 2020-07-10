@@ -6,6 +6,7 @@ import 'package:shogi_proverbs/models/sections/diagram.dart';
 import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
+/// A service to handle proverbs
 class ProverbService {
   static final _proverbs = [
     Proverb(
@@ -200,5 +201,6 @@ class ProverbService {
     ),
   ];
 
+  /// Returns a list of proverbs
   static List<Proverb> get proverbs => _proverbs;
 }

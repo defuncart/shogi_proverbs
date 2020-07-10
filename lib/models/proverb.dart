@@ -26,5 +26,6 @@ class Proverb {
         assert(japaneseTitle != null),
         assert(pages != null);
 
+  /// Whether the proverb is multi-paged
   bool get isMultiPage => pages.length > 1;
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 
+/// A detail widget for a [MoveSequence]
 class MoveSequenceDetail extends StatelessWidget {
   final MoveSequence moveSequence;
 

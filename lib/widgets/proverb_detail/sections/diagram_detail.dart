@@ -3,6 +3,7 @@ import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi/shogi.dart';
 import 'package:shogi_proverbs/models/sections/diagram.dart';
 
+/// A detail widget for a [Diagram]
 class DiagramDetail extends StatelessWidget {
   final Diagram diagram;
 

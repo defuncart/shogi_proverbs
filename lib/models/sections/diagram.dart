@@ -1,7 +1,7 @@
 import 'package:meta/meta.dart';
 import 'package:shogi_proverbs/models/sections/i_section.dart';
 
-/// A class representing a section containing a game board diagram
+/// A model representing a section containing a game board diagram
 class Diagram implements ISection {
   /// A sfen representation of the game board
   final String sfenString;

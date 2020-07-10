@@ -2,6 +2,7 @@ import 'package:flutter/material.dart' hide Page;
 import 'package:shogi_proverbs/models/page.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/page_detail.dart';
 
+/// A detail widget for a multi-page [Page]
 class MultiPageDetail extends StatefulWidget {
   final List<Page> pages;
 

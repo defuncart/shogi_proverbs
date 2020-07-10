@@ -1,2 +1,2 @@
-/// An interface which proverb sections implement
+/// An interface for proverb sections to implement
 abstract class ISection {}

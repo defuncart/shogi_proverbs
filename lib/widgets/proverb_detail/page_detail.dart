@@ -7,6 +7,7 @@ import 'package:shogi_proverbs/widgets/proverb_detail/sections/diagram_detail.da
 import 'package:shogi_proverbs/widgets/proverb_detail/sections/move_sequence_detail.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/sections/paragraphy_detail.dart';
 
+/// A detail widget for a [Page]
 class PageDetail extends StatelessWidget {
   final Page page;
 

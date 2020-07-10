@@ -3,6 +3,7 @@ import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/multi_page_detail.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/page_detail.dart';
 
+/// A detail widget for a [Proverb]
 class ProverbDetail extends StatelessWidget {
   final Proverb proverb;
 

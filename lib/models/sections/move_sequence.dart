@@ -2,7 +2,7 @@ import 'package:meta/meta.dart';
 import 'package:shogi/shogi.dart';
 import 'package:shogi_proverbs/models/sections/i_section.dart';
 
-/// A class describing a section containing a sequence of game moves
+/// A model representing a section containing a sequence of game moves
 class MoveSequence implements ISection {
   /// A list of moves specified as text
   final List<String> moves;
@@ -17,7 +17,7 @@ class MoveSequence implements ISection {
         assert(playerFirstMove != null);
 }
 
-/// Extension methods for MoveSequence
+/// A class of extension methods for MoveSequence
 extension MoveSequenceExtensions on MoveSequence {
   /// Determines the player icon for a given move index
   String playerIconForMoveIndex(int index) {
