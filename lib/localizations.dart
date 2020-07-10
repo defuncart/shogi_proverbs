@@ -36,6 +36,32 @@ class AppLocalizations {
 
   static String get aboutPopupText3 => _getText('aboutPopupText3');
 
+  static String get proverbTypepawn => _getText('proverbTypepawn');
+
+  static String get proverbTypelance => _getText('proverbTypelance');
+
+  static String get proverbTypeknight => _getText('proverbTypeknight');
+
+  static String get proverbTypesilver => _getText('proverbTypesilver');
+
+  static String get proverbTypegold => _getText('proverbTypegold');
+
+  static String get proverbTypebishop => _getText('proverbTypebishop');
+
+  static String get proverbTypehorse => _getText('proverbTypehorse');
+
+  static String get proverbTypedragon => _getText('proverbTypedragon');
+
+  static String get proverbTypetokin => _getText('proverbTypetokin');
+
+  static String get proverbTypeopening => _getText('proverbTypeopening');
+
+  static String get proverbTypemiddle => _getText('proverbTypemiddle');
+
+  static String get proverbTypeend => _getText('proverbTypeend');
+
+  static String get proverbTypeother => _getText('proverbTypeother');
+
   static Map<String, String> _localizedValues;
 
   static Map<String, String> _enValues = {
@@ -52,6 +78,19 @@ class AppLocalizations {
         'All content is taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
     'aboutPopupText3':
         'Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.',
+    'proverbTypepawn': 'Pawn',
+    'proverbTypelance': 'lance',
+    'proverbTypeknight': 'Knight',
+    'proverbTypesilver': 'Silver',
+    'proverbTypegold': 'Gold',
+    'proverbTypebishop': 'Bishop',
+    'proverbTypehorse': 'Horse',
+    'proverbTypedragon': 'Dragon',
+    'proverbTypetokin': 'Tokin',
+    'proverbTypeopening': 'Opening',
+    'proverbTypemiddle': 'Middlegame',
+    'proverbTypeend': 'Endgame',
+    'proverbTypeother': 'Other',
   };
 
   static Map<String, Map<String, String>> _allValues = {

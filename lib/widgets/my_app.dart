@@ -66,25 +66,28 @@ class _MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer(
-      (_, read) => MaterialApp(
-        localizationsDelegates: [
-          const AppLocalizationsDelegate(),
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: AppLocalizationsDelegate.supportedLocals,
-        themeMode: read(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
-        theme: AppThemes.light,
-        darkTheme: AppThemes.dark,
-        home: DefaultShogiBoardStyle(
-          style: read(isDarkModeProvider).state
-              ? ShogiBoardStyle(
-                  pieceColor: Colors.white,
-                  borderColor: AppThemes.dark.disabledColor,
-                )
-              : ShogiBoardStyle(),
-          child: HomeScreen(),
+      (_, read) => DefaultShogiBoardStyle(
+        style: read(isDarkModeProvider).state
+            ? ShogiBoardStyle(
+                pieceColor: Colors.white,
+                borderColor: AppThemes.dark.disabledColor,
+                coordIndicatorType: CoordIndicatorType.arabic,
+              )
+            : ShogiBoardStyle(
+                coordIndicatorType: CoordIndicatorType.arabic,
+              ),
+        child: MaterialApp(
+          localizationsDelegates: [
+            const AppLocalizationsDelegate(),
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizationsDelegate.supportedLocals,
+          themeMode: read(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
+          theme: AppThemes.light,
+          darkTheme: AppThemes.dark,
+          home: HomeScreen(),
         ),
       ),
     );

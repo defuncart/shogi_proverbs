@@ -29,13 +29,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.4.1"
-  auto_size_text:
-    dependency: transitive
-    description:
-      name: auto_size_text
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -165,9 +158,11 @@ packages:
   flutter_shogi_board:
     dependency: "direct main"
     description:
-      name: flutter_shogi_board
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "0b548933c66441b21928df6375bc4c8ebc0eb816"
+      url: "https://github.com/defuncart/flutter_shogi_board"
+    source: git
     version: "0.0.5"
   flutter_test:
     dependency: "direct dev"
@@ -352,9 +347,11 @@ packages:
   shogi:
     dependency: transitive
     description:
-      name: shogi
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "9e3701f1f2035c6c7c6c93ce902993dc43f14aff"
+      url: "https://github.com/defuncart/shogi"
+    source: git
     version: "0.0.3"
   sky_engine:
     dependency: transitive

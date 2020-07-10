@@ -1,21 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shogi_board/flutter_shogi_board.dart';
-import 'package:shogi/shogi.dart';
+import 'package:shogi_proverbs/services/proverb_service.dart';
+import 'package:shogi_proverbs/widgets/proverb_detail/proverb_detail.dart';
 
 class ProverbsTab extends StatelessWidget {
   const ProverbsTab({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Center(
-        child: ShogiBoard(
-          gameBoard: ShogiUtils.sfenStringToGameBoard(
-            '7nl/5bgk1/5g1pp/5pp2/7NP/4PB3/5P3/9/8L b P',
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          RaisedButton(
+            child: Text('Proverb Single Page'),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ProverbDetail(
+                  proverb: ProverbService.proverbs.first,
+                ),
+              ),
+            ),
           ),
-          showPiecesInHand: false,
-        ),
+          RaisedButton(
+            child: Text('Proverb Multi Page'),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ProverbDetail(
+                  proverb: ProverbService.proverbs.last,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
