@@ -81,7 +81,7 @@ class ProverbService {
             ),
             Paragraph(
               text:
-                  'Diagram 1 is from the endgame between the static Rook anaguma (Black) and the ranging Rook (White). How should Black play next? Where would you drop your Lance?',
+                  'Diagram 1 is from the endgame between the static Rook anaguma (Black) and the ranging Rook (White) (last move S-5g+). How should Black play next? Where would you drop your Lance?',
             ),
             MoveSequence(
               moves: [
