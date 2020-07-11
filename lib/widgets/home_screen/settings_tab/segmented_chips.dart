@@ -57,17 +57,5 @@ class _SegmentedChipsState extends State<SegmentedChips> {
         ),
       ).toList(),
     );
-    //       return ChoiceChip(
-    //         label: Text('Item $index'),
-    //         selected: _selectedIndex == index,
-    //         onSelected: (bool selected) {
-    //           setState(() {
-    //             _selectedIndex = selected ? index : null;
-    //           });
-    //         },
-    //       );
-    //     },
-    //   ).toList(),
-    // );
   }
 }
