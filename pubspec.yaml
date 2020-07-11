@@ -13,9 +13,13 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   cupertino_icons: ^0.1.3
+  path_provider: ^1.6.11
   flutter_shogi_board:
     git:
       url: https://github.com/defuncart/flutter_shogi_board
+  hive: ^1.4.1+1
+  flutter_riverpod: ^0.3.0
+  get_it: ^4.0.2
 
 dev_dependencies:
   flutter_test:
@@ -30,6 +34,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
 
 flappy_translator:
   input_file_path: "assets_dev/loca/loca.csv"

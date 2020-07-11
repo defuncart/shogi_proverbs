@@ -9,6 +9,27 @@ import 'package:flutter/material.dart';
 class AppLocalizations {
   static String get appTitle => _getText('appTitle');
 
+  static String get homeScreenProversTabTitleText =>
+      _getText('homeScreenProversTabTitleText');
+
+  static String get homeScreenSettingsTabTitleText =>
+      _getText('homeScreenSettingsTabTitleText');
+
+  static String get settingsTabDarkModeLabel =>
+      _getText('settingsTabDarkModeLabel');
+
+  static String get settingsTabPieceSymbolLabel =>
+      _getText('settingsTabPieceSymbolLabel');
+
+  static String get settingsTabAboutButtonText =>
+      _getText('settingsTabAboutButtonText');
+
+  static String get aboutPopupText1 => _getText('aboutPopupText1');
+
+  static String get aboutPopupText2 => _getText('aboutPopupText2');
+
+  static String get aboutPopupText3 => _getText('aboutPopupText3');
+
   static String get proverbTypepawn => _getText('proverbTypepawn');
 
   static String get proverbTypelance => _getText('proverbTypelance');
@@ -39,6 +60,16 @@ class AppLocalizations {
 
   static Map<String, String> _enValues = {
     'appTitle': 'Shogi Proverbs',
+    'homeScreenProversTabTitleText': 'Proverbs',
+    'homeScreenSettingsTabTitleText': 'Settings',
+    'settingsTabDarkModeLabel': 'Dark Mode',
+    'settingsTabPieceSymbolLabel': 'Piece Symbol',
+    'settingsTabAboutButtonText': 'About',
+    'aboutPopupText1': 'Concept, Design and Programming by James Leahy.',
+    'aboutPopupText2':
+        'All content is taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
+    'aboutPopupText3':
+        'Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.',
     'proverbTypepawn': 'Pawn',
     'proverbTypelance': 'lance',
     'proverbTypeknight': 'Knight',
