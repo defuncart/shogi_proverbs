@@ -1,14 +1,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:grouped_buttons/grouped_buttons.dart';
 import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
+import 'package:shogi_proverbs/widgets/home_screen/settings_tab/segmented_chips.dart';
 
 final isDarkModeProvider = StateProvider((_) => DIContainer.get<ISettingsDatabase>().isDarkMode);
+final isPieceLanguageJapaneseProvider =
+    StateProvider((_) => DIContainer.get<ISettingsDatabase>().isPieceLanguageJapanese);
 
 class SettingsTab extends StatelessWidget {
+  static const _languageSymbols = ['K', '玉'];
+
   const SettingsTab({Key key}) : super(key: key);
 
   @override
@@ -39,13 +43,16 @@ class SettingsTab extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(AppLocalizations.settingsTabPieceLanguageLabel),
-                  RadioButtonGroup(
-                    orientation: GroupedButtonsOrientation.HORIZONTAL,
-                    labels: ['K', '玉'],
-                    onChange: (_, selectedIndex) {},
-                    // picked: ,
-                  ),
+                  Text(AppLocalizations.settingsTabPieceSymbolLabel),
+                  Consumer((_, read) => SegmentedChips(
+                        labels: _languageSymbols,
+                        initiallySelectedIndex: read(isPieceLanguageJapaneseProvider).state ? 1 : 0,
+                        onSelected: (selectedIndex) {
+                          final isJapanese = selectedIndex == 1;
+                          isPieceLanguageJapaneseProvider.read(context).state = isJapanese;
+                          DIContainer.get<ISettingsDatabase>().isPieceLanguageJapanese = isJapanese;
+                        },
+                      )),
                 ],
               ),
               SizedBox(height: 16.0),
@@ -55,7 +62,7 @@ class SettingsTab extends StatelessWidget {
                   child: Text(
                     AppLocalizations.settingsTabAboutButtonText,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Theme.of(context).scaffoldBackgroundColor,
                     ),
                   ),
                   onPressed: () => showAboutDialog(
