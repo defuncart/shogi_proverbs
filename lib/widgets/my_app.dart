@@ -67,15 +67,12 @@ class _MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer(
       (_, read) => DefaultShogiBoardStyle(
-        style: read(isDarkModeProvider).state
-            ? ShogiBoardStyle(
-                pieceColor: Colors.white,
-                borderColor: AppThemes.dark.disabledColor,
-                coordIndicatorType: CoordIndicatorType.arabic,
-              )
-            : ShogiBoardStyle(
-                coordIndicatorType: CoordIndicatorType.arabic,
-              ),
+        style: ShogiBoardStyle(
+          pieceColor: read(isDarkModeProvider).state ? Colors.white : BoardColors.black,
+          borderColor: read(isDarkModeProvider).state ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
+          usesJapanese: read(selectedPieceSymbolProvider).state == 1,
+          coordIndicatorType: CoordIndicatorType.arabic,
+        ),
         child: MaterialApp(
           localizationsDelegates: [
             const AppLocalizationsDelegate(),
