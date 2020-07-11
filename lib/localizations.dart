@@ -71,7 +71,7 @@ class AppLocalizations {
     'aboutPopupText3':
         'Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.',
     'proverbTypepawn': 'Pawn',
-    'proverbTypelance': 'lance',
+    'proverbTypelance': 'Lance',
     'proverbTypeknight': 'Knight',
     'proverbTypesilver': 'Silver',
     'proverbTypegold': 'Gold',
