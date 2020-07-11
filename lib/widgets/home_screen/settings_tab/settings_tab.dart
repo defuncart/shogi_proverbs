@@ -7,8 +7,7 @@ import 'package:shogi_proverbs/services/settings_database/i_settings_database.da
 import 'package:shogi_proverbs/widgets/home_screen/settings_tab/segmented_chips.dart';
 
 final isDarkModeProvider = StateProvider((_) => DIContainer.get<ISettingsDatabase>().isDarkMode);
-final isPieceLanguageJapaneseProvider =
-    StateProvider((_) => DIContainer.get<ISettingsDatabase>().isPieceLanguageJapanese);
+final selectedPieceSymbolProvider = StateProvider((_) => DIContainer.get<ISettingsDatabase>().selectedPieceSymbol);
 
 class SettingsTab extends StatelessWidget {
   static const _languageSymbols = ['K', '玉'];
@@ -46,11 +45,10 @@ class SettingsTab extends StatelessWidget {
                   Text(AppLocalizations.settingsTabPieceSymbolLabel),
                   Consumer((_, read) => SegmentedChips(
                         labels: _languageSymbols,
-                        initiallySelectedIndex: read(isPieceLanguageJapaneseProvider).state ? 1 : 0,
+                        initiallySelectedIndex: read(selectedPieceSymbolProvider).state,
                         onSelected: (selectedIndex) {
-                          final isJapanese = selectedIndex == 1;
-                          isPieceLanguageJapaneseProvider.read(context).state = isJapanese;
-                          DIContainer.get<ISettingsDatabase>().isPieceLanguageJapanese = isJapanese;
+                          selectedPieceSymbolProvider.read(context).state = selectedIndex;
+                          DIContainer.get<ISettingsDatabase>().selectedPieceSymbol = selectedIndex;
                         },
                       )),
                 ],

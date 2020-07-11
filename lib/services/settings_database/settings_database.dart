@@ -12,17 +12,23 @@ class SettingsDatabase implements ISettingsDatabase {
   static const _boxName = 'settings';
 
   /// Returns whether dark mode is enabled
+  @override
   bool get isDarkMode => _box.get(_Keys.isDarkMode, defaultValue: _Defaults.isDarkMode);
 
   /// Sets whether dark mode is enabled
+  @override
   set isDarkMode(bool value) => _box.put(_Keys.isDarkMode, value);
 
-  /// Returns whether piece langauge is japanese
-  bool get isPieceLanguageJapanese =>
-      _box.get(_Keys.isPieceLanguageJapanese, defaultValue: _Defaults.isPieceLanguageJapanese);
+  /// Returns the selected piece symbol
+  @override
+  int get selectedPieceSymbol => _box.get(
+        _Keys.selectedPieceSymbol,
+        defaultValue: _Defaults.selectedPieceSymbol,
+      );
 
-  /// Sets whether piece langauge is japanese
-  set isPieceLanguageJapanese(bool value) => _box.put(_Keys.isPieceLanguageJapanese, value);
+  /// Sets the selected piece symbol
+  @override
+  set selectedPieceSymbol(int value) => _box.put(_Keys.selectedPieceSymbol, value);
 
   /// Initializes the database
   Future<void> initialize() async {
@@ -40,11 +46,11 @@ class SettingsDatabase implements ISettingsDatabase {
 /// A class of keys used to store values
 class _Keys {
   static const isDarkMode = 'isDarkMode';
-  static const isPieceLanguageJapanese = 'isPieceLanguageJapanese';
+  static const selectedPieceSymbol = 'selectedPieceSymbol';
 }
 
 /// A class of defaults for each key
 class _Defaults {
   static const isDarkMode = false;
-  static const isPieceLanguageJapanese = true;
+  static const selectedPieceSymbol = 1;
 }

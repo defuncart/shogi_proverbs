@@ -9,9 +9,9 @@ abstract class ISettingsDatabase {
   /// Sets whether dark mode is enabled
   set isDarkMode(bool value);
 
-  /// Returns whether piece langauge is japanese
-  bool get isPieceLanguageJapanese;
+  /// Returns the selected piece symbol
+  int get selectedPieceSymbol;
 
-  /// Sets whether piece langauge is japanese
-  set isPieceLanguageJapanese(bool value);
+  /// Sets the selected piece symbol
+  set selectedPieceSymbol(int value);
 }
