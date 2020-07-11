@@ -38,6 +38,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         body: FutureBuilder(
           future: _initAppFuture,
+          // ignore: avoid_types_on_closure_parameters
           builder: (_, AsyncSnapshot<bool> snapshot) {
             switch (snapshot.connectionState) {
               case ConnectionState.waiting:
