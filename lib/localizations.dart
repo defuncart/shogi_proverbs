@@ -18,14 +18,8 @@ class AppLocalizations {
   static String get settingsTabDarkModeLabel =>
       _getText('settingsTabDarkModeLabel');
 
-  static String get settingsTabPieceLanguageLabel =>
-      _getText('settingsTabPieceLanguageLabel');
-
-  static String get settingsTabShowCoordIndicatorsLabel =>
-      _getText('settingsTabShowCoordIndicatorsLabel');
-
-  static String get settingsTabCoordIndicatorTypeLabel =>
-      _getText('settingsTabCoordIndicatorTypeLabel');
+  static String get settingsTabPieceSymbolLabel =>
+      _getText('settingsTabPieceSymbolLabel');
 
   static String get settingsTabAboutButtonText =>
       _getText('settingsTabAboutButtonText');
@@ -69,9 +63,7 @@ class AppLocalizations {
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
     'settingsTabDarkModeLabel': 'Dark Mode',
-    'settingsTabPieceLanguageLabel': 'Piece Language',
-    'settingsTabShowCoordIndicatorsLabel': 'Show Coordinate Indicators',
-    'settingsTabCoordIndicatorTypeLabel': 'Coordinate Indicator',
+    'settingsTabPieceSymbolLabel': 'Piece Symbol',
     'settingsTabAboutButtonText': 'About',
     'aboutPopupText1': 'Concept, Design and Programming by James Leahy.',
     'aboutPopupText2':

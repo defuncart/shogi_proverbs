@@ -3,9 +3,7 @@ appTitle;Shogi Proverbs
 homeScreenProversTabTitleText;Proverbs
 homeScreenSettingsTabTitleText;Settings
 settingsTabDarkModeLabel;Dark Mode
-settingsTabPieceLanguageLabel;Piece Language
-settingsTabShowCoordIndicatorsLabel;Show Coordinate Indicators
-settingsTabCoordIndicatorTypeLabel;Coordinate Indicator
+settingsTabPieceSymbolLabel;Piece Symbol
 settingsTabAboutButtonText;About
 aboutPopupText1;Concept, Design and Programming by James Leahy.
 aboutPopupText2;All content is taken from Takako Tombo Noda's website, which in turn contains translations of Masahiko Urano's book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).
