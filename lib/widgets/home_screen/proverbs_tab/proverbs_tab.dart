@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shogi_proverbs/services/proverb_service.dart';
+import 'package:shogi_proverbs/enums/proverb_type.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs_service.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/proverb_detail.dart';
 
 class ProverbsTab extends StatelessWidget {
@@ -7,32 +8,29 @@ class ProverbsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          RaisedButton(
-            child: Text('Proverb Single Page'),
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => ProverbDetail(
-                  proverb: ProverbService.proverbs.first,
+    final proverbs = ProverbsService.proverbs;
+    return ListView(
+      children: [
+        for (final kvp in proverbs.entries)
+          ExpansionTile(
+            initiallyExpanded: true,
+            title: Text(kvp.key.locaString),
+            children: [
+              for (final proverb in kvp.value)
+                ListTile(
+                  title: Text(proverb.title),
+                  subtitle: Text(proverb.japaneseTitle),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => ProverbDetail(
+                        proverb: proverb,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
+            ],
           ),
-          RaisedButton(
-            child: Text('Proverb Multi Page'),
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => ProverbDetail(
-                  proverb: ProverbService.proverbs.last,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
+      ],
     );
   }
 }

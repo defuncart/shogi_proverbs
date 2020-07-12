@@ -15,11 +15,15 @@ class MoveSequenceDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Wrap(
-        spacing: 4.0,
+        alignment: WrapAlignment.center,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        spacing: 12.0,
         runSpacing: 4.0,
         children: <Widget>[
           for (int i = 0; i < moveSequence.moves.length; i++)
-            Text('${moveSequence.playerIconForMoveIndex(i)}${moveSequence.moves[i]}'),
+            Text(
+              '${moveSequence.playerIconForMoveIndex(i)}${moveSequence.moves[i]}',
+            ),
         ],
       ),
     );
