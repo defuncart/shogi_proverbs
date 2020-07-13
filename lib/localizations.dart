@@ -9,17 +9,15 @@ import 'package:flutter/material.dart';
 class AppLocalizations {
   static String get appTitle => _getText('appTitle');
 
+  static String get darkModePanelText => _getText('darkModePanelText');
+
+  static String get pieceSymbolPanelText => _getText('pieceSymbolPanelText');
+
   static String get homeScreenProversTabTitleText =>
       _getText('homeScreenProversTabTitleText');
 
   static String get homeScreenSettingsTabTitleText =>
       _getText('homeScreenSettingsTabTitleText');
-
-  static String get settingsTabDarkModeLabel =>
-      _getText('settingsTabDarkModeLabel');
-
-  static String get settingsTabPieceSymbolLabel =>
-      _getText('settingsTabPieceSymbolLabel');
 
   static String get settingsTabAboutButtonText =>
       _getText('settingsTabAboutButtonText');
@@ -60,10 +58,10 @@ class AppLocalizations {
 
   static Map<String, String> _enValues = {
     'appTitle': 'Shogi Proverbs',
+    'darkModePanelText': 'Dark Mode',
+    'pieceSymbolPanelText': 'Piece Symbol',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
-    'settingsTabDarkModeLabel': 'Dark Mode',
-    'settingsTabPieceSymbolLabel': 'Piece Symbol',
     'settingsTabAboutButtonText': 'About',
     'aboutPopupText1': 'Concept, Design and Programming by James Leahy.',
     'aboutPopupText2':

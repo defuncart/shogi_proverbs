@@ -1,9 +1,9 @@
 keys;en
 appTitle;Shogi Proverbs
+darkModePanelText;Dark Mode
+pieceSymbolPanelText;Piece Symbol
 homeScreenProversTabTitleText;Proverbs
 homeScreenSettingsTabTitleText;Settings
-settingsTabDarkModeLabel;Dark Mode
-settingsTabPieceSymbolLabel;Piece Symbol
 settingsTabAboutButtonText;About
 aboutPopupText1;Concept, Design and Programming by James Leahy.
 aboutPopupText2;All content is taken from Takako Tombo Noda's website, which in turn contains translations of Masahiko Urano's book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).
