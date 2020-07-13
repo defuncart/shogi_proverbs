@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 import 'package:shogi_proverbs/widgets/home_screen/home_screen.dart';
 import 'package:shogi_proverbs/widgets/home_screen/settings_tab/settings_tab.dart';
+import 'package:shogi_proverbs/widgets/onboarding/onboarding.dart';
 
 class MyApp extends StatefulWidget {
   @override
@@ -28,6 +29,7 @@ class _MyAppState extends State<MyApp> {
     DIContainer.setup();
 
     await DIContainer.get<ISettingsDatabase>().initialize();
+    // await DIContainer.get<ISettingsDatabase>().reset();
 
     return true;
   }
@@ -85,7 +87,7 @@ class _MyApp extends StatelessWidget {
           themeMode: read(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
           theme: AppThemes.light,
           darkTheme: AppThemes.dark,
-          home: HomeScreen(),
+          home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : Onboarding(),
         ),
       ),
     );
