@@ -14,4 +14,10 @@ abstract class ISettingsDatabase {
 
   /// Sets the selected piece symbol
   set selectedPieceSymbol(int value);
+
+  /// Returns whether the user has seen onboarding
+  bool get hasSeenOnboarding;
+
+  /// Sets whether the user has seen onboarding
+  set hasSeenOnboarding(bool value);
 }

@@ -30,6 +30,14 @@ class SettingsDatabase implements ISettingsDatabase {
   @override
   set selectedPieceSymbol(int value) => _box.put(_Keys.selectedPieceSymbol, value);
 
+  /// Returns whether the user has seen onboarding
+  @override
+  bool get hasSeenOnboarding => _box.get(_Keys.hasSeenOnboarding, defaultValue: _Defaults.hasSeenOnboarding);
+
+  /// Sets whether the user has seen onboarding
+  @override
+  set hasSeenOnboarding(bool value) => _box.put(_Keys.hasSeenOnboarding, value);
+
   /// Initializes the database
   Future<void> initialize() async {
     if (!kIsWeb) {
@@ -47,10 +55,12 @@ class SettingsDatabase implements ISettingsDatabase {
 class _Keys {
   static const isDarkMode = 'isDarkMode';
   static const selectedPieceSymbol = 'selectedPieceSymbol';
+  static const hasSeenOnboarding = 'hasSeenOnboarding';
 }
 
 /// A class of defaults for each key
 class _Defaults {
   static const isDarkMode = false;
   static const selectedPieceSymbol = 1;
+  static const hasSeenOnboarding = false;
 }
