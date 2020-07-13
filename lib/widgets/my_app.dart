@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi_proverbs/configs/app_themes.dart';
+import 'package:shogi_proverbs/configs/route_names.dart';
 import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
@@ -88,6 +89,9 @@ class _MyApp extends StatelessWidget {
           theme: AppThemes.light,
           darkTheme: AppThemes.dark,
           home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : Onboarding(),
+          routes: {
+            RouteNames.homeScreen: (_) => HomeScreen(),
+          },
         ),
       ),
     );
