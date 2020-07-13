@@ -39,6 +39,7 @@ class SettingsDatabase implements ISettingsDatabase {
   set hasSeenOnboarding(bool value) => _box.put(_Keys.hasSeenOnboarding, value);
 
   /// Initializes the database
+  @override
   Future<void> initialize() async {
     if (!kIsWeb) {
       final dir = await getApplicationDocumentsDirectory();
@@ -49,6 +50,10 @@ class SettingsDatabase implements ISettingsDatabase {
       _box = await Hive.openBox<dynamic>(_boxName);
     }
   }
+
+  /// Resets the database
+  @override
+  Future<void> reset() => _box?.deleteAll(_box?.keys);
 }
 
 /// A class of keys used to store values
