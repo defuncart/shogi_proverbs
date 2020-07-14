@@ -31,6 +31,11 @@ class OnboardingPage1 extends StatelessWidget {
             AppLocalizations.onboardingPage1Label4,
             textAlign: TextAlign.justify,
           ),
+          SizedBox(height: 16.0),
+          Text(
+            AppLocalizations.onboardingPage1Label5,
+            textAlign: TextAlign.justify,
+          ),
         ],
       ),
     );
