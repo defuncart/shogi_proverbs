@@ -39,10 +39,20 @@ class AppLocalizations {
 
   static String get onboardingPage3Label2 => _getText('onboardingPage3Label2');
 
-  static String get onboardingPage3Label3 => _getText('onboardingPage3Label3');
+  static String get onboardingPage3Label31 =>
+      _getText('onboardingPage3Label31');
 
-  static String get onboardingPage3SourceCodeLabel =>
-      _getText('onboardingPage3SourceCodeLabel');
+  static String get onboardingPage3Label32 =>
+      _getText('onboardingPage3Label32');
+
+  static String get onboardingPage3Label33 =>
+      _getText('onboardingPage3Label33');
+
+  static String get onboardingPage3Label34 =>
+      _getText('onboardingPage3Label34');
+
+  static String get onboardingPage3Label35 =>
+      _getText('onboardingPage3Label35');
 
   static String get onboardingPage3ContinueButtonText =>
       _getText('onboardingPage3ContinueButtonText');
@@ -115,8 +125,11 @@ class AppLocalizations {
     'onboardingPage3Label13': '.',
     'onboardingPage3Label2':
         'No data is collected on how you use the app, nor is any data sent onto third parties.',
-    'onboardingPage3Label3': 'Developed with <3 in Berlin. ',
-    'onboardingPage3SourceCodeLabel': 'Source code',
+    'onboardingPage3Label31': 'Developed with ',
+    'onboardingPage3Label32': '\u2764',
+    'onboardingPage3Label33': ' in Berlin. ',
+    'onboardingPage3Label34': 'Source code',
+    'onboardingPage3Label35': '.',
     'onboardingPage3ContinueButtonText': 'Continue',
     'darkModePanelText': 'Dark Mode',
     'pieceSymbolPanelText': 'Piece Symbol',

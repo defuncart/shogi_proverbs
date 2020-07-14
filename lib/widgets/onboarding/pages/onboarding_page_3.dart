@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/external_links.dart';
 import 'package:shogi_proverbs/configs/route_names.dart';
@@ -17,20 +18,26 @@ class OnboardingPage3 extends StatelessWidget {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Wrap(
-            children: [
-              Text(
-                AppLocalizations.onboardingPage3Label11,
-                textAlign: TextAlign.justify,
-              ),
-              _ClickableText(
-                text: AppLocalizations.onboardingPage3Label12,
-                onPressed: () async => await _openUrl(ExternalLinks.privacyPolicy),
-              ),
-              Text(
-                AppLocalizations.onboardingPage3Label13,
-              ),
-            ],
+          RichText(
+            textAlign: TextAlign.justify,
+            text: TextSpan(
+              style: Theme.of(context).textTheme.bodyText2,
+              children: [
+                TextSpan(
+                  text: AppLocalizations.onboardingPage3Label11,
+                ),
+                TextSpan(
+                  text: AppLocalizations.onboardingPage3Label12,
+                  style: TextStyle(
+                    color: Theme.of(context).accentColor,
+                  ),
+                  recognizer: TapGestureRecognizer()..onTap = () async => await _openUrl(ExternalLinks.privacyPolicy),
+                ),
+                TextSpan(
+                  text: AppLocalizations.onboardingPage3Label13,
+                ),
+              ],
+            ),
           ),
           SizedBox(height: 16.0),
           Text(
@@ -38,17 +45,35 @@ class OnboardingPage3 extends StatelessWidget {
             textAlign: TextAlign.justify,
           ),
           SizedBox(height: 16.0),
-          Wrap(
-            children: [
-              Text(
-                AppLocalizations.onboardingPage3Label3,
-                textAlign: TextAlign.justify,
-              ),
-              _ClickableText(
-                text: AppLocalizations.onboardingPage3SourceCodeLabel,
-                onPressed: () async => await _openUrl(ExternalLinks.sourceCode),
-              ),
-            ],
+          RichText(
+            textAlign: TextAlign.justify,
+            text: TextSpan(
+              style: Theme.of(context).textTheme.bodyText2,
+              children: [
+                TextSpan(
+                  text: AppLocalizations.onboardingPage3Label31,
+                ),
+                TextSpan(
+                  text: AppLocalizations.onboardingPage3Label32,
+                  style: TextStyle(
+                    color: Colors.red,
+                  ),
+                ),
+                TextSpan(
+                  text: AppLocalizations.onboardingPage3Label33,
+                ),
+                TextSpan(
+                  text: AppLocalizations.onboardingPage3Label34,
+                  style: TextStyle(
+                    color: Theme.of(context).accentColor,
+                  ),
+                  recognizer: TapGestureRecognizer()..onTap = () async => await _openUrl(ExternalLinks.sourceCode),
+                ),
+                TextSpan(
+                  text: AppLocalizations.onboardingPage3Label35,
+                ),
+              ],
+            ),
           ),
           SizedBox(height: 16.0),
           Center(
@@ -75,31 +100,5 @@ class OnboardingPage3 extends StatelessWidget {
     if (await canLaunch(url)) {
       await launch(url);
     }
-  }
-}
-
-class _ClickableText extends StatelessWidget {
-  final String text;
-  final void Function() onPressed;
-
-  const _ClickableText({
-    Key key,
-    @required this.text,
-    @required this.onPressed,
-  })  : assert(text != null),
-        assert(onPressed != null),
-        super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      child: Text(
-        text,
-        style: TextStyle(
-          color: Theme.of(context).accentColor,
-        ),
-      ),
-      onTap: onPressed,
-    );
   }
 }
