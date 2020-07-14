@@ -9,17 +9,65 @@ import 'package:flutter/material.dart';
 class AppLocalizations {
   static String get appTitle => _getText('appTitle');
 
+  static String get onboardingPage1Headline =>
+      _getText('onboardingPage1Headline');
+
+  static String get onboardingPage1Label1 => _getText('onboardingPage1Label1');
+
+  static String get onboardingPage1Label2 => _getText('onboardingPage1Label2');
+
+  static String get onboardingPage1Label3 => _getText('onboardingPage1Label3');
+
+  static String get onboardingPage1Label4 => _getText('onboardingPage1Label4');
+
+  static String get onboardingPage1Label5 => _getText('onboardingPage1Label5');
+
+  static String get onboardingPage2Headline =>
+      _getText('onboardingPage2Headline');
+
+  static String get onboardingPage2Label1 => _getText('onboardingPage2Label1');
+
+  static String get onboardingPage3Headline =>
+      _getText('onboardingPage3Headline');
+
+  static String get onboardingPage3Label11 =>
+      _getText('onboardingPage3Label11');
+
+  static String get onboardingPage3Label12 =>
+      _getText('onboardingPage3Label12');
+
+  static String get onboardingPage3Label13 =>
+      _getText('onboardingPage3Label13');
+
+  static String get onboardingPage3Label2 => _getText('onboardingPage3Label2');
+
+  static String get onboardingPage3Label31 =>
+      _getText('onboardingPage3Label31');
+
+  static String get onboardingPage3Label32 =>
+      _getText('onboardingPage3Label32');
+
+  static String get onboardingPage3Label33 =>
+      _getText('onboardingPage3Label33');
+
+  static String get onboardingPage3Label34 =>
+      _getText('onboardingPage3Label34');
+
+  static String get onboardingPage3Label35 =>
+      _getText('onboardingPage3Label35');
+
+  static String get onboardingPage3ContinueButtonText =>
+      _getText('onboardingPage3ContinueButtonText');
+
+  static String get darkModePanelText => _getText('darkModePanelText');
+
+  static String get pieceSymbolPanelText => _getText('pieceSymbolPanelText');
+
   static String get homeScreenProversTabTitleText =>
       _getText('homeScreenProversTabTitleText');
 
   static String get homeScreenSettingsTabTitleText =>
       _getText('homeScreenSettingsTabTitleText');
-
-  static String get settingsTabDarkModeLabel =>
-      _getText('settingsTabDarkModeLabel');
-
-  static String get settingsTabPieceSymbolLabel =>
-      _getText('settingsTabPieceSymbolLabel');
 
   static String get settingsTabAboutButtonText =>
       _getText('settingsTabAboutButtonText');
@@ -60,10 +108,37 @@ class AppLocalizations {
 
   static Map<String, String> _enValues = {
     'appTitle': 'Shogi Proverbs',
+    'onboardingPage1Headline': 'Introduction',
+    'onboardingPage1Label1':
+        'Shogi (将棋) is a two-player strategy board game native to Japan, belonging to the same family as chess and xiangqi.',
+    'onboardingPage1Label2':
+        'Shogi proverbs are technical tips for the player to lead them in the right direction when they are unsure of what move to play.',
+    'onboardingPage1Label3':
+        'This app contains 50 such proverbs for beginner to intermediate players. These proverbs are taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
+    'onboardingPage1Label4':
+        'Although this website is still online, it is not optimized for mobile and the diagrams can be difficult to dephicer. Thus the goal of this mobile application is to make this excellent content more accessible to beginners in 2020.',
+    'onboardingPage1Label5':
+        'It is assumed that neither Mr. Noda nor Mr. Urano would have anything against this open source project. No copyright infringement is intended.',
+    'onboardingPage2Headline': 'Personalizing your experience',
+    'onboardingPage2Label1':
+        'These settings can be updated anytime in the settings menu.',
+    'onboardingPage3Headline': 'Data privacy',
+    'onboardingPage3Label11':
+        'By using this application, you agree to the terms and conditions stated in the ',
+    'onboardingPage3Label12': 'privacy policy',
+    'onboardingPage3Label13': '.',
+    'onboardingPage3Label2':
+        'No data is collected on how you use the app, nor is any data sent onto third parties.',
+    'onboardingPage3Label31': 'Developed with ',
+    'onboardingPage3Label32': '\u2764',
+    'onboardingPage3Label33': ' in Berlin. ',
+    'onboardingPage3Label34': 'Source code',
+    'onboardingPage3Label35': '.',
+    'onboardingPage3ContinueButtonText': 'Continue',
+    'darkModePanelText': 'Dark Mode',
+    'pieceSymbolPanelText': 'Piece Symbol',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
-    'settingsTabDarkModeLabel': 'Dark Mode',
-    'settingsTabPieceSymbolLabel': 'Piece Symbol',
     'settingsTabAboutButtonText': 'About',
     'aboutPopupText1': 'Concept, Design and Programming by James Leahy.',
     'aboutPopupText2':
