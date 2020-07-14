@@ -5,6 +5,7 @@ import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 import 'package:shogi_proverbs/widgets/onboarding/pages/onboarding_page.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class OnboardingPage3 extends StatelessWidget {
   const OnboardingPage3({Key key}) : super(key: key);
@@ -24,7 +25,7 @@ class OnboardingPage3 extends StatelessWidget {
               ),
               _ClickableText(
                 text: AppLocalizations.onboardingPage3Label12,
-                onPressed: () => print(ExternalLinks.privacyPolicy),
+                onPressed: () async => await _openUrl(ExternalLinks.privacyPolicy),
               ),
               Text(
                 AppLocalizations.onboardingPage3Label13,
@@ -45,7 +46,7 @@ class OnboardingPage3 extends StatelessWidget {
               ),
               _ClickableText(
                 text: AppLocalizations.onboardingPage3SourceCodeLabel,
-                onPressed: () => print(ExternalLinks.sourceCode),
+                onPressed: () async => await _openUrl(ExternalLinks.sourceCode),
               ),
             ],
           ),
@@ -68,6 +69,12 @@ class OnboardingPage3 extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _openUrl(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    }
   }
 }
 
