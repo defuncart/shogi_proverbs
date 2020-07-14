@@ -9,6 +9,44 @@ import 'package:flutter/material.dart';
 class AppLocalizations {
   static String get appTitle => _getText('appTitle');
 
+  static String get onboardingPage1Headline =>
+      _getText('onboardingPage1Headline');
+
+  static String get onboardingPage1Label1 => _getText('onboardingPage1Label1');
+
+  static String get onboardingPage1Label2 => _getText('onboardingPage1Label2');
+
+  static String get onboardingPage1Label3 => _getText('onboardingPage1Label3');
+
+  static String get onboardingPage1Label4 => _getText('onboardingPage1Label4');
+
+  static String get onboardingPage2Headline =>
+      _getText('onboardingPage2Headline');
+
+  static String get onboardingPage2Label1 => _getText('onboardingPage2Label1');
+
+  static String get onboardingPage3Headline =>
+      _getText('onboardingPage3Headline');
+
+  static String get onboardingPage3Label11 =>
+      _getText('onboardingPage3Label11');
+
+  static String get onboardingPage3Label12 =>
+      _getText('onboardingPage3Label12');
+
+  static String get onboardingPage3Label13 =>
+      _getText('onboardingPage3Label13');
+
+  static String get onboardingPage3Label2 => _getText('onboardingPage3Label2');
+
+  static String get onboardingPage3Label3 => _getText('onboardingPage3Label3');
+
+  static String get onboardingPage3SourceCodeLabel =>
+      _getText('onboardingPage3SourceCodeLabel');
+
+  static String get onboardingPage3ContinueButtonText =>
+      _getText('onboardingPage3ContinueButtonText');
+
   static String get darkModePanelText => _getText('darkModePanelText');
 
   static String get pieceSymbolPanelText => _getText('pieceSymbolPanelText');
@@ -58,6 +96,28 @@ class AppLocalizations {
 
   static Map<String, String> _enValues = {
     'appTitle': 'Shogi Proverbs',
+    'onboardingPage1Headline': 'What is Shogi Proverbs?',
+    'onboardingPage1Label1':
+        'Shogi (将棋) is a two-player strategy board game native to Japan, belonging to the same family as chess and xiangqi.',
+    'onboardingPage1Label2':
+        'Shogi proverbs are technical tips for the player to lead them in the right direction when they are unsure of what move to play.',
+    'onboardingPage1Label3':
+        'Shogi Proverbs is an open source project whose goal is to help beginners.',
+    'onboardingPage1Label4':
+        'All proverbs featured in this app are taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
+    'onboardingPage2Headline': 'Personalizing your experience',
+    'onboardingPage2Label1':
+        'These settings can be updated anytime in the settings menu.',
+    'onboardingPage3Headline': 'Data privacy',
+    'onboardingPage3Label11':
+        'By using this application, you agree to the terms and conditions stated in the ',
+    'onboardingPage3Label12': 'privacy policy',
+    'onboardingPage3Label13': '.',
+    'onboardingPage3Label2':
+        'No data is collected on how you use the app, nor is any data sent onto third parties.',
+    'onboardingPage3Label3': 'Developed with <3 in Berlin. ',
+    'onboardingPage3SourceCodeLabel': 'Source code',
+    'onboardingPage3ContinueButtonText': 'Continue',
     'darkModePanelText': 'Dark Mode',
     'pieceSymbolPanelText': 'Piece Symbol',
     'homeScreenProversTabTitleText': 'Proverbs',
