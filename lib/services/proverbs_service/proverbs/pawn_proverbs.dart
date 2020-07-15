@@ -250,4 +250,100 @@ final pawnProverbs = [
       ),
     ],
   ),
+  Proverb(
+    title: 'A Pawn-anchored Gold is more solid than a rock',
+    japaneseTitle: 'Kinzoko no Fu iwa yori katashi',
+    type: ProverbType.pawn,
+    pages: [
+      Page(
+        sections: [
+          Paragraph(
+            text:
+                'When your opponent attacks with a promoted Rook, remember that a Pawn-anchored Gold makes a solid guard.',
+          ),
+          Diagram(
+            sfenString: 'ln1g5/1ks6/1pp6/pl1p5/9/P1P6/1P1PSP3/2KGG4/LN6+r b Pp',
+            label: 'Diagram 1',
+          ),
+          Paragraph(
+            text:
+                'Diagram 1 shows where White has just dropped a Lance on 8d. Together with the promoted Rook on the bottom row, White aims to attack your King directly. The expected line of moves is:',
+          ),
+          MoveSequence(
+            moves: [
+              'Lx8g',
+              'Kx8g',
+              '+Rx8i',
+            ],
+            playerFirstMove: PlayerType.gote,
+          ),
+          Paragraph(
+            text:
+                'Here P*5i is the move Black should play. This is the harder-than-a-rock Pawn, a bulwark against the promoted Rook.',
+          ),
+          Diagram(
+            sfenString: 'ln1g5/1ks6/1pp6/pl1p5/9/P1P6/1P1P1P3/1BKGGS3/LN4P1+r w p',
+            label: 'Diagram 2',
+          ),
+          Paragraph(
+            text:
+                "Look at diagram 2 (last move P*4i). Here you see a Pawn-anchored Silver. In this case White can drop a Pawn on 3h, so it may not seem as solid as a Pawn-anchored Gold. Still, White will need to play Px3i+ and +P-3h in order to get the promoted Rook's path open. In the meantime, you can play some effective moves.",
+          ),
+          Paragraph(
+            text: 'Take note how an anchor Pawn makes sturdy defense in either case.',
+          ),
+        ],
+      ),
+      Page(
+        sections: [
+          Paragraph(
+            text: 'Sometimes a Pawn-anchored Gold can be as brittle as a sandcastle.',
+          ),
+          Paragraph(
+            text:
+                "Diagram 3 shows where Black interposed a Pawn P*5i after White's R*3i, which was also anchoring the Gold on 5h. In this case, however, there was a problem.",
+          ),
+          Diagram(
+            sfenString: '9/9/9/9/9/2P6/PPSP5/2G1G4/LNK1P1r2 w p',
+            label: 'Diagram 3',
+          ),
+          Paragraph(
+            text: 'Moves after Diagram 3:',
+          ),
+          MoveSequence(
+            moves: [
+              'P*5g',
+              'G-6h',
+              'Rx5i+',
+            ],
+            playerFirstMove: PlayerType.gote,
+          ),
+          Paragraph(
+            text:
+                "White's P*5g reveals where the problem lies. Black cannot respond with Gx5g which will only allow White to play Rx5i+, a fatal fork, so Black has to play G-6h, to which White can reply by promoting his Rook on 5i taking the Pawn. After this, if Black plays K-8h, White will play P-5h+. A happy position for White.",
+          ),
+          Paragraph(
+            text: 'Look at Diagram 3 again. The correct move here is K-8h.',
+          ),
+          Paragraph(
+            text: 'I will show you another dubious anchor Pawn. Look at Diagram 4.',
+          ),
+          Diagram(
+            sfenString: '9/9/9/9/9/2P6/PP1P1P3/2GSG4/LNK1P1+r2 w l',
+            label: 'Diagram 4',
+          ),
+          Paragraph(
+            text:
+                "Black has just dropped a Pawn on 5i after White's +R-3i, check. This was a grievous mistake on Black's part. White will then drop a Lance along the 5th file, L*5e, with which Black cannot cope because he cannot use another Pawn on the same file.",
+          ),
+          Paragraph(
+            text: 'So, in Diagram 4, you should play S-5i, so that you can drop a Pawn in case of L*5e.',
+          ),
+          Paragraph(
+            text: 'Always beware of a Lance drop when you drop an anchor Pawn.',
+          ),
+        ],
+      ),
+    ],
+  ),
 ];
