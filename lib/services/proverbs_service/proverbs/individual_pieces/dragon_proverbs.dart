@@ -6,12 +6,12 @@ import 'package:shogi_proverbs/models/sections/diagram.dart';
 import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
-/// Proverbs for ProverbsType.dragon
+/// Proverbs for dragon section of ProverbType.pieces
 final dragonProverbs = [
   Proverb(
     title: 'The Dragon had better be inside',
     japaneseTitle: 'Ryu wa soto yori uchi',
-    type: ProverbType.dragon,
+    type: ProverbType.pieces,
     pages: [
       Page(
         sections: [

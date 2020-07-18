@@ -6,12 +6,12 @@ import 'package:shogi_proverbs/models/sections/diagram.dart';
 import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
-/// Proverbs for ProverbsType.lance
+/// Proverbs for lance section of ProverbType.pieces
 final lanceProverbs = [
   Proverb(
     title: 'Drop the Lance on the back rank',
     japaneseTitle: 'Kyo wa gedan kara ute',
-    type: ProverbType.lance,
+    type: ProverbType.pieces,
     pages: [
       Page(
         sections: [

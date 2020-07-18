@@ -6,12 +6,12 @@ import 'package:shogi_proverbs/models/sections/diagram.dart';
 import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
-/// Proverbs for ProverbsType.pawn
+/// Proverbs for pawn section of ProverbType.pieces
 final pawnProverbs = [
   Proverb(
     title: 'A Pawn is Worth a Thousand Generals',
     japaneseTitle: 'Ippu Atai Senkin',
-    type: ProverbType.pawn,
+    type: ProverbType.pieces,
     pages: [
       Page(
         sections: [
@@ -253,7 +253,7 @@ final pawnProverbs = [
   Proverb(
     title: 'A Pawn-anchored Gold is more solid than a rock',
     japaneseTitle: 'Kinzoko no Fu iwa yori katashi',
-    type: ProverbType.pawn,
+    type: ProverbType.pieces,
     pages: [
       Page(
         sections: [

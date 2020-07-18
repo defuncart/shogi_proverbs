@@ -6,12 +6,12 @@ import 'package:shogi_proverbs/models/sections/diagram.dart';
 import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
-/// Proverbs for ProverbsType.opening
+/// Proverbs for opening section of ProverbType.pieces
 final openingProverbs = [
   Proverb(
     title: 'Avoid a Sitting King',
     japaneseTitle: 'Igyoku wa sakeyo',
-    type: ProverbType.opening,
+    type: ProverbType.pieces,
     pages: [
       Page(
         sections: [

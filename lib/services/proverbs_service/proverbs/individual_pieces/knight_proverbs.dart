@@ -6,12 +6,12 @@ import 'package:shogi_proverbs/models/sections/diagram.dart';
 import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
-/// Proverbs for ProverbsType.knight
+/// Proverbs for knight section of ProverbType.pieces
 final knightProverbs = [
   Proverb(
     title: 'Drop the Knight Well Back',
     japaneseTitle: 'Keima wa hikaete ute',
-    type: ProverbType.knight,
+    type: ProverbType.pieces,
     pages: [
       Page(
         sections: [
@@ -161,7 +161,7 @@ final knightProverbs = [
   Proverb(
     title: 'The Knight that jumps high falls prey to a Pawn.',
     japaneseTitle: 'Keima no takatobi Fu no ejiki',
-    type: ProverbType.knight,
+    type: ProverbType.pieces,
     pages: [
       Page(
         sections: [
