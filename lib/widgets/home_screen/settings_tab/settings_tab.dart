@@ -121,9 +121,7 @@ class _CreditsPopup extends StatelessWidget {
                 ],
               ),
             ),
-            // Text(AppLocalizations.creditsPopupLabel2),
             Container(height: 8.0),
-            // Text(AppLocalizations.creditsPopupLabel3),
             RichText(
               textAlign: TextAlign.justify,
               text: TextSpan(
