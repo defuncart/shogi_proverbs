@@ -23,11 +23,14 @@ developerPanelLabel14;Source code
 developerPanelLabel15;.
 homeScreenProversTabTitleText;Proverbs
 homeScreenSettingsTabTitleText;Settings
-settingsTabPrivacyPolicyButtonText;PrivacyPolicy
+settingsTabDataPrivacyButtonText;Data Privacy
+settingsTabCreditsButtonText;Credits
 settingsTabAboutButtonText;About
-aboutPopupText1;Concept, Design and Programming by James Leahy.
-aboutPopupText2;All content is taken from Takako Tombo Noda's website, which in turn contains translations of Masahiko Urano's book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).
-aboutPopupText3;Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.
+dataPrivacyPopupTitle;Data privacy
+creditsPopupTitle;Credits
+creditsPopupLabel1;Concept, Design and Programming by James Leahy.
+creditsPopupLabel2;All proverbs are taken from Takako Tombo Noda's website, which in turn contains translations of Masahiko Urano's book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).
+creditsPopupLabel3;Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.
 proverbTypepawn;Pawn
 proverbTypelance;Lance
 proverbTypeknight;Knight

@@ -65,17 +65,24 @@ class AppLocalizations {
   static String get homeScreenSettingsTabTitleText =>
       _getText('homeScreenSettingsTabTitleText');
 
-  static String get settingsTabPrivacyPolicyButtonText =>
-      _getText('settingsTabPrivacyPolicyButtonText');
+  static String get settingsTabDataPrivacyButtonText =>
+      _getText('settingsTabDataPrivacyButtonText');
+
+  static String get settingsTabCreditsButtonText =>
+      _getText('settingsTabCreditsButtonText');
 
   static String get settingsTabAboutButtonText =>
       _getText('settingsTabAboutButtonText');
 
-  static String get aboutPopupText1 => _getText('aboutPopupText1');
+  static String get dataPrivacyPopupTitle => _getText('dataPrivacyPopupTitle');
 
-  static String get aboutPopupText2 => _getText('aboutPopupText2');
+  static String get creditsPopupTitle => _getText('creditsPopupTitle');
 
-  static String get aboutPopupText3 => _getText('aboutPopupText3');
+  static String get creditsPopupLabel1 => _getText('creditsPopupLabel1');
+
+  static String get creditsPopupLabel2 => _getText('creditsPopupLabel2');
+
+  static String get creditsPopupLabel3 => _getText('creditsPopupLabel3');
 
   static String get proverbTypepawn => _getText('proverbTypepawn');
 
@@ -138,12 +145,15 @@ class AppLocalizations {
     'developerPanelLabel15': '.',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
-    'settingsTabPrivacyPolicyButtonText': 'PrivacyPolicy',
+    'settingsTabDataPrivacyButtonText': 'Data Privacy',
+    'settingsTabCreditsButtonText': 'Credits',
     'settingsTabAboutButtonText': 'About',
-    'aboutPopupText1': 'Concept, Design and Programming by James Leahy.',
-    'aboutPopupText2':
-        'All content is taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
-    'aboutPopupText3':
+    'dataPrivacyPopupTitle': 'Data privacy',
+    'creditsPopupTitle': 'Credits',
+    'creditsPopupLabel1': 'Concept, Design and Programming by James Leahy.',
+    'creditsPopupLabel2':
+        'All proverbs are taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
+    'creditsPopupLabel3':
         'Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.',
     'proverbTypepawn': 'Pawn',
     'proverbTypelance': 'Lance',
