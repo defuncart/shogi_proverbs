@@ -29,8 +29,12 @@ settingsTabAboutButtonText;About
 dataPrivacyPopupTitle;Data privacy
 creditsPopupTitle;Credits
 creditsPopupLabel1;Concept, Design and Programming by James Leahy.
-creditsPopupLabel2;All proverbs are taken from Takako Tombo Noda's website, which in turn contains translations of Masahiko Urano's book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).
-creditsPopupLabel3;Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.
+creditsPopupLabel21;All proverbs are taken from Takako Tombo Noda's 
+creditsPopupLabel22;website
+creditsPopupLabel23;, which in turn contains translations of Masahiko Urano's book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).
+creditsPopupLabel31;Special thanks to 
+creditsPopupLabel32;takodori 
+creditsPopupLabel33; whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.
 proverbTypepawn;Pawn
 proverbTypelance;Lance
 proverbTypeknight;Knight

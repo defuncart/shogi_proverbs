@@ -80,9 +80,17 @@ class AppLocalizations {
 
   static String get creditsPopupLabel1 => _getText('creditsPopupLabel1');
 
-  static String get creditsPopupLabel2 => _getText('creditsPopupLabel2');
+  static String get creditsPopupLabel21 => _getText('creditsPopupLabel21');
 
-  static String get creditsPopupLabel3 => _getText('creditsPopupLabel3');
+  static String get creditsPopupLabel22 => _getText('creditsPopupLabel22');
+
+  static String get creditsPopupLabel23 => _getText('creditsPopupLabel23');
+
+  static String get creditsPopupLabel31 => _getText('creditsPopupLabel31');
+
+  static String get creditsPopupLabel32 => _getText('creditsPopupLabel32');
+
+  static String get creditsPopupLabel33 => _getText('creditsPopupLabel33');
 
   static String get proverbTypepawn => _getText('proverbTypepawn');
 
@@ -151,10 +159,14 @@ class AppLocalizations {
     'dataPrivacyPopupTitle': 'Data privacy',
     'creditsPopupTitle': 'Credits',
     'creditsPopupLabel1': 'Concept, Design and Programming by James Leahy.',
-    'creditsPopupLabel2':
-        'All proverbs are taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
-    'creditsPopupLabel3':
-        'Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.',
+    'creditsPopupLabel21': 'All proverbs are taken from Takako Tombo Noda\'s ',
+    'creditsPopupLabel22': 'website',
+    'creditsPopupLabel23':
+        ', which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
+    'creditsPopupLabel31': 'Special thanks to ',
+    'creditsPopupLabel32': 'takodori ',
+    'creditsPopupLabel33':
+        ' whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.',
     'proverbTypepawn': 'Pawn',
     'proverbTypelance': 'Lance',
     'proverbTypeknight': 'Knight',

@@ -1,11 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:shogi_proverbs/configs/external_links.dart';
 import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/widgets/common/buttons/custom_button.dart';
 import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/data_privacy_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/developer_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/piece_symbol_panel.dart';
+import 'package:shogi_proverbs/widgets/common/text/clickable_text_span.dart';
 
 class SettingsTab extends StatelessWidget {
   const SettingsTab({Key key}) : super(key: key);
@@ -97,9 +99,54 @@ class _CreditsPopup extends StatelessWidget {
           children: [
             Text(AppLocalizations.creditsPopupLabel1),
             Container(height: 8.0),
-            Text(AppLocalizations.creditsPopupLabel2),
+            RichText(
+              textAlign: TextAlign.justify,
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: AppLocalizations.creditsPopupLabel21,
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                  ClickableTextSpan(
+                    text: AppLocalizations.creditsPopupLabel22,
+                    url: ExternalLinks.proverbsContent,
+                    style: TextStyle(
+                      color: Theme.of(context).accentColor,
+                    ),
+                  ),
+                  TextSpan(
+                    text: AppLocalizations.creditsPopupLabel23,
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                ],
+              ),
+            ),
+            // Text(AppLocalizations.creditsPopupLabel2),
             Container(height: 8.0),
-            Text(AppLocalizations.creditsPopupLabel3),
+            // Text(AppLocalizations.creditsPopupLabel3),
+            RichText(
+              textAlign: TextAlign.justify,
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: AppLocalizations.creditsPopupLabel31,
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                  ClickableTextSpan(
+                    text: AppLocalizations.creditsPopupLabel32,
+                    url: ExternalLinks.proverbsContent,
+                    style: TextStyle(
+                      color: Theme.of(context).accentColor,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                  TextSpan(
+                    text: AppLocalizations.creditsPopupLabel33,
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                ],
+              ),
+            ),
             Container(height: 4.0),
             DeveloperPanel(),
           ],
