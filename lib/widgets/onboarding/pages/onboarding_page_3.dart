@@ -3,6 +3,7 @@ import 'package:shogi_proverbs/configs/route_names.dart';
 import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
+import 'package:shogi_proverbs/widgets/common/buttons/custom_button.dart';
 import 'package:shogi_proverbs/widgets/common/panels/data_privacy_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/developer_panel.dart';
 import 'package:shogi_proverbs/widgets/onboarding/pages/onboarding_page.dart';
@@ -22,14 +23,8 @@ class OnboardingPage3 extends StatelessWidget {
           DeveloperPanel(),
           SizedBox(height: 16.0),
           Center(
-            child: RaisedButton(
-              color: Theme.of(context).accentColor,
-              child: Text(
-                AppLocalizations.onboardingPage3ContinueButtonText,
-                style: TextStyle(
-                  color: Theme.of(context).scaffoldBackgroundColor,
-                ),
-              ),
+            child: CustomButton(
+              label: AppLocalizations.onboardingPage3ContinueButtonText,
               onPressed: () {
                 DIContainer.get<ISettingsDatabase>().hasSeenOnboarding = true;
                 Navigator.of(context).pushReplacementNamed(RouteNames.homeScreen);
