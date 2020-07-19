@@ -41,6 +41,7 @@ class DataPrivacyPanel extends StatelessWidget {
         Text(
           AppLocalizations.dataPrivacyPanelLabel2,
           textAlign: TextAlign.justify,
+          style: Theme.of(context).textTheme.bodyText2,
         ),
       ],
     );
