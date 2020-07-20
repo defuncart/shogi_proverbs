@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/widgets/common/page_view_with_indicators.dart';
 import 'package:shogi_proverbs/widgets/shogi_notation/pages/shogi_notation_page_1.dart';
+import 'package:shogi_proverbs/widgets/shogi_notation/pages/shogi_notation_page_2.dart';
 
 class ShogiNotationScreen extends StatelessWidget {
   const ShogiNotationScreen({Key key}) : super(key: key);
@@ -16,6 +17,7 @@ class ShogiNotationScreen extends StatelessWidget {
         child: PageViewWithIndicators(
           children: [
             ShogiNotationPage1(),
+            ShogiNotationPage2(),
           ],
         ),
       ),

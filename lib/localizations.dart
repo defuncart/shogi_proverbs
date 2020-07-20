@@ -70,6 +70,15 @@ class AppLocalizations {
   static String get shogiNotationPage1Label2 =>
       _getText('shogiNotationPage1Label2');
 
+  static String get shogiNotationPage2Headline =>
+      _getText('shogiNotationPage2Headline');
+
+  static String get shogiNotationPage2Label1 =>
+      _getText('shogiNotationPage2Label1');
+
+  static String get shogiNotationPage2Label2 =>
+      _getText('shogiNotationPage2Label2');
+
   static String get homeScreenProversTabTitleText =>
       _getText('homeScreenProversTabTitleText');
 
@@ -168,6 +177,11 @@ class AppLocalizations {
         'The shogi board contains 9 x 9 squares, which are labeled horizontally leftwards by 1 - 9 and vertically downwards by a - i.',
     'shogiNotationPage1Label2':
         'Thus square 1a is the upper leftmost square, while 9i is the bottom rightmost square.',
+    'shogiNotationPage2Headline': 'Shogi pieces',
+    'shogiNotationPage2Label1':
+        'Although Black and White\'s pieces are displayed on the board with upper case (K) and lower case (k) letters respectively, this has no bearing on the move notation which is always capitalized.',
+    'shogiNotationPage2Label2':
+        'The following pieces are often refered to by their Japanese names:',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
     'settingsTabDataPrivacyButtonText': 'Data Privacy',
