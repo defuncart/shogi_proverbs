@@ -31,4 +31,4 @@ The project isn't actively looking for contributors, however feel free to contac
 - Concept, Design and Programming by James Leahy.
 - All proverbs taken from *Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs)* by Masahiko Urano, in the form presented on Takako Tombo Noda's [website](http://www.shogi.net/kakugen/).
 
-Special thanks to [takodori](https://www.reddit.com/user/takodori/) who posted Shogi Playground diagrams on [Reddit](https://www.reddit.com/r/shogi/comments/822oda/diagram_updates_shogi_proverbs_with_commentaries/). These greatly aided in the quick integration of the board diagrams.
+Special thanks to [takodori](https://www.reddit.com/user/takodori/) whose Shogi Playground [diagrams](https://www.reddit.com/r/shogi/comments/822oda/diagram_updates_shogi_proverbs_with_commentaries/) greatly aided in the quick integration of board diagrams.

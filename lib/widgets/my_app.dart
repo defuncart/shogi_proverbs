@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
+      builder: (_, __) => Scaffold(
         body: FutureBuilder(
           future: _initAppFuture,
           // ignore: avoid_types_on_closure_parameters

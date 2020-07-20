@@ -9,24 +9,32 @@ onboardingPage1Label5;It is assumed that neither Mr. Noda nor Mr. Urano would ha
 onboardingPage2Headline;Personalizing your experience
 onboardingPage2Label1;These settings can be updated anytime in the settings menu.
 onboardingPage3Headline;Data privacy
-onboardingPage3Label11;By using this application, you agree to the terms and conditions stated in the 
-onboardingPage3Label12;privacy policy
-onboardingPage3Label13;.
-onboardingPage3Label2;No data is collected on how you use the app, nor is any data sent onto third parties.
-onboardingPage3Label31;Developed with 
-onboardingPage3Label32;\u2764
-onboardingPage3Label33; in Berlin. 
-onboardingPage3Label34;Source code
-onboardingPage3Label35;.
 onboardingPage3ContinueButtonText;Continue
 darkModePanelText;Dark Mode
 pieceSymbolPanelText;Piece Symbol
+dataPrivacyPanelLabel11;By using this application, you agree to the terms and conditions stated in the 
+dataPrivacyPanelLabel12;privacy policy
+dataPrivacyPanelLabel13;.
+dataPrivacyPanelLabel2;No data is collected on how you use the app, nor is any data sent onto third parties.
+developerPanelLabel11;Developed with 
+developerPanelLabel12;\u2764
+developerPanelLabel13; in Berlin. 
+developerPanelLabel14;Source code
+developerPanelLabel15;.
 homeScreenProversTabTitleText;Proverbs
 homeScreenSettingsTabTitleText;Settings
+settingsTabDataPrivacyButtonText;Data Privacy
+settingsTabCreditsButtonText;Credits
 settingsTabAboutButtonText;About
-aboutPopupText1;Concept, Design and Programming by James Leahy.
-aboutPopupText2;All content is taken from Takako Tombo Noda's website, which in turn contains translations of Masahiko Urano's book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).
-aboutPopupText3;Special thanks to takodori whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.
+dataPrivacyPopupTitle;Data privacy
+creditsPopupTitle;Credits
+creditsPopupLabel1;Concept, Design and Programming by James Leahy.
+creditsPopupLabel21;All proverbs are taken from Takako Tombo Noda's 
+creditsPopupLabel22;website
+creditsPopupLabel23;, which in turn contains translations of Masahiko Urano's book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).
+creditsPopupLabel31;Special thanks to 
+creditsPopupLabel32;takodori 
+creditsPopupLabel33; whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.
 proverbTypepieces;Individual pieces
 proverbTypeopening;Opening
 proverbTypemiddle;Middlegame
