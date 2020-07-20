@@ -11,6 +11,7 @@ import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/piece_symbol_panel.dart';
 import 'package:shogi_proverbs/widgets/home_screen/home_screen.dart';
 import 'package:shogi_proverbs/widgets/onboarding/onboarding_screen.dart';
+import 'package:shogi_proverbs/widgets/shogi_notation/shogi_notation_screen.dart';
 
 class MyApp extends StatefulWidget {
   @override
@@ -92,6 +93,7 @@ class _MyApp extends StatelessWidget {
           home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : OnboardingScreen(),
           routes: {
             RouteNames.homeScreen: (_) => HomeScreen(),
+            RouteNames.shogiNotationScreen: (_) => ShogiNotationScreen(),
           },
         ),
       ),

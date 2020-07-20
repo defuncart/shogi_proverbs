@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 class AppLocalizations {
   static String get appTitle => _getText('appTitle');
 
+  static String get generalShogiNotation => _getText('generalShogiNotation');
+
   static String get onboardingPage1Headline =>
       _getText('onboardingPage1Headline');
 
@@ -122,6 +124,7 @@ class AppLocalizations {
 
   static Map<String, String> _enValues = {
     'appTitle': 'Shogi Proverbs',
+    'generalShogiNotation': 'Shogi notation',
     'onboardingPage1Headline': 'Introduction',
     'onboardingPage1Label1':
         'Shogi (将棋) is a two-player strategy board game native to Japan, belonging to the same family as chess and xiangqi.',
