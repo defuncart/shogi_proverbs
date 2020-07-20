@@ -160,7 +160,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "77b1d2f82956b936bc74648174d4b25ba5d097c6"
+      resolved-ref: "4884b5eab2062bb8de430176bd9c55ff8af65a09"
       url: "https://github.com/defuncart/flutter_shogi_board"
     source: git
     version: "0.0.5"
@@ -354,7 +354,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "9e3701f1f2035c6c7c6c93ce902993dc43f14aff"
+      resolved-ref: "739fa5338765e1b5f532f70a8af1fa0a9a682460"
       url: "https://github.com/defuncart/shogi"
     source: git
     version: "0.0.3"
