@@ -61,6 +61,15 @@ class AppLocalizations {
 
   static String get developerPanelLabel15 => _getText('developerPanelLabel15');
 
+  static String get shogiNotationPage1Headline =>
+      _getText('shogiNotationPage1Headline');
+
+  static String get shogiNotationPage1Label1 =>
+      _getText('shogiNotationPage1Label1');
+
+  static String get shogiNotationPage1Label2 =>
+      _getText('shogiNotationPage1Label2');
+
   static String get homeScreenProversTabTitleText =>
       _getText('homeScreenProversTabTitleText');
 
@@ -154,6 +163,11 @@ class AppLocalizations {
     'developerPanelLabel13': ' in Berlin. ',
     'developerPanelLabel14': 'Source code',
     'developerPanelLabel15': '.',
+    'shogiNotationPage1Headline': 'Shogi board',
+    'shogiNotationPage1Label1':
+        'The shogi board contains 9 x 9 squares, which are labeled horizontally leftwards by 1 - 9 and vertically downwards by a - i.',
+    'shogiNotationPage1Label2':
+        'Thus square 1a is the upper leftmost square, while 9i is the bottom rightmost square.',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
     'settingsTabDataPrivacyButtonText': 'Data Privacy',
