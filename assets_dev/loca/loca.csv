@@ -1,5 +1,6 @@
 keys;en
 appTitle;Shogi Proverbs
+generalShogiNotation;Shogi Notation
 onboardingPage1Headline;Introduction
 onboardingPage1Label1;Shogi (将棋) is a two-player strategy board game native to Japan, belonging to the same family as chess and xiangqi.
 onboardingPage1Label2;Shogi proverbs are technical tips for the player to lead them in the right direction when they are unsure of what move to play.
@@ -21,8 +22,24 @@ developerPanelLabel12;\u2764
 developerPanelLabel13; in Berlin. 
 developerPanelLabel14;Source code
 developerPanelLabel15;.
+shogiNotationPage1Headline;Shogi board
+shogiNotationPage1Label1;The shogi board contains 9 x 9 squares, which are labeled horizontally leftwards by 1 - 9 and vertically downwards by a - i.
+shogiNotationPage1Label2;Thus square 1a is the upper leftmost square, while 9i is the bottom rightmost square.
+shogiNotationPage2Headline;Shogi pieces
+shogiNotationPage2Label1;Although Black and White's pieces are displayed on the board with upper case (K) and lower case (k) letters respectively, this has no bearing on the move notation which is always capitalized.
+shogiNotationPage2Label2;The following pieces are often refered to by their Japanese names:
+shogiNotationPage3Headline;Game moves
+shogiNotationPage3Label1;Game moves are denoted using the following notation:
+shogiNotationPage3Label2;Player is denoted by ☗ for black and ☖ for white.
+shogiNotationPage3Label3;Movement is denoted by -, x and * for simple movement, capture and drop, respectively.
+shogiNotationPage3Label4;If a move entitles the player to promote their piece, then promotion is denoted by +, while declined promotion is denoted by =. 
+shogiNotationPage4Headline;Example
+shogiNotationPage4Label1;Lets put all this into practice with a simple example. Diagram 1 shows the initial game board:
+shogiNotationPage4Label2;Diagram 2 shows the resulting game board after the following moves:
 homeScreenProversTabTitleText;Proverbs
 homeScreenSettingsTabTitleText;Settings
+askSeenTutorialPopupTitle;Shogi notation tutorial
+askSeenTutorialPopupDescription;Before reading your first proverb, would you like to view a short tutorial on shogi notation?
 settingsTabDataPrivacyButtonText;Data Privacy
 settingsTabCreditsButtonText;Credits
 settingsTabAboutButtonText;About
