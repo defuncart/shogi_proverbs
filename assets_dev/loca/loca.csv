@@ -38,6 +38,8 @@ shogiNotationPage4Label1;Lets put all this into practice with a simple example. 
 shogiNotationPage4Label2;Diagram 2 shows the resulting game board after the following moves:
 homeScreenProversTabTitleText;Proverbs
 homeScreenSettingsTabTitleText;Settings
+askSeenTutorialPopupTitle;Shogi notation tutorial
+askSeenTutorialPopupDescription;Before reading your first proverb, would you like to view a short tutorial on shogi notation?
 settingsTabDataPrivacyButtonText;Data Privacy
 settingsTabCreditsButtonText;Credits
 settingsTabAboutButtonText;About

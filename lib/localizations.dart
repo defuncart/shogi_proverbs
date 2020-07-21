@@ -109,6 +109,12 @@ class AppLocalizations {
   static String get homeScreenSettingsTabTitleText =>
       _getText('homeScreenSettingsTabTitleText');
 
+  static String get askSeenTutorialPopupTitle =>
+      _getText('askSeenTutorialPopupTitle');
+
+  static String get askSeenTutorialPopupDescription =>
+      _getText('askSeenTutorialPopupDescription');
+
   static String get settingsTabDataPrivacyButtonText =>
       _getText('settingsTabDataPrivacyButtonText');
 
@@ -222,6 +228,9 @@ class AppLocalizations {
         'Diagram 2 shows the resulting game board after the following moves:',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
+    'askSeenTutorialPopupTitle': 'Shogi notation tutorial',
+    'askSeenTutorialPopupDescription':
+        'Before reading your first proverb, would you like to view a short tutorial on shogi notation?',
     'settingsTabDataPrivacyButtonText': 'Data Privacy',
     'settingsTabCreditsButtonText': 'Credits',
     'settingsTabAboutButtonText': 'About',

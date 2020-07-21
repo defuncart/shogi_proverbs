@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:shogi_proverbs/configs/route_names.dart';
+import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/enums/proverb_type.dart';
+import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs_service.dart';
+import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/proverb_detail.dart';
 
 class ProverbsTab extends StatelessWidget {
@@ -20,16 +25,58 @@ class ProverbsTab extends StatelessWidget {
                 ListTile(
                   title: Text(proverb.title),
                   subtitle: Text(proverb.japaneseTitle),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => ProverbDetail(
-                        proverb: proverb,
-                      ),
-                    ),
-                  ),
+                  onTap: () async {
+                    if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
+                      final openTutorial = await showDialog(
+                        context: context,
+                        child: _AskSeenTutorialPopup(),
+                      );
+                      if (!openTutorial) {
+                        _openProverbDetail(proverb, context);
+                      } else {
+                        Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
+                      }
+                    } else {
+                      _openProverbDetail(proverb, context);
+                    }
+                  },
                 ),
             ],
           ),
+      ],
+    );
+  }
+
+  void _openProverbDetail(Proverb proverb, BuildContext context) => Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (_) => ProverbDetail(
+            proverb: proverb,
+          ),
+        ),
+      );
+}
+
+/// Returns true if user decides to see tutorial, otherwise false
+class _AskSeenTutorialPopup extends StatelessWidget {
+  const _AskSeenTutorialPopup({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: Text(AppLocalizations.askSeenTutorialPopupTitle),
+      content: Text(
+        AppLocalizations.askSeenTutorialPopupDescription,
+        textAlign: TextAlign.justify,
+      ),
+      actions: [
+        FlatButton(
+          child: Text(MaterialLocalizations.of(context).okButtonLabel),
+          onPressed: () => Navigator.of(context).pop(true),
+        ),
+        FlatButton(
+          child: Text(MaterialLocalizations.of(context).closeButtonLabel),
+          onPressed: () => Navigator.of(context).pop(false),
+        ),
       ],
     );
   }
