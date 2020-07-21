@@ -94,6 +94,15 @@ class AppLocalizations {
   static String get shogiNotationPage3Label4 =>
       _getText('shogiNotationPage3Label4');
 
+  static String get shogiNotationPage4Headline =>
+      _getText('shogiNotationPage4Headline');
+
+  static String get shogiNotationPage4Label1 =>
+      _getText('shogiNotationPage4Label1');
+
+  static String get shogiNotationPage4Label2 =>
+      _getText('shogiNotationPage4Label2');
+
   static String get homeScreenProversTabTitleText =>
       _getText('homeScreenProversTabTitleText');
 
@@ -206,6 +215,11 @@ class AppLocalizations {
         'Movement is denoted by -, x and * for simple movement, capture and drop, respectively.',
     'shogiNotationPage3Label4':
         'If a move entitles the player to promote their piece, then promotion is denoted by +, while declined promotion is denoted by =. ',
+    'shogiNotationPage4Headline': 'Example',
+    'shogiNotationPage4Label1':
+        'Lets put all this into practice with a simple example. Diagram 1 shows the initial game board:',
+    'shogiNotationPage4Label2':
+        'Diagram 2 shows the resulting game board after the following moves:',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
     'settingsTabDataPrivacyButtonText': 'Data Privacy',
