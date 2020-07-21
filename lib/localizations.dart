@@ -166,7 +166,7 @@ class AppLocalizations {
 
   static Map<String, String> _enValues = {
     'appTitle': 'Shogi Proverbs',
-    'generalShogiNotation': 'Shogi notation',
+    'generalShogiNotation': 'Shogi Notation',
     'onboardingPage1Headline': 'Introduction',
     'onboardingPage1Label1':
         'Shogi (将棋) is a two-player strategy board game native to Japan, belonging to the same family as chess and xiangqi.',
