@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/external_links.dart';
+import 'package:shogi_proverbs/configs/route_names.dart';
 import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/widgets/common/buttons/custom_button.dart';
 import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
@@ -25,6 +26,13 @@ class SettingsTab extends StatelessWidget {
               DarkModePanel(),
               SizedBox(height: 16.0),
               PieceSymbolPanel(),
+              SizedBox(height: 16.0),
+              Center(
+                child: CustomButton(
+                  label: AppLocalizations.generalShogiNotation,
+                  onPressed: () => Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen),
+                ),
+              ),
               SizedBox(height: 16.0),
               Center(
                 child: CustomButton(

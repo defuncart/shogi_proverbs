@@ -38,6 +38,12 @@ class SettingsDatabase implements ISettingsDatabase {
   @override
   set hasSeenOnboarding(bool value) => _box.put(_Keys.hasSeenOnboarding, value);
 
+  /// Returns whether the user has seen the tutorial
+  bool get hasSeenTutorial => _box.get(_Keys.hasSeenTutorial, defaultValue: _Defaults.hasSeenTutorial);
+
+  /// Sets whether the user has seen the tutorial
+  set hasSeenTutorial(bool value) => _box.put(_Keys.hasSeenTutorial, value);
+
   /// Initializes the database
   @override
   Future<void> initialize() async {
@@ -61,6 +67,7 @@ class _Keys {
   static const isDarkMode = 'isDarkMode';
   static const selectedPieceSymbol = 'selectedPieceSymbol';
   static const hasSeenOnboarding = 'hasSeenOnboarding';
+  static const hasSeenTutorial = 'hasSeenTutorial';
 }
 
 /// A class of defaults for each key
@@ -68,4 +75,5 @@ class _Defaults {
   static const isDarkMode = false;
   static const selectedPieceSymbol = 1;
   static const hasSeenOnboarding = false;
+  static const hasSeenTutorial = false;
 }

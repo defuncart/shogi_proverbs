@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-/// A foundation for which all onboarding pages can use
-class OnboardingPage extends StatelessWidget {
+/// A foundation for which pages of PageViewWithIndicators can use
+class ContentPage extends StatelessWidget {
   final String headline;
   final Widget content;
 
-  const OnboardingPage({
+  const ContentPage({
     Key key,
     @required this.headline,
     @required this.content,
@@ -21,17 +21,21 @@ class OnboardingPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 16.0),
+            Container(height: 16.0),
             Text(
               headline,
               textAlign: TextAlign.justify,
               style: Theme.of(context).textTheme.bodyText1,
             ),
-            SizedBox(height: 32.0),
+            Container(height: 32.0),
             //content
-            content,
+            DefaultTextStyle(
+              style: Theme.of(context).textTheme.bodyText2,
+              textAlign: TextAlign.justify,
+              child: content,
+            ),
             //content
-            SizedBox(height: 8.0),
+            Container(height: 8.0),
           ],
         ),
       ),

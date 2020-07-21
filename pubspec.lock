@@ -354,7 +354,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: d2aa3930796eb8d41490b0def4a1b4ef34369351
+      resolved-ref: "739fa5338765e1b5f532f70a8af1fa0a9a682460"
       url: "https://github.com/defuncart/shogi"
     source: git
     version: "0.0.3"

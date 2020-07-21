@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 class AppLocalizations {
   static String get appTitle => _getText('appTitle');
 
+  static String get generalShogiNotation => _getText('generalShogiNotation');
+
   static String get onboardingPage1Headline =>
       _getText('onboardingPage1Headline');
 
@@ -59,11 +61,59 @@ class AppLocalizations {
 
   static String get developerPanelLabel15 => _getText('developerPanelLabel15');
 
+  static String get shogiNotationPage1Headline =>
+      _getText('shogiNotationPage1Headline');
+
+  static String get shogiNotationPage1Label1 =>
+      _getText('shogiNotationPage1Label1');
+
+  static String get shogiNotationPage1Label2 =>
+      _getText('shogiNotationPage1Label2');
+
+  static String get shogiNotationPage2Headline =>
+      _getText('shogiNotationPage2Headline');
+
+  static String get shogiNotationPage2Label1 =>
+      _getText('shogiNotationPage2Label1');
+
+  static String get shogiNotationPage2Label2 =>
+      _getText('shogiNotationPage2Label2');
+
+  static String get shogiNotationPage3Headline =>
+      _getText('shogiNotationPage3Headline');
+
+  static String get shogiNotationPage3Label1 =>
+      _getText('shogiNotationPage3Label1');
+
+  static String get shogiNotationPage3Label2 =>
+      _getText('shogiNotationPage3Label2');
+
+  static String get shogiNotationPage3Label3 =>
+      _getText('shogiNotationPage3Label3');
+
+  static String get shogiNotationPage3Label4 =>
+      _getText('shogiNotationPage3Label4');
+
+  static String get shogiNotationPage4Headline =>
+      _getText('shogiNotationPage4Headline');
+
+  static String get shogiNotationPage4Label1 =>
+      _getText('shogiNotationPage4Label1');
+
+  static String get shogiNotationPage4Label2 =>
+      _getText('shogiNotationPage4Label2');
+
   static String get homeScreenProversTabTitleText =>
       _getText('homeScreenProversTabTitleText');
 
   static String get homeScreenSettingsTabTitleText =>
       _getText('homeScreenSettingsTabTitleText');
+
+  static String get askSeenTutorialPopupTitle =>
+      _getText('askSeenTutorialPopupTitle');
+
+  static String get askSeenTutorialPopupDescription =>
+      _getText('askSeenTutorialPopupDescription');
 
   static String get settingsTabDataPrivacyButtonText =>
       _getText('settingsTabDataPrivacyButtonText');
@@ -106,6 +156,7 @@ class AppLocalizations {
 
   static Map<String, String> _enValues = {
     'appTitle': 'Shogi Proverbs',
+    'generalShogiNotation': 'Shogi Notation',
     'onboardingPage1Headline': 'Introduction',
     'onboardingPage1Label1':
         'Shogi (将棋) is a two-player strategy board game native to Japan, belonging to the same family as chess and xiangqi.',
@@ -135,8 +186,35 @@ class AppLocalizations {
     'developerPanelLabel13': ' in Berlin. ',
     'developerPanelLabel14': 'Source code',
     'developerPanelLabel15': '.',
+    'shogiNotationPage1Headline': 'Shogi board',
+    'shogiNotationPage1Label1':
+        'The shogi board contains 9 x 9 squares, which are labeled horizontally leftwards by 1 - 9 and vertically downwards by a - i.',
+    'shogiNotationPage1Label2':
+        'Thus square 1a is the upper leftmost square, while 9i is the bottom rightmost square.',
+    'shogiNotationPage2Headline': 'Shogi pieces',
+    'shogiNotationPage2Label1':
+        'Although Black and White\'s pieces are displayed on the board with upper case (K) and lower case (k) letters respectively, this has no bearing on the move notation which is always capitalized.',
+    'shogiNotationPage2Label2':
+        'The following pieces are often refered to by their Japanese names:',
+    'shogiNotationPage3Headline': 'Game moves',
+    'shogiNotationPage3Label1':
+        'Game moves are denoted using the following notation:',
+    'shogiNotationPage3Label2':
+        'Player is denoted by ☗ for black and ☖ for white.',
+    'shogiNotationPage3Label3':
+        'Movement is denoted by -, x and * for simple movement, capture and drop, respectively.',
+    'shogiNotationPage3Label4':
+        'If a move entitles the player to promote their piece, then promotion is denoted by +, while declined promotion is denoted by =. ',
+    'shogiNotationPage4Headline': 'Example',
+    'shogiNotationPage4Label1':
+        'Lets put all this into practice with a simple example. Diagram 1 shows the initial game board:',
+    'shogiNotationPage4Label2':
+        'Diagram 2 shows the resulting game board after the following moves:',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
+    'askSeenTutorialPopupTitle': 'Shogi notation tutorial',
+    'askSeenTutorialPopupDescription':
+        'Before reading your first proverb, would you like to view a short tutorial on shogi notation?',
     'settingsTabDataPrivacyButtonText': 'Data Privacy',
     'settingsTabCreditsButtonText': 'Credits',
     'settingsTabAboutButtonText': 'About',
