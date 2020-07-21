@@ -18,6 +18,12 @@ abstract class ISettingsDatabase {
   /// Sets whether the user has seen onboarding
   set hasSeenOnboarding(bool value);
 
+  /// Returns whether the user has seen the tutorial
+  bool get hasSeenTutorial;
+
+  /// Sets whether the user has seen the tutorial
+  set hasSeenTutorial(bool value);
+
   /// Initializes the database
   Future<void> initialize();
 
