@@ -79,6 +79,21 @@ class AppLocalizations {
   static String get shogiNotationPage2Label2 =>
       _getText('shogiNotationPage2Label2');
 
+  static String get shogiNotationPage3Headline =>
+      _getText('shogiNotationPage3Headline');
+
+  static String get shogiNotationPage3Label1 =>
+      _getText('shogiNotationPage3Label1');
+
+  static String get shogiNotationPage3Label2 =>
+      _getText('shogiNotationPage3Label2');
+
+  static String get shogiNotationPage3Label3 =>
+      _getText('shogiNotationPage3Label3');
+
+  static String get shogiNotationPage3Label4 =>
+      _getText('shogiNotationPage3Label4');
+
   static String get homeScreenProversTabTitleText =>
       _getText('homeScreenProversTabTitleText');
 
@@ -182,6 +197,15 @@ class AppLocalizations {
         'Although Black and White\'s pieces are displayed on the board with upper case (K) and lower case (k) letters respectively, this has no bearing on the move notation which is always capitalized.',
     'shogiNotationPage2Label2':
         'The following pieces are often refered to by their Japanese names:',
+    'shogiNotationPage3Headline': 'Game moves',
+    'shogiNotationPage3Label1':
+        'Game moves are denoted using the following notation:',
+    'shogiNotationPage3Label2':
+        'Player is denoted by ☗ for black and ☖ for white.',
+    'shogiNotationPage3Label3':
+        'Movement is denoted by -, x and * for simple movement, capture and drop, respectively.',
+    'shogiNotationPage3Label4':
+        'If a move entitles the player to promote their piece, then promotion is denoted by +, while declined promotion is denoted by =. ',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
     'settingsTabDataPrivacyButtonText': 'Data Privacy',
