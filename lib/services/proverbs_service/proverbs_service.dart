@@ -4,6 +4,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pie
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/knight_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/lance_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/pawn_proverbs.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/silver_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/tokin_proverbs.dart';
 
 /// A service to handle proverbs
@@ -13,7 +14,7 @@ class ProverbsService {
       ...pawnProverbs,
       ...lanceProverbs,
       ...knightProverbs,
-      // TODO silver
+      ...silverProverbs,
       // TODO gold
       // TODO bishop
       ...dragonProverbs,
