@@ -27,6 +27,7 @@ class ProverbsTab extends StatelessWidget {
                   subtitle: Text(proverb.japaneseTitle),
                   onTap: () async {
                     if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
+                      DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
                       final openTutorial = await showDialog(
                         context: context,
                         child: _AskViewTutorialPopup(),
