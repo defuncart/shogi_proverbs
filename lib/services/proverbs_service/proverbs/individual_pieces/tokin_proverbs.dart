@@ -85,7 +85,7 @@ final tokinProverbs = [
             moves: [
               'S*7a',
               'Gx7a',
-              'Sx7a',
+              'Sx7a=',
               'Kx7a',
               'G*6b',
             ],
