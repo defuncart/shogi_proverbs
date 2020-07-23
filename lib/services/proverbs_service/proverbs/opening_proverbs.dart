@@ -6,7 +6,7 @@ import 'package:shogi_proverbs/models/sections/diagram.dart';
 import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
-/// Proverbs for opening section of ProverbType.pieces
+/// Proverbs for ProverbType.opening
 final openingProverbs = [
   Proverb(
     title: 'Avoid a Sitting King',
