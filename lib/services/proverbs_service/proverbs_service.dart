@@ -21,6 +21,7 @@ class ProverbsService {
       ...dragonProverbs,
       ...tokinProverbs,
     ],
+    // ProverbType.opening: openingProverbs,
   };
 
   /// A map of ProverbType to a list of proverbs
