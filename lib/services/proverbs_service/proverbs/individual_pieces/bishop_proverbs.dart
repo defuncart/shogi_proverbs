@@ -16,7 +16,7 @@ final bishopProverbs = [
       Page(
         sections: [
           Diagram(
-            sfenString: '',
+            sfenString: 'ln1g1k1nl/1r3sg2/p2psp1pp/1pp3p2/4b4/2PP5/PPSG1PPPP/1BG2S1R1/LN2K2NL b pP',
             label: 'Diagram 1',
           ),
           Paragraph(
@@ -70,7 +70,7 @@ final bishopProverbs = [
                 "Another example to show you how vital the Bishop's position can be when you are about to move into the middlegame.",
           ),
           Diagram(
-            sfenString: '',
+            sfenString: 'ln4knl/4r1g2/p1bpsgspp/2p1ppp2/1p5P1/2PPPSP2/PPSG1PN1P/1KGB3R1/LN6L b -',
             label: 'Diagram 2',
           ),
           Paragraph(
@@ -82,7 +82,7 @@ final bishopProverbs = [
                 "On the other hand, the Bishop pulled to 4b (Diagram 3) is for applying pressure on Black's King, therefore an offensive move.",
           ),
           Diagram(
-            sfenString: '',
+            sfenString: 'ln5nl/1r3bgk1/p2p1gspp/1sp1ppp2/1p7/2PPPSPP1/PPSG1PN1P/1KGB3R1/LN6L b -',
             label: 'Diagram 3',
           ),
           Paragraph(
@@ -99,10 +99,10 @@ final bishopProverbs = [
           ),
           Paragraph(
             text:
-                'Diagram 4 shows where White has just opened the way for the opening called Masuda-style Ishida-ryu opening.',
+                'Diagram 4 (last move K-6h) shows where White has just opened the way for the opening called Masuda-style Ishida-ryu opening.',
           ),
           Diagram(
-            sfenString: '',
+            sfenString: 'lnsgkgsnl/6rb1/pppppp1pp/9/6pP1/2P6/PP1PPPP1P/1B1K3R1/LNSG1GSNL w -',
             label: 'Diagram 4',
           ),
           Paragraph(
@@ -110,7 +110,7 @@ final bishopProverbs = [
                 "From Diagram 4, White can play P-3f. Then there will be a Bishop-exchange followed by White's B*5e (Diagram 5). You may think White has gained the lead.",
           ),
           Diagram(
-            sfenString: '',
+            sfenString: 'lnsgkgsnl/6r2/pppppp1pp/9/4b2P1/2P3P2/PP1PPP2P/1S1K3R1/LN1G1GSNL b BP',
             label: 'Diagram 5',
           ),
           Paragraph(
@@ -136,7 +136,7 @@ final bishopProverbs = [
             playerFirstMove: PlayerType.sente,
           ),
           Diagram(
-            sfenString: '',
+            sfenString: 'lnsgkg1nl/6rs1/pppppp1pp/9/3B3P1/2P3P2/PPBPPP2P/1S1K3S1/LN1G1G1NL w Pr',
             label: 'Diagram 6',
           ),
           Paragraph(
