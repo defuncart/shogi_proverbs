@@ -136,7 +136,7 @@ final silverProverbs = [
           ),
           Paragraph(
             text:
-                'Diagram 1 (last move N*2d) shows where White has just dropped a Knight on 2d. It may not seem particularly alarming, but is in fact a threatmate, starting from N*3f. Black has to prevent that, but how?',
+                'Diagram 1 shows where White has just dropped a Knight on 2d. It may not seem particularly alarming, but is in fact a threatmate, starting from N*3f. Black has to prevent that, but how?',
           ),
           Paragraph(
             text:

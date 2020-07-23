@@ -1,5 +1,6 @@
 import 'package:shogi_proverbs/enums/proverb_type.dart';
 import 'package:shogi_proverbs/models/proverb.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/bishop_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/dragon_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/knight_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/lance_proverbs.dart';
@@ -16,7 +17,7 @@ class ProverbsService {
       ...knightProverbs,
       ...silverProverbs,
       // TODO gold
-      // TODO bishop
+      ...bishopProverbs,
       ...dragonProverbs,
       ...tokinProverbs,
     ],
