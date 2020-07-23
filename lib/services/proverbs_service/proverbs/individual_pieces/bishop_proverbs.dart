@@ -151,4 +151,129 @@ final bishopProverbs = [
       ),
     ],
   ),
+  Proverb(
+    title: 'Oppose Bishop with Bishop',
+    japaneseTitle: 'Kaku niwa Kaku',
+    type: ProverbType.pieces,
+    pages: [
+      Page(
+        sections: [
+          Paragraph(
+            text:
+                'When attacked by a Bishop drop, you can often kill exactly the same threat that your opponent aims at.',
+          ),
+          Diagram(
+            sfenString: 'ln1g3+Rl/1ks1g4/1pp1ps2p/p2p2p2/7N1/P1P1P1P2/1P1P4P/1bKSGS3/LN1G3rL b BN2P2p',
+            label: 'Diagram 1',
+          ),
+          Paragraph(
+            text:
+                'Diagram 1 shows White, who has already forfeited a Knight, has just dropped a Bishop on 8h. A daring move. Kx8h would only invite White to play Rx6i+, which would be too devastating for Black. When left unattended, White will play Bx9i+, promoting the Bishop on a very good square on top of taking a Lance.',
+          ),
+          Paragraph(
+            text: 'Moves from Diagram 1:',
+          ),
+          MoveSequence(
+            moves: [
+              'B*7g',
+              'Bx7g+',
+              'Sx7g',
+            ],
+            playerFirstMove: PlayerType.sente,
+          ),
+          Paragraph(
+            text:
+                'B*7g is the move to play. White has nothing else but play Bx7g+, after which Black can play Sx7g making everything AOK.',
+          ),
+          Diagram(
+            sfenString: '9/9/9/9/4b4/P1P3P2/1P1P2N1P/2K1GS3/LNSG3rL b B',
+            label: 'Diagram 2',
+          ),
+          Paragraph(
+            text:
+                'B*5e in Diagram 2 can be a dangerous move. If you play either S8h or N7g, it will only allow White to play Bx8h or Bx7g so that he can next play Rx6i+.',
+          ),
+          Paragraph(
+            text: 'You should know the right move to play by now. Yes, B*8h.',
+          ),
+          Paragraph(
+            text:
+                'What if White plays B*5e again after Bx8h+, Sx8h? Again Bishop for Bishop will apply: B*7g. Then there will follow: Bx7g, Sx7g. See? Now you don\'t even have a "wall Silver" problem, which might be the cause of embarrassment at a later stage.',
+          ),
+        ],
+      ),
+      Page(
+        sections: [
+          Paragraph(
+            text:
+                'Let me present a position from a Kaku-gawari (Exchanging Bishops opening) game. You will see how the proverb is put to use in an actual game.',
+          ),
+          Diagram(
+            sfenString: 'ln1gk2nl/1r4g2/p1spppspp/2p1b1p2/1p5PS/2P6/PPSPPPP1P/2G4R1/LN2KG1NL b B',
+            label: 'Diagram 3',
+          ),
+          Paragraph(
+            text:
+                "Diagram 3 shows where White, in an attempt to cope with Black's bo-gin (climbing Silver), has just dropped a Bishop on 5d. If P2d, Px2d, Sx2d as Black intends to play, White can then drop a Pawn on 2g blocking the Rook's path.",
+          ),
+          Paragraph(
+            text: 'So, the move Black should play in Diagram 3 is...?',
+          ),
+          MoveSequence(
+            moves: [
+              'B*3h',
+            ],
+            playerFirstMove: PlayerType.sente,
+          ),
+          Paragraph(
+            text:
+                'B*3h in response to B*5d. This was first played by Kozo Masuda in 1955, and now is the move you should know (joseki) when playing bo-gin.',
+          ),
+          Paragraph(
+            text: 'Moves from Diagram 3:',
+          ),
+          MoveSequence(
+            moves: [
+              'B*3h',
+              'P-1d',
+              'P-2d',
+              'Px2d',
+              'Sx2d',
+              'P*2g',
+            ],
+            playerFirstMove: PlayerType.sente,
+          ),
+          Paragraph(
+            text:
+                "You don't have to worry about your Silver being repelled by White's P1d. You can keep your offense along the second file. What if White plays P*2g? Calm down, this is where you have to keep your cool.",
+          ),
+          Paragraph(
+            text: 'Moves thereafter:',
+          ),
+          MoveSequence(
+            moves: [
+              'Bx2g',
+              'Sx2d',
+              'Bx5d',
+              'Px5d',
+              'Rx2d',
+            ],
+            playerFirstMove: PlayerType.sente,
+          ),
+          Diagram(
+            sfenString: 'ln1gk2nl/1r4g2/p1sp1p3/2p1p1pRp/1p7/2P6/PPSPPPP1P/2G6/LN2KG1NL w BS2Pbs',
+            label: 'Diagram 4',
+          ),
+          Paragraph(
+            text:
+                "After your Bx2g White will take your Silver on 2d, apparently for free, but you can take White's Silver back by playing Bx5d and Rx2d.",
+          ),
+          Paragraph(
+            text:
+                'Look at Diagram 4. White has no Pawn in hand, which means it will not be easy for White to defend the second file. Having "Bishop for Bishop" well applied, Black has a very good position here.',
+          ),
+        ],
+      ),
+    ],
+  ),
 ];
