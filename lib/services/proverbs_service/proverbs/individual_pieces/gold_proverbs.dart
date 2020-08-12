@@ -241,4 +241,107 @@ final goldProverbs = [
       ),
     ],
   ),
+  Proverb(
+    title: 'The Gold pulled back is bound to be a good move',
+    japaneseTitle: 'Kin wa hiku te ni koshu ari',
+    type: ProverbType.pieces,
+    pages: [
+      Page(
+        sections: [
+          Paragraph(
+            text:
+                'Pull back your Gold on the back rank, and your defense will be stronger. Sometimes it may turn out to be a better move than you expect.',
+          ),
+          Paragraph(
+            text:
+                'Diagram 1 (last move P-8d) is from a title match by professional players. How would you play here as Black?',
+          ),
+          Diagram(
+            sfenString: 'ln1g4l/1ks3g2/2pp1pnp1/pp1sp1r1p/6pP1/P1PSPP2P/1P1P1SP2/2KG2GR1/LN5NL b Bb',
+            label: 'Diagram 1',
+          ),
+          Paragraph(
+            text:
+                "Black played G-3i, anticipating a Rook exchange. Then he moved the Gold onto 4i, thereby strengthening his defense. There followed a flamboyant show of exchanging both Rooks and Bishops (Diagram 2). The position is well-balanced, but take note that Black's camp allows no space for a Rook drop.",
+          ),
+          Diagram(
+            sfenString: 'ln1g4l/1ks6/3p2n2/ppps2g1p/4P1pp1/P2S1p2P/1PPP5/2KG2S2/LN3G1NL b RB2Prb2p',
+            label: 'Diagram 2',
+          ),
+          Paragraph(
+            text:
+                'Below is another example in which the maxim in question was put to good use. Unlike above, this is a joseki position in the central Rook against static Rook opening.',
+          ),
+          Diagram(
+            sfenString: 'ln3g1nl/2r1gskb1/p3sp1p1/2ppp1p1p/1p7/2PPPP2P/PPBS2PP1/2G1R1SK1/LN3G1NL b -',
+            label: 'Diagram 3',
+          ),
+          Paragraph(
+            text: 'Moves from Diagram 3:',
+          ),
+          MoveSequence(
+            moves: [
+              'G-7i',
+              'P-7e',
+              'Px7e',
+              'Rx7e',
+              'R-7h',
+            ],
+            playerFirstMove: PlayerType.sente,
+          ),
+          Diagram(
+            sfenString: 'ln3g1nl/4gskb1/p3sp1p1/3pp1p1p/1pr6/3PPP2P/PPBS2PP1/2R3SK1/LNG2G1NL w Pp',
+            label: 'Diagram 4',
+          ),
+          Paragraph(
+            text:
+                "G-7i is exactly what the proverb teaches: to mend the unguarded space, which was at the same time preparing for Black's own Rook to come to 7h. Therefore, this was the best move to play here. Diagram 4 shows that Black has nothing to worry about in case of a Rook exchange. He/she can next play P-6e or B-8h, thereby taking the initiative of the game.",
+          ),
+        ],
+      ),
+      Page(
+        sections: [
+          Paragraph(
+            text:
+                'Diagram 5 (last mvoe R*3h) shows White has just dropped a Rook in your camp. Your yagura-castle is still intact, but you cannot be too optimistic about that, since White still has a Rook and a Silver in hand.',
+          ),
+          Diagram(
+            sfenString: '9/9/9/9/9/2PPP4/PPSG2b2/1KG3r2/LN7 b rs',
+            label: 'Diagram 5',
+          ),
+          Paragraph(
+            text:
+                'White will next play Rx7h, to which Black will have to respond with Kx7h. Then there will follow S*6i, Kx6i, R*4i, which will practically finish the game (Diagram 6).',
+          ),
+          Diagram(
+            sfenString: '9/9/9/9/9/2PPP4/PPSG2b2/9/LN1K1r3 b RSg',
+            label: 'Diagram 6',
+          ),
+          Paragraph(
+            text: "From Diagram 6, Black's K-7h won't do. G*7i will end the game.",
+          ),
+          Paragraph(
+            text: 'Back in Diagram 5, there is one move you can play to get yourself out of danger, which is...?',
+          ),
+          MoveSequence(
+            moves: [
+              'G6g-6h',
+            ],
+            playerFirstMove: PlayerType.gote,
+          ),
+          Paragraph(
+            text:
+                'By placing two Golds side by side to guard your King, you can buy time. In the yagura-opening, you are supposed to place your Gold on 6g, but when you get into the endgame, the Gold had better be on 6h for the defense.',
+          ),
+          Paragraph(
+            text:
+                'I might add that S-6h instead of G6g-6h is less preferable, even if it may appear to be similar in effect. There is a well-known endgame tesuji against the Yagura: S*6i, to which S-6h is hardly well-prepared.',
+          ),
+          Paragraph(
+            text: 'Just remember that a Gold functions better when sitting in the back rank.',
+          ),
+        ],
+      ),
+    ],
+  ),
 ];
