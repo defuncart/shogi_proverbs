@@ -27,9 +27,10 @@ class ProverbsTab extends StatelessWidget {
                   subtitle: Text(proverb.japaneseTitle),
                   onTap: () async {
                     if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
+                      DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
                       final openTutorial = await showDialog(
                         context: context,
-                        child: _AskSeenTutorialPopup(),
+                        child: _AskViewTutorialPopup(),
                       );
                       if (!openTutorial) {
                         _openProverbDetail(proverb, context);
@@ -57,8 +58,8 @@ class ProverbsTab extends StatelessWidget {
 }
 
 /// Returns true if user decides to see tutorial, otherwise false
-class _AskSeenTutorialPopup extends StatelessWidget {
-  const _AskSeenTutorialPopup({Key key}) : super(key: key);
+class _AskViewTutorialPopup extends StatelessWidget {
+  const _AskViewTutorialPopup({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

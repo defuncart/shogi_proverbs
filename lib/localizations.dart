@@ -142,23 +142,7 @@ class AppLocalizations {
 
   static String get creditsPopupLabel33 => _getText('creditsPopupLabel33');
 
-  static String get proverbTypepawn => _getText('proverbTypepawn');
-
-  static String get proverbTypelance => _getText('proverbTypelance');
-
-  static String get proverbTypeknight => _getText('proverbTypeknight');
-
-  static String get proverbTypesilver => _getText('proverbTypesilver');
-
-  static String get proverbTypegold => _getText('proverbTypegold');
-
-  static String get proverbTypebishop => _getText('proverbTypebishop');
-
-  static String get proverbTypehorse => _getText('proverbTypehorse');
-
-  static String get proverbTypedragon => _getText('proverbTypedragon');
-
-  static String get proverbTypetokin => _getText('proverbTypetokin');
+  static String get proverbTypepieces => _getText('proverbTypepieces');
 
   static String get proverbTypeopening => _getText('proverbTypeopening');
 
@@ -245,15 +229,7 @@ class AppLocalizations {
     'creditsPopupLabel32': 'takodori ',
     'creditsPopupLabel33':
         ' whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.',
-    'proverbTypepawn': 'Pawn',
-    'proverbTypelance': 'Lance',
-    'proverbTypeknight': 'Knight',
-    'proverbTypesilver': 'Silver',
-    'proverbTypegold': 'Gold',
-    'proverbTypebishop': 'Bishop',
-    'proverbTypehorse': 'Horse',
-    'proverbTypedragon': 'Dragon',
-    'proverbTypetokin': 'Tokin',
+    'proverbTypepieces': 'Individual pieces',
     'proverbTypeopening': 'Opening',
     'proverbTypemiddle': 'Middlegame',
     'proverbTypeend': 'Endgame',

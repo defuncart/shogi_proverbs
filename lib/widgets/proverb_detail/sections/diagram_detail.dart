@@ -25,7 +25,12 @@ class DiagramDetail extends StatelessWidget {
             Column(
               children: <Widget>[
                 Container(height: 4),
-                Text(diagram.label),
+                Text(
+                  diagram.label,
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
               ],
             ),
         ],

@@ -52,15 +52,7 @@ creditsPopupLabel23;, which in turn contains translations of Masahiko Urano's bo
 creditsPopupLabel31;Special thanks to 
 creditsPopupLabel32;takodori 
 creditsPopupLabel33; whose Shogi Playground diagrams greatly aided in the quick integration of board diagrams.
-proverbTypepawn;Pawn
-proverbTypelance;Lance
-proverbTypeknight;Knight
-proverbTypesilver;Silver
-proverbTypegold;Gold
-proverbTypebishop;Bishop
-proverbTypehorse;Horse
-proverbTypedragon;Dragon
-proverbTypetokin;Tokin
+proverbTypepieces;Individual pieces
 proverbTypeopening;Opening
 proverbTypemiddle;Middlegame
 proverbTypeend;Endgame
