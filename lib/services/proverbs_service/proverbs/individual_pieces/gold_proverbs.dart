@@ -344,4 +344,84 @@ final goldProverbs = [
       ),
     ],
   ),
+  Proverb(
+    title: 'With Gold and Silver Reversed (Gold above Silver), You Are Bound To Get Trouble',
+    japaneseTitle: 'Kin gin no gyakkei wa akkei nari',
+    type: ProverbType.pieces,
+    pages: [
+      Page(
+        sections: [
+          Paragraph(
+            text: 'A Silver above a Gold is the normal shape.',
+          ),
+          Diagram(
+            sfenString: 'ln7/1kg6/1spg5/pp1pp4/2P6/PPSPP4/2BG5/1KG6/LN7 w -',
+            label: 'Diagram 1',
+          ),
+          Paragraph(
+            text:
+                'In Diagram 1, Black has assumed the vanguard Pawn at the head of the King. Since the Silver is above the Gold, they connect and have good shape.',
+          ),
+          Diagram(
+            sfenString: 'ln7/1kg6/1spg5/pp1pp4/2P6/PPGPP4/2BG5/1KS6/LN7 w -',
+            label: 'Diagram 2',
+          ),
+          Paragraph(
+            text:
+                'If a Gold is placed above instead of a Silver, as in Diagram 2, this is what is called akkei (bad shape). The King may appear to be guarded by three Generals, but it is hardly safe. Firstly, the Generals are not so well connected with each other as in Diagram 1. Secondly, the 7i square is not covered by either General, which means the whole castle can be quite useless when White attacks from the side with a Rook dropped on the first rank.',
+          ),
+          Diagram(
+            sfenString: 'ln7/1kg6/1spg5/pp1pp4/2P6/PPGPP4/2BS5/1KG6/LN7 w -',
+            label: 'Diagram 3',
+          ),
+          Paragraph(
+            text:
+                'In Diagram 3, a Silver is on 6g instead of 7h and a Gold on 7h instead of 6g. This is a little better than Diagram 2. But in view of the function of Generals, the one on the upper front should be the Silver, since it is the piece with which you act on your first offensive.',
+          ),
+          Paragraph(
+            text:
+                'Now, we will look into how the Pawn-exchange on the 6th file will further affect the already ill-shaped formation.',
+          ),
+          Paragraph(
+            text:
+                "From Diagram 1, you can play: P-6e, Px6e, Sx6e, P*6d, S-7f. No problem resulted from the exchange. From Diagram 3, however, if you play likewise: P-6e, Px6e, Gx6e, P*6d, G-6f, your Gold will end up blocking your own Bishop's path. You will have to play an extra move, G-7f, to fix the bad shape.",
+          ),
+          Paragraph(
+            text:
+                'As there are exceptions to every rule, "Silver on top of Gold" can work against you at times, but more often it will lead you to the right track. That\'s what the basics are all about.',
+          ),
+        ],
+      ),
+      Page(
+        sections: [
+          Diagram(
+            sfenString: 'l8/1r7/2np5/2pbp4/pp7/2PPP4/PPSG5/1KG6/LN7 w p',
+            label: 'Diagram 4',
+          ),
+          Paragraph(
+            text:
+                'Diagram 4 shows the Yagura castle, Kin-Yagura to be exact, which is known to be sturdy when attacked from above. Diagram 5 is a variation in which the Silver is on 6g instead of 7g, where the Gold was in Diagram 4. You may find the two Golds, one on top of another along the 7th file, sufficiently tight. You might also notice that the Gold on 7h is doubly secured, i.e., by the Gold on 7g and the Silver on 6g. But there is a deadly defect here. Let me show you by means of how White plays from this position.',
+          ),
+          Diagram(
+            sfenString: 'l8/1r7/2np5/2pbp4/pp7/2PPP4/PPGS5/1KG6/LN7 w p',
+            label: 'Diagram 5',
+          ),
+          MoveSequence(
+            moves: [
+              'P-8f',
+            ],
+            playerFirstMove: PlayerType.gote,
+          ),
+          Paragraph(
+            text:
+                "When Black responds with Px8f, White will next play P*8e. If Gx8f instead, White's P*8e will be even more devastating.",
+          ),
+          Paragraph(
+            text:
+                "Look at Diagram 1 again. You will see White's P-8f is nothing to fear. You can play Sx8f. When White plays P*8e, you can pull your Silver back to 7g, which will demonstrate one major difference between a Silver and a Gold. Let me add, though, in the endgame when your Silver is no longer on 7g, the Gold on 6g should be moved to G7g to protect the King. With your two Golds on 7g and 7h, your opponent should have a hard time working out a threatmate.",
+          ),
+        ],
+      ),
+    ],
+  ),
 ];
