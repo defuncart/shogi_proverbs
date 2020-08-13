@@ -3,6 +3,7 @@ import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/bishop_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/dragon_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/gold_proverbs.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/horse_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/knight_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/lance_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/pawn_proverbs.dart';
@@ -19,7 +20,7 @@ class ProverbsService {
       ...silverProverbs,
       ...goldProverbs,
       ...bishopProverbs,
-      // TODO horse
+      ...horseProverbs,
       ...dragonProverbs,
       ...tokinProverbs,
     ],
