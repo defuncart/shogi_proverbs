@@ -15,13 +15,15 @@ class DarkModePanel extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Text(AppLocalizations.darkModePanelText),
-        Consumer((_, read) => Switch(
-              value: read(isDarkModeProvider).state,
-              onChanged: (value) {
-                isDarkModeProvider.read(context).state = value;
-                DIContainer.get<ISettingsDatabase>().isDarkMode = value;
-              },
-            )),
+        Consumer(
+          builder: (_, read, __) => Switch(
+            value: read(isDarkModeProvider).state,
+            onChanged: (value) {
+              context.read(isDarkModeProvider).state = value;
+              DIContainer.get<ISettingsDatabase>().isDarkMode = value;
+            },
+          ),
+        ),
       ],
     );
   }

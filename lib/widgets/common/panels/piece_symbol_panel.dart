@@ -19,14 +19,16 @@ class PieceSymbolPanel extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(AppLocalizations.pieceSymbolPanelText),
-        Consumer((_, read) => SegmentedChips(
-              labels: _languageSymbols,
-              initiallySelectedIndex: read(selectedPieceSymbolProvider).state,
-              onSelected: (selectedIndex) {
-                selectedPieceSymbolProvider.read(context).state = selectedIndex;
-                DIContainer.get<ISettingsDatabase>().selectedPieceSymbol = selectedIndex;
-              },
-            )),
+        Consumer(
+          builder: (_, read, __) => SegmentedChips(
+            labels: _languageSymbols,
+            initiallySelectedIndex: read(selectedPieceSymbolProvider).state,
+            onSelected: (selectedIndex) {
+              context.read(selectedPieceSymbolProvider).state = selectedIndex;
+              DIContainer.get<ISettingsDatabase>().selectedPieceSymbol = selectedIndex;
+            },
+          ),
+        ),
       ],
     );
   }
