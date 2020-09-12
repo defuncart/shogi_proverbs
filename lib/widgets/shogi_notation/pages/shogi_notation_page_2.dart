@@ -44,7 +44,7 @@ class ShogiNotationPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer(
-      (_, read) {
+      builder: (_, read, __) {
         final usesJapanese = read(selectedPieceSymbolProvider).state == 1;
         final pieceColor = DefaultShogiBoardStyle.of(context).style.pieceColor;
         final promotedPieceColor = DefaultShogiBoardStyle.of(context).style.promotedPieceColor;

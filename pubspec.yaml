@@ -19,7 +19,7 @@ dependencies:
     git:
       url: https://github.com/defuncart/flutter_shogi_board
   hive: ^1.4.4
-  flutter_riverpod: ^0.5.1
+  flutter_riverpod: ^0.9.1
   get_it: ^4.0.4
 
 dev_dependencies:

@@ -72,7 +72,7 @@ class _MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer(
-      (_, read) => DefaultShogiBoardStyle(
+      builder: (_, read, __) => DefaultShogiBoardStyle(
         style: ShogiBoardStyle(
           pieceColor: read(isDarkModeProvider).state ? Colors.white : BoardColors.black,
           borderColor: read(isDarkModeProvider).state ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
