@@ -54,6 +54,7 @@ class ShogiNotationPage4 extends StatelessWidget {
               label: 'Diagram 2',
             ),
           ),
+          Container(height: 8.0),
         ],
       ),
     );
