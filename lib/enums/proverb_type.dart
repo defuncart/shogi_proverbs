@@ -1,4 +1,4 @@
-import '../localizations.dart';
+import 'package:shogi_proverbs/localizations.dart';
 
 /// A enum describing the types of proverbs
 enum ProverbType {
