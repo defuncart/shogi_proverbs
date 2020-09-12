@@ -39,27 +39,67 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      builder: (_, __) => Scaffold(
-        body: FutureBuilder(
-          future: _initAppFuture,
-          // ignore: avoid_types_on_closure_parameters
-          builder: (_, AsyncSnapshot<bool> snapshot) {
-            switch (snapshot.connectionState) {
-              case ConnectionState.waiting:
-              case ConnectionState.active:
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              default:
-                if (snapshot.connectionState == ConnectionState.done && snapshot.hasData && snapshot.data == true) {
-                  return _MyApp();
-                }
-              //TODO else show error
+    final futureBuilder = FutureBuilder(
+      future: _initAppFuture,
+      // ignore: avoid_types_on_closure_parameters
+      builder: (_, AsyncSnapshot<bool> snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.waiting:
+          case ConnectionState.active:
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          default:
+            if (snapshot.connectionState == ConnectionState.done && snapshot.hasData && snapshot.data == true) {
+              return _MyApp();
             }
+          //TODO else show error
+        }
 
-            return Container();
-          },
+        return Container();
+      },
+    );
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      builder: (_, __) => Scaffold(
+        body: LayoutBuilder(
+          builder: (_, constraints) => constraints.maxWidth > 675
+              ? _FakeMobileWrapper(
+                  child: futureBuilder,
+                  constraints: constraints,
+                )
+              : futureBuilder,
+        ),
+      ),
+    );
+  }
+}
+
+class _FakeMobileWrapper extends StatelessWidget {
+  final Widget child;
+  final BoxConstraints constraints;
+
+  const _FakeMobileWrapper({
+    @required this.child,
+    @required this.constraints,
+    Key key,
+  })  : assert(child != null),
+        assert(constraints != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final height = constraints.maxHeight;
+    final width = height / 2;
+
+    return Container(
+      color: Colors.black,
+      child: Center(
+        child: SizedBox(
+          height: height,
+          width: width,
+          child: child,
         ),
       ),
     );
