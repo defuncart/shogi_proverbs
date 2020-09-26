@@ -29,6 +29,7 @@ class DataPrivacyPanel extends StatelessWidget {
                 text: AppLocalizations.dataPrivacyPanelLabel12,
                 style: TextStyle(
                   color: Theme.of(context).accentColor,
+                  fontWeight: FontWeight.bold,
                 ),
                 url: ExternalLinks.privacyPolicy,
               ),

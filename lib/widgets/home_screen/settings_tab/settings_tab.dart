@@ -120,6 +120,7 @@ class _CreditsPopup extends StatelessWidget {
                     url: ExternalLinks.proverbsContent,
                     style: TextStyle(
                       color: Theme.of(context).accentColor,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   TextSpan(
@@ -144,6 +145,7 @@ class _CreditsPopup extends StatelessWidget {
                     style: TextStyle(
                       color: Theme.of(context).accentColor,
                       fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   TextSpan(

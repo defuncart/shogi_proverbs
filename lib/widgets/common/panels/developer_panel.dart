@@ -29,6 +29,7 @@ class DeveloperPanel extends StatelessWidget {
             text: AppLocalizations.developerPanelLabel14,
             style: TextStyle(
               color: Theme.of(context).accentColor,
+              fontWeight: FontWeight.bold,
             ),
             url: ExternalLinks.sourceCode,
           ),
