@@ -80,10 +80,12 @@ class _DataPrivacyPopup extends StatelessWidget {
             applicationIcon: Image.asset('assets/images/app_icon.png'),
             applicationLegalese: '© 2020 defuncart',
           ),
+          textColor: Theme.of(context).accentColor,
         ),
         FlatButton(
           child: Text(MaterialLocalizations.of(context).closeButtonLabel),
           onPressed: () => Navigator.pop(context),
+          textColor: Theme.of(context).accentColor,
         ),
       ],
       scrollable: true,
@@ -164,6 +166,7 @@ class _CreditsPopup extends StatelessWidget {
         FlatButton(
           child: Text(MaterialLocalizations.of(context).closeButtonLabel),
           onPressed: () => Navigator.pop(context),
+          textColor: Theme.of(context).accentColor,
         ),
       ],
       scrollable: true,
