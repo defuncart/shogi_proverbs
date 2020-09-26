@@ -62,6 +62,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: AppThemes.light,
       builder: (_, __) => Scaffold(
         body: LayoutBuilder(
           builder: (_, constraints) => constraints.maxWidth > 675
