@@ -114,7 +114,9 @@ class _MyApp extends StatelessWidget {
     return Consumer(
       builder: (_, read, __) => DefaultShogiBoardStyle(
         style: ShogiBoardStyle(
-          pieceColor: read(isDarkModeProvider).state ? Colors.white : BoardColors.black,
+          pieceColor: read(isDarkModeProvider).state
+              ? AppThemes.dark.textTheme.bodyText1.color
+              : AppThemes.light.textTheme.bodyText1.color,
           borderColor: read(isDarkModeProvider).state ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
           usesJapanese: read(selectedPieceSymbolProvider).state == 1,
           coordIndicatorType: CoordIndicatorType.arabic,
