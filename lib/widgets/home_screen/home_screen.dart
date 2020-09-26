@@ -51,6 +51,8 @@ class _ShiftingBottomNavBarItem extends BottomNavigationBarItem {
             icon,
             color: color,
           ),
+          // TODO once 1.23 is stable, update to label
+          // ignore: deprecated_member_use
           title: Text(
             label,
             style: TextStyle(color: color),
