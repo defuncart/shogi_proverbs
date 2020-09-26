@@ -29,6 +29,7 @@ dev_dependencies:
   flutter_analysis_options:
     git:
       url: https://github.com/defuncart/flutter_analysis_options
+  flutter_launcher_icons: ^0.8.0
 
 flutter:
   uses-material-design: true
@@ -45,3 +46,11 @@ flappy_translator:
   depend_on_context: false
   use_single_quotes: true
   replace_no_break_spaces: false
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path_android: "assets_dev/app_icon/android_old.png"
+  image_path_ios: "assets_dev/app_icon/ios.png"
+  adaptive_icon_background: "#E2E3D1"
+  adaptive_icon_foreground: "assets_dev/app_icon/android_foreground.png"

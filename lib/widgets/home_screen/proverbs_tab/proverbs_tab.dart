@@ -64,6 +64,7 @@ class _AskViewTutorialPopup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       title: Text(AppLocalizations.askSeenTutorialPopupTitle),
       content: Text(
         AppLocalizations.askSeenTutorialPopupDescription,
@@ -71,12 +72,14 @@ class _AskViewTutorialPopup extends StatelessWidget {
       ),
       actions: [
         FlatButton(
-          child: Text(MaterialLocalizations.of(context).okButtonLabel),
-          onPressed: () => Navigator.of(context).pop(true),
+          child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+          onPressed: () => Navigator.of(context).pop(false),
+          color: Theme.of(context).accentColor,
         ),
         FlatButton(
-          child: Text(MaterialLocalizations.of(context).closeButtonLabel),
-          onPressed: () => Navigator.of(context).pop(false),
+          child: Text(MaterialLocalizations.of(context).okButtonLabel),
+          onPressed: () => Navigator.of(context).pop(true),
+          color: Theme.of(context).accentColor,
         ),
       ],
     );

@@ -149,13 +149,17 @@ class ShogiNotationPage2 extends StatelessWidget {
                         'Piece Name',
                         style: Theme.of(context).textTheme.bodyText1,
                       ),
-                      Text(
-                        'Board Symbol',
-                        style: Theme.of(context).textTheme.bodyText1,
+                      Center(
+                        child: Text(
+                          'Board Symbol',
+                          style: Theme.of(context).textTheme.bodyText1,
+                        ),
                       ),
-                      Text(
-                        'Move Notation',
-                        style: Theme.of(context).textTheme.bodyText1,
+                      Center(
+                        child: Text(
+                          'Move Notation',
+                          style: Theme.of(context).textTheme.bodyText1,
+                        ),
                       ),
                     ],
                   ),
@@ -170,11 +174,15 @@ class ShogiNotationPage2 extends StatelessWidget {
                     TableRow(
                       children: [
                         Text(piece.name),
-                        Text(
-                          piece.boardSymbol,
-                          style: Theme.of(context).textTheme.bodyText2.copyWith(color: piece.boardSymbolColor),
+                        Center(
+                          child: Text(
+                            piece.boardSymbol,
+                            style: Theme.of(context).textTheme.bodyText2.copyWith(color: piece.boardSymbolColor),
+                          ),
                         ),
-                        Text(piece.moveNotation),
+                        Center(
+                          child: Text(piece.moveNotation),
+                        ),
                       ],
                     ),
                 ],
