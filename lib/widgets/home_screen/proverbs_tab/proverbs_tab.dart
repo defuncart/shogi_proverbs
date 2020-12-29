@@ -30,7 +30,7 @@ class ProverbsTab extends StatelessWidget {
                       DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
                       final openTutorial = await showDialog(
                         context: context,
-                        child: _AskViewTutorialPopup(),
+                        builder: (_) => _AskViewTutorialPopup(),
                       );
                       if (!openTutorial) {
                         _openProverbDetail(proverb, context);
