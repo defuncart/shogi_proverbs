@@ -30,7 +30,7 @@ class ProverbsTab extends StatelessWidget {
                       DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
                       final openTutorial = await showDialog(
                         context: context,
-                        child: _AskViewTutorialPopup(),
+                        builder: (_) => _AskViewTutorialPopup(),
                       );
                       if (!openTutorial) {
                         _openProverbDetail(proverb, context);
@@ -73,11 +73,13 @@ class _AskViewTutorialPopup extends StatelessWidget {
       actions: [
         FlatButton(
           child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+          textColor: Theme.of(context).scaffoldBackgroundColor,
           onPressed: () => Navigator.of(context).pop(false),
           color: Theme.of(context).accentColor,
         ),
         FlatButton(
           child: Text(MaterialLocalizations.of(context).okButtonLabel),
+          textColor: Theme.of(context).scaffoldBackgroundColor,
           onPressed: () => Navigator.of(context).pop(true),
           color: Theme.of(context).accentColor,
         ),

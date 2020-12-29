@@ -22,16 +22,11 @@ class DiagramDetail extends StatelessWidget {
             gameBoard: ShogiUtils.sfenStringToGameBoard(diagram.sfenString),
           ),
           if (diagram.label != null)
-            Column(
-              children: <Widget>[
-                Container(height: 4),
-                Text(
-                  diagram.label,
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
-              ],
+            Text(
+              diagram.label,
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+              ),
             ),
         ],
       ),
