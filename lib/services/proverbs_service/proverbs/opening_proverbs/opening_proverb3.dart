@@ -1,5 +1,6 @@
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
+// http://www.shogi.net/kakugen/kakugen21.htm
 const openingProverb3 = Proverb(
   title: 'Defend the King with three Generals, Attack with Rook, Bishop, Silver and Knight',
   japaneseTitle: 'Gyoku no mamori wa Kin Gin 3 mai, seme wa Hi, Kaku, Gin, Kei',

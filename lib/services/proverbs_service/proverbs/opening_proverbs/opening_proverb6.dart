@@ -1,5 +1,6 @@
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
+// http://www.shogi.net/kakugen/kakugen24.htm
 const openingProverb6 = Proverb(
   title: "Don't Put the King on the Bishop's Diagonal",
   japaneseTitle: 'Gyoku wa Kaku-suji wo sakeyo',
