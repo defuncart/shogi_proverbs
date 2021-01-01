@@ -6,6 +6,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_prover
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverb6.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverb7.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverb8.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverb9.dart';
 
 const openingProverbs = [
   openingProverb1,
@@ -16,4 +17,5 @@ const openingProverbs = [
   openingProverb6,
   openingProverb7,
   openingProverb8,
+  openingProverb9,
 ];
