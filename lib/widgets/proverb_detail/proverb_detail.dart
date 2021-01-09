@@ -17,7 +17,7 @@ class ProverbDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.proverbDetailAppBarTitle(index: proverb.index + 1)),
+        title: Text(AppLocalizations.proverbDetailsAppBarTitle(index: proverb.index + 1)),
       ),
       body: SafeArea(
         child: proverb.isMultiPage ? MultiPageDetail(pages: proverb.pages) : PageDetail(page: proverb.pages.first),

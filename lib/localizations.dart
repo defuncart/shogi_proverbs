@@ -107,6 +107,9 @@ class AppLocalizations {
   static String get shogiNotationPage4Label2 =>
       _getText('shogiNotationPage4Label2');
 
+  static String get homeScreenSearchHintText =>
+      _getText('homeScreenSearchHintText');
+
   static String get homeScreenProversTabTitleText =>
       _getText('homeScreenProversTabTitleText');
 
@@ -118,6 +121,9 @@ class AppLocalizations {
 
   static String get askSeenTutorialPopupDescription =>
       _getText('askSeenTutorialPopupDescription');
+
+  static String get proverbsTabNoResultsText =>
+      _getText('proverbsTabNoResultsText');
 
   static String get settingsTabDataPrivacyButtonText =>
       _getText('settingsTabDataPrivacyButtonText');
@@ -156,10 +162,10 @@ class AppLocalizations {
 
   static String get proverbTypeother => _getText('proverbTypeother');
 
-  static String proverbDetailAppBarTitle({
+  static String proverbDetailsAppBarTitle({
     @required int index,
   }) {
-    String _text = _getText('proverbDetailAppBarTitle');
+    String _text = _getText('proverbDetailsAppBarTitle');
     if (index != null) {
       _text = _text.replaceAll('%index\$d', index.toString());
     }
@@ -226,11 +232,13 @@ class AppLocalizations {
         'Lets put all this into practice with a simple example. Diagram 1 shows the initial game board:',
     'shogiNotationPage4Label2':
         'Diagram 2 shows the resulting game board after the following moves:',
+    'homeScreenSearchHintText': 'Search...',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
     'askSeenTutorialPopupTitle': 'Shogi notation tutorial',
     'askSeenTutorialPopupDescription':
         'Before reading your first proverb, would you like to view a short tutorial on shogi notation?',
+    'proverbsTabNoResultsText': 'No proverbs found.',
     'settingsTabDataPrivacyButtonText': 'Data Privacy',
     'settingsTabCreditsButtonText': 'Credits',
     'settingsTabAboutButtonText': 'About',
@@ -250,7 +258,7 @@ class AppLocalizations {
     'proverbTypemiddle': 'Middlegame',
     'proverbTypeend': 'Endgame',
     'proverbTypeother': 'Other',
-    'proverbDetailAppBarTitle': 'Proverb %index\$d',
+    'proverbDetailsAppBarTitle': 'Proverb %index\$d',
   };
 
   static Map<String, Map<String, String>> _allValues = {

@@ -38,10 +38,12 @@ shogiNotationPage3Label4;If a move entitles the player to promote their piece, t
 shogiNotationPage4Headline;Example
 shogiNotationPage4Label1;Lets put all this into practice with a simple example. Diagram 1 shows the initial game board:
 shogiNotationPage4Label2;Diagram 2 shows the resulting game board after the following moves:
+homeScreenSearchHintText;Search...
 homeScreenProversTabTitleText;Proverbs
 homeScreenSettingsTabTitleText;Settings
 askSeenTutorialPopupTitle;Shogi notation tutorial
 askSeenTutorialPopupDescription;Before reading your first proverb, would you like to view a short tutorial on shogi notation?
+proverbsTabNoResultsText;No proverbs found.
 settingsTabDataPrivacyButtonText;Data Privacy
 settingsTabCreditsButtonText;Credits
 settingsTabAboutButtonText;About
@@ -59,4 +61,4 @@ proverbTypeopening;Opening
 proverbTypemiddle;Middlegame
 proverbTypeend;Endgame
 proverbTypeother;Other
-proverbDetailAppBarTitle;Proverb %index$d
+proverbDetailsAppBarTitle;Proverb %index$d
