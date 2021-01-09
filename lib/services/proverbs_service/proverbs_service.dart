@@ -9,8 +9,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pie
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/pawn_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/silver_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/tokin_proverbs.dart';
-import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverbs13.dart';
-import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverbs46.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverbs.dart';
 
 /// A service to handle proverbs
 class ProverbsService {
@@ -26,10 +25,7 @@ class ProverbsService {
       ...dragonProverbs,
       ...tokinProverbs,
     ],
-    ProverbType.opening: [
-      ...openingProverbs13,
-      ...openingProverbs46,
-    ],
+    ProverbType.opening: openingProverbs,
   };
 
   /// A map of ProverbType to a list of proverbs

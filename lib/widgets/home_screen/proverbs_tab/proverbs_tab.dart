@@ -27,15 +27,18 @@ class ProverbsTab extends StatelessWidget {
                   subtitle: Text(proverb.japaneseTitle),
                   onTap: () async {
                     if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
-                      DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
                       final openTutorial = await showDialog(
                         context: context,
                         builder: (_) => _AskViewTutorialPopup(),
                       );
-                      if (!openTutorial) {
-                        _openProverbDetail(proverb, context);
-                      } else {
-                        Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
+                      // user must choose yes/no, dismissing by taping outside of popup doesn't count
+                      if (openTutorial != null) {
+                        DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
+                        if (!openTutorial) {
+                          _openProverbDetail(proverb, context);
+                        } else {
+                          Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
+                        }
                       }
                     } else {
                       _openProverbDetail(proverb, context);
@@ -72,16 +75,16 @@ class _AskViewTutorialPopup extends StatelessWidget {
       ),
       actions: [
         FlatButton(
-          child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
-          textColor: Theme.of(context).scaffoldBackgroundColor,
+          child: Text(AppLocalizations.generalNo.toUpperCase()),
+          textColor: Theme.of(context).accentColor,
           onPressed: () => Navigator.of(context).pop(false),
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).scaffoldBackgroundColor,
         ),
         FlatButton(
-          child: Text(MaterialLocalizations.of(context).okButtonLabel),
-          textColor: Theme.of(context).scaffoldBackgroundColor,
+          child: Text(AppLocalizations.generalYes.toUpperCase()),
+          textColor: Theme.of(context).accentColor,
           onPressed: () => Navigator.of(context).pop(true),
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).scaffoldBackgroundColor,
         ),
       ],
     );
