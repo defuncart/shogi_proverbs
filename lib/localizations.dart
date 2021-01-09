@@ -156,6 +156,16 @@ class AppLocalizations {
 
   static String get proverbTypeother => _getText('proverbTypeother');
 
+  static String proverbDetailAppBarTitle({
+    @required int index,
+  }) {
+    String _text = _getText('proverbDetailAppBarTitle');
+    if (index != null) {
+      _text = _text.replaceAll('%index\$d', index.toString());
+    }
+    return _text;
+  }
+
   static Map<String, String> _localizedValues;
 
   static Map<String, String> _enValues = {
@@ -240,6 +250,7 @@ class AppLocalizations {
     'proverbTypemiddle': 'Middlegame',
     'proverbTypeend': 'Endgame',
     'proverbTypeother': 'Other',
+    'proverbDetailAppBarTitle': 'Proverb %index\$d',
   };
 
   static Map<String, Map<String, String>> _allValues = {
