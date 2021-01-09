@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Page;
+import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/multi_page_detail.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/page_detail.dart';
@@ -16,7 +17,7 @@ class ProverbDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(proverb.title),
+        title: Text(AppLocalizations.proverbDetailAppBarTitle(index: proverb.index + 1)),
       ),
       body: SafeArea(
         child: proverb.isMultiPage ? MultiPageDetail(pages: proverb.pages) : PageDetail(page: proverb.pages.first),
