@@ -9,6 +9,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 /// Proverbs for knight section of ProverbType.pieces
 final knightProverbs = [
   Proverb(
+    index: 3,
     title: 'Drop the Knight Well Back',
     japaneseTitle: 'Keima wa hikaete ute',
     type: ProverbType.pieces,
@@ -159,6 +160,7 @@ final knightProverbs = [
     ],
   ),
   Proverb(
+    index: 4,
     title: 'The Knight that jumps high falls prey to a Pawn.',
     japaneseTitle: 'Keima no takatobi Fu no ejiki',
     type: ProverbType.pieces,

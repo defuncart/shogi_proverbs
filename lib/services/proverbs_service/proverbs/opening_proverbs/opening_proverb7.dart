@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen25.htm
 const openingProverb7 = Proverb(
+  index: 24,
   title: 'In the Opening Push up Pawns in the Odd-number Files',
   japaneseTitle: 'Joban wa kisuu no Fu wo tsuke',
   type: ProverbType.opening,

@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen30.htm
 const openingProverb12 = Proverb(
+  index: 29,
   title: "Don't Push the 5th file-Pawn in Bishop-Exchange",
   japaneseTitle: 'Kakugawari shogi wa 5-suji wo tsukuna',
   type: ProverbType.opening,

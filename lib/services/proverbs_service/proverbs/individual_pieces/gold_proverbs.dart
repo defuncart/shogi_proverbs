@@ -9,6 +9,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 /// Proverbs for gold section of ProverbType.pieces
 final goldProverbs = [
   Proverb(
+    index: 7,
     title: 'Save the Gold till the end (for the coup de grace)',
     japaneseTitle: 'Kin wa todome ni nokose',
     type: ProverbType.pieces,
@@ -84,6 +85,7 @@ final goldProverbs = [
     ],
   ),
   Proverb(
+    index: 8,
     title: 'Entice the Gold diagonally forwards',
     japaneseTitle: 'Kin wa naname ni sasoe',
     type: ProverbType.pieces,
@@ -154,6 +156,7 @@ final goldProverbs = [
     ],
   ),
   Proverb(
+    index: 9,
     title: 'With a Gold on your back rank, you can sacrifice the Rook',
     japaneseTitle: 'Ichidan kin ni hisha sute ari',
     type: ProverbType.pieces,
@@ -242,6 +245,7 @@ final goldProverbs = [
     ],
   ),
   Proverb(
+    index: 10,
     title: 'The Gold pulled back is bound to be a good move',
     japaneseTitle: 'Kin wa hiku te ni koshu ari',
     type: ProverbType.pieces,
@@ -345,6 +349,7 @@ final goldProverbs = [
     ],
   ),
   Proverb(
+    index: 11,
     title: 'With Gold and Silver Reversed (Gold above Silver), You Are Bound To Get Trouble',
     japaneseTitle: 'Kin gin no gyakkei wa akkei nari',
     type: ProverbType.pieces,

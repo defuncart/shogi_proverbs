@@ -9,6 +9,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 /// Proverbs for tokin section of ProverbType.pieces
 final tokinProverbs = [
   Proverb(
+    index: 16,
     title: 'A Tokin on 5c cannot lose',
     japaneseTitle: 'Gosan no Tokin ni make wa nashi',
     type: ProverbType.pieces,
@@ -125,6 +126,7 @@ final tokinProverbs = [
     ],
   ),
   Proverb(
+    index: 17,
     title: 'A Tokin is Faster Than You Think',
     japaneseTitle: 'Tokin no oso haya',
     type: ProverbType.pieces,

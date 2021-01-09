@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen28.htm
 const openingProverb10 = Proverb(
+  index: 27,
   title: 'The 4e Vanguard Pawn is the Tennozan Mountain',
   japaneseTitle: '4-5 no kurai wa Tennozan',
   type: ProverbType.opening,

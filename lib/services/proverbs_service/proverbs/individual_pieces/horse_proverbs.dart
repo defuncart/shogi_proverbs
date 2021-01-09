@@ -9,6 +9,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 /// Proverbs for horse section of ProverbType.pieces
 final horseProverbs = [
   Proverb(
+    index: 14,
     title: 'Pull the Horse to your own Camp',
     japaneseTitle: 'Uma wa jijin ni',
     type: ProverbType.pieces,

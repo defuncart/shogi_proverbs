@@ -9,6 +9,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 /// Proverbs for bishop section of ProverbType.pieces
 final bishopProverbs = [
   Proverb(
+    index: 12,
     title: 'In the Opening the Bishop is Stronger than the Rook',
     japaneseTitle: 'Joban wa hisha yori kaku',
     type: ProverbType.pieces,
@@ -152,6 +153,7 @@ final bishopProverbs = [
     ],
   ),
   Proverb(
+    index: 13,
     title: 'Oppose Bishop with Bishop',
     japaneseTitle: 'Kaku niwa Kaku',
     type: ProverbType.pieces,

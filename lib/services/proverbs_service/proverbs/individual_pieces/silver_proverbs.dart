@@ -9,6 +9,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 /// Proverbs for silver section of ProverbType.pieces
 final silverProverbs = [
   Proverb(
+    index: 5,
     title: 'Use the Silver like a Plover (moving zig-zag)',
     japaneseTitle: 'Gin wa chidori ni tsukae',
     type: ProverbType.pieces,
@@ -124,6 +125,7 @@ final silverProverbs = [
     ],
   ),
   Proverb(
+    index: 6,
     title: "Silver at the head of the (opponent's) Knight is the standard move",
     japaneseTitle: 'Keisaki no gin joseki nari',
     type: ProverbType.pieces,

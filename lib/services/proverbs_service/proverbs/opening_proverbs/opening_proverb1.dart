@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen19.htm
 const openingProverb1 = Proverb(
+  index: 18,
   title: 'Avoid a Sitting King',
   japaneseTitle: 'Igyoku wa sakeyo',
   type: ProverbType.opening,

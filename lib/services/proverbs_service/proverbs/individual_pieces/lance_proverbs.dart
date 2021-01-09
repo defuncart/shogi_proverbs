@@ -9,6 +9,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 /// Proverbs for lance section of ProverbType.pieces
 final lanceProverbs = [
   Proverb(
+    index: 2,
     title: 'Drop the Lance on the back rank',
     japaneseTitle: 'Kyo wa gedan kara ute',
     type: ProverbType.pieces,

@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen23.htm
 const openingProverb5 = Proverb(
+  index: 22,
   title: 'Push up the Edge Pawn When Playing the Mino Castle',
   japaneseTitle: 'Mino-gakoi wa hashifu wo tsuke',
   type: ProverbType.opening,

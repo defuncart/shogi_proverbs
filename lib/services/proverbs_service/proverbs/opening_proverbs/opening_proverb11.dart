@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen29.htm
 const openingProverb11 = Proverb(
+  index: 28,
   title: 'There are Three Advantages to Pawn-Exchange in the Rook File',
   japaneseTitle: 'Hisha-saki kokan mittsu no toku ari',
   type: ProverbType.opening,

@@ -9,6 +9,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 /// Proverbs for pawn section of ProverbType.pieces
 final pawnProverbs = [
   Proverb(
+    index: 0,
     title: 'A Pawn is Worth a Thousand Generals',
     japaneseTitle: 'Ippu Atai Senkin',
     type: ProverbType.pieces,
@@ -251,6 +252,7 @@ final pawnProverbs = [
     ],
   ),
   Proverb(
+    index: 1,
     title: 'A Pawn-anchored Gold is more solid than a rock',
     japaneseTitle: 'Kinzoko no Fu iwa yori katashi',
     type: ProverbType.pieces,
