@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for tokin section of ProverbType.pieces
-final tokinProverbs = [
+const tokinProverbs = [
   Proverb(
     index: 16,
     title: 'A Tokin on 5c cannot lose',

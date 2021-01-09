@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for knight section of ProverbType.pieces
-final knightProverbs = [
+const knightProverbs = [
   Proverb(
     index: 3,
     title: 'Drop the Knight Well Back',

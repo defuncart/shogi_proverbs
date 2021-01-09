@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for gold section of ProverbType.pieces
-final goldProverbs = [
+const goldProverbs = [
   Proverb(
     index: 7,
     title: 'Save the Gold till the end (for the coup de grace)',

@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for bishop section of ProverbType.pieces
-final bishopProverbs = [
+const bishopProverbs = [
   Proverb(
     index: 12,
     title: 'In the Opening the Bishop is Stronger than the Rook',

@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for dragon section of ProverbType.pieces
-final dragonProverbs = [
+const dragonProverbs = [
   Proverb(
     index: 15,
     title: 'The Dragon had better be inside',

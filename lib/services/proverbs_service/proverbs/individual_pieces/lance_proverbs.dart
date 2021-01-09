@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for lance section of ProverbType.pieces
-final lanceProverbs = [
+const lanceProverbs = [
   Proverb(
     index: 2,
     title: 'Drop the Lance on the back rank',

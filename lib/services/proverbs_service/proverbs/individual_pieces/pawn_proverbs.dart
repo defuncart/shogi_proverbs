@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for pawn section of ProverbType.pieces
-final pawnProverbs = [
+const pawnProverbs = [
   Proverb(
     index: 0,
     title: 'A Pawn is Worth a Thousand Generals',

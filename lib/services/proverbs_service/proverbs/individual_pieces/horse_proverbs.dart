@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for horse section of ProverbType.pieces
-final horseProverbs = [
+const horseProverbs = [
   Proverb(
     index: 14,
     title: 'Pull the Horse to your own Camp',
