@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for pawn section of ProverbType.pieces
 const pawnProverbs = [
+  // http://www.shogi.net/kakugen/kakugen02.htm
   Proverb(
     index: 0,
     title: 'A Pawn is Worth a Thousand Generals',
@@ -251,6 +252,7 @@ const pawnProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen03.htm
   Proverb(
     index: 1,
     title: 'A Pawn-anchored Gold is more solid than a rock',

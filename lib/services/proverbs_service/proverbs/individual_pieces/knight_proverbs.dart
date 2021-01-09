@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for knight section of ProverbType.pieces
 const knightProverbs = [
+  // http://www.shogi.net/kakugen/kakugen05.htm
   Proverb(
     index: 3,
     title: 'Drop the Knight Well Back',
@@ -159,6 +160,7 @@ const knightProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen06.htm
   Proverb(
     index: 4,
     title: 'The Knight that jumps high falls prey to a Pawn.',

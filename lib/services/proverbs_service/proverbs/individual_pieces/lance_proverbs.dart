@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for lance section of ProverbType.pieces
 const lanceProverbs = [
+  // http://www.shogi.net/kakugen/kakugen04.htm
   Proverb(
     index: 2,
     title: 'Drop the Lance on the back rank',

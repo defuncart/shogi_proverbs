@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for silver section of ProverbType.pieces
 const silverProverbs = [
+  // http://www.shogi.net/kakugen/kakugen07.htm
   Proverb(
     index: 5,
     title: 'Use the Silver like a Plover (moving zig-zag)',
@@ -124,6 +125,7 @@ const silverProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen07.htm#Nox
   Proverb(
     index: 6,
     title: "Silver at the head of the (opponent's) Knight is the standard move",

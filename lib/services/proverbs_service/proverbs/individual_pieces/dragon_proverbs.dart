@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for dragon section of ProverbType.pieces
 const dragonProverbs = [
+  // http://www.shogi.net/kakugen/kakugen16.htm
   Proverb(
     index: 15,
     title: 'The Dragon had better be inside',

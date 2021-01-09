@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for tokin section of ProverbType.pieces
 const tokinProverbs = [
+  // http://www.shogi.net/kakugen/kakugen17.htm
   Proverb(
     index: 16,
     title: 'A Tokin on 5c cannot lose',
@@ -125,6 +126,7 @@ const tokinProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen18.htm
   Proverb(
     index: 17,
     title: 'A Tokin is Faster Than You Think',

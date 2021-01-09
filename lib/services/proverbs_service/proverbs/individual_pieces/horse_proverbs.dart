@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for horse section of ProverbType.pieces
 const horseProverbs = [
+  // http://www.shogi.net/kakugen/kakugen15.htm
   Proverb(
     index: 14,
     title: 'Pull the Horse to your own Camp',

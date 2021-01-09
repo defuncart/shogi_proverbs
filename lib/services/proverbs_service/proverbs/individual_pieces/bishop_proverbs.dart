@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for bishop section of ProverbType.pieces
 const bishopProverbs = [
+  // http://www.shogi.net/kakugen/kakugen13.htm
   Proverb(
     index: 12,
     title: 'In the Opening the Bishop is Stronger than the Rook',
@@ -152,6 +153,7 @@ const bishopProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen14.htm
   Proverb(
     index: 13,
     title: 'Oppose Bishop with Bishop',

@@ -8,6 +8,7 @@ import 'package:shogi_proverbs/models/sections/paragraph.dart';
 
 /// Proverbs for gold section of ProverbType.pieces
 const goldProverbs = [
+  // http://www.shogi.net/kakugen/kakugen08.htm
   Proverb(
     index: 7,
     title: 'Save the Gold till the end (for the coup de grace)',
@@ -84,6 +85,7 @@ const goldProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen09.htm
   Proverb(
     index: 8,
     title: 'Entice the Gold diagonally forwards',
@@ -155,6 +157,7 @@ const goldProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen10.htm
   Proverb(
     index: 9,
     title: 'With a Gold on your back rank, you can sacrifice the Rook',
@@ -244,6 +247,7 @@ const goldProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen11.htm
   Proverb(
     index: 10,
     title: 'The Gold pulled back is bound to be a good move',
@@ -348,6 +352,7 @@ const goldProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen12.htm
   Proverb(
     index: 11,
     title: 'With Gold and Silver Reversed (Gold above Silver), You Are Bound To Get Trouble',
