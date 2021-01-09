@@ -21,7 +21,7 @@ class ProverbsTab extends StatelessWidget {
     final proverbs = ProverbsService.proverbsWithFilter(filterTerm);
     return proverbs.isEmpty
         ? Center(
-            child: Text('No proverbs found'),
+            child: Text(AppLocalizations.proverbsTabNoResultsText),
           )
         : ListView(
             children: [
