@@ -26,9 +26,6 @@ class ProverbsService {
     ...openingProverbs,
   ];
 
-  /// A map of ProverbType to a list of proverbs
-  static Map<ProverbType, List<Proverb>> get proverbs => _mapSelectedProverbsToType(_proverbs);
-
   /// Returns proverbs satisfying a filter
   static Map<ProverbType, List<Proverb>> proverbsWithFilter(String filter) {
     final proverbs = filter == null || filter.isEmpty
