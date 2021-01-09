@@ -187,9 +187,9 @@ class AppLocalizations {
     'onboardingPage1Label3':
         'This app contains 50 such proverbs for beginner to intermediate players. These proverbs are taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
     'onboardingPage1Label4':
-        'Although this website is still online, it is not optimized for mobile and the diagrams can be difficult to dephicer. Thus the goal of this mobile application is to make this excellent content more accessible to beginners in 2020.',
+        'Although this website is still online, it is not optimized for mobile, while the diagrams can be difficult to dephicer. ',
     'onboardingPage1Label5':
-        'It is assumed that neither Mr. Noda nor Mr. Urano would have anything against this open source project. No copyright infringement is intended.',
+        'The goal of this open source project is to make this excellent content more accessible to beginners in the mobile age. It is assumed that neither Mr. Noda nor Mr. Urano would have anything against said project. No copyright infringement is intended.',
     'onboardingPage2Headline': 'Personalizing your experience',
     'onboardingPage2Label1':
         'These settings can be updated anytime in the settings menu.',
