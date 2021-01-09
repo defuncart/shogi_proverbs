@@ -27,15 +27,18 @@ class ProverbsTab extends StatelessWidget {
                   subtitle: Text(proverb.japaneseTitle),
                   onTap: () async {
                     if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
-                      DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
                       final openTutorial = await showDialog(
                         context: context,
                         builder: (_) => _AskViewTutorialPopup(),
                       );
-                      if (!openTutorial) {
-                        _openProverbDetail(proverb, context);
-                      } else {
-                        Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
+                      // user must choose yes/no, dismissing by taping outside of popup doesn't count
+                      if (openTutorial != null) {
+                        DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
+                        if (!openTutorial) {
+                          _openProverbDetail(proverb, context);
+                        } else {
+                          Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
+                        }
                       }
                     } else {
                       _openProverbDetail(proverb, context);
