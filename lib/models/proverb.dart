@@ -4,9 +4,10 @@ import 'package:shogi_proverbs/models/page.dart';
 
 /// A model representing a shogi proverb
 class Proverb {
+  /// The index (0 - 49)
   final int index;
 
-  /// The type. This is used for sorting.
+  /// The type (used for sorting)
   final ProverbType type;
 
   /// The title
