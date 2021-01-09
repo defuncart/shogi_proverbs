@@ -72,16 +72,16 @@ class _AskViewTutorialPopup extends StatelessWidget {
       ),
       actions: [
         FlatButton(
-          child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
-          textColor: Theme.of(context).scaffoldBackgroundColor,
+          child: Text(AppLocalizations.generalNo.toUpperCase()),
+          textColor: Theme.of(context).accentColor,
           onPressed: () => Navigator.of(context).pop(false),
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).scaffoldBackgroundColor,
         ),
         FlatButton(
-          child: Text(MaterialLocalizations.of(context).okButtonLabel),
-          textColor: Theme.of(context).scaffoldBackgroundColor,
+          child: Text(AppLocalizations.generalYes.toUpperCase()),
+          textColor: Theme.of(context).accentColor,
           onPressed: () => Navigator.of(context).pop(true),
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).scaffoldBackgroundColor,
         ),
       ],
     );
