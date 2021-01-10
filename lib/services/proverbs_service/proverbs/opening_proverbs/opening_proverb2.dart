@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen20.htm
 const openingProverb2 = Proverb(
+  index: 19,
   title: "Don't Put King and Rook Close Together",
   japaneseTitle: 'Gyoku-hi sekkin su bekarazu',
   type: ProverbType.opening,

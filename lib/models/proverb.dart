@@ -4,7 +4,10 @@ import 'package:shogi_proverbs/models/page.dart';
 
 /// A model representing a shogi proverb
 class Proverb {
-  /// The type. This is used for sorting.
+  /// The index (0 - 49)
+  final int index;
+
+  /// The type (used for sorting)
   final ProverbType type;
 
   /// The title
@@ -17,11 +20,14 @@ class Proverb {
   final List<Page> pages;
 
   const Proverb({
+    @required this.index,
     @required this.type,
     @required this.title,
     @required this.japaneseTitle,
     @required this.pages,
-  })  : assert(type != null),
+  })  : assert(index != null),
+        assert(index >= 0 && index < 50),
+        assert(type != null),
         assert(title != null),
         assert(japaneseTitle != null),
         assert(pages != null);

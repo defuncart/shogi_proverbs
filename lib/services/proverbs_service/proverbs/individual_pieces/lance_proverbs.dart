@@ -1,14 +1,10 @@
-import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/enums/proverb_type.dart';
-import 'package:shogi_proverbs/models/page.dart';
-import 'package:shogi_proverbs/models/proverb.dart';
-import 'package:shogi_proverbs/models/sections/diagram.dart';
-import 'package:shogi_proverbs/models/sections/move_sequence.dart';
-import 'package:shogi_proverbs/models/sections/paragraph.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 /// Proverbs for lance section of ProverbType.pieces
-final lanceProverbs = [
+const lanceProverbs = [
+  // http://www.shogi.net/kakugen/kakugen04.htm
   Proverb(
+    index: 2,
     title: 'Drop the Lance on the back rank',
     japaneseTitle: 'Kyo wa gedan kara ute',
     type: ProverbType.pieces,

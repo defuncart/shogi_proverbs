@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen26.htm
 const openingProverb8 = Proverb(
+  index: 25,
   title: 'Make a Vanguard Pawn, then Make it Stick',
   japaneseTitle: 'Kurai wo tottara kurai no kakuho',
   type: ProverbType.opening,

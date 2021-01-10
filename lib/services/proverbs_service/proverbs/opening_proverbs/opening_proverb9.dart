@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen27.htm
 const openingProverb9 = Proverb(
+  index: 26,
   title: 'The 5e Vanguard Pawn is the Tennozan Mountain',
   japaneseTitle: 'Go-go no kurai wa Tennozan',
   type: ProverbType.opening,

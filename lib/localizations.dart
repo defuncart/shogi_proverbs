@@ -107,6 +107,9 @@ class AppLocalizations {
   static String get shogiNotationPage4Label2 =>
       _getText('shogiNotationPage4Label2');
 
+  static String get homeScreenSearchHintText =>
+      _getText('homeScreenSearchHintText');
+
   static String get homeScreenProversTabTitleText =>
       _getText('homeScreenProversTabTitleText');
 
@@ -118,6 +121,9 @@ class AppLocalizations {
 
   static String get askSeenTutorialPopupDescription =>
       _getText('askSeenTutorialPopupDescription');
+
+  static String get proverbsTabNoResultsText =>
+      _getText('proverbsTabNoResultsText');
 
   static String get settingsTabDataPrivacyButtonText =>
       _getText('settingsTabDataPrivacyButtonText');
@@ -156,6 +162,16 @@ class AppLocalizations {
 
   static String get proverbTypeother => _getText('proverbTypeother');
 
+  static String proverbDetailsAppBarTitle({
+    @required int index,
+  }) {
+    String _text = _getText('proverbDetailsAppBarTitle');
+    if (index != null) {
+      _text = _text.replaceAll('%index\$d', index.toString());
+    }
+    return _text;
+  }
+
   static Map<String, String> _localizedValues;
 
   static Map<String, String> _enValues = {
@@ -171,9 +187,9 @@ class AppLocalizations {
     'onboardingPage1Label3':
         'This app contains 50 such proverbs for beginner to intermediate players. These proverbs are taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
     'onboardingPage1Label4':
-        'Although this website is still online, it is not optimized for mobile and the diagrams can be difficult to dephicer. Thus the goal of this mobile application is to make this excellent content more accessible to beginners in 2020.',
+        'Although this website is still online, it is not optimized for mobile, while the diagrams can be difficult to dephicer. ',
     'onboardingPage1Label5':
-        'It is assumed that neither Mr. Noda nor Mr. Urano would have anything against this open source project. No copyright infringement is intended.',
+        'The goal of this open source project is to make this excellent content more accessible to beginners in the mobile age. It is assumed that neither Mr. Noda nor Mr. Urano would have anything against said project. No copyright infringement is intended.',
     'onboardingPage2Headline': 'Personalizing your experience',
     'onboardingPage2Label1':
         'These settings can be updated anytime in the settings menu.',
@@ -216,11 +232,13 @@ class AppLocalizations {
         'Lets put all this into practice with a simple example. Diagram 1 shows the initial game board:',
     'shogiNotationPage4Label2':
         'Diagram 2 shows the resulting game board after the following moves:',
+    'homeScreenSearchHintText': 'Search...',
     'homeScreenProversTabTitleText': 'Proverbs',
     'homeScreenSettingsTabTitleText': 'Settings',
     'askSeenTutorialPopupTitle': 'Shogi notation tutorial',
     'askSeenTutorialPopupDescription':
         'Before reading your first proverb, would you like to view a short tutorial on shogi notation?',
+    'proverbsTabNoResultsText': 'No proverbs found.',
     'settingsTabDataPrivacyButtonText': 'Data Privacy',
     'settingsTabCreditsButtonText': 'Credits',
     'settingsTabAboutButtonText': 'About',
@@ -240,6 +258,7 @@ class AppLocalizations {
     'proverbTypemiddle': 'Middlegame',
     'proverbTypeend': 'Endgame',
     'proverbTypeother': 'Other',
+    'proverbDetailsAppBarTitle': 'Proverb %index\$d',
   };
 
   static Map<String, Map<String, String>> _allValues = {

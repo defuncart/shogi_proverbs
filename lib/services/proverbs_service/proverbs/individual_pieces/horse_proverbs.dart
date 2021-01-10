@@ -1,14 +1,10 @@
-import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/enums/proverb_type.dart';
-import 'package:shogi_proverbs/models/page.dart';
-import 'package:shogi_proverbs/models/proverb.dart';
-import 'package:shogi_proverbs/models/sections/diagram.dart';
-import 'package:shogi_proverbs/models/sections/move_sequence.dart';
-import 'package:shogi_proverbs/models/sections/paragraph.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 /// Proverbs for horse section of ProverbType.pieces
-final horseProverbs = [
+const horseProverbs = [
+  // http://www.shogi.net/kakugen/kakugen15.htm
   Proverb(
+    index: 14,
     title: 'Pull the Horse to your own Camp',
     japaneseTitle: 'Uma wa jijin ni',
     type: ProverbType.pieces,

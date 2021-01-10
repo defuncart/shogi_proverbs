@@ -1,14 +1,10 @@
-import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/enums/proverb_type.dart';
-import 'package:shogi_proverbs/models/page.dart';
-import 'package:shogi_proverbs/models/proverb.dart';
-import 'package:shogi_proverbs/models/sections/diagram.dart';
-import 'package:shogi_proverbs/models/sections/move_sequence.dart';
-import 'package:shogi_proverbs/models/sections/paragraph.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 /// Proverbs for tokin section of ProverbType.pieces
-final tokinProverbs = [
+const tokinProverbs = [
+  // http://www.shogi.net/kakugen/kakugen17.htm
   Proverb(
+    index: 16,
     title: 'A Tokin on 5c cannot lose',
     japaneseTitle: 'Gosan no Tokin ni make wa nashi',
     type: ProverbType.pieces,
@@ -124,7 +120,9 @@ final tokinProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen18.htm
   Proverb(
+    index: 17,
     title: 'A Tokin is Faster Than You Think',
     japaneseTitle: 'Tokin no oso haya',
     type: ProverbType.pieces,

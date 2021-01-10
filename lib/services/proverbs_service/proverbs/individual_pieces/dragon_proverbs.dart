@@ -1,14 +1,10 @@
-import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/enums/proverb_type.dart';
-import 'package:shogi_proverbs/models/page.dart';
-import 'package:shogi_proverbs/models/proverb.dart';
-import 'package:shogi_proverbs/models/sections/diagram.dart';
-import 'package:shogi_proverbs/models/sections/move_sequence.dart';
-import 'package:shogi_proverbs/models/sections/paragraph.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 /// Proverbs for dragon section of ProverbType.pieces
-final dragonProverbs = [
+const dragonProverbs = [
+  // http://www.shogi.net/kakugen/kakugen16.htm
   Proverb(
+    index: 15,
     title: 'The Dragon had better be inside',
     japaneseTitle: 'Ryu wa soto yori uchi',
     type: ProverbType.pieces,

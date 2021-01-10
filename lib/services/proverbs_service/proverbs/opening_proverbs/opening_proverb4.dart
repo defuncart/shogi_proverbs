@@ -2,6 +2,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 // http://www.shogi.net/kakugen/kakugen22.htm
 const openingProverb4 = Proverb(
+  index: 21,
   title: "In the Yagura Opening, Don't Push the Edge Pawn",
   japaneseTitle: 'Yagura-gakoi ni hashi-fu wo tsukuna',
   type: ProverbType.opening,

@@ -1,14 +1,10 @@
-import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/enums/proverb_type.dart';
-import 'package:shogi_proverbs/models/page.dart';
-import 'package:shogi_proverbs/models/proverb.dart';
-import 'package:shogi_proverbs/models/sections/diagram.dart';
-import 'package:shogi_proverbs/models/sections/move_sequence.dart';
-import 'package:shogi_proverbs/models/sections/paragraph.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 /// Proverbs for gold section of ProverbType.pieces
-final goldProverbs = [
+const goldProverbs = [
+  // http://www.shogi.net/kakugen/kakugen08.htm
   Proverb(
+    index: 7,
     title: 'Save the Gold till the end (for the coup de grace)',
     japaneseTitle: 'Kin wa todome ni nokose',
     type: ProverbType.pieces,
@@ -83,7 +79,9 @@ final goldProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen09.htm
   Proverb(
+    index: 8,
     title: 'Entice the Gold diagonally forwards',
     japaneseTitle: 'Kin wa naname ni sasoe',
     type: ProverbType.pieces,
@@ -153,7 +151,9 @@ final goldProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen10.htm
   Proverb(
+    index: 9,
     title: 'With a Gold on your back rank, you can sacrifice the Rook',
     japaneseTitle: 'Ichidan kin ni hisha sute ari',
     type: ProverbType.pieces,
@@ -241,7 +241,9 @@ final goldProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen11.htm
   Proverb(
+    index: 10,
     title: 'The Gold pulled back is bound to be a good move',
     japaneseTitle: 'Kin wa hiku te ni koshu ari',
     type: ProverbType.pieces,
@@ -344,7 +346,9 @@ final goldProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen12.htm
   Proverb(
+    index: 11,
     title: 'With Gold and Silver Reversed (Gold above Silver), You Are Bound To Get Trouble',
     japaneseTitle: 'Kin gin no gyakkei wa akkei nari',
     type: ProverbType.pieces,

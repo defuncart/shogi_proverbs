@@ -1,14 +1,10 @@
-import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/enums/proverb_type.dart';
-import 'package:shogi_proverbs/models/page.dart';
-import 'package:shogi_proverbs/models/proverb.dart';
-import 'package:shogi_proverbs/models/sections/diagram.dart';
-import 'package:shogi_proverbs/models/sections/move_sequence.dart';
-import 'package:shogi_proverbs/models/sections/paragraph.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 /// Proverbs for bishop section of ProverbType.pieces
-final bishopProverbs = [
+const bishopProverbs = [
+  // http://www.shogi.net/kakugen/kakugen13.htm
   Proverb(
+    index: 12,
     title: 'In the Opening the Bishop is Stronger than the Rook',
     japaneseTitle: 'Joban wa hisha yori kaku',
     type: ProverbType.pieces,
@@ -151,7 +147,9 @@ final bishopProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen14.htm
   Proverb(
+    index: 13,
     title: 'Oppose Bishop with Bishop',
     japaneseTitle: 'Kaku niwa Kaku',
     type: ProverbType.pieces,

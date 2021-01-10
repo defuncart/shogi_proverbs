@@ -9,45 +9,70 @@ import 'package:shogi_proverbs/services/settings_database/i_settings_database.da
 import 'package:shogi_proverbs/widgets/proverb_detail/proverb_detail.dart';
 
 class ProverbsTab extends StatelessWidget {
-  const ProverbsTab({Key key}) : super(key: key);
+  final String filterTerm;
+
+  const ProverbsTab({
+    Key key,
+    this.filterTerm,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final proverbs = ProverbsService.proverbs;
-    return ListView(
-      children: [
-        for (final kvp in proverbs.entries)
-          ExpansionTile(
-            initiallyExpanded: true,
-            title: Text(kvp.key.locaString),
+    final proverbs = ProverbsService.proverbsWithFilter(filterTerm);
+    return proverbs.isEmpty
+        ? Center(
+            child: Text(AppLocalizations.proverbsTabNoResultsText),
+          )
+        : ListView(
             children: [
-              for (final proverb in kvp.value)
-                ListTile(
-                  title: Text(proverb.title),
-                  subtitle: Text(proverb.japaneseTitle),
-                  onTap: () async {
-                    if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
-                      final openTutorial = await showDialog(
-                        context: context,
-                        builder: (_) => _AskViewTutorialPopup(),
-                      );
-                      // user must choose yes/no, dismissing by taping outside of popup doesn't count
-                      if (openTutorial != null) {
-                        DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
-                        if (!openTutorial) {
-                          _openProverbDetail(proverb, context);
-                        } else {
-                          Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
-                        }
-                      }
-                    } else {
-                      _openProverbDetail(proverb, context);
-                    }
-                  },
+              for (final kvp in proverbs.entries)
+                ExpansionTile(
+                  initiallyExpanded: true,
+                  title: Text(kvp.key.locaString),
+                  children: [
+                    for (final proverb in kvp.value) _ProverbTile(proverb: proverb),
+                  ],
                 ),
             ],
-          ),
-      ],
+          );
+  }
+}
+
+class _ProverbTile extends StatelessWidget {
+  final Proverb proverb;
+
+  const _ProverbTile({
+    Key key,
+    @required this.proverb,
+  })  : assert(proverb != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(proverb.title),
+      subtitle: Text(proverb.japaneseTitle),
+      onTap: () async {
+        FocusScope.of(context).unfocus();
+
+        if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
+          final openTutorial = await showDialog(
+            context: context,
+            builder: (_) => _AskViewTutorialPopup(),
+          );
+          // user must choose yes/no, dismissing by taping outside of popup doesn't count
+          if (openTutorial != null) {
+            DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
+            if (!openTutorial) {
+              _openProverbDetail(proverb, context);
+            } else {
+              Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
+            }
+          }
+        } else {
+          _openProverbDetail(proverb, context);
+        }
+      },
     );
   }
 

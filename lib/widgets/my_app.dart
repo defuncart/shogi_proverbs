@@ -64,6 +64,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: AppThemes.light,
       builder: (_, __) => Scaffold(
+        resizeToAvoidBottomPadding: false,
         body: LayoutBuilder(
           builder: (_, constraints) => constraints.maxWidth > 675
               ? _FakeMobileWrapper(

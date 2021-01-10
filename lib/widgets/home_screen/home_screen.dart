@@ -12,14 +12,66 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
+  final _searchQueryController = TextEditingController();
+  bool _isSearching = false;
+  String _searchQuery = '';
+
+  bool get _canSearch => _currentIndex == 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.appTitle),
+        leading: _canSearch && _isSearching
+            ? BackButton(onPressed: () {
+                _searchQueryController.clear();
+                setState(() {
+                  _isSearching = false;
+                  _searchQuery = '';
+                });
+              })
+            : Container(),
+        title: _canSearch && _isSearching
+            ? TextField(
+                controller: _searchQueryController,
+                autofocus: true,
+                decoration: InputDecoration(
+                  hintText: AppLocalizations.homeScreenSearchHintText,
+                  border: InputBorder.none,
+                  hintStyle: Theme.of(context).textTheme.headline6.apply(
+                        color: Colors.white.withOpacity(0.4),
+                      ),
+                ),
+                cursorColor: Colors.white,
+                style: Theme.of(context).textTheme.headline6.apply(color: Colors.white),
+                onChanged: (value) => setState(() => _searchQuery = value),
+              )
+            : Text(AppLocalizations.appTitle),
+        actions: [
+          if (_canSearch && !_isSearching)
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () => setState(() => _isSearching = true),
+            ),
+          if (_canSearch && _isSearching)
+            IconButton(
+              icon: Icon(Icons.close),
+              onPressed: () {
+                if (_searchQuery.isEmpty) {
+                  setState(() => _isSearching = false);
+                } else {
+                  _searchQueryController.clear();
+                  setState(() => _searchQuery = '');
+                }
+              },
+            ),
+        ],
       ),
-      body: _currentIndex == 0 ? ProverbsTab() : SettingsTab(),
+      body: _currentIndex == 0
+          ? ProverbsTab(
+              filterTerm: _searchQuery,
+            )
+          : SettingsTab(),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(canvasColor: Theme.of(context).scaffoldBackgroundColor),
         child: BottomNavigationBar(

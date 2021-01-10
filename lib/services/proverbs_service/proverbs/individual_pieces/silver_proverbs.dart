@@ -1,14 +1,10 @@
-import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/enums/proverb_type.dart';
-import 'package:shogi_proverbs/models/page.dart';
-import 'package:shogi_proverbs/models/proverb.dart';
-import 'package:shogi_proverbs/models/sections/diagram.dart';
-import 'package:shogi_proverbs/models/sections/move_sequence.dart';
-import 'package:shogi_proverbs/models/sections/paragraph.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/imports.dart';
 
 /// Proverbs for silver section of ProverbType.pieces
-final silverProverbs = [
+const silverProverbs = [
+  // http://www.shogi.net/kakugen/kakugen07.htm
   Proverb(
+    index: 5,
     title: 'Use the Silver like a Plover (moving zig-zag)',
     japaneseTitle: 'Gin wa chidori ni tsukae',
     type: ProverbType.pieces,
@@ -123,7 +119,9 @@ final silverProverbs = [
       ),
     ],
   ),
+  // http://www.shogi.net/kakugen/kakugen07.htm#Nox
   Proverb(
+    index: 6,
     title: "Silver at the head of the (opponent's) Knight is the standard move",
     japaneseTitle: 'Keisaki no gin joseki nari',
     type: ProverbType.pieces,
