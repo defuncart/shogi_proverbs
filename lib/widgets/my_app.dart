@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -66,7 +67,7 @@ class _MyAppState extends State<MyApp> {
       builder: (_, __) => Scaffold(
         resizeToAvoidBottomPadding: false,
         body: LayoutBuilder(
-          builder: (_, constraints) => constraints.maxWidth > 675
+          builder: (_, constraints) => kIsWeb && constraints.maxWidth > 675
               ? _FakeMobileWrapper(
                   child: futureBuilder,
                   constraints: constraints,
@@ -116,6 +117,7 @@ class _MyApp extends StatelessWidget {
     return Consumer(
       builder: (_, read, __) => DefaultShogiBoardStyle(
         style: ShogiBoardStyle(
+          maxSize: 500,
           pieceColor: read(isDarkModeProvider).state
               ? AppThemes.dark.textTheme.bodyText1.color
               : AppThemes.light.textTheme.bodyText1.color,

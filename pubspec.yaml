@@ -1,7 +1,7 @@
 name: shogi_proverbs
 description: A mobile application containing various Shogi proverbs.
 publish_to: 'none'
-version: 0.0.1+1
+version: 0.1.0+2
 
 environment:
   sdk: ">=2.11.0 <3.0.0"
@@ -15,9 +15,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   path_provider: ^1.6.24
   url_launcher: ^5.7.10
-  flutter_shogi_board:
-    git:
-      url: https://github.com/defuncart/flutter_shogi_board
+  flutter_shogi_board: 0.0.6
   hive: ^1.4.4
   flutter_riverpod: ^0.12.1
   get_it: ^5.0.3

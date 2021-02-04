@@ -19,8 +19,6 @@ class OnboardingPage1 extends StatelessWidget {
           Text(AppLocalizations.onboardingPage1Label3),
           Container(height: 16.0),
           Text(AppLocalizations.onboardingPage1Label4),
-          Container(height: 16.0),
-          Text(AppLocalizations.onboardingPage1Label5),
         ],
       ),
     );

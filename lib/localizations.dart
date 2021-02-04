@@ -26,8 +26,6 @@ class AppLocalizations {
 
   static String get onboardingPage1Label4 => _getText('onboardingPage1Label4');
 
-  static String get onboardingPage1Label5 => _getText('onboardingPage1Label5');
-
   static String get onboardingPage2Headline =>
       _getText('onboardingPage2Headline');
 
@@ -183,13 +181,11 @@ class AppLocalizations {
     'onboardingPage1Label1':
         'Shogi (将棋) is a two-player strategy board game native to Japan, belonging to the same family as chess and xiangqi.',
     'onboardingPage1Label2':
-        'Shogi proverbs are technical tips for the player to lead them in the right direction when they are unsure of what move to play.',
+        'Shogi proverbs are technical tips for the player to lead them in the right direction when they are unsure of what move to play. This app contains 50 such proverbs for beginner to intermediate players.',
     'onboardingPage1Label3':
-        'This app contains 50 such proverbs for beginner to intermediate players. These proverbs are taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs).',
+        'These proverbs are taken from Takako Tombo Noda\'s website, which in turn contains translations of Masahiko Urano\'s book Shogi Kakugen Mame Jiten (Tiny dictionary of Shogi proverbs). Although this website is still online, it is not optimized for mobile, while the diagrams can be difficult to decipher.',
     'onboardingPage1Label4':
-        'Although this website is still online, it is not optimized for mobile, while the diagrams can be difficult to dephicer. ',
-    'onboardingPage1Label5':
-        'The goal of this open source project is to make this excellent content more accessible to beginners in the mobile age. It is assumed that neither Mr. Noda nor Mr. Urano would have anything against said project. No copyright infringement is intended.',
+        'The goal of this open source project is to make this excellent content more accessible to beginners in the mobile age, and it is assumed that neither Mr. Noda nor Mr. Urano would not support this goal. No copyright infringement is intended.',
     'onboardingPage2Headline': 'Personalizing your experience',
     'onboardingPage2Label1':
         'These settings can be updated anytime in the settings menu.',

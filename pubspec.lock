@@ -191,12 +191,10 @@ packages:
   flutter_shogi_board:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "4884b5eab2062bb8de430176bd9c55ff8af65a09"
-      url: "https://github.com/defuncart/flutter_shogi_board"
-    source: git
-    version: "0.0.5"
+      name: flutter_shogi_board
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.6"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -399,12 +397,10 @@ packages:
   shogi:
     dependency: transitive
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "739fa5338765e1b5f532f70a8af1fa0a9a682460"
-      url: "https://github.com/defuncart/shogi"
-    source: git
-    version: "0.0.3"
+      name: shogi
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.4"
   sky_engine:
     dependency: transitive
     description: flutter
