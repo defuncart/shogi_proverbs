@@ -4,6 +4,9 @@ import 'package:shogi_proverbs/models/sections/i_section.dart';
 
 /// A model representing a section containing a sequence of game moves
 class MoveSequence implements ISection {
+  /// A header description
+  final String description;
+
   /// A list of moves specified as text
   final List<String> moves;
 
@@ -11,6 +14,7 @@ class MoveSequence implements ISection {
   final PlayerType playerFirstMove;
 
   const MoveSequence({
+    this.description,
     @required this.moves,
     @required this.playerFirstMove,
   })  : assert(moves != null),
