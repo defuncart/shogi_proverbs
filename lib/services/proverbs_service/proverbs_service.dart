@@ -1,6 +1,7 @@
 import 'package:shogi_proverbs/enums/proverb_type.dart';
 import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/individual_pieces.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/middlegame_proverbs/middlegame_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverbs.dart';
 
 /// A service to handle proverbs
@@ -8,6 +9,7 @@ class ProverbsService {
   static const _proverbs = [
     ...individualPieces,
     ...openingProverbs,
+    ...middlegameProverbs,
   ];
 
   /// Returns proverbs satisfying a filter
