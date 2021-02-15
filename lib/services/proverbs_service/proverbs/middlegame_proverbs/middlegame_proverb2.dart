@@ -17,10 +17,8 @@ const middlegameProverb2 = Proverb(
           sfenString: '7nl/6gk1/5ppp1/8p/9/6P1P/5P3/7R1/7NL b 3P',
           label: 'Diagram 1-1',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 1-1:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 1-1:',
           moves: [
             'P2d',
             'Px2d',
@@ -31,10 +29,8 @@ const middlegameProverb2 = Proverb(
         Paragraph(
           text: 'Above is the joining Pawn tesuji.',
         ),
-        Paragraph(
-          text: 'Moves thereafter:',
-        ),
         MoveSequence(
+          description: 'Moves thereafter:',
           moves: [
             'Px2e',
             'P*2d',
@@ -90,10 +86,8 @@ const middlegameProverb2 = Proverb(
           sfenString: 'kng1+R4/lsg6/pNppp4/1P7/PpP6/2SPP4/2BG5/1KG6/LN7 w 2p',
           label: 'Diagram 2-3',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 2-3:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 2-3:',
           moves: [
             'Sx8c',
             'Px8c+',

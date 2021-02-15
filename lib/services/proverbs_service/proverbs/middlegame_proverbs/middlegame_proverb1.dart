@@ -25,10 +25,8 @@ const middlegameProverb1 = Proverb(
           text:
               'Against the rash Silver, align your Pawns up front first. Then counter with a Pawn-push on another file. See for yourself how good it looks when Black plays P6e from Diagram 1-1, which is the tesuji you should remember.',
         ),
-        Paragraph(
-          text: 'Moves thereafter:',
-        ),
         MoveSequence(
+          description: 'Moves thereafter:',
           moves: [
             'Sx6e',
             'Px7e',
@@ -47,10 +45,8 @@ const middlegameProverb1 = Proverb(
           text:
               "White should not have played Sx6e in the first place. Px7f would have been better. Suppose you are Black, how would you play after White's Px7f?",
         ),
-        Paragraph(
-          text: 'Moves thereafter:',
-        ),
         MoveSequence(
+          description: 'Moves thereafter:',
           moves: [
             'Gx7f',
             'S7c',
@@ -88,10 +84,8 @@ const middlegameProverb1 = Proverb(
           text:
               "So, from Diagram 2-1, Black's move should be B5g, which will hold the square 7e in its path, making the power balance on 7e even.",
         ),
-        Paragraph(
-          text: 'Moves thereafter:',
-        ),
         MoveSequence(
+          description: 'Moves thereafter:',
           moves: [
             'P7e',
             'P6e',
