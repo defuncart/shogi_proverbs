@@ -17,8 +17,10 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      color: Theme.of(context).accentColor,
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: Theme.of(context).accentColor,
+      ),
       child: Text(
         label,
         style: TextStyle(
