@@ -4,6 +4,7 @@ import 'package:shogi_proverbs/configs/external_links.dart';
 import 'package:shogi_proverbs/configs/route_names.dart';
 import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/widgets/common/buttons/custom_button.dart';
+import 'package:shogi_proverbs/widgets/common/buttons/custom_text_button.dart';
 import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/data_privacy_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/developer_panel.dart';
@@ -71,8 +72,8 @@ class _DataPrivacyPopup extends StatelessWidget {
       title: Text(AppLocalizations.dataPrivacyPopupTitle),
       content: DataPrivacyPanel(),
       actions: <Widget>[
-        FlatButton(
-          child: Text(MaterialLocalizations.of(context).viewLicensesButtonLabel),
+        CustomTextButton(
+          label: MaterialLocalizations.of(context).viewLicensesButtonLabel,
           onPressed: () => showLicensePage(
             context: context,
             applicationName: AppLocalizations.appTitle,
@@ -80,12 +81,10 @@ class _DataPrivacyPopup extends StatelessWidget {
             applicationIcon: Image.asset('assets/images/app_icon.png'),
             applicationLegalese: '© 2021 defuncart',
           ),
-          textColor: Theme.of(context).accentColor,
         ),
-        FlatButton(
-          child: Text(MaterialLocalizations.of(context).closeButtonLabel),
+        CustomTextButton(
+          label: MaterialLocalizations.of(context).closeButtonLabel,
           onPressed: () => Navigator.pop(context),
-          textColor: Theme.of(context).accentColor,
         ),
       ],
       scrollable: true,
@@ -163,10 +162,9 @@ class _CreditsPopup extends StatelessWidget {
         ),
       ),
       actions: <Widget>[
-        FlatButton(
-          child: Text(MaterialLocalizations.of(context).closeButtonLabel),
+        CustomTextButton(
+          label: MaterialLocalizations.of(context).closeButtonLabel,
           onPressed: () => Navigator.pop(context),
-          textColor: Theme.of(context).accentColor,
         ),
       ],
       scrollable: true,
