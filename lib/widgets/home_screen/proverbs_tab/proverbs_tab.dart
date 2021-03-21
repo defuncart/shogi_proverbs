@@ -6,6 +6,7 @@ import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs_service.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
+import 'package:shogi_proverbs/widgets/common/buttons/custom_text_button.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/proverb_detail.dart';
 
 class ProverbsTab extends StatelessWidget {
@@ -99,17 +100,13 @@ class _AskViewTutorialPopup extends StatelessWidget {
         textAlign: TextAlign.justify,
       ),
       actions: [
-        FlatButton(
-          child: Text(AppLocalizations.generalNo.toUpperCase()),
-          textColor: Theme.of(context).accentColor,
+        CustomTextButton(
+          label: AppLocalizations.generalNo.toUpperCase(),
           onPressed: () => Navigator.of(context).pop(false),
-          color: Theme.of(context).scaffoldBackgroundColor,
         ),
-        FlatButton(
-          child: Text(AppLocalizations.generalYes.toUpperCase()),
-          textColor: Theme.of(context).accentColor,
+        CustomTextButton(
+          label: AppLocalizations.generalYes.toUpperCase(),
           onPressed: () => Navigator.of(context).pop(true),
-          color: Theme.of(context).scaffoldBackgroundColor,
         ),
       ],
     );

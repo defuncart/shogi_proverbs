@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-/// A button which uses the current theme to style itself
+/// A text button which uses the current theme to style itself
 ///
-/// Text color matches scaffold, while button color matches accent
-class CustomButton extends StatelessWidget {
+/// Text color matches accent
+class CustomTextButton extends StatelessWidget {
   final String label;
   final void Function() onPressed;
 
-  const CustomButton({
+  const CustomTextButton({
     Key key,
     @required this.label,
     @required this.onPressed,
@@ -17,16 +17,11 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
+    return TextButton(
+      style: TextButton.styleFrom(
         primary: Theme.of(context).accentColor,
       ),
-      child: Text(
-        label,
-        style: TextStyle(
-          color: Theme.of(context).scaffoldBackgroundColor,
-        ),
-      ),
+      child: Text(label),
       onPressed: onPressed,
     );
   }
