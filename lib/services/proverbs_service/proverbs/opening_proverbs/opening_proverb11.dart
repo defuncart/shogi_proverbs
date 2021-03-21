@@ -17,10 +17,8 @@ const openingProverb11 = Proverb(
           text:
               'A series of moves that starts from Diagram 1-1 and ends with Black having a Pawn in hand is known as the Pawn-exchange in the Rook file.',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 1-1:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 1-1:',
           moves: [
             'P2d',
             'Px2d',
@@ -66,10 +64,8 @@ const openingProverb11 = Proverb(
           sfenString: '5k1nl/6gb1/5ppp1/8p/9/8P/6P2/7R1/7NL b P',
           label: 'Diagram 2-1',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 2-1:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 2-1:',
           moves: [
             'P1e',
             'Px1e',
@@ -85,10 +81,8 @@ const openingProverb11 = Proverb(
           text:
               'Begin with the edge-wing attack: P1e, Px1e, P*1c. This is one of the basics. When beginning the edge attack, it is crucial whether you have a Pawn in hand or not.',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 2-2:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 2-2:',
           moves: [
             'Lx1c',
             'S*1b',

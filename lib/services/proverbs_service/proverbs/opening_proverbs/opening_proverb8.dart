@@ -72,10 +72,8 @@ const openingProverb8 = Proverb(
           text:
               'In Diagram 2-1, Black has just played to make the midfile-Pawn into a vanguard (P5e), but it was a bad idea.',
         ),
-        Paragraph(
-          text: 'After Diagram 2-1:',
-        ),
         MoveSequence(
+          description: 'After Diagram 2-1:',
           moves: [
             'R5b',
             'S5g',
@@ -101,10 +99,8 @@ const openingProverb8 = Proverb(
           sfenString: 'ln4knl/1r1s2g2/p2p1gspp/2pbppp2/1p7/2PPP1P2/PPSG1PSPP/1KGB3R1/LN5NL b -',
           label: 'Diagram 2-3',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 2-3 (1):',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 2-3 (1):',
           moves: [
             'P6e',
             'B4b',
@@ -117,10 +113,8 @@ const openingProverb8 = Proverb(
           text:
               'It is never easy to create a vanguard Pawn in the double fortress opening. In Diagram 2-3, it may appear quite easy for Black to take a kurai in the 6th file by playing P6e. But White will then play P8f to exchange Pawns, which is hardly desirable for Black. What if, then, you play G6f instead of S6f so that White cannot come for the Pawn-exchange in the 8th file?',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 2-3 (2):',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 2-3 (2):',
           moves: [
             'P6e',
             'B4b',

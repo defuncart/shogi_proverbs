@@ -21,10 +21,8 @@ const openingProverb6 = Proverb(
           text:
               'Diagram 1 shows where Black has played K-8h, in the Yagura castle: a normal move, apparently. But it turned out to be a bad move, since the King moved into a dangerous zone.',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 1:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 1:',
           moves: [
             'N8e',
             'S8f',
@@ -40,10 +38,8 @@ const openingProverb6 = Proverb(
           text:
               "N8e is a smart move on White's part. Naturally Black avoids offering his Silver in exchange for a Knight; therefore, he plays S8f, but White's next move, P6e, gives Black a headache. Black cannot play Px6e.",
         ),
-        Paragraph(
-          text: 'Moves thereafter:',
-        ),
         MoveSequence(
+          description: 'Moves thereafter:',
           moves: [
             'S5g',
             'Px6f',
