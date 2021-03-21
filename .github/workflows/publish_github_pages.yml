@@ -16,8 +16,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: subosito/flutter-action@v1
         with:
-          channel: 'beta'
-      - run: flutter config --enable-web
+          channel: 'stable'
       - run: flutter pub get
       - name: Build + Commit
         run: |

@@ -13,19 +13,29 @@ class MoveSequenceDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Wrap(
-        alignment: WrapAlignment.center,
-        crossAxisAlignment: WrapCrossAlignment.center,
-        spacing: 12.0,
-        runSpacing: 4.0,
-        children: <Widget>[
-          for (int i = 0; i < moveSequence.moves.length; i++)
-            Text(
-              '${moveSequence.playerIconForMoveIndex(i)}${moveSequence.moves[i]}',
-            ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (moveSequence.description != null)
+          Padding(
+            padding: const EdgeInsetsDirectional.only(bottom: 8),
+            child: Text(moveSequence.description),
+          ),
+        Center(
+          child: Wrap(
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            spacing: 12.0,
+            runSpacing: 4.0,
+            children: <Widget>[
+              for (int i = 0; i < moveSequence.moves.length; i++)
+                Text(
+                  '${moveSequence.playerIconForMoveIndex(i)}${moveSequence.moves[i]}',
+                ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

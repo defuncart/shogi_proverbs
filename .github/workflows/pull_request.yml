@@ -11,7 +11,7 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          channel: 'beta'
+          channel: 'stable'
       - name: Install packages
         run:
           flutter pub get
@@ -31,7 +31,7 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          channel: 'beta'
+          channel: 'stable'
       - name: Build apk
         run:
           flutter build apk --release --split-per-abi
@@ -45,7 +45,7 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          channel: 'beta'
+          channel: 'stable'
       - name: Build ipa
         run:
           flutter build ios --release --no-codesign
@@ -59,10 +59,7 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          channel: 'beta'
-      - name: Enable Web Support
-        run:
-          flutter config --enable-web
+          channel: 'stable'
       - name: Build web
         run:
           flutter build web --release
