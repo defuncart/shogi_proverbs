@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
@@ -48,7 +49,9 @@ class _MyAppState extends State<MyApp> {
           case ConnectionState.waiting:
           case ConnectionState.active:
             return Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                color: AppThemes.light.accentColor,
+              ),
             );
           default:
             if (snapshot.connectionState == ConnectionState.done && snapshot.hasData && snapshot.data == true) {
@@ -124,22 +127,33 @@ class _MyApp extends StatelessWidget {
           usesJapanese: ref.read(selectedPieceSymbolProvider).state == 1,
           coordIndicatorType: CoordIndicatorType.arabic,
         ),
-        child: MaterialApp(
-          localizationsDelegates: [
-            const AppLocalizationsDelegate(),
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: AppLocalizationsDelegate.supportedLocals,
-          themeMode: ref.read(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
-          theme: AppThemes.light,
-          darkTheme: AppThemes.dark,
-          home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : OnboardingScreen(),
-          routes: {
-            RouteNames.homeScreen: (_) => HomeScreen(),
-            RouteNames.shogiNotationScreen: (_) => ShogiNotationScreen(),
-          },
+        child: AnnotatedRegion<SystemUiOverlayStyle>(
+          value: SystemUiOverlayStyle(
+            systemNavigationBarColor: ref.read(isDarkModeProvider).state
+                ? AppThemes.dark.scaffoldBackgroundColor
+                : AppThemes.light.scaffoldBackgroundColor,
+            statusBarColor: Colors.transparent,
+            systemNavigationBarIconBrightness: ref.read(isDarkModeProvider).state ? Brightness.light : Brightness.dark,
+            statusBarIconBrightness: ref.read(isDarkModeProvider).state ? Brightness.light : Brightness.dark,
+            statusBarBrightness: ref.read(isDarkModeProvider).state ? Brightness.dark : Brightness.light,
+          ),
+          child: MaterialApp(
+            localizationsDelegates: [
+              const AppLocalizationsDelegate(),
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: AppLocalizationsDelegate.supportedLocals,
+            themeMode: ref.read(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
+            theme: AppThemes.light,
+            darkTheme: AppThemes.dark,
+            home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : OnboardingScreen(),
+            routes: {
+              RouteNames.homeScreen: (_) => HomeScreen(),
+              RouteNames.shogiNotationScreen: (_) => ShogiNotationScreen(),
+            },
+          ),
         ),
       ),
     );
