@@ -20,7 +20,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Future<bool> _initAppFuture;
+  late Future<bool> _initAppFuture;
 
   @override
   void initState() {
@@ -84,12 +84,10 @@ class _FakeMobileWrapper extends StatelessWidget {
   final BoxConstraints constraints;
 
   const _FakeMobileWrapper({
-    @required this.child,
-    @required this.constraints,
-    Key key,
-  })  : assert(child != null),
-        assert(constraints != null),
-        super(key: key);
+    required this.child,
+    required this.constraints,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +108,7 @@ class _FakeMobileWrapper extends StatelessWidget {
 }
 
 class _MyApp extends StatelessWidget {
-  const _MyApp({Key key}) : super(key: key);
+  const _MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -119,8 +117,8 @@ class _MyApp extends StatelessWidget {
         style: ShogiBoardStyle(
           maxSize: 500,
           pieceColor: ref.read(isDarkModeProvider).state
-              ? AppThemes.dark.textTheme.bodyText1.color
-              : AppThemes.light.textTheme.bodyText1.color,
+              ? AppThemes.dark.textTheme.bodyText1!.color!
+              : AppThemes.light.textTheme.bodyText1!.color!,
           borderColor:
               ref.read(isDarkModeProvider).state ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
           usesJapanese: ref.read(selectedPieceSymbolProvider).state == 1,

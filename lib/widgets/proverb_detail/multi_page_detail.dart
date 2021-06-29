@@ -8,10 +8,9 @@ class MultiPageDetail extends StatelessWidget {
   final List<Page> pages;
 
   const MultiPageDetail({
-    Key key,
-    @required this.pages,
-  })  : assert(pages != null),
-        super(key: key);
+    Key? key,
+    required this.pages,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

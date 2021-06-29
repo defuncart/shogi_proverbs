@@ -6,12 +6,10 @@ class ContentPage extends StatelessWidget {
   final Widget content;
 
   const ContentPage({
-    Key key,
-    @required this.headline,
-    @required this.content,
-  })  : assert(headline != null),
-        assert(content != null),
-        super(key: key);
+    Key? key,
+    required this.headline,
+    required this.content,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +28,7 @@ class ContentPage extends StatelessWidget {
             Container(height: 32.0),
             //content
             DefaultTextStyle(
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.bodyText2!,
               textAlign: TextAlign.justify,
               child: content,
             ),

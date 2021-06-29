@@ -13,23 +13,20 @@ class _PieceModel {
   final String moveNotation;
 
   const _PieceModel({
-    @required this.name,
-    @required this.boardSymbol,
-    @required this.boardSymbolColor,
-    @required this.moveNotation,
-  })  : assert(name != null),
-        assert(boardSymbol != null),
-        assert(boardSymbolColor != null),
-        assert(moveNotation != null);
+    required this.name,
+    required this.boardSymbol,
+    required this.boardSymbolColor,
+    required this.moveNotation,
+  });
 }
 
 class ShogiNotationPage2 extends StatelessWidget {
-  const ShogiNotationPage2({Key key}) : super(key: key);
+  const ShogiNotationPage2({Key? key}) : super(key: key);
 
-  String _pieceTypeMultipleOptions(PieceType pieceType, {@required bool usesJapanese}) =>
+  String _pieceTypeMultipleOptions(PieceType pieceType, {required bool usesJapanese}) =>
       '${BoardPiece(pieceType: pieceType, position: Position(column: 1, row: 1)).displayString(usesJapanese: usesJapanese)}/${BoardPiece(pieceType: pieceType, player: PlayerType.gote, position: Position(column: 1, row: 1)).displayString(usesJapanese: usesJapanese)}';
 
-  String _formattedPieceType(PieceType pieceType, {@required bool usesJapanese}) {
+  String _formattedPieceType(PieceType pieceType, {required bool usesJapanese}) {
     if (usesJapanese) {
       if (pieceType == PieceType.king) {
         return _pieceTypeMultipleOptions(pieceType, usesJapanese: usesJapanese);
@@ -177,7 +174,7 @@ class ShogiNotationPage2 extends StatelessWidget {
                         Center(
                           child: Text(
                             piece.boardSymbol,
-                            style: Theme.of(context).textTheme.bodyText2.copyWith(color: piece.boardSymbolColor),
+                            style: Theme.of(context).textTheme.bodyText2!.copyWith(color: piece.boardSymbolColor),
                           ),
                         ),
                         Center(

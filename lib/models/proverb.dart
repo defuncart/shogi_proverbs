@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:shogi_proverbs/enums/proverb_type.dart';
 import 'package:shogi_proverbs/models/page.dart';
 
@@ -20,17 +19,12 @@ class Proverb {
   final List<Page> pages;
 
   const Proverb({
-    @required this.index,
-    @required this.type,
-    @required this.title,
-    @required this.japaneseTitle,
-    @required this.pages,
-  })  : assert(index != null),
-        assert(index >= 0 && index < 50),
-        assert(type != null),
-        assert(title != null),
-        assert(japaneseTitle != null),
-        assert(pages != null);
+    required this.index,
+    required this.type,
+    required this.title,
+    required this.japaneseTitle,
+    required this.pages,
+  }) : assert(index >= 0 && index < 50);
 
   /// Whether the proverb is multi-paged
   bool get isMultiPage => pages.length > 1;

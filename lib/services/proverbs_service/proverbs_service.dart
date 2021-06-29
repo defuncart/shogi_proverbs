@@ -14,7 +14,7 @@ class ProverbsService {
 
   /// Returns proverbs satisfying a filter
   static Map<ProverbType, List<Proverb>> proverbsWithFilter(String filter) {
-    final proverbs = filter == null || filter.isEmpty
+    final proverbs = filter.isEmpty
         ? _proverbs
         : _proverbs.where((proverbs) => proverbs.title.toLowerCase().contains(filter.toLowerCase())).toList();
     return _mapSelectedProverbsToType(proverbs);

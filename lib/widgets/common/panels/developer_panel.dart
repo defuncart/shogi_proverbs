@@ -4,7 +4,7 @@ import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/widgets/common/text/clickable_text_span.dart';
 
 class DeveloperPanel extends StatelessWidget {
-  const DeveloperPanel({Key key}) : super(key: key);
+  const DeveloperPanel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

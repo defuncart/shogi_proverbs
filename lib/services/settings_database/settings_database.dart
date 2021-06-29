@@ -6,7 +6,7 @@ import 'package:shogi_proverbs/services/settings_database/i_settings_database.da
 /// A database of the player's device settings
 class SettingsDatabase implements ISettingsDatabase {
   /// A box to store objects
-  Box<dynamic> _box;
+  late Box<dynamic> _box;
 
   /// A name for the box
   static const _boxName = 'settings';
@@ -52,14 +52,12 @@ class SettingsDatabase implements ISettingsDatabase {
       Hive.init(dir.path);
     }
 
-    if (_box == null) {
-      _box = await Hive.openBox<dynamic>(_boxName);
-    }
+    _box = await Hive.openBox<dynamic>(_boxName);
   }
 
   /// Resets the database
   @override
-  Future<void> reset() => _box?.deleteAll(_box?.keys);
+  Future<void> reset() => _box.deleteAll(_box.keys);
 }
 
 /// A class of keys used to store values

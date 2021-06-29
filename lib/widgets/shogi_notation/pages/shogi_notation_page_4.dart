@@ -8,7 +8,7 @@ import 'package:shogi_proverbs/widgets/proverb_detail/sections/diagram_detail.da
 import 'package:shogi_proverbs/widgets/proverb_detail/sections/move_sequence_detail.dart';
 
 class ShogiNotationPage4 extends StatelessWidget {
-  const ShogiNotationPage4({Key key}) : super(key: key);
+  const ShogiNotationPage4({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

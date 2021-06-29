@@ -5,10 +5,9 @@ class PageViewWithIndicators extends StatefulWidget {
   final List<Widget> children;
 
   PageViewWithIndicators({
-    Key key,
-    @required this.children,
-  })  : assert(children != null),
-        assert(children.isNotEmpty),
+    Key? key,
+    required this.children,
+  })  : assert(children.isNotEmpty),
         super(key: key);
 
   @override
@@ -48,9 +47,9 @@ class _PageIndicator extends StatelessWidget {
   final int totalNumPages;
 
   const _PageIndicator({
-    Key key,
-    @required this.currentIndex,
-    @required this.totalNumPages,
+    Key? key,
+    required this.currentIndex,
+    required this.totalNumPages,
   }) : super(key: key);
 
   @override

@@ -11,14 +11,19 @@ enum ProverbType {
 
 /// A class of extension methods for ProverbType
 extension ProverbTypeExtensions on ProverbType {
-  static final _mapProverTypeLocaString = {
-    ProverbType.pieces: AppLocalizations.proverbTypepieces,
-    ProverbType.opening: AppLocalizations.proverbTypeopening,
-    ProverbType.middle: AppLocalizations.proverbTypemiddle,
-    ProverbType.end: AppLocalizations.proverbTypeend,
-    ProverbType.other: AppLocalizations.proverbTypeother,
-  };
-
   /// Returns a localized string for the [ProverbType]
-  String get locaString => _mapProverTypeLocaString[this];
+  String get locaString {
+    switch (this) {
+      case ProverbType.pieces:
+        return AppLocalizations.proverbTypepieces;
+      case ProverbType.opening:
+        return AppLocalizations.proverbTypeopening;
+      case ProverbType.middle:
+        return AppLocalizations.proverbTypemiddle;
+      case ProverbType.end:
+        return AppLocalizations.proverbTypeend;
+      case ProverbType.other:
+        return AppLocalizations.proverbTypeother;
+    }
+  }
 }

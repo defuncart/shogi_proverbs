@@ -13,5 +13,5 @@ abstract class DIContainer {
     }
   }
 
-  static T get<T>() => _getIt.get<T>();
+  static T get<T extends Object>() => _getIt.get<T>();
 }

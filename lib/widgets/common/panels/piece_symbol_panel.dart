@@ -10,7 +10,7 @@ final selectedPieceSymbolProvider = StateProvider((_) => DIContainer.get<ISettin
 class PieceSymbolPanel extends StatelessWidget {
   static const _languageSymbols = ['K', '玉'];
 
-  const PieceSymbolPanel({Key key}) : super(key: key);
+  const PieceSymbolPanel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

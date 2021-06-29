@@ -9,7 +9,7 @@ import 'package:shogi_proverbs/widgets/shogi_notation/pages/shogi_notation_page_
 import 'package:shogi_proverbs/widgets/shogi_notation/pages/shogi_notation_page_4.dart';
 
 class ShogiNotationScreen extends StatelessWidget {
-  const ShogiNotationScreen({Key key}) : super(key: key);
+  const ShogiNotationScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

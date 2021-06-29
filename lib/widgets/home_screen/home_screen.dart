@@ -4,7 +4,7 @@ import 'package:shogi_proverbs/widgets/home_screen/proverbs_tab/proverbs_tab.dar
 import 'package:shogi_proverbs/widgets/home_screen/settings_tab/settings_tab.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -38,12 +38,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: InputDecoration(
                   hintText: AppLocalizations.homeScreenSearchHintText,
                   border: InputBorder.none,
-                  hintStyle: Theme.of(context).textTheme.headline6.apply(
+                  hintStyle: Theme.of(context).textTheme.headline6!.apply(
                         color: Colors.white.withOpacity(0.4),
                       ),
                 ),
                 cursorColor: Colors.white,
-                style: Theme.of(context).textTheme.headline6.apply(color: Colors.white),
+                style: Theme.of(context).textTheme.headline6!.apply(color: Colors.white),
                 onChanged: (value) => setState(() => _searchQuery = value),
               )
             : Text(AppLocalizations.appTitle),
@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class _ShiftingBottomNavBarItem extends BottomNavigationBarItem {
-  _ShiftingBottomNavBarItem({IconData icon, String label, Color color})
+  _ShiftingBottomNavBarItem({IconData? icon, required String label, Color? color})
       : super(
           icon: Icon(
             icon,
