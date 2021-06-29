@@ -29,6 +29,10 @@ class ProverbsTab extends StatelessWidget {
               for (final kvp in proverbs.entries)
                 ExpansionTile(
                   initiallyExpanded: true,
+                  textColor: Theme.of(context).textTheme.bodyText2?.color,
+                  collapsedTextColor: Theme.of(context).disabledColor,
+                  iconColor: Theme.of(context).textTheme.bodyText2?.color,
+                  collapsedIconColor: Theme.of(context).disabledColor,
                   title: Text(kvp.key.locaString),
                   children: [
                     for (final proverb in kvp.value) _ProverbTile(proverb: proverb),

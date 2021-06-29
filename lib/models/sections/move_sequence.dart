@@ -28,7 +28,7 @@ extension MoveSequenceExtensions on MoveSequence {
   }
 }
 
-// TODO move to shogi package
+// TODO consider moving to shogi package
 extension PlayerTypeExtensions on PlayerType {
   /// Returns the player icon for the player type
   String get icon {
