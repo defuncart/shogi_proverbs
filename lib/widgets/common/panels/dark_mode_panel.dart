@@ -16,10 +16,10 @@ class DarkModePanel extends StatelessWidget {
       children: <Widget>[
         Text(AppLocalizations.darkModePanelText),
         Consumer(
-          builder: (_, read, __) => Switch(
-            value: read(isDarkModeProvider).state,
+          builder: (_, ref, __) => Switch(
+            value: ref.read(isDarkModeProvider).state,
             onChanged: (value) {
-              context.read(isDarkModeProvider).state = value;
+              ref.read(isDarkModeProvider).state = value;
               DIContainer.get<ISettingsDatabase>().isDarkMode = value;
             },
             inactiveThumbColor: Theme.of(context).scaffoldBackgroundColor,

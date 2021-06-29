@@ -23,9 +23,7 @@ class ShogiNotationPage1 extends StatelessWidget {
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.75,
               child: ShogiBoard(
-                gameBoard: GameBoard(
-                  boardPieces: [],
-                ),
+                gameBoard: GameBoard.empty(),
                 showPiecesInHand: false,
               ),
             ),

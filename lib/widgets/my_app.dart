@@ -115,14 +115,15 @@ class _MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer(
-      builder: (_, read, __) => DefaultShogiBoardStyle(
+      builder: (_, ref, __) => DefaultShogiBoardStyle(
         style: ShogiBoardStyle(
           maxSize: 500,
-          pieceColor: read(isDarkModeProvider).state
+          pieceColor: ref.read(isDarkModeProvider).state
               ? AppThemes.dark.textTheme.bodyText1.color
               : AppThemes.light.textTheme.bodyText1.color,
-          borderColor: read(isDarkModeProvider).state ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
-          usesJapanese: read(selectedPieceSymbolProvider).state == 1,
+          borderColor:
+              ref.read(isDarkModeProvider).state ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
+          usesJapanese: ref.read(selectedPieceSymbolProvider).state == 1,
           coordIndicatorType: CoordIndicatorType.arabic,
         ),
         child: MaterialApp(
@@ -133,7 +134,7 @@ class _MyApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: AppLocalizationsDelegate.supportedLocals,
-          themeMode: read(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
+          themeMode: ref.read(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
           theme: AppThemes.light,
           darkTheme: AppThemes.dark,
           home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : OnboardingScreen(),
