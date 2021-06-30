@@ -9,6 +9,7 @@ class AppThemes {
   static final light = ThemeData.light().copyWith(
     scaffoldBackgroundColor: _lightAppColors.scaffoldBackgroundColor,
     accentColor: _lightAppColors.accentColor,
+    splashColor: _lightAppColors.accentColor,
     appBarTheme: AppBarTheme(
       color: _lightAppColors.appBarColor,
       brightness: Brightness.dark,
@@ -22,6 +23,7 @@ class AppThemes {
   static final dark = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: _darkAppColors.scaffoldBackgroundColor,
     accentColor: _darkAppColors.accentColor,
+    splashColor: _darkAppColors.accentColor,
     appBarTheme: AppBarTheme(
       color: _darkAppColors.appBarColor,
       brightness: Brightness.dark,

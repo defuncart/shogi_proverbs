@@ -76,38 +76,22 @@ class _HomeScreenState extends State<HomeScreen> {
         data: Theme.of(context).copyWith(canvasColor: Theme.of(context).scaffoldBackgroundColor),
         child: BottomNavigationBar(
           items: [
-            _ShiftingBottomNavBarItem(
-              icon: Icons.book,
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book),
               label: AppLocalizations.homeScreenProversTabTitleText,
-              color: _currentIndex == 0 ? Theme.of(context).accentColor : Theme.of(context).disabledColor,
             ),
-            _ShiftingBottomNavBarItem(
-              icon: Icons.settings,
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
               label: AppLocalizations.homeScreenSettingsTabTitleText,
-              color: _currentIndex == 1 ? Theme.of(context).accentColor : Theme.of(context).disabledColor,
             ),
           ],
           currentIndex: _currentIndex,
           onTap: (index) => setState(() => _currentIndex = index),
           type: BottomNavigationBarType.shifting,
+          selectedItemColor: Theme.of(context).accentColor,
+          unselectedItemColor: Theme.of(context).disabledColor,
         ),
       ),
     );
   }
-}
-
-class _ShiftingBottomNavBarItem extends BottomNavigationBarItem {
-  _ShiftingBottomNavBarItem({IconData? icon, required String label, Color? color})
-      : super(
-          icon: Icon(
-            icon,
-            color: color,
-          ),
-          // TODO once 1.23 is stable, update to label
-          // ignore: deprecated_member_use
-          title: Text(
-            label,
-            style: TextStyle(color: color),
-          ),
-        );
 }
