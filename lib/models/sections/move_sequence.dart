@@ -1,11 +1,10 @@
-import 'package:meta/meta.dart';
 import 'package:shogi/shogi.dart';
 import 'package:shogi_proverbs/models/sections/i_section.dart';
 
 /// A model representing a section containing a sequence of game moves
 class MoveSequence implements ISection {
   /// A header description
-  final String description;
+  final String? description;
 
   /// A list of moves specified as text
   final List<String> moves;
@@ -15,10 +14,9 @@ class MoveSequence implements ISection {
 
   const MoveSequence({
     this.description,
-    @required this.moves,
-    @required this.playerFirstMove,
-  })  : assert(moves != null),
-        assert(playerFirstMove != null);
+    required this.moves,
+    required this.playerFirstMove,
+  });
 }
 
 /// A class of extension methods for MoveSequence
@@ -30,13 +28,15 @@ extension MoveSequenceExtensions on MoveSequence {
   }
 }
 
-// TODO move to shogi package
+// TODO consider moving to shogi package
 extension PlayerTypeExtensions on PlayerType {
-  static const _mapPlayerTypeStringIcon = {
-    PlayerType.sente: BoardConfig.sente,
-    PlayerType.gote: BoardConfig.gote,
-  };
-
   /// Returns the player icon for the player type
-  String get icon => _mapPlayerTypeStringIcon[this];
+  String get icon {
+    switch (this) {
+      case PlayerType.sente:
+        return BoardConfig.sente;
+      case PlayerType.gote:
+        return BoardConfig.gote;
+    }
+  }
 }

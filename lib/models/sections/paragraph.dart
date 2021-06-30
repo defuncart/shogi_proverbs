@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:shogi_proverbs/models/sections/i_section.dart';
 
 /// A model representing a section contain paragraph text
@@ -7,6 +6,6 @@ class Paragraph implements ISection {
   final String text;
 
   const Paragraph({
-    @required this.text,
-  }) : assert(text != null);
+    required this.text,
+  });
 }

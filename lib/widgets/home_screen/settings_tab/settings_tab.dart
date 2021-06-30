@@ -12,7 +12,7 @@ import 'package:shogi_proverbs/widgets/common/panels/piece_symbol_panel.dart';
 import 'package:shogi_proverbs/widgets/common/text/clickable_text_span.dart';
 
 class SettingsTab extends StatelessWidget {
-  const SettingsTab({Key key}) : super(key: key);
+  const SettingsTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class SettingsTab extends StatelessWidget {
 }
 
 class _DataPrivacyPopup extends StatelessWidget {
-  const _DataPrivacyPopup({Key key}) : super(key: key);
+  const _DataPrivacyPopup({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +93,7 @@ class _DataPrivacyPopup extends StatelessWidget {
 }
 
 class _CreditsPopup extends StatelessWidget {
-  const _CreditsPopup({Key key}) : super(key: key);
+  const _CreditsPopup({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +101,7 @@ class _CreditsPopup extends StatelessWidget {
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       title: Text(AppLocalizations.creditsPopupTitle),
       content: DefaultTextStyle(
-        style: Theme.of(context).textTheme.bodyText2,
+        style: Theme.of(context).textTheme.bodyText2!,
         textAlign: TextAlign.justify,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

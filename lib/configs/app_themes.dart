@@ -9,9 +9,16 @@ class AppThemes {
   static final light = ThemeData.light().copyWith(
     scaffoldBackgroundColor: _lightAppColors.scaffoldBackgroundColor,
     accentColor: _lightAppColors.accentColor,
+    splashColor: _lightAppColors.accentColor,
+    colorScheme: ColorScheme.light().copyWith(
+      primary: _lightAppColors.accentColor,
+      secondary: _lightAppColors.accentColor,
+    ),
     appBarTheme: AppBarTheme(
       color: _lightAppColors.appBarColor,
+      brightness: Brightness.dark,
     ),
+    toggleableActiveColor: _lightAppColors.accentColor,
     //TODO this is because _PackagesView from about.dart uses card color for background color
     cardColor: _lightAppColors.scaffoldBackgroundColor,
   );
@@ -21,7 +28,15 @@ class AppThemes {
   static final dark = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: _darkAppColors.scaffoldBackgroundColor,
     accentColor: _darkAppColors.accentColor,
-    appBarTheme: AppBarTheme(color: _darkAppColors.appBarColor),
+    splashColor: _darkAppColors.accentColor,
+    colorScheme: ColorScheme.light().copyWith(
+      primary: _darkAppColors.accentColor,
+      secondary: _darkAppColors.accentColor,
+    ),
+    appBarTheme: AppBarTheme(
+      color: _darkAppColors.appBarColor,
+      brightness: Brightness.dark,
+    ),
     toggleableActiveColor: _darkAppColors.accentColor,
     disabledColor: _darkAppColors.disabledColor,
     //TODO this is because _PackagesView from about.dart uses card color for background color

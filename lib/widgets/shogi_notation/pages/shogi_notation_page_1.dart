@@ -5,7 +5,7 @@ import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 
 class ShogiNotationPage1 extends StatelessWidget {
-  const ShogiNotationPage1({Key key}) : super(key: key);
+  const ShogiNotationPage1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +23,7 @@ class ShogiNotationPage1 extends StatelessWidget {
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.75,
               child: ShogiBoard(
-                gameBoard: GameBoard(
-                  boardPieces: [],
-                ),
+                gameBoard: GameBoard.empty(),
                 showPiecesInHand: false,
               ),
             ),

@@ -4,7 +4,7 @@ import 'package:shogi_proverbs/widgets/home_screen/proverbs_tab/proverbs_tab.dar
 import 'package:shogi_proverbs/widgets/home_screen/settings_tab/settings_tab.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -38,12 +38,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: InputDecoration(
                   hintText: AppLocalizations.homeScreenSearchHintText,
                   border: InputBorder.none,
-                  hintStyle: Theme.of(context).textTheme.headline6.apply(
+                  hintStyle: Theme.of(context).textTheme.headline6!.apply(
                         color: Colors.white.withOpacity(0.4),
                       ),
                 ),
                 cursorColor: Colors.white,
-                style: Theme.of(context).textTheme.headline6.apply(color: Colors.white),
+                style: Theme.of(context).textTheme.headline6!.apply(color: Colors.white),
                 onChanged: (value) => setState(() => _searchQuery = value),
               )
             : Text(AppLocalizations.appTitle),
@@ -76,38 +76,22 @@ class _HomeScreenState extends State<HomeScreen> {
         data: Theme.of(context).copyWith(canvasColor: Theme.of(context).scaffoldBackgroundColor),
         child: BottomNavigationBar(
           items: [
-            _ShiftingBottomNavBarItem(
-              icon: Icons.book,
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book),
               label: AppLocalizations.homeScreenProversTabTitleText,
-              color: _currentIndex == 0 ? Theme.of(context).accentColor : Theme.of(context).disabledColor,
             ),
-            _ShiftingBottomNavBarItem(
-              icon: Icons.settings,
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
               label: AppLocalizations.homeScreenSettingsTabTitleText,
-              color: _currentIndex == 1 ? Theme.of(context).accentColor : Theme.of(context).disabledColor,
             ),
           ],
           currentIndex: _currentIndex,
           onTap: (index) => setState(() => _currentIndex = index),
           type: BottomNavigationBarType.shifting,
+          selectedItemColor: Theme.of(context).accentColor,
+          unselectedItemColor: Theme.of(context).disabledColor,
         ),
       ),
     );
   }
-}
-
-class _ShiftingBottomNavBarItem extends BottomNavigationBarItem {
-  _ShiftingBottomNavBarItem({IconData icon, String label, Color color})
-      : super(
-          icon: Icon(
-            icon,
-            color: color,
-          ),
-          // TODO once 1.23 is stable, update to label
-          // ignore: deprecated_member_use
-          title: Text(
-            label,
-            style: TextStyle(color: color),
-          ),
-        );
 }

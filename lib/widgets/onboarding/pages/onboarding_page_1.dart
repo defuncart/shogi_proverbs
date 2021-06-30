@@ -3,7 +3,7 @@ import 'package:shogi_proverbs/localizations.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 
 class OnboardingPage1 extends StatelessWidget {
-  const OnboardingPage1({Key key}) : super(key: key);
+  const OnboardingPage1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

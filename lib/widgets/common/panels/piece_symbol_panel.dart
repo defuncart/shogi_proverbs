@@ -10,7 +10,7 @@ final selectedPieceSymbolProvider = StateProvider((_) => DIContainer.get<ISettin
 class PieceSymbolPanel extends StatelessWidget {
   static const _languageSymbols = ['K', '玉'];
 
-  const PieceSymbolPanel({Key key}) : super(key: key);
+  const PieceSymbolPanel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +20,11 @@ class PieceSymbolPanel extends StatelessWidget {
       children: [
         Text(AppLocalizations.pieceSymbolPanelText),
         Consumer(
-          builder: (_, read, __) => SegmentedChips(
+          builder: (_, ref, __) => SegmentedChips(
             labels: _languageSymbols,
-            initiallySelectedIndex: read(selectedPieceSymbolProvider).state,
+            initiallySelectedIndex: ref.read(selectedPieceSymbolProvider).state,
             onSelected: (selectedIndex) {
-              context.read(selectedPieceSymbolProvider).state = selectedIndex;
+              ref.read(selectedPieceSymbolProvider).state = selectedIndex;
               DIContainer.get<ISettingsDatabase>().selectedPieceSymbol = selectedIndex;
             },
           ),

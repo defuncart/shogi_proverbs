@@ -12,8 +12,8 @@ class PageDetail extends StatelessWidget {
   final Page page;
 
   const PageDetail({
-    Key key,
-    @required this.page,
+    Key? key,
+    required this.page,
   }) : super(key: key);
 
   @override

@@ -6,10 +6,9 @@ class MoveSequenceDetail extends StatelessWidget {
   final MoveSequence moveSequence;
 
   const MoveSequenceDetail({
-    @required this.moveSequence,
-    Key key,
-  })  : assert(moveSequence != null),
-        super(key: key);
+    required this.moveSequence,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class MoveSequenceDetail extends StatelessWidget {
         if (moveSequence.description != null)
           Padding(
             padding: const EdgeInsetsDirectional.only(bottom: 8),
-            child: Text(moveSequence.description),
+            child: Text(moveSequence.description!),
           ),
         Center(
           child: Wrap(

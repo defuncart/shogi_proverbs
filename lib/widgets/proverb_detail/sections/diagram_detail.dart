@@ -8,10 +8,9 @@ class DiagramDetail extends StatelessWidget {
   final Diagram diagram;
 
   const DiagramDetail({
-    @required this.diagram,
-    Key key,
-  })  : assert(diagram != null),
-        super(key: key);
+    required this.diagram,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class DiagramDetail extends StatelessWidget {
           ),
           if (diagram.label != null)
             Text(
-              diagram.label,
+              diagram.label!,
               style: TextStyle(
                 fontStyle: FontStyle.italic,
               ),
