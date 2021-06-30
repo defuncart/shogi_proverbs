@@ -116,46 +116,47 @@ class _MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer(
-      builder: (_, ref, __) => DefaultShogiBoardStyle(
-        style: ShogiBoardStyle(
-          maxSize: 500,
-          pieceColor: ref.read(isDarkModeProvider).state
-              ? AppThemes.dark.textTheme.bodyText1!.color!
-              : AppThemes.light.textTheme.bodyText1!.color!,
-          borderColor:
-              ref.read(isDarkModeProvider).state ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
-          usesJapanese: ref.read(selectedPieceSymbolProvider).state == 1,
-          coordIndicatorType: CoordIndicatorType.arabic,
-        ),
-        child: AnnotatedRegion<SystemUiOverlayStyle>(
-          value: SystemUiOverlayStyle(
-            systemNavigationBarColor: ref.read(isDarkModeProvider).state
-                ? AppThemes.dark.scaffoldBackgroundColor
-                : AppThemes.light.scaffoldBackgroundColor,
-            statusBarColor: Colors.transparent,
-            systemNavigationBarIconBrightness: ref.read(isDarkModeProvider).state ? Brightness.light : Brightness.dark,
-            statusBarIconBrightness: ref.read(isDarkModeProvider).state ? Brightness.light : Brightness.dark,
-            statusBarBrightness: ref.read(isDarkModeProvider).state ? Brightness.dark : Brightness.light,
+      builder: (_, ref, __) {
+        final isDarkMode = ref.watch(isDarkModeProvider).state;
+
+        return DefaultShogiBoardStyle(
+          style: ShogiBoardStyle(
+            maxSize: 500,
+            pieceColor:
+                isDarkMode ? AppThemes.dark.textTheme.bodyText1!.color! : AppThemes.light.textTheme.bodyText1!.color!,
+            borderColor: isDarkMode ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
+            usesJapanese: ref.watch(selectedPieceSymbolProvider).state == 1,
+            coordIndicatorType: CoordIndicatorType.arabic,
           ),
-          child: MaterialApp(
-            localizationsDelegates: [
-              const AppLocalizationsDelegate(),
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: AppLocalizationsDelegate.supportedLocals,
-            themeMode: ref.read(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
-            theme: AppThemes.light,
-            darkTheme: AppThemes.dark,
-            home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : OnboardingScreen(),
-            routes: {
-              RouteNames.homeScreen: (_) => HomeScreen(),
-              RouteNames.shogiNotationScreen: (_) => ShogiNotationScreen(),
-            },
+          child: AnnotatedRegion<SystemUiOverlayStyle>(
+            value: SystemUiOverlayStyle(
+              systemNavigationBarColor:
+                  isDarkMode ? AppThemes.dark.scaffoldBackgroundColor : AppThemes.light.scaffoldBackgroundColor,
+              statusBarColor: Colors.transparent,
+              systemNavigationBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+              statusBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+              statusBarBrightness: isDarkMode ? Brightness.dark : Brightness.light,
+            ),
+            child: MaterialApp(
+              localizationsDelegates: [
+                const AppLocalizationsDelegate(),
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: AppLocalizationsDelegate.supportedLocals,
+              themeMode: ref.watch(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
+              theme: AppThemes.light,
+              darkTheme: AppThemes.dark,
+              home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : OnboardingScreen(),
+              routes: {
+                RouteNames.homeScreen: (_) => HomeScreen(),
+                RouteNames.shogiNotationScreen: (_) => ShogiNotationScreen(),
+              },
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }
