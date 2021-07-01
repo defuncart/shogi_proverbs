@@ -1,5 +1,6 @@
 import 'package:shogi_proverbs/enums/proverb_type.dart';
 import 'package:shogi_proverbs/models/proverb.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/endgame_proverbs/endgame_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/individual_pieces.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/middlegame_proverbs/middlegame_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverbs.dart';
@@ -10,6 +11,7 @@ class ProverbsService {
     ...individualPieces,
     ...openingProverbs,
     ...middlegameProverbs,
+    ...endgameProverbs,
   ];
 
   /// Returns proverbs satisfying a filter
