@@ -145,7 +145,7 @@ class _MyApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: AppLocalizationsDelegate.supportedLocals,
-              themeMode: ref.watch(isDarkModeProvider).state ? ThemeMode.dark : ThemeMode.light,
+              themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
               theme: AppThemes.light,
               darkTheme: AppThemes.dark,
               home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : OnboardingScreen(),
