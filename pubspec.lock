@@ -63,7 +63,7 @@ packages:
       name: cli_util
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.0"
+    version: "0.3.1"
   clock:
     dependency: transitive
     description:
@@ -84,7 +84,7 @@ packages:
       name: convert
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "3.0.1"
   crypto:
     dependency: transitive
     description:
@@ -194,16 +194,16 @@ packages:
       name: flutter_riverpod
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0-dev.1"
+    version: "1.0.0-dev.2"
   flutter_shogi_board:
     dependency: "direct main"
     description:
       path: "."
       ref: main
-      resolved-ref: f95254a8053e5ca87b29cb3e7ed7b3a70e46b200
+      resolved-ref: "182e9a2809bbd066bd3ea02a4a415a146ed3990d"
       url: "https://github.com/defuncart/flutter_shogi_board"
     source: git
-    version: "0.0.7-nullsafety.0"
+    version: "0.0.7"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -381,16 +381,14 @@ packages:
       name: riverpod
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0-dev.1"
+    version: "1.0.0-dev.2"
   shogi:
     dependency: transitive
     description:
-      path: "."
-      ref: main
-      resolved-ref: e31bc38c48a5c2c688ec140e1ef319ea3c6238d1
-      url: "https://github.com/defuncart/shogi"
-    source: git
-    version: "0.0.5-nullsafety.0"
+      name: shogi
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.5"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -458,7 +456,7 @@ packages:
       name: url_launcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.7"
+    version: "6.0.8"
   url_launcher_linux:
     dependency: transitive
     description:
@@ -514,7 +512,7 @@ packages:
       name: win32
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.3"
+    version: "2.2.4"
   xdg_directories:
     dependency: transitive
     description:
