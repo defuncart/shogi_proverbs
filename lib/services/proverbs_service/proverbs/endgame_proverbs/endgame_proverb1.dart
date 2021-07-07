@@ -28,7 +28,7 @@ const endgameProverb1 = Proverb(
           label: 'Diagram 1-2',
         ),
         MoveSequence(
-          description: 'Moves from Diagram 2:',
+          description: 'Moves from Diagram 1-2:',
           moves: [
             'Rx4a+',
             'Kx4a',
