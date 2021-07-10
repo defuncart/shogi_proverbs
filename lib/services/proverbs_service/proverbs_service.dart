@@ -6,7 +6,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/middlegame_pro
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverbs.dart';
 
 /// A service to handle proverbs
-class ProverbsService {
+abstract class ProverbsService {
   static const _proverbs = [
     ...individualPieces,
     ...openingProverbs,
