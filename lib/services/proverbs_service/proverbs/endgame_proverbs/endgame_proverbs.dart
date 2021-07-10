@@ -5,6 +5,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/endgame_prover
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/endgame_proverbs/endgame_proverb5.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/endgame_proverbs/endgame_proverb6.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/endgame_proverbs/endgame_proverb7.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/endgame_proverbs/endgame_proverb8.dart';
 
 const endgameProverbs = [
   endgameProverb1,
@@ -14,4 +15,5 @@ const endgameProverbs = [
   endgameProverb5,
   endgameProverb6,
   endgameProverb7,
+  endgameProverb8,
 ];
