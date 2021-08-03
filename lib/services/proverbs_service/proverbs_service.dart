@@ -4,6 +4,7 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs/endgame_prover
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/individual_pieces/individual_pieces.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/middlegame_proverbs/middlegame_proverbs.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs/opening_proverbs/opening_proverbs.dart';
+import 'package:shogi_proverbs/services/proverbs_service/proverbs/other_proverbs/other_proverbs.dart';
 
 /// A service to handle proverbs
 abstract class ProverbsService {
@@ -12,6 +13,7 @@ abstract class ProverbsService {
     ...openingProverbs,
     ...middlegameProverbs,
     ...endgameProverbs,
+    ...otherProverbs,
   ];
 
   /// Returns proverbs satisfying a filter
