@@ -6,7 +6,7 @@ class SegmentedChips extends StatefulWidget {
   final int initiallySelectedIndex;
   final void Function(int) onSelected;
 
-  SegmentedChips({
+  const SegmentedChips({
     Key? key,
     required this.labels,
     this.initiallySelectedIndex = 0,
@@ -34,7 +34,7 @@ class _SegmentedChipsState extends State<SegmentedChips> {
         widget.labels.length,
         (index) => Row(
           children: [
-            if (index != 0) Container(width: 8),
+            if (index != 0) const SizedBox(width: 16),
             FilterChip(
               label: Text(
                 widget.labels[index],

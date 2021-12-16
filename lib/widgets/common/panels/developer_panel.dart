@@ -18,7 +18,7 @@ class DeveloperPanel extends StatelessWidget {
           ),
           TextSpan(
             text: AppLocalizations.developerPanelLabel12,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.red,
             ),
           ),

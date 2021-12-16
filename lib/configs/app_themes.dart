@@ -8,13 +8,13 @@ class AppThemes {
   static final light = ThemeData.light().copyWith(
     scaffoldBackgroundColor: _lightAppColors.scaffoldBackgroundColor,
     splashColor: _lightAppColors.accentColor,
-    colorScheme: ColorScheme.light().copyWith(
+    colorScheme: const ColorScheme.light().copyWith(
       primary: _lightAppColors.accentColor,
       secondary: _lightAppColors.accentColor,
     ),
     appBarTheme: AppBarTheme(
       color: _lightAppColors.appBarColor,
-      systemOverlayStyle: SystemUiOverlayStyle(
+      systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarBrightness: Brightness.dark,
       ),
     ),
@@ -28,13 +28,13 @@ class AppThemes {
   static final dark = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: _darkAppColors.scaffoldBackgroundColor,
     splashColor: _darkAppColors.accentColor,
-    colorScheme: ColorScheme.light().copyWith(
+    colorScheme: const ColorScheme.light().copyWith(
       primary: _darkAppColors.accentColor,
       secondary: _darkAppColors.accentColor,
     ),
     appBarTheme: AppBarTheme(
       color: _darkAppColors.appBarColor,
-      systemOverlayStyle: SystemUiOverlayStyle(
+      systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarBrightness: Brightness.dark,
       ),
     ),

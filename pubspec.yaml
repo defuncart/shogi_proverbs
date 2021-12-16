@@ -27,10 +27,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flappy_translator:
-  flutter_analysis_options:
-    git:
-      url: https://github.com/defuncart/flutter_analysis_options
-      ref: main
+  flutter_lints:
   flutter_launcher_icons:
 
 dependency_overrides:

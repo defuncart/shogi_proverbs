@@ -18,17 +18,17 @@ class ShogiNotationPage1 extends StatelessWidget {
             AppLocalizations.shogiNotationPage1Label1,
             // textAlign: TextAlign.justify,
           ),
-          Container(height: 16.0),
+          const SizedBox(height: 16),
           Center(
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.75,
-              child: ShogiBoard(
+              child: const ShogiBoard(
                 gameBoard: GameBoard.empty(),
                 showPiecesInHand: false,
               ),
             ),
           ),
-          Container(height: 16.0),
+          const SizedBox(height: 16),
           Text(
             AppLocalizations.shogiNotationPage1Label2,
             // textAlign: TextAlign.justify,

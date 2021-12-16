@@ -30,7 +30,7 @@ class PageDetail extends StatelessWidget {
                   if (section is Paragraph) ParagraphDetail(paragraph: section),
                   if (section is Diagram) DiagramDetail(diagram: section),
                   if (section is MoveSequence) MoveSequenceDetail(moveSequence: section),
-                  Container(height: 16),
+                  const SizedBox(height: 16),
                 ],
               )
           ],

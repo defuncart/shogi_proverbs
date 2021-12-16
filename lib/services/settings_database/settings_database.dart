@@ -39,9 +39,11 @@ class SettingsDatabase implements ISettingsDatabase {
   set hasSeenOnboarding(bool value) => _box.put(_Keys.hasSeenOnboarding, value);
 
   /// Returns whether the user has seen the tutorial
+  @override
   bool get hasSeenTutorial => _box.get(_Keys.hasSeenTutorial, defaultValue: _Defaults.hasSeenTutorial);
 
   /// Sets whether the user has seen the tutorial
+  @override
   set hasSeenTutorial(bool value) => _box.put(_Keys.hasSeenTutorial, value);
 
   /// Initializes the database

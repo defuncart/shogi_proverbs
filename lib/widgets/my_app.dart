@@ -16,6 +16,8 @@ import 'package:shogi_proverbs/widgets/onboarding/onboarding_screen.dart';
 import 'package:shogi_proverbs/widgets/shogi_notation/shogi_notation_screen.dart';
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -55,7 +57,7 @@ class _MyAppState extends State<MyApp> {
             );
           default:
             if (snapshot.connectionState == ConnectionState.done && snapshot.hasData && snapshot.data == true) {
-              return _MyApp();
+              return const _MyApp();
             }
           //TODO else show error
         }
@@ -138,8 +140,8 @@ class _MyApp extends StatelessWidget {
               statusBarBrightness: isDarkMode ? Brightness.dark : Brightness.light,
             ),
             child: MaterialApp(
-              localizationsDelegates: [
-                const AppLocalizationsDelegate(),
+              localizationsDelegates: const [
+                AppLocalizationsDelegate(),
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,
@@ -148,10 +150,12 @@ class _MyApp extends StatelessWidget {
               themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
               theme: AppThemes.light,
               darkTheme: AppThemes.dark,
-              home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : OnboardingScreen(),
+              home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding
+                  ? const HomeScreen()
+                  : const OnboardingScreen(),
               routes: {
-                RouteNames.homeScreen: (_) => HomeScreen(),
-                RouteNames.shogiNotationScreen: (_) => ShogiNotationScreen(),
+                RouteNames.homeScreen: (_) => const HomeScreen(),
+                RouteNames.shogiNotationScreen: (_) => const ShogiNotationScreen(),
               },
             ),
           ),

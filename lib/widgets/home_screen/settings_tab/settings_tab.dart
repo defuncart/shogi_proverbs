@@ -22,34 +22,34 @@ class SettingsTab extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 16.0),
-              DarkModePanel(),
-              SizedBox(height: 16.0),
-              PieceSymbolPanel(),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
+              const DarkModePanel(),
+              const SizedBox(height: 16.0),
+              const PieceSymbolPanel(),
+              const SizedBox(height: 16.0),
               Center(
                 child: CustomButton(
                   label: AppLocalizations.generalShogiNotation,
                   onPressed: () => Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen),
                 ),
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               Center(
                 child: CustomButton(
                   label: AppLocalizations.settingsTabDataPrivacyButtonText,
                   onPressed: () => showDialog(
                     context: context,
-                    builder: (_) => _DataPrivacyPopup(),
+                    builder: (_) => const _DataPrivacyPopup(),
                   ),
                 ),
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               Center(
                 child: CustomButton(
                   label: AppLocalizations.settingsTabCreditsButtonText,
                   onPressed: () => showDialog(
                     context: context,
-                    builder: (_) => _CreditsPopup(),
+                    builder: (_) => const _CreditsPopup(),
                   ),
                 ),
               ),
@@ -69,7 +69,7 @@ class _DataPrivacyPopup extends StatelessWidget {
     return AlertDialog(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       title: Text(AppLocalizations.dataPrivacyPopupTitle),
-      content: DataPrivacyPanel(),
+      content: const DataPrivacyPanel(),
       actions: <Widget>[
         CustomTextButton(
           label: MaterialLocalizations.of(context).viewLicensesButtonLabel,
@@ -106,7 +106,7 @@ class _CreditsPopup extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(AppLocalizations.creditsPopupLabel1),
-            Container(height: 8.0),
+            const SizedBox(height: 16),
             RichText(
               textAlign: TextAlign.justify,
               text: TextSpan(
@@ -130,7 +130,7 @@ class _CreditsPopup extends StatelessWidget {
                 ],
               ),
             ),
-            Container(height: 8.0),
+            const SizedBox(height: 16),
             RichText(
               textAlign: TextAlign.justify,
               text: TextSpan(
@@ -156,7 +156,7 @@ class _CreditsPopup extends StatelessWidget {
               ),
             ),
             Container(height: 4.0),
-            DeveloperPanel(),
+            const DeveloperPanel(),
           ],
         ),
       ),

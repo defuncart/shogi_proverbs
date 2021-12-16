@@ -14,12 +14,12 @@ class ShogiNotationPage3 extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(AppLocalizations.shogiNotationPage3Label1),
-          Container(height: 16),
+          const SizedBox(height: 16),
           Center(
             child: Wrap(
               spacing: 8.0,
               runSpacing: 4.0,
-              children: [
+              children: const [
                 Text('player'),
                 Text('piece'),
                 // Text('(origin)'),
@@ -29,19 +29,19 @@ class ShogiNotationPage3 extends StatelessWidget {
               ],
             ),
           ),
-          Container(height: 16),
+          const SizedBox(height: 16),
           Text(AppLocalizations.shogiNotationPage3Label2),
-          Container(height: 16),
+          const SizedBox(height: 16),
           Text(AppLocalizations.shogiNotationPage3Label3),
-          Container(height: 16),
+          const SizedBox(height: 16),
           Text(AppLocalizations.shogiNotationPage3Label4),
-          Container(height: 16),
+          const SizedBox(height: 16),
           Table(
             border: TableBorder.all(
               color: Theme.of(context).disabledColor,
               width: 1,
             ),
-            columnWidths: {
+            columnWidths: const {
               0: FractionColumnWidth(0.225),
               1: FractionColumnWidth(0.775),
             },
@@ -64,50 +64,50 @@ class ShogiNotationPage3 extends StatelessWidget {
                   ),
                 ],
               ),
-              TableRow(
+              const TableRow(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(2.0),
+                    padding: EdgeInsets.all(2.0),
                     child: Text('☗P-7f'),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(2.0),
+                    padding: EdgeInsets.all(2.0),
                     child: Text('Black moves a pawn to 7f.'),
                   ),
                 ],
               ),
-              TableRow(
+              const TableRow(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(2.0),
+                    padding: EdgeInsets.all(2.0),
                     child: Text('☖Px7d'),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(2.0),
+                    padding: EdgeInsets.all(2.0),
                     child: Text('White moves a pawn to 7d and captures the piece at 7d.'),
                   ),
                 ],
               ),
-              TableRow(
+              const TableRow(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(2.0),
+                    padding: EdgeInsets.all(2.0),
                     child: Text('☖S*3d'),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(2.0),
+                    padding: EdgeInsets.all(2.0),
                     child: Text('White drops a silver from in hand onto 3d'),
                   ),
                 ],
               ),
-              TableRow(
+              const TableRow(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(2.0),
+                    padding: EdgeInsets.all(2.0),
                     child: Text('☗Sx3c+'),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(2.0),
+                    padding: EdgeInsets.all(2.0),
                     child: Text(
                       'Black moves a silver to 3c, captures the piece at 3c and chooses to promote their silver.',
                     ),

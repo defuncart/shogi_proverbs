@@ -16,16 +16,16 @@ class OnboardingPage2 extends StatelessWidget {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          DarkModePanel(),
-          Container(height: 16.0),
-          PieceSymbolPanel(),
-          Container(height: 32.0),
+          const DarkModePanel(),
+          const SizedBox(height: 16.0),
+          const PieceSymbolPanel(),
+          const SizedBox(height: 32.0),
           Center(
             child: ShogiBoard(
               gameBoard: ShogiUtils.initialBoard,
             ),
           ),
-          Container(height: 32.0),
+          const SizedBox(height: 32.0),
           Text(AppLocalizations.onboardingPage2Label1),
         ],
       ),

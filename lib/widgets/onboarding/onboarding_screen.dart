@@ -12,7 +12,7 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: PageViewWithIndicators(
-          children: [
+          children: const [
             OnboardingPage1(),
             OnboardingPage2(),
             OnboardingPage3(),

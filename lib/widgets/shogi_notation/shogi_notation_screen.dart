@@ -23,7 +23,7 @@ class ShogiNotationScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: PageViewWithIndicators(
-          children: [
+          children: const [
             ShogiNotationPage1(),
             ShogiNotationPage2(),
             ShogiNotationPage3(),
