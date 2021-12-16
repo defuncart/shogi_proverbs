@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/external_links.dart';
 import 'package:shogi_proverbs/configs/route_names.dart';
@@ -120,7 +119,7 @@ class _CreditsPopup extends StatelessWidget {
                     text: AppLocalizations.creditsPopupLabel22,
                     url: ExternalLinks.proverbsContent,
                     style: TextStyle(
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -144,7 +143,7 @@ class _CreditsPopup extends StatelessWidget {
                     text: AppLocalizations.creditsPopupLabel32,
                     url: ExternalLinks.proverbsContent,
                     style: TextStyle(
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
                     ),

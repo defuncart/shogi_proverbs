@@ -17,7 +17,7 @@ class CustomTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-        primary: Theme.of(context).accentColor,
+        primary: Theme.of(context).colorScheme.secondary,
       ),
       child: Text(label),
       onPressed: onPressed,

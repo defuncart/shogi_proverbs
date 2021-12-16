@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
           case ConnectionState.active:
             return Center(
               child: CircularProgressIndicator(
-                color: AppThemes.light.accentColor,
+                color: AppThemes.light.colorScheme.secondary,
               ),
             );
           default:
@@ -117,7 +117,7 @@ class _MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer(
       builder: (_, ref, __) {
-        final isDarkMode = ref.watch(isDarkModeProvider).state;
+        final isDarkMode = ref.watch(isDarkModeProvider);
 
         return DefaultShogiBoardStyle(
           style: ShogiBoardStyle(
@@ -125,7 +125,7 @@ class _MyApp extends StatelessWidget {
             pieceColor:
                 isDarkMode ? AppThemes.dark.textTheme.bodyText1!.color! : AppThemes.light.textTheme.bodyText1!.color!,
             borderColor: isDarkMode ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
-            usesJapanese: ref.watch(selectedPieceSymbolProvider).state == 1,
+            usesJapanese: ref.watch(selectedPieceSymbolProvider) == 1,
             coordIndicatorType: CoordIndicatorType.arabic,
           ),
           child: AnnotatedRegion<SystemUiOverlayStyle>(

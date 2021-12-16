@@ -66,8 +66,9 @@ class _PageIndicator extends StatelessWidget {
                 width: 12,
                 height: 12,
                 decoration: BoxDecoration(
-                  color:
-                      i == currentIndex ? Theme.of(context).accentColor : Theme.of(context).accentColor.withAlpha(128),
+                  color: i == currentIndex
+                      ? Theme.of(context).colorScheme.secondary
+                      : Theme.of(context).colorScheme.secondary.withAlpha(128),
                   shape: BoxShape.circle,
                 ),
               ),

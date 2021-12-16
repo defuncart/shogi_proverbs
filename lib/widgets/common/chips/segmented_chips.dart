@@ -47,7 +47,7 @@ class _SegmentedChipsState extends State<SegmentedChips> {
                 widget.onSelected(index);
               },
               selected: index == _selectedIndex,
-              selectedColor: Theme.of(context).accentColor,
+              selectedColor: Theme.of(context).colorScheme.secondary,
               backgroundColor: Theme.of(context).disabledColor,
               checkmarkColor: Theme.of(context).scaffoldBackgroundColor,
             ),

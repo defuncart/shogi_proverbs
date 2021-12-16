@@ -22,9 +22,9 @@ class PieceSymbolPanel extends StatelessWidget {
         Consumer(
           builder: (_, ref, __) => SegmentedChips(
             labels: _languageSymbols,
-            initiallySelectedIndex: ref.read(selectedPieceSymbolProvider).state,
+            initiallySelectedIndex: ref.read(selectedPieceSymbolProvider),
             onSelected: (selectedIndex) {
-              ref.read(selectedPieceSymbolProvider).state = selectedIndex;
+              ref.read(selectedPieceSymbolProvider.notifier).state = selectedIndex;
               DIContainer.get<ISettingsDatabase>().selectedPieceSymbol = selectedIndex;
             },
           ),
