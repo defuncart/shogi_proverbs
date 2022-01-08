@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -140,6 +141,7 @@ class _MyApp extends StatelessWidget {
               statusBarBrightness: isDarkMode ? Brightness.dark : Brightness.light,
             ),
             child: MaterialApp(
+              scrollBehavior: _AppScrollBehavior(),
               localizationsDelegates: const [
                 AppLocalizationsDelegate(),
                 GlobalMaterialLocalizations.delegate,
@@ -163,4 +165,12 @@ class _MyApp extends StatelessWidget {
       },
     );
   }
+}
+
+class _AppScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }
