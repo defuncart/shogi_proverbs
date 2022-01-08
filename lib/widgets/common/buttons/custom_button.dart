@@ -17,7 +17,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Theme.of(context).accentColor,
+        primary: Theme.of(context).colorScheme.secondary,
       ),
       child: Text(
         label,

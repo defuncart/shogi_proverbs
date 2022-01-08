@@ -23,7 +23,7 @@ class DiagramDetail extends StatelessWidget {
           if (diagram.label != null)
             Text(
               diagram.label!,
-              style: TextStyle(
+              style: const TextStyle(
                 fontStyle: FontStyle.italic,
               ),
             ),

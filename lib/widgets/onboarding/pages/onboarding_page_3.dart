@@ -18,10 +18,10 @@ class OnboardingPage3 extends StatelessWidget {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          DataPrivacyPanel(),
-          Container(height: 16.0),
-          DeveloperPanel(),
-          Container(height: 16.0),
+          const DataPrivacyPanel(),
+          const SizedBox(height: 16.0),
+          const DeveloperPanel(),
+          const SizedBox(height: 16.0),
           Center(
             child: CustomButton(
               label: AppLocalizations.onboardingPage3ContinueButtonText,

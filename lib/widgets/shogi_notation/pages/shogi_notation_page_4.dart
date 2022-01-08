@@ -20,19 +20,19 @@ class ShogiNotationPage4 extends StatelessWidget {
           Text(
             AppLocalizations.shogiNotationPage4Label1,
           ),
-          Container(height: 8.0),
-          DiagramDetail(
+          const SizedBox(height: 16),
+          const DiagramDetail(
             diagram: Diagram(
               sfenString: 'lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b -',
               label: 'Diagram 1',
             ),
           ),
-          Container(height: 16.0),
+          const SizedBox(height: 16),
           Text(
             AppLocalizations.shogiNotationPage4Label2,
           ),
-          Container(height: 16.0),
-          MoveSequenceDetail(
+          const SizedBox(height: 16),
+          const MoveSequenceDetail(
             moveSequence: MoveSequence(
               moves: [
                 'P-7f',
@@ -47,14 +47,14 @@ class ShogiNotationPage4 extends StatelessWidget {
               playerFirstMove: PlayerType.sente,
             ),
           ),
-          Container(height: 8.0),
-          DiagramDetail(
+          const SizedBox(height: 16),
+          const DiagramDetail(
             diagram: Diagram(
               sfenString: 'lnsgkg1nl/1r5s1/p1pppp1pp/6p2/1p7/2P4P1/PP1PPPP1P/2G4R1/LNS1KGSNL b bB',
               label: 'Diagram 2',
             ),
           ),
-          Container(height: 8.0),
+          const SizedBox(height: 16),
         ],
       ),
     );

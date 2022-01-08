@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 /// A config of themes used in the app
 class AppThemes {
@@ -8,15 +7,16 @@ class AppThemes {
 
   static final light = ThemeData.light().copyWith(
     scaffoldBackgroundColor: _lightAppColors.scaffoldBackgroundColor,
-    accentColor: _lightAppColors.accentColor,
     splashColor: _lightAppColors.accentColor,
-    colorScheme: ColorScheme.light().copyWith(
+    colorScheme: const ColorScheme.light().copyWith(
       primary: _lightAppColors.accentColor,
       secondary: _lightAppColors.accentColor,
     ),
     appBarTheme: AppBarTheme(
       color: _lightAppColors.appBarColor,
-      brightness: Brightness.dark,
+      systemOverlayStyle: const SystemUiOverlayStyle(
+        statusBarBrightness: Brightness.dark,
+      ),
     ),
     toggleableActiveColor: _lightAppColors.accentColor,
     //TODO this is because _PackagesView from about.dart uses card color for background color
@@ -27,15 +27,16 @@ class AppThemes {
 
   static final dark = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: _darkAppColors.scaffoldBackgroundColor,
-    accentColor: _darkAppColors.accentColor,
     splashColor: _darkAppColors.accentColor,
-    colorScheme: ColorScheme.light().copyWith(
+    colorScheme: const ColorScheme.light().copyWith(
       primary: _darkAppColors.accentColor,
       secondary: _darkAppColors.accentColor,
     ),
     appBarTheme: AppBarTheme(
       color: _darkAppColors.appBarColor,
-      brightness: Brightness.dark,
+      systemOverlayStyle: const SystemUiOverlayStyle(
+        statusBarBrightness: Brightness.dark,
+      ),
     ),
     toggleableActiveColor: _darkAppColors.accentColor,
     disabledColor: _darkAppColors.disabledColor,

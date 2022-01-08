@@ -62,7 +62,7 @@ class _ProverbTile extends StatelessWidget {
         if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
           final openTutorial = await showDialog(
             context: context,
-            builder: (_) => _AskViewTutorialPopup(),
+            builder: (_) => const _AskViewTutorialPopup(),
           );
           // user must choose yes/no, dismissing by taping outside of popup doesn't count
           if (openTutorial != null) {

@@ -18,7 +18,7 @@ class DeveloperPanel extends StatelessWidget {
           ),
           TextSpan(
             text: AppLocalizations.developerPanelLabel12,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.red,
             ),
           ),
@@ -28,7 +28,7 @@ class DeveloperPanel extends StatelessWidget {
           ClickableTextSpan(
             text: AppLocalizations.developerPanelLabel14,
             style: TextStyle(
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               fontWeight: FontWeight.bold,
             ),
             url: ExternalLinks.sourceCode,

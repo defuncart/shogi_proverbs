@@ -28,7 +28,7 @@ class DataPrivacyPanel extends StatelessWidget {
               ClickableTextSpan(
                 text: AppLocalizations.dataPrivacyPanelLabel12,
                 style: TextStyle(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   fontWeight: FontWeight.bold,
                 ),
                 url: ExternalLinks.privacyPolicy,

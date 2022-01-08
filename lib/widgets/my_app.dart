@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -16,6 +17,8 @@ import 'package:shogi_proverbs/widgets/onboarding/onboarding_screen.dart';
 import 'package:shogi_proverbs/widgets/shogi_notation/shogi_notation_screen.dart';
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -50,12 +53,12 @@ class _MyAppState extends State<MyApp> {
           case ConnectionState.active:
             return Center(
               child: CircularProgressIndicator(
-                color: AppThemes.light.accentColor,
+                color: AppThemes.light.colorScheme.secondary,
               ),
             );
           default:
             if (snapshot.connectionState == ConnectionState.done && snapshot.hasData && snapshot.data == true) {
-              return _MyApp();
+              return const _MyApp();
             }
           //TODO else show error
         }
@@ -117,7 +120,7 @@ class _MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer(
       builder: (_, ref, __) {
-        final isDarkMode = ref.watch(isDarkModeProvider).state;
+        final isDarkMode = ref.watch(isDarkModeProvider);
 
         return DefaultShogiBoardStyle(
           style: ShogiBoardStyle(
@@ -125,7 +128,7 @@ class _MyApp extends StatelessWidget {
             pieceColor:
                 isDarkMode ? AppThemes.dark.textTheme.bodyText1!.color! : AppThemes.light.textTheme.bodyText1!.color!,
             borderColor: isDarkMode ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
-            usesJapanese: ref.watch(selectedPieceSymbolProvider).state == 1,
+            usesJapanese: ref.watch(selectedPieceSymbolProvider) == 1,
             coordIndicatorType: CoordIndicatorType.arabic,
           ),
           child: AnnotatedRegion<SystemUiOverlayStyle>(
@@ -138,8 +141,9 @@ class _MyApp extends StatelessWidget {
               statusBarBrightness: isDarkMode ? Brightness.dark : Brightness.light,
             ),
             child: MaterialApp(
-              localizationsDelegates: [
-                const AppLocalizationsDelegate(),
+              scrollBehavior: _AppScrollBehavior(),
+              localizationsDelegates: const [
+                AppLocalizationsDelegate(),
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,
@@ -148,10 +152,12 @@ class _MyApp extends StatelessWidget {
               themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
               theme: AppThemes.light,
               darkTheme: AppThemes.dark,
-              home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding ? HomeScreen() : OnboardingScreen(),
+              home: DIContainer.get<ISettingsDatabase>().hasSeenOnboarding
+                  ? const HomeScreen()
+                  : const OnboardingScreen(),
               routes: {
-                RouteNames.homeScreen: (_) => HomeScreen(),
-                RouteNames.shogiNotationScreen: (_) => ShogiNotationScreen(),
+                RouteNames.homeScreen: (_) => const HomeScreen(),
+                RouteNames.shogiNotationScreen: (_) => const ShogiNotationScreen(),
               },
             ),
           ),
@@ -159,4 +165,12 @@ class _MyApp extends StatelessWidget {
       },
     );
   }
+}
+
+class _AppScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }

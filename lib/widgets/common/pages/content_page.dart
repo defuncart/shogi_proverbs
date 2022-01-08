@@ -19,7 +19,7 @@ class ContentPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(height: 16.0),
+            const SizedBox(height: 16),
             Text(
               headline,
               textAlign: TextAlign.justify,
@@ -33,7 +33,7 @@ class ContentPage extends StatelessWidget {
               child: content,
             ),
             //content
-            Container(height: 8.0),
+            const SizedBox(height: 16),
           ],
         ),
       ),

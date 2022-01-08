@@ -24,7 +24,7 @@ class ShogiNotationPage2 extends StatelessWidget {
   const ShogiNotationPage2({Key? key}) : super(key: key);
 
   String _pieceTypeMultipleOptions(PieceType pieceType, {required bool usesJapanese}) =>
-      '${BoardPiece(pieceType: pieceType, position: Position(column: 1, row: 1)).displayString(usesJapanese: usesJapanese)}/${BoardPiece(pieceType: pieceType, player: PlayerType.gote, position: Position(column: 1, row: 1)).displayString(usesJapanese: usesJapanese)}';
+      '${BoardPiece(pieceType: pieceType, position: const Position(column: 1, row: 1)).displayString(usesJapanese: usesJapanese)}/${BoardPiece(pieceType: pieceType, player: PlayerType.gote, position: const Position(column: 1, row: 1)).displayString(usesJapanese: usesJapanese)}';
 
   String _formattedPieceType(PieceType pieceType, {required bool usesJapanese}) {
     if (usesJapanese) {
@@ -32,7 +32,7 @@ class ShogiNotationPage2 extends StatelessWidget {
         return _pieceTypeMultipleOptions(pieceType, usesJapanese: usesJapanese);
       }
 
-      return BoardPiece(pieceType: pieceType, position: Position(row: 1, column: 1)).displayString();
+      return BoardPiece(pieceType: pieceType, position: const Position(row: 1, column: 1)).displayString();
     }
 
     return _pieceTypeMultipleOptions(pieceType, usesJapanese: usesJapanese);
@@ -42,7 +42,7 @@ class ShogiNotationPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer(
       builder: (_, ref, __) {
-        final usesJapanese = ref.read(selectedPieceSymbolProvider).state == 1;
+        final usesJapanese = ref.read(selectedPieceSymbolProvider) == 1;
         final pieceColor = DefaultShogiBoardStyle.of(context).style.pieceColor;
         final promotedPieceColor = DefaultShogiBoardStyle.of(context).style.promotedPieceColor;
 
@@ -160,7 +160,7 @@ class ShogiNotationPage2 extends StatelessWidget {
                       ),
                     ],
                   ),
-                  TableRow(
+                  const TableRow(
                     children: [
                       Text(''),
                       Text(''),
@@ -193,7 +193,7 @@ class ShogiNotationPage2 extends StatelessWidget {
                   ],
                 ),
               Text(AppLocalizations.shogiNotationPage2Label2),
-              Container(height: 16.0),
+              const SizedBox(height: 16),
               Table(
                 children: [
                   TableRow(
@@ -208,25 +208,25 @@ class ShogiNotationPage2 extends StatelessWidget {
                       ),
                     ],
                   ),
-                  TableRow(
+                  const TableRow(
                     children: [
                       Text(''),
                       Text(''),
                     ],
                   ),
-                  TableRow(
+                  const TableRow(
                     children: [
                       Text('Promoted Pawn'),
                       Text('Tokin'),
                     ],
                   ),
-                  TableRow(
+                  const TableRow(
                     children: [
                       Text('Promoted Bishop'),
                       Text('Horse'),
                     ],
                   ),
-                  TableRow(
+                  const TableRow(
                     children: [
                       Text('Promoted Rook'),
                       Text('Dragon'),

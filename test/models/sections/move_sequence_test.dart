@@ -4,7 +4,7 @@ import 'package:shogi_proverbs/models/sections/move_sequence.dart';
 
 void main() {
   test('MoveSequenceExtensions: playerIconForMoveIndex sente first', () {
-    final moveSequence = MoveSequence(
+    const moveSequence = MoveSequence(
       moves: [
         'P*1c',
         'Lx1c',
@@ -22,7 +22,7 @@ void main() {
   });
 
   test('MoveSequenceExtensions: playerIconForMoveIndex gote first', () {
-    final moveSequence = MoveSequence(
+    const moveSequence = MoveSequence(
       moves: [
         'N-7c',
         'P-3e',

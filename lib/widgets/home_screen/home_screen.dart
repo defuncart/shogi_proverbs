@@ -50,12 +50,12 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           if (_canSearch && !_isSearching)
             IconButton(
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
               onPressed: () => setState(() => _isSearching = true),
             ),
           if (_canSearch && _isSearching)
             IconButton(
-              icon: Icon(Icons.close),
+              icon: const Icon(Icons.close),
               onPressed: () {
                 if (_searchQuery.isEmpty) {
                   setState(() => _isSearching = false);
@@ -71,24 +71,24 @@ class _HomeScreenState extends State<HomeScreen> {
           ? ProverbsTab(
               filterTerm: _searchQuery,
             )
-          : SettingsTab(),
+          : const SettingsTab(),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(canvasColor: Theme.of(context).scaffoldBackgroundColor),
         child: BottomNavigationBar(
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.book),
+              icon: const Icon(Icons.book),
               label: AppLocalizations.homeScreenProversTabTitleText,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
+              icon: const Icon(Icons.settings),
               label: AppLocalizations.homeScreenSettingsTabTitleText,
             ),
           ],
           currentIndex: _currentIndex,
           onTap: (index) => setState(() => _currentIndex = index),
           type: BottomNavigationBarType.shifting,
-          selectedItemColor: Theme.of(context).accentColor,
+          selectedItemColor: Theme.of(context).colorScheme.secondary,
           unselectedItemColor: Theme.of(context).disabledColor,
         ),
       ),
