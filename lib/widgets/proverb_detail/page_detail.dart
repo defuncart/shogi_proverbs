@@ -22,17 +22,14 @@ class PageDetail extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            for (final section in page.sections)
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  if (section is Paragraph) ParagraphDetail(paragraph: section),
-                  if (section is Diagram) DiagramDetail(diagram: section),
-                  if (section is MoveSequence) MoveSequenceDetail(moveSequence: section),
-                  const SizedBox(height: 16),
-                ],
-              )
+            for (final section in page.sections) ...[
+              if (section is Paragraph) ParagraphDetail(paragraph: section),
+              if (section is Diagram) DiagramDetail(diagram: section),
+              if (section is MoveSequence) MoveSequenceDetail(moveSequence: section),
+              const SizedBox(height: 16),
+            ],
           ],
         ),
       ),
