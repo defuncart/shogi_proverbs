@@ -80,13 +80,16 @@ class _ProverbTile extends StatelessWidget {
     );
   }
 
-  void _openProverbDetail(Proverb proverb, BuildContext context) => Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (_) => ProverbDetail(
-            proverb: proverb,
-          ),
+  void _openProverbDetail(Proverb proverb, BuildContext context) {
+    DIContainer.get<ISettingsDatabase>().setHasSeenProverb(proverb.index);
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => ProverbDetail(
+          proverb: proverb,
         ),
-      );
+      ),
+    );
+  }
 }
 
 /// Returns true if user decides to see tutorial, otherwise false
