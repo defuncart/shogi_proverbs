@@ -3,7 +3,6 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 
-/// A database of the player's device settings
 class SettingsDatabase implements ISettingsDatabase {
   /// A box to store objects
   late Box<dynamic> _box;
@@ -11,38 +10,30 @@ class SettingsDatabase implements ISettingsDatabase {
   /// A name for the box
   static const _boxName = 'settings';
 
-  /// Returns whether dark mode is enabled
   @override
   bool get isDarkMode => _box.get(_Keys.isDarkMode, defaultValue: _Defaults.isDarkMode);
 
-  /// Sets whether dark mode is enabled
   @override
   set isDarkMode(bool value) => _box.put(_Keys.isDarkMode, value);
 
-  /// Returns the selected piece symbol
   @override
   int get selectedPieceSymbol => _box.get(
         _Keys.selectedPieceSymbol,
         defaultValue: _Defaults.selectedPieceSymbol,
       );
 
-  /// Sets the selected piece symbol
   @override
   set selectedPieceSymbol(int value) => _box.put(_Keys.selectedPieceSymbol, value);
 
-  /// Returns whether the user has seen onboarding
   @override
   bool get hasSeenOnboarding => _box.get(_Keys.hasSeenOnboarding, defaultValue: _Defaults.hasSeenOnboarding);
 
-  /// Sets whether the user has seen onboarding
   @override
   set hasSeenOnboarding(bool value) => _box.put(_Keys.hasSeenOnboarding, value);
 
-  /// Returns whether the user has seen the tutorial
   @override
   bool get hasSeenTutorial => _box.get(_Keys.hasSeenTutorial, defaultValue: _Defaults.hasSeenTutorial);
 
-  /// Sets whether the user has seen the tutorial
   @override
   set hasSeenTutorial(bool value) => _box.put(_Keys.hasSeenTutorial, value);
 
@@ -57,7 +48,6 @@ class SettingsDatabase implements ISettingsDatabase {
 
   List<int> get _proverbsSeen => _box.get(_Keys.proverbsSeen, defaultValue: _Defaults.proverbsSeen);
 
-  /// Initializes the database
   @override
   Future<void> initialize() async {
     if (!kIsWeb) {
@@ -68,7 +58,6 @@ class SettingsDatabase implements ISettingsDatabase {
     _box = await Hive.openBox<dynamic>(_boxName);
   }
 
-  /// Resets the database
   @override
   Future<void> reset() => _box.deleteAll(_box.keys);
 }
