@@ -24,6 +24,12 @@ abstract class ISettingsDatabase {
   /// Sets whether the user has seen the tutorial
   set hasSeenTutorial(bool value);
 
+  /// Returns whether the user has seen proverb [id]
+  bool hasSeenProverb(int id);
+
+  /// Sets whether the user has seen proverb [id]
+  void setHasSeenProverb(int id);
+
   /// Initializes the database
   Future<void> initialize();
 

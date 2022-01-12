@@ -46,6 +46,17 @@ class SettingsDatabase implements ISettingsDatabase {
   @override
   set hasSeenTutorial(bool value) => _box.put(_Keys.hasSeenTutorial, value);
 
+  @override
+  bool hasSeenProverb(int id) => _proverbsSeen.contains(id);
+
+  @override
+  void setHasSeenProverb(int id) {
+    final proverbsSeen = List<int>.from(_proverbsSeen)..add(id);
+    _box.put(_Keys.proverbsSeen, Set<int>.from(proverbsSeen).toList());
+  }
+
+  List<int> get _proverbsSeen => _box.get(_Keys.proverbsSeen, defaultValue: _Defaults.proverbsSeen);
+
   /// Initializes the database
   @override
   Future<void> initialize() async {
@@ -68,6 +79,7 @@ class _Keys {
   static const selectedPieceSymbol = 'selectedPieceSymbol';
   static const hasSeenOnboarding = 'hasSeenOnboarding';
   static const hasSeenTutorial = 'hasSeenTutorial';
+  static const proverbsSeen = 'proverbsSeen';
 }
 
 /// A class of defaults for each key
@@ -76,4 +88,5 @@ class _Defaults {
   static const selectedPieceSymbol = 1;
   static const hasSeenOnboarding = false;
   static const hasSeenTutorial = false;
+  static const proverbsSeen = <int>[];
 }
