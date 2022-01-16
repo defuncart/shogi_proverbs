@@ -1,14 +1,14 @@
 # Privacy Policy
 
-Effective Date: September 26th, 2020
+Effective Date: January 16th, 2022
 
-DeFunc Art ("we") is a developer of mobile applications and game that are made available though mobile app stores including the Apple App Store and Google Play Store. Shogi Provebs, henceforth referred to as "the Service", is developed using Flutter and is Open Source. The Service is provided at no cost and is intended for use as is. 
+DeFunc Art ("we") is a developer of mobile applications and game that are made available though mobile app stores including the Apple App Store and Google Play Store. Shogi Proverbs, henceforth referred to as "the Service", is developed using Flutter and is open source. The Service is provided at no cost and is intended for use as is. 
 
 From time to time, we may update this Privacy Policy. If there are any changes that impact your personal data, we will notify you before these changes become effective. As changes to this Privacy Policy are effective once updated, you are advised to periodically review this Privacy Policy for any changes.
 
 ## Information Collection and Use
 
-For a better experience while using the Service, personal settings are persisted on your device. Such information is not collected by us in any way, nor is it passed onto any third parties.
+For a better experience while using the Service, personal settings (app appearance) and app usage (read proverbs) are persisted on your device. Such information is not collected by us in any way, nor is it passed onto any third parties.
 
 ## Links to Other Sites
 
@@ -20,4 +20,4 @@ The Service is not targeted to persons under the age of 13.
 
 ## How to Contact Us
 
-If you have any questions or suggestions about this Privacy Policy, please do not hesitate to contact us per Email on defuncart@gmail.com.
+If you have any questions or suggestions about this Privacy Policy, please do not hesitate to contact us per email on defuncart@gmail.com.

@@ -25,7 +25,7 @@ class ContentPage extends StatelessWidget {
               textAlign: TextAlign.justify,
               style: Theme.of(context).textTheme.bodyText1,
             ),
-            Container(height: 32.0),
+            const SizedBox(height: 32.0),
             //content
             DefaultTextStyle(
               style: Theme.of(context).textTheme.bodyText2!,

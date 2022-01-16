@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   _searchQuery = '';
                 });
               })
-            : Container(),
+            : const SizedBox.shrink(),
         title: _canSearch && _isSearching
             ? TextField(
                 controller: _searchQueryController,

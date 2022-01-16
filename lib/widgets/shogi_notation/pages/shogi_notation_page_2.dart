@@ -184,12 +184,12 @@ class ShogiNotationPage2 extends StatelessWidget {
                     ),
                 ],
               ),
-              Container(height: 32.0),
+              const SizedBox(height: 32.0),
               if (!usesJapanese)
                 Column(
                   children: [
                     Text(AppLocalizations.shogiNotationPage2Label1),
-                    Container(height: 32.0),
+                    const SizedBox(height: 32.0),
                   ],
                 ),
               Text(AppLocalizations.shogiNotationPage2Label2),

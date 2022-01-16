@@ -76,9 +76,9 @@ class _DataPrivacyPopup extends StatelessWidget {
           onPressed: () => showLicensePage(
             context: context,
             applicationName: AppLocalizations.appTitle,
-            applicationVersion: '0.1.0', //TODO use getVersion
+            applicationVersion: '0.2.0', //TODO use getVersion
             applicationIcon: Image.asset('assets/images/app_icon.png'),
-            applicationLegalese: '© 2021 defuncart',
+            applicationLegalese: '© 2022 defuncart',
           ),
         ),
         CustomTextButton(
@@ -139,14 +139,11 @@ class _CreditsPopup extends StatelessWidget {
                     text: AppLocalizations.creditsPopupLabel31,
                     style: Theme.of(context).textTheme.bodyText2,
                   ),
-                  ClickableTextSpan(
+                  TextSpan(
                     text: AppLocalizations.creditsPopupLabel32,
-                    url: ExternalLinks.proverbsContent,
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                          fontStyle: FontStyle.italic,
+                        ),
                   ),
                   TextSpan(
                     text: AppLocalizations.creditsPopupLabel33,
@@ -155,7 +152,7 @@ class _CreditsPopup extends StatelessWidget {
                 ],
               ),
             ),
-            Container(height: 4.0),
+            const SizedBox(height: 16),
             const DeveloperPanel(),
           ],
         ),
