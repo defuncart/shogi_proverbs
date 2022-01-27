@@ -278,10 +278,8 @@ const goldProverbs = [
             sfenString: 'ln3g1nl/2r1gskb1/p3sp1p1/2ppp1p1p/1p7/2PPPP2P/PPBS2PP1/2G1R1SK1/LN3G1NL b -',
             label: 'Diagram 3',
           ),
-          Paragraph(
-            text: 'Moves from Diagram 3:',
-          ),
           MoveSequence(
+            description: 'Moves from Diagram 3:',
             moves: [
               'G-7i',
               'P-7e',

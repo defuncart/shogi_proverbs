@@ -15,12 +15,12 @@ const tokinProverbs = [
             text:
                 'Of all the promoted pieces, Tokin or the promoted Pawn enjoys the greatest increase of power. That you have a promoted Pawn is good, but one around the central area will be especially valuable.',
           ),
-          Paragraph(
-            text: "In Diagram 1 you have a Tokin on 5c. How would you play here to hem in White's King?",
-          ),
           Diagram(
             sfenString: '7nl/6gk1/4+P1spp/5pp2/9/9/9/9/9 b RB',
-            label: 'Diagram 1',
+            label: 'Diagram 1-1',
+          ),
+          Paragraph(
+            text: "In Diagram 1-1 you have a Tokin on 5c. How would you play here to hem in White's King?",
           ),
           MoveSequence(
             moves: [
@@ -43,7 +43,7 @@ const tokinProverbs = [
           ),
           Paragraph(
             text:
-                'Even if you have only one Pawn in hand in Diagram 1, you can still play a very good move making the most of the Tokin on 5c.',
+                'Even if you have only one Pawn in hand in Diagram 1-1, you can still play a very good move making the most of the Tokin on 5c.',
           ),
           MoveSequence(
             moves: [
@@ -64,11 +64,11 @@ const tokinProverbs = [
         sections: [
           Diagram(
             sfenString: 'ln1g5/1ks6/pppp+P4/9/2PP5/9/9/9/9 b R2S',
-            label: 'Diagram 2',
+            label: 'Diagram 2-1',
           ),
           Paragraph(
             text:
-                "In Diagram 2, Black's Tokin is on a very good square threatening White's Mino castle. What would be the best way to continue your attack?",
+                "In Diagram 2-1, Black's Tokin is on a very good square threatening White's Mino castle. What would be the best way to continue your attack?",
           ),
           MoveSequence(
             moves: [
@@ -76,8 +76,8 @@ const tokinProverbs = [
             ],
             playerFirstMove: PlayerType.sente,
           ),
-          Paragraph(text: 'This is threatmate:'),
           MoveSequence(
+            description: 'This is threatmate:',
             moves: [
               'S*7a',
               'Gx7a',
@@ -92,7 +92,7 @@ const tokinProverbs = [
           ),
           Paragraph(
             text:
-                'You could drop a Rook on the 1st or 2nd row in Diagram 1 so that you can continue your attack from +P6b or +Px6c.',
+                'You could drop a Rook on the 1st or 2nd row in Diagram 2-1 so that you can continue your attack from +P6b or +Px6c.',
           ),
           Paragraph(
             text:
@@ -135,11 +135,11 @@ const tokinProverbs = [
           ),
           Paragraph(
             text:
-                "Diagram 1 is from an actual game. White has dropped a Pawn on 4a blocking Black's Dragon's path. How would you play here?",
+                "Diagram 1-1 is from an actual game. White has dropped a Pawn on 4a blocking Black's Dragon's path. How would you play here?",
           ),
           Diagram(
             sfenString: 'ln1g1p+R2/1ks2r2l/1pp1pg2p/p2p1sp2/5n3/P1P1PSP1P/1P1P1S3/1BKGG4/LN5NL b 2Pbp',
-            label: 'Diagram 1',
+            label: 'Diagram 1-1',
           ),
           MoveSequence(
             moves: [
@@ -150,10 +150,8 @@ const tokinProverbs = [
           Paragraph(
             text: "Strikes you as slow? But actually it's a very good move.",
           ),
-          Paragraph(
-            text: 'Moves after Diagram1:',
-          ),
           MoveSequence(
+            description: 'Moves after Diagram 1-1:',
             moves: [
               'B*2h',
               'P2b+',
@@ -182,16 +180,14 @@ const tokinProverbs = [
           ),
           Diagram(
             sfenString: 'ln1g+P+R3/1ksr4l/1pp1p3p/p2pgsp2/5n3/P1P1PSP1P/1P1P1S3/1BKGG4/LN5+b1 w 2Pnlp',
-            label: 'Diagram 2',
+            label: 'Diagram 1-2',
           ),
           Paragraph(
             text:
                 'White cannot allow Black to capture his valuable piece in exchange for a Tokin. Even if the Tokin attack may seem to start from a distance, it is fast enough as long as the opponent has to respond to it.',
           ),
-          Paragraph(
-            text: 'Moves after Diagram 2:',
-          ),
           MoveSequence(
+            description: 'Moves after Diagram 1-2:',
             moves: [
               'G7a',
               '+P5b',
@@ -204,7 +200,7 @@ const tokinProverbs = [
           ),
           Diagram(
             sfenString: 'lng2+R3/1ks1+P3l/1pprp3p/p2pg1p2/2N2s3/P1P1P1P1P/1P1P1S3/1BKGG4/LN5+b1 w 2Psnlp',
-            label: 'Diagram 3',
+            label: 'Diagram 1-3',
           ),
           Paragraph(
             text: 'Black succeeded in capturing a Rook, leading the game to a winning position.',
@@ -218,11 +214,11 @@ const tokinProverbs = [
         sections: [
           Diagram(
             sfenString: 'ln5nl/r4bgk1/1p1p1gspp/p1s1ppp2/9/1S1PP4/PP1GSP1PP/1KG3RB1/LN5NL b 2Pp',
-            label: 'Diagram 4',
+            label: 'Diagram 2-1',
           ),
           Paragraph(
             text:
-                "Diagram 4 shows where both players have adopted the double fortress opening. With White's S7d, there is a hole in White's camp. How would you play here?",
+                "Diagram 2-1 shows where both players have adopted the double fortress opening. With White's S7d, there is a hole in White's camp. How would you play here?",
           ),
           MoveSequence(
             moves: [
@@ -236,10 +232,8 @@ const tokinProverbs = [
           Paragraph(
             text: 'You may think P*7c will be equally good. In this case, however, White can play P6d, good defense.',
           ),
-          Paragraph(
-            text: 'Moves from Diagram 4:',
-          ),
           MoveSequence(
+            description: 'Moves from Diagram 2-1:',
             moves: [
               'P*7b',
               'B-5c',
@@ -251,7 +245,7 @@ const tokinProverbs = [
           ),
           Diagram(
             sfenString: 'lnb4nl/r5gk1/1p1p1gspp/p1s1ppp2/2P6/1S1PP4/PP1GSP1PP/1KG3RB1/LN5NL w 2p',
-            label: 'Diagram 5',
+            label: 'Diagram 2-2',
           ),
           Paragraph(
             text:

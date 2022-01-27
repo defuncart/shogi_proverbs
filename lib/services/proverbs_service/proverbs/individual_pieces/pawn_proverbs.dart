@@ -13,20 +13,18 @@ const pawnProverbs = [
         sections: [
           Paragraph(
             text:
-                "There are far more positions than you'd think in which a Pawn in hand makes a big difference. Look at Diagram 1.",
+                "There are far more positions than you'd think in which a Pawn in hand makes a big difference. Look at Diagram 1-1.",
           ),
           Diagram(
             sfenString: '7nl/5bgk1/5g1pp/4ppp2/7NP/4PB3/5P3/7R1/8L b P',
-            label: 'Diagram 1',
+            label: 'Diagram 1-1',
           ),
           Paragraph(
             text:
                 "White has formed a usual Yagura castle less one Silver. With Black's Knight on 2e, a Pawn drop on 3c will be quite effective. If you have a Pawn in hand, that is. Thus, a Pawn in hand could be compared to a thousand Gold pieces.",
           ),
-          Paragraph(
-            text: 'The most likely moves to follow are:',
-          ),
           MoveSequence(
+            description: 'The most likely moves to follow are:',
             moves: [
               'P*3c',
               'Nx3c',
@@ -38,10 +36,8 @@ const pawnProverbs = [
             text:
                 "After Black's P*3c, White could play G-3a, but that would leave bad shape for White. So, Nx3c is a natural move, avoiding loss of material. Note the next move: Nx1c+. In the wrong direction, you say? No, this is right.",
           ),
-          Paragraph(
-            text: 'There will follow:',
-          ),
           MoveSequence(
+            description: 'There will follow:',
             moves: [
               'Lx1c',
               'P-1d',
@@ -54,7 +50,7 @@ const pawnProverbs = [
             text: 'By following the natural moves, Black will have a breakthrough along the first file.',
           ),
           Paragraph(
-            text: 'Back at the Diagram 1, if you have more than one Pawn, you could also play as follows:',
+            text: 'Back at the Diagram 1-1, if you have more than one Pawn, you could also play as follows:',
           ),
           MoveSequence(
             moves: [
@@ -78,11 +74,11 @@ const pawnProverbs = [
         sections: [
           Paragraph(
             text:
-                "Diagram 2 (up to Px2d) shows where White played Px2d after Black's P-2d. Now what will be the next move using a Pawn in hand to attack White's yagura castle?",
+                "Diagram 2-1 (up to Px2d) shows where White played Px2d after Black's P-2d. Now what will be the next move using a Pawn in hand to attack White's yagura castle?",
           ),
           Diagram(
             sfenString: '7nl/5bgk1/5gs1p/4pppp1/8P/4PBP2/5PN2/7R1/8L b Pp',
-            label: 'Diagram 2',
+            label: 'Diagram 2-1',
           ),
           Paragraph(
             text:
@@ -110,10 +106,10 @@ const pawnProverbs = [
         sections: [
           Diagram(
             sfenString: 'ln1g1R3/1ks6/pppp5/5B3/P8/1PP1P4/9/9/9 b Pp',
-            label: 'Diagram 3',
+            label: 'Diagram 3-1',
           ),
           Paragraph(
-            text: 'Against the Mino-castle, on Diagram 3, where would you drop your Pawn?',
+            text: 'Against the Mino-castle, on Diagram 3-1, where would you drop your Pawn?',
           ),
           Paragraph(
             text:
@@ -133,11 +129,11 @@ const pawnProverbs = [
           ),
           Paragraph(
             text:
-                'If you cannot drop your Pawn along the 6th file, check if you can on the 5th file. P*5b will also be a very effective move (diagram 4).',
+                'If you cannot drop your Pawn along the 6th file, check if you can on the 5th file. P*5b will also be a very effective move (Diagram 3-2).',
           ),
           Diagram(
             sfenString: 'ln1g1R3/1ks1P4/pppp5/5B3/P8/1PP6/9/9/9 w p',
-            label: 'Diagram 4',
+            label: 'Diagram 3-2',
           ),
           Paragraph(
             text:
@@ -145,7 +141,7 @@ const pawnProverbs = [
           ),
           Paragraph(
             text:
-                'What if White plays Gx5b at Diagram 4? You know it. R-7a+ will lead to exactly the same position as above.',
+                'What if White plays Gx5b at Diagram 3-2? You know it. R-7a+ will lead to exactly the same position as above.',
           ),
           Paragraph(
             text:
@@ -160,11 +156,11 @@ const pawnProverbs = [
         sections: [
           Paragraph(
             text:
-                'Sometimes a Pawn in hand could decide a game. Look at Diagram 5 (last move R-3b). Black played Px2d, to which White played R-3b, inadvertently giving Black a windfall.',
+                'Sometimes a Pawn in hand could decide a game. Look at Diagram 4-1 (last move R-3b). Black played Px2d, to which White played R-3b, inadvertently giving Black a windfall.',
           ),
           Diagram(
             sfenString: 'ln1g3n1/1ks3rbl/1p1g5/p1ppppsRp/6p2/P1P1PP2P/1P1PS4/1BKGGS3/LN5NL b P2p',
-            label: 'Diagram 5',
+            label: 'Diagram 4-1',
           ),
           MoveSequence(
             moves: [
@@ -180,11 +176,11 @@ const pawnProverbs = [
                 'The square in question is guarded by three White pieces. See for yourself that White cannot save himself from loss of the material whichever way he may respond.',
           ),
           Paragraph(
-            text: 'Diagram 6 (last move Px2d) also shows how devastating a focal point Pawn drop can be.',
+            text: 'Diagram 4-2 (last move Px2d) also shows how devastating a focal point Pawn drop can be.',
           ),
           Diagram(
             sfenString: 'ln1gbr1n1/1ks5l/1p1g5/p1pppsppp/5p3/P1P1P1P1P/1P1PS1N2/1BKGGS1R1/LN6L b Pp',
-            label: 'Diagram 6',
+            label: 'Diagram 4-2',
           ),
           MoveSequence(
             moves: [
@@ -205,16 +201,14 @@ const pawnProverbs = [
         sections: [
           Paragraph(
             text:
-                "Diagram 7 (last move G-6c) shows where a static-Rook versus ranging-Rook game gets into the mid-stage. Note that Black's Pawn along the 4th file is missing from the board, and is in hand instead. This is a solid advantage for Black, giving him an opportunity to put the proverb to good use.",
+                "Diagram 5-1 (last move G-6c) shows where a static-Rook versus ranging-Rook game gets into the mid-stage. Note that Black's Pawn along the 4th file is missing from the board, and is in hand instead. This is a solid advantage for Black, giving him an opportunity to put the proverb to good use.",
           ),
           Diagram(
             sfenString: 'ln1g1r1nl/1ks6/1p1g2bp1/p1pppsp1p/5p1P1/P1P1P1P1P/1P1PS4/1BKGGS1R1/LN5NL b P',
-            label: 'Diagram 7',
-          ),
-          Paragraph(
-            text: 'Moves after Diagram 7:',
+            label: 'Diagram 5-1',
           ),
           MoveSequence(
+            description: 'Moves after Diagram 5-1:',
             moves: [
               'P-2d',
               'Px2d',
@@ -228,7 +222,7 @@ const pawnProverbs = [
           ),
           Paragraph(
             text:
-                "If White does not respond to P*2b and play something else, Black can play Px2a+, taking the Knight and then the Lance for free. If, after Diagram 7, White plays Bx2d in response to P-2d, P*2b will still be a good move. After White plays N-3c, Black's P-2a+ will follow. White cannot take the promoted Pawn, for the Silver on 4d will be taken for free.",
+                "If White does not respond to P*2b and play something else, Black can play Px2a+, taking the Knight and then the Lance for free. If, after Diagram 5-1, White plays Bx2d in response to P-2d, P*2b will still be a good move. After White plays N-3c, Black's P-2a+ will follow. White cannot take the promoted Pawn, for the Silver on 4d will be taken for free.",
           ),
           Paragraph(
             text:
@@ -236,7 +230,7 @@ const pawnProverbs = [
           ),
           Paragraph(
             text:
-                'Look at Diagram 7 again. Attack on the second file aiming at a crucial Pawn drop will give White a big headache. White may have to think of resigning even before he gets into the endgame.',
+                'Look at Diagram 5-1 again. Attack on the second file aiming at a crucial Pawn drop will give White a big headache. White may have to think of resigning even before he gets into the endgame.',
           ),
           Paragraph(
             text:
@@ -261,11 +255,11 @@ const pawnProverbs = [
           ),
           Diagram(
             sfenString: 'ln1g5/1ks6/1pp6/pl1p5/9/P1P6/1P1PSP3/2KGG4/LN6+r b Pp',
-            label: 'Diagram 1',
+            label: 'Diagram 1-1',
           ),
           Paragraph(
             text:
-                'Diagram 1 shows where White has just dropped a Lance on 8d. Together with the promoted Rook on the bottom row, White aims to attack your King directly. The expected line of moves is:',
+                'Diagram 1-1 shows where White has just dropped a Lance on 8d. Together with the promoted Rook on the bottom row, White aims to attack your King directly. The expected line of moves is:',
           ),
           MoveSequence(
             moves: [
@@ -281,11 +275,11 @@ const pawnProverbs = [
           ),
           Diagram(
             sfenString: 'ln1g5/1ks6/1pp6/pl1p5/9/P1P6/1P1P1P3/1BKGGS3/LN4P1+r w p',
-            label: 'Diagram 2',
+            label: 'Diagram 1-2',
           ),
           Paragraph(
             text:
-                "Look at diagram 2 (last move P*4i). Here you see a Pawn-anchored Silver. In this case White can drop a Pawn on 3h, so it may not seem as solid as a Pawn-anchored Gold. Still, White will need to play Px3i+ and +P-3h in order to get the promoted Rook's path open. In the meantime, you can play some effective moves.",
+                "Look at Diagram 1-2 (last move P*4i). Here you see a Pawn-anchored Silver. In this case White can drop a Pawn on 3h, so it may not seem as solid as a Pawn-anchored Gold. Still, White will need to play Px3i+ and +P-3h in order to get the promoted Rook's path open. In the meantime, you can play some effective moves.",
           ),
           Paragraph(
             text: 'Take note how an anchor Pawn makes sturdy defense in either case.',
@@ -299,16 +293,14 @@ const pawnProverbs = [
           ),
           Paragraph(
             text:
-                "Diagram 3 shows where Black interposed a Pawn P*5i after White's R*3i, which was also anchoring the Gold on 5h. In this case, however, there was a problem.",
+                "Diagram 2-1 shows where Black interposed a Pawn P*5i after White's R*3i, which was also anchoring the Gold on 5h. In this case, however, there was a problem.",
           ),
           Diagram(
             sfenString: '9/9/9/9/9/2P6/PPSP5/2G1G4/LNK1P1r2 w p',
-            label: 'Diagram 3',
-          ),
-          Paragraph(
-            text: 'Moves after Diagram 3:',
+            label: 'Diagram 2-1',
           ),
           MoveSequence(
+            description: 'Moves after Diagram 2-1:',
             moves: [
               'P*5g',
               'G-6h',
@@ -321,21 +313,21 @@ const pawnProverbs = [
                 "White's P*5g reveals where the problem lies. Black cannot respond with Gx5g which will only allow White to play Rx5i+, a fatal fork, so Black has to play G-6h, to which White can reply by promoting his Rook on 5i taking the Pawn. After this, if Black plays K-8h, White will play P-5h+. A happy position for White.",
           ),
           Paragraph(
-            text: 'Look at Diagram 3 again. The correct move here is K-8h.',
+            text: 'Look at Diagram 2-1 again. The correct move here is K-8h.',
           ),
           Paragraph(
-            text: 'I will show you another dubious anchor Pawn. Look at Diagram 4.',
+            text: 'I will show you another dubious anchor Pawn. Look at Diagram 2-2.',
           ),
           Diagram(
             sfenString: '9/9/9/9/9/2P6/PP1P1P3/2GSG4/LNK1P1+r2 w l',
-            label: 'Diagram 4',
+            label: 'Diagram 2-2',
           ),
           Paragraph(
             text:
                 "Black has just dropped a Pawn on 5i after White's +R-3i, check. This was a grievous mistake on Black's part. White will then drop a Lance along the 5th file, L*5e, with which Black cannot cope because he cannot use another Pawn on the same file.",
           ),
           Paragraph(
-            text: 'So, in Diagram 4, you should play S-5i, so that you can drop a Pawn in case of L*5e.',
+            text: 'So, in Diagram 2-2, you should play S-5i, so that you can drop a Pawn in case of L*5e.',
           ),
           Paragraph(
             text: 'Always beware of a Lance drop when you drop an anchor Pawn.',

@@ -52,10 +52,8 @@ const silverProverbs = [
           Paragraph(
             text: 'On Diagram 3, you cannot afford to leave the Silver on 4f as it is.',
           ),
-          Paragraph(
-            text: 'Moves after Diagram 3:',
-          ),
           MoveSequence(
+            description: 'Moves after Diagram 3:',
             moves: [
               'S-3g',
               'P-5d',
@@ -79,10 +77,8 @@ const silverProverbs = [
             sfenString: 'ln5nl/1kg2r3/1s1gpsbp1/pppp1pp1p/4P2P1/P1P1SSP1P/1P3P3/1BKGG2R1/LN5NL w P',
             label: 'Diagram 5',
           ),
-          Paragraph(
-            text: 'A)',
-          ),
           MoveSequence(
+            description: 'A)',
             moves: [
               'N-7c',
               'P-3e',
@@ -93,10 +89,8 @@ const silverProverbs = [
             ],
             playerFirstMove: PlayerType.gote,
           ),
-          Paragraph(
-            text: 'B)',
-          ),
           MoveSequence(
+            description: 'B)',
             moves: [
               'P-5d',
               'G5h-6g',
@@ -150,10 +144,8 @@ const silverProverbs = [
           Paragraph(
             text: "See how the Silver covers both squares the opponent's Knight threatens: 3f and 1f.",
           ),
-          Paragraph(
-            text: 'Moves after Diagram 1:',
-          ),
           MoveSequence(
+            description: 'Moves after Diagram 1:',
             moves: [
               'G*3e',
               'Sx2d',
