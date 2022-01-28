@@ -37,10 +37,8 @@ const openingProverb10 = Proverb(
           text:
               'Diagram 2 shows a double fortress opening, where Black has just played P4e. White should play Px4e here. Supposing he plays 8a instead, which happens to be a bad move, how should Black take advantage of that?',
         ),
-        Paragraph(
-          text: 'Moves after Diagram 2:',
-        ),
         MoveSequence(
+          description: 'Moves after Diagram 2:',
           moves: [
             'R8a',
             'Px4d',

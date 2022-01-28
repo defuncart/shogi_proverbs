@@ -32,10 +32,8 @@ const openingProverb5 = Proverb(
           sfenString: 'ln1+P5/1ks6/1pp6/p8/9/P1P6/1P7/9/L8 b 2G2S',
           label: 'Diagram 3',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 3:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 3:',
           moves: [
             'S*7a',
             'K9b',
@@ -67,10 +65,8 @@ const openingProverb5 = Proverb(
           text:
               "What if the edge Pawn was another square ahead (Diagram 4)? In order to mate White's King, you will need as many as six Generals.",
         ),
-        Paragraph(
-          text: 'Moves from Diagram 4:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 4:',
           moves: [
             'S*7a',
             'K-9b',

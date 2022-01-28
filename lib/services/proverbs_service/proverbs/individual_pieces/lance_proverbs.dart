@@ -17,11 +17,11 @@ const lanceProverbs = [
           ),
           Diagram(
             sfenString: 'ln1g4+R/1ks1gp3/1pp1p3n/5Pppp/p8/2P1P1P1P/PP2+s1+b2/LSG3+r1L/KNG6 b BNL3Ps',
-            label: 'Diagram 1',
+            label: 'Diagram 1-1',
           ),
           Paragraph(
             text:
-                'Diagram 1 is from the endgame between the static Rook anaguma (Black) and the ranging Rook (White) (last move S-5g+). How should Black play next? Where would you drop your Lance?',
+                'Diagram 1-1 is from the endgame between the static Rook anaguma (Black) and the ranging Rook (White) (last move S-5g+). How should Black play next? Where would you drop your Lance?',
           ),
           MoveSequence(
             moves: [
@@ -47,13 +47,15 @@ const lanceProverbs = [
         sections: [
           Diagram(
             sfenString: '9/5bgk1/5gsp1/4ppp2/7P1/4P1P2/5P3/8R/9 b Lp',
-            label: 'Diagram 2',
+            label: 'Diagram 2-1',
           ),
           Paragraph(
             text:
-                "Where would you, as Black, drop your Lance in Diagram 2? L*1g may have been the first idea that came to your mind. It's not entirely a bad idea. You could then play L-1b+ to chase the King and R-1c+ afterwards. But this line of moves is what we call \"heavy\", meaning slow and less efficient.",
+                "Where would you, as Black, drop your Lance in Diagram 2-1? L*1g may have been the first idea that came to your mind. It's not entirely a bad idea. You could then play L-1b+ to chase the King and R-1c+ afterwards. But this line of moves is what we call \"heavy\", meaning slow and less efficient.",
           ),
-          Paragraph(text: 'L*1i is a much better move.'),
+          Paragraph(
+            text: 'L*1i is a much better move.',
+          ),
           Paragraph(
             text:
                 'Even if White plays K-3a in the hopes of running away to a safe place, it will be of no avail. Since White has nothing in hand other than a Pawn, he/she cannot escape from R-1a+, checkmate.',
@@ -68,11 +70,11 @@ const lanceProverbs = [
         sections: [
           Diagram(
             sfenString: 'ln5nl/1r3bgk1/p2s1gspp/2ppppp2/1p6P/2PPP1PP1/PPS2PN1L/2G1GS2R/LNBK5 b -',
-            label: 'Diagram 3',
+            label: 'Diagram 3-1',
           ),
           Paragraph(
             text:
-                'Diagram 3 shows the double fortress (double Yagura) opening, where Black is about to attack with the Spearing the Sparrow tactic. Please note how the Lance plays the crucial role from here.',
+                'Diagram 3-1 shows the double fortress (double Yagura) opening, where Black is about to attack with the Spearing the Sparrow tactic. Please note how the Lance plays the crucial role from here.',
           ),
           MoveSequence(
             moves: [
@@ -91,7 +93,7 @@ const lanceProverbs = [
           ),
           Diagram(
             sfenString: 'ln5nl/1r3bgk1/p2s1g1p1/2ppppp1R/1p7/2PPP1PP1/PPS2P3/2G1GS3/LNBK5 b SLPnp',
-            label: 'Diagram 4',
+            label: 'Diagram 3-2',
           ),
           Paragraph(
             text:
@@ -109,7 +111,7 @@ const lanceProverbs = [
           ),
           Diagram(
             sfenString: 'ln7/1r3bgk1/p2s1g1pn/2ppppp1R/1p7/2PPP1PP1/PPS2P3/2G1GS3/LN1K2L2 w SLbn2p',
-            label: 'Diagram 5',
+            label: 'Diagram 3-3',
           ),
           Paragraph(
             text:
@@ -128,7 +130,7 @@ const lanceProverbs = [
           ),
           Diagram(
             sfenString: 'l8/1r3bgk1/p1ns1gnpn/2ppppL1R/1p4L2/2PPP2P1/PPS2P3/2G1GS3/LN1K5 w SPb3p',
-            label: 'Diagram 6',
+            label: 'Diagram 3-4',
           ),
           Paragraph(
             text:

@@ -39,10 +39,8 @@ const openingProverb9 = Proverb(
           text:
               "First he plays P3e before moving the Knight, and then P5f, thereby aiming at the Pawn on 5e. These are orthodox and effective moves on Black's part.",
         ),
-        Paragraph(
-          text: 'Then there will follow:',
-        ),
         MoveSequence(
+          description: 'Then there will follow:',
           moves: [
             'Bx2b+',
             'Gx2b',

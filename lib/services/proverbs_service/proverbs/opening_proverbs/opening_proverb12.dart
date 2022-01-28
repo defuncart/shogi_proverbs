@@ -25,10 +25,8 @@ const openingProverb12 = Proverb(
           sfenString: 'ln5nl/1r2g1gk1/3sp1sp1/p1pp1pp1p/1p5P1/P1PP1PP1P/1PS1PS3/1KG1G2R1/LN5NL b Bb',
           label: 'Diagram 1-1A',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 1-1:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 1-1:',
           moves: [
             'K3g',
             'G5b-4c',
@@ -80,10 +78,8 @@ const openingProverb12 = Proverb(
           sfenString: 'ln5nl/1r1s2gk1/3p1gsp1/p1p1ppp1p/1p5P1/P1PP1PP1P/1PS1PS3/1KG1G2R1/LN5NL b Bb',
           label: 'Diagram 2-1',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 2-1:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 2-1:',
           moves: [
             'N3g',
             'S7c',
@@ -107,10 +103,8 @@ const openingProverb12 = Proverb(
           text:
               'To exclude the possibility of B*7a, White may try another line of moves without moving the Silver from 6b. To this, Black should play a waiting game.',
         ),
-        Paragraph(
-          text: 'Moves from Diagram 1:',
-        ),
         MoveSequence(
+          description: 'Moves from Diagram 2-1:',
           moves: [
             'N3g',
             'P6d',
@@ -146,10 +140,8 @@ const openingProverb12 = Proverb(
           text:
               "This was rather drastic. Black lost tempo by first playing B7g and then B2b+, but in this case for a good reason: He took the proverb the other way round. Seeing White's P5d, he thought he could prove White's P5d to be a bad move by guiding the position into a Kakugawari variation.",
         ),
-        Paragraph(
-          text: 'Moves after Diagram 1:',
-        ),
         MoveSequence(
+          description: 'Moves after Diagram 3-1:',
           moves: [
             'Sx2b',
             'S7g',

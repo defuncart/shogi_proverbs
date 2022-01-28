@@ -13,11 +13,11 @@ const knightProverbs = [
         sections: [
           Diagram(
             sfenString: '7nl/4gg1k1/4sp1p1/4p1p1p/9/4PPP1P/5GNP1/6SK1/5G2L b BN',
-            label: 'Diagram 1',
+            label: 'Diagram 1-1',
           ),
           Paragraph(
             text:
-                "Diagram 1 shows part of the position from the static Rook versus ranging Rook game. White's King is in an odd square, but this actually happens when White plays Kx2b after Black's Bx2b+, Bishop exchange.",
+                "Diagram 1-1 shows part of the position from the static Rook versus ranging Rook game. White's King is in an odd square, but this actually happens when White plays Kx2b after Black's Bx2b+, Bishop exchange.",
           ),
           Paragraph(
             text: 'Now is the good time for Black to drop a Knight, but where?',
@@ -28,7 +28,7 @@ const knightProverbs = [
           ),
           Diagram(
             sfenString: '7nl/4gg1k1/4sp1p1/4p1p1p/9/4PPPNP/5GNP1/6SK1/5G2L w B',
-            label: 'Diagram 2',
+            label: 'Diagram 1-2',
           ),
           Paragraph(
             text: 'N*2f illustrates the Knight dropped well back, so that it can leap onto 3d, forking King and Gold.',
@@ -46,7 +46,7 @@ const knightProverbs = [
             playerFirstMove: PlayerType.sente,
           ),
           Paragraph(
-            text: 'If White plays G-3c on Diagram 2, Black will play N-4e, another fork.',
+            text: 'If White plays G-3c on Diagram 1-2, Black will play N-4e, another fork.',
           ),
           Paragraph(
             text:
@@ -62,16 +62,14 @@ const knightProverbs = [
         sections: [
           Paragraph(
             text:
-                'A knight comes in handy when attacking the Mino-castle. Look at Diagram 3, where Black has just dropped a Knight on 8f. Surprisingly, this very move is threatmate to the seemingly unshakable Mino-castle.',
+                'A knight comes in handy when attacking the Mino-castle. Look at Diagram 2-1, where Black has just dropped a Knight on 8f. Surprisingly, this very move is threatmate to the seemingly unshakable Mino-castle.',
           ),
           Diagram(
             sfenString: 'ln1g5/1ks1g4/1ppp5/p3p4/9/PNPP5/1P7/9/L8 b BGSN',
-            label: 'Diagram 3',
-          ),
-          Paragraph(
-            text: 'Moves to mate are:',
+            label: 'Diagram 2-1',
           ),
           MoveSequence(
+            description: 'Moves to mate are:',
             moves: [
               'N*7d',
               'Px7d',
@@ -83,20 +81,16 @@ const knightProverbs = [
             ],
             playerFirstMove: PlayerType.sente,
           ),
-          Paragraph(
-            text: 'Followed by',
-          ),
           MoveSequence(
+            description: 'Followed by',
             moves: [
               'K-8d',
               'G*7e',
             ],
             playerFirstMove: PlayerType.gote,
           ),
-          Paragraph(
-            text: 'or',
-          ),
           MoveSequence(
+            description: 'or',
             moves: [
               'K-9b',
               'Bx9a+',
@@ -107,23 +101,21 @@ const knightProverbs = [
           ),
           Diagram(
             sfenString: 'ln1g5/1ks1g4/1p7/p1ppp4/9/PNPP5/1P7/9/L8 w -',
-            label: 'Diagram 4',
+            label: 'Diagram 2-2',
           ),
           Paragraph(
             text:
-                'Diagram 4 shows a similar position as Diagram 3. Again N*8f is a smart move. If you have a Pawn in hand, you can attack from the 9th file. If you have more pieces in hand, you can just play N-7d, mate.',
+                'Diagram 2-2 shows a similar position as Diagram 3. Again N*8f is a smart move. If you have a Pawn in hand, you can attack from the 9th file. If you have more pieces in hand, you can just play N-7d, mate.',
           ),
           Paragraph(
             text: 'Lastly let me show you how a Knight works in the edge attack.',
           ),
           Diagram(
             sfenString: 'ln1g5/1ks1g4/1ppp5/p3p4/9/P1PP5/1P7/9/L8 b N2P',
-            label: 'Diagram 5',
-          ),
-          Paragraph(
-            text: 'Moves from Diagram 5:',
+            label: 'Diagram 2-3',
           ),
           MoveSequence(
+            description: 'Moves from Diagram 2-3:',
             moves: [
               'P-9e',
               'Px9e',
@@ -192,10 +184,8 @@ const knightProverbs = [
             text:
                 'P-3e is an important move to play here. By pushing a Pawn to be taken, you can drop a Pawn in hand on the 3rd file.',
           ),
-          Paragraph(
-            text: 'Moves thereafter:',
-          ),
           MoveSequence(
+            description: 'Moves thereafter:',
             moves: [
               'Px3e',
               'P*3c',
