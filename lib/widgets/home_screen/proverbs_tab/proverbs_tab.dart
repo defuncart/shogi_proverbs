@@ -53,31 +53,39 @@ class _ProverbTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(proverb.title),
-      subtitle: Text(proverb.japaneseTitle),
-      onTap: () async {
-        FocusScope.of(context).unfocus();
+    return StreamBuilder<bool>(
+        initialData: DIContainer.get<ISettingsDatabase>().hasSeenProverb(proverb.index),
+        stream: DIContainer.get<ISettingsDatabase>().watchHasSeenProverb(proverb.index),
+        builder: (context, snapshot) {
+          return Opacity(
+            opacity: (snapshot.data ?? false) ? 0.6 : 1,
+            child: ListTile(
+              title: Text(proverb.title),
+              subtitle: Text(proverb.japaneseTitle),
+              onTap: () async {
+                FocusScope.of(context).unfocus();
 
-        if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
-          final openTutorial = await showDialog(
-            context: context,
-            builder: (_) => const _AskViewTutorialPopup(),
+                if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
+                  final openTutorial = await showDialog(
+                    context: context,
+                    builder: (_) => const _AskViewTutorialPopup(),
+                  );
+                  // user must choose yes/no, dismissing by taping outside of popup doesn't count
+                  if (openTutorial != null) {
+                    DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
+                    if (!openTutorial) {
+                      _openProverbDetail(proverb, context);
+                    } else {
+                      Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
+                    }
+                  }
+                } else {
+                  _openProverbDetail(proverb, context);
+                }
+              },
+            ),
           );
-          // user must choose yes/no, dismissing by taping outside of popup doesn't count
-          if (openTutorial != null) {
-            DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
-            if (!openTutorial) {
-              _openProverbDetail(proverb, context);
-            } else {
-              Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
-            }
-          }
-        } else {
-          _openProverbDetail(proverb, context);
-        }
-      },
-    );
+        });
   }
 
   void _openProverbDetail(Proverb proverb, BuildContext context) {
