@@ -27,6 +27,9 @@ abstract class ISettingsDatabase {
   /// Returns whether the user has seen proverb [id]
   bool hasSeenProverb(int id);
 
+  /// Returns a sream of whether the user has seen proverb [id]
+  Stream<bool> watchHasSeenProverb(int id);
+
   /// Sets whether the user has seen proverb [id]
   void setHasSeenProverb(int id);
 
