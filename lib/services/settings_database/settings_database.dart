@@ -41,6 +41,10 @@ class SettingsDatabase implements ISettingsDatabase {
   bool hasSeenProverb(int id) => _proverbsSeen.contains(id);
 
   @override
+  Stream<bool> watchHasSeenProverb(int id) =>
+      _box.watch(key: _Keys.proverbsSeen).map((_) => _proverbsSeen.contains(id));
+
+  @override
   void setHasSeenProverb(int id) {
     final proverbsSeen = List<int>.from(_proverbsSeen)..add(id);
     _box.put(_Keys.proverbsSeen, Set<int>.from(proverbsSeen).toList());
