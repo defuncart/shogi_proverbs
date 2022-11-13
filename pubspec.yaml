@@ -4,8 +4,8 @@ publish_to: 'none'
 version: 0.2.0+3
 
 environment:
-  sdk: '>=2.15.0 <3.0.0'
-  flutter: ">=2.8.0 <3.0.0"
+  sdk: '>=2.18.0 <3.0.0'
+  flutter: ">=3.3.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -15,6 +15,7 @@ dependencies:
   cupertino_icons:
   path_provider:
   url_launcher:
+  shogi:
   flutter_shogi_board:
     git:
       url: https://github.com/defuncart/flutter_shogi_board
@@ -26,12 +27,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flappy_translator:
+  flappy_translator: ^2.0.0-nullsafety.3
   flutter_lints:
   flutter_launcher_icons:
 
-dependency_overrides:
-  hive: ^2.0.5
+# dependency_overrides:
+  # hive: ^2.0.5
 
 flutter:
   uses-material-design: true
