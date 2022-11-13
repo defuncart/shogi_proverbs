@@ -11,7 +11,7 @@ class PageViewWithIndicators extends StatefulWidget {
         super(key: key);
 
   @override
-  _PageViewWithIndicatorsState createState() => _PageViewWithIndicatorsState();
+  State<PageViewWithIndicators> createState() => _PageViewWithIndicatorsState();
 }
 
 class _PageViewWithIndicatorsState extends State<PageViewWithIndicators> {

@@ -17,15 +17,15 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Theme.of(context).colorScheme.secondary,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
       ),
+      onPressed: onPressed,
       child: Text(
         label,
         style: TextStyle(
           color: Theme.of(context).scaffoldBackgroundColor,
         ),
       ),
-      onPressed: onPressed,
     );
   }
 }

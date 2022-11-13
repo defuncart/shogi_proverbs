@@ -14,7 +14,7 @@ class SegmentedChips extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _SegmentedChipsState createState() => _SegmentedChipsState();
+  State<SegmentedChips> createState() => _SegmentedChipsState();
 }
 
 class _SegmentedChipsState extends State<SegmentedChips> {

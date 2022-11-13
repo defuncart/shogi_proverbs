@@ -20,7 +20,7 @@ class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -75,8 +75,8 @@ class _MyAppState extends State<MyApp> {
         body: LayoutBuilder(
           builder: (_, constraints) => kIsWeb && constraints.maxWidth > 675
               ? _FakeMobileWrapper(
-                  child: futureBuilder,
                   constraints: constraints,
+                  child: futureBuilder,
                 )
               : futureBuilder,
         ),
