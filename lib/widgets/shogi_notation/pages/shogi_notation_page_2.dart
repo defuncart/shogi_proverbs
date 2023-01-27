@@ -144,18 +144,18 @@ class ShogiNotationPage2 extends StatelessWidget {
                     children: [
                       Text(
                         'Piece Name',
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Center(
                         child: Text(
                           'Board Symbol',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
                       Center(
                         child: Text(
                           'Move Notation',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
                     ],
@@ -174,7 +174,7 @@ class ShogiNotationPage2 extends StatelessWidget {
                         Center(
                           child: Text(
                             piece.boardSymbol,
-                            style: Theme.of(context).textTheme.bodyText2!.copyWith(color: piece.boardSymbolColor),
+                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: piece.boardSymbolColor),
                           ),
                         ),
                         Center(
@@ -200,11 +200,11 @@ class ShogiNotationPage2 extends StatelessWidget {
                     children: [
                       Text(
                         'Piece',
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Text(
                         'Alternative Name',
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     ],
                   ),

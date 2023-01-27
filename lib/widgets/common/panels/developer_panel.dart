@@ -11,7 +11,7 @@ class DeveloperPanel extends StatelessWidget {
     return RichText(
       textAlign: TextAlign.justify,
       text: TextSpan(
-        style: Theme.of(context).textTheme.bodyText2,
+        style: Theme.of(context).textTheme.bodyMedium,
         children: [
           TextSpan(
             text: AppLocalizations.developerPanelLabel11,

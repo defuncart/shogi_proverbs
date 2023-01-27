@@ -39,11 +39,10 @@ The app is presently optimized for mobile. A web simulation can be found at [htt
 
 If you would like to build the app yourself, then you simply need:
 
-- Flutter >= 2.8
-- Dart >= 2.15
-- Xcode >= 13.0
-- Android SDK >= 29.0.4
-- Chrome
+- Flutter >= 3.7
+- Dart >= 2.19
+- Xcode >= 13.4
+- Android SDK >= 31
 
 ## Contributing
 

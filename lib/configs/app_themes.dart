@@ -18,7 +18,6 @@ class AppThemes {
         statusBarBrightness: Brightness.dark,
       ),
     ),
-    toggleableActiveColor: _lightAppColors.accentColor,
     //TODO this is because _PackagesView from about.dart uses card color for background color
     cardColor: _lightAppColors.scaffoldBackgroundColor,
   );
@@ -38,7 +37,6 @@ class AppThemes {
         statusBarBrightness: Brightness.dark,
       ),
     ),
-    toggleableActiveColor: _darkAppColors.accentColor,
     disabledColor: _darkAppColors.disabledColor,
     //TODO this is because _PackagesView from about.dart uses card color for background color
     cardColor: _darkAppColors.scaffoldBackgroundColor,

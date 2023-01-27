@@ -126,7 +126,7 @@ class _MyApp extends StatelessWidget {
           style: ShogiBoardStyle(
             maxSize: 500,
             pieceColor:
-                isDarkMode ? AppThemes.dark.textTheme.bodyText1!.color! : AppThemes.light.textTheme.bodyText1!.color!,
+                isDarkMode ? AppThemes.dark.textTheme.bodyLarge!.color! : AppThemes.light.textTheme.bodyLarge!.color!,
             borderColor: isDarkMode ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
             usesJapanese: ref.watch(selectedPieceSymbolProvider) == 1,
             coordIndicatorType: CoordIndicatorType.arabic,

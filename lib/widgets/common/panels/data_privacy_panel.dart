@@ -20,7 +20,7 @@ class DataPrivacyPanel extends StatelessWidget {
         RichText(
           textAlign: TextAlign.justify,
           text: TextSpan(
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium,
             children: [
               TextSpan(
                 text: AppLocalizations.dataPrivacyPanelLabel11,
@@ -43,7 +43,7 @@ class DataPrivacyPanel extends StatelessWidget {
         Text(
           AppLocalizations.dataPrivacyPanelLabel2,
           textAlign: TextAlign.justify,
-          style: Theme.of(context).textTheme.bodyText2,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
       ],
     );
