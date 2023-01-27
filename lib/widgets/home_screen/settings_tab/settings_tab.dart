@@ -78,7 +78,7 @@ class _DataPrivacyPopup extends StatelessWidget {
             applicationName: AppLocalizations.appTitle,
             applicationVersion: '0.2.0', //TODO use getVersion
             applicationIcon: Image.asset('assets/images/app_icon.png'),
-            applicationLegalese: '© 2022 defuncart',
+            applicationLegalese: '© 2023 defuncart',
           ),
         ),
         CustomTextButton(
@@ -100,7 +100,7 @@ class _CreditsPopup extends StatelessWidget {
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       title: Text(AppLocalizations.creditsPopupTitle),
       content: DefaultTextStyle(
-        style: Theme.of(context).textTheme.bodyText2!,
+        style: Theme.of(context).textTheme.bodyMedium!,
         textAlign: TextAlign.justify,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +113,7 @@ class _CreditsPopup extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: AppLocalizations.creditsPopupLabel21,
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   ClickableTextSpan(
                     text: AppLocalizations.creditsPopupLabel22,
@@ -125,7 +125,7 @@ class _CreditsPopup extends StatelessWidget {
                   ),
                   TextSpan(
                     text: AppLocalizations.creditsPopupLabel23,
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
               ),
@@ -137,17 +137,17 @@ class _CreditsPopup extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: AppLocalizations.creditsPopupLabel31,
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   TextSpan(
                     text: AppLocalizations.creditsPopupLabel32,
-                    style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           fontStyle: FontStyle.italic,
                         ),
                   ),
                   TextSpan(
                     text: AppLocalizations.creditsPopupLabel33,
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
               ),

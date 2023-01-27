@@ -23,12 +23,12 @@ class ContentPage extends StatelessWidget {
             Text(
               headline,
               textAlign: TextAlign.justify,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: 32.0),
             //content
             DefaultTextStyle(
-              style: Theme.of(context).textTheme.bodyText2!,
+              style: Theme.of(context).textTheme.bodyMedium!,
               textAlign: TextAlign.justify,
               child: content,
             ),

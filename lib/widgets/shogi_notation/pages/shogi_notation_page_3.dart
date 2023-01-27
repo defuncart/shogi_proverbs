@@ -52,14 +52,14 @@ class ShogiNotationPage3 extends StatelessWidget {
                     padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Example',
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'Explanation',
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
                 ],

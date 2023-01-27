@@ -7,7 +7,7 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -38,12 +38,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: InputDecoration(
                   hintText: AppLocalizations.homeScreenSearchHintText,
                   border: InputBorder.none,
-                  hintStyle: Theme.of(context).textTheme.headline6!.apply(
+                  hintStyle: Theme.of(context).textTheme.titleLarge!.apply(
                         color: Colors.white.withOpacity(0.4),
                       ),
                 ),
                 cursorColor: Colors.white,
-                style: Theme.of(context).textTheme.headline6!.apply(color: Colors.white),
+                style: Theme.of(context).textTheme.titleLarge!.apply(color: Colors.white),
                 onChanged: (value) => setState(() => _searchQuery = value),
               )
             : Text(AppLocalizations.appTitle),
