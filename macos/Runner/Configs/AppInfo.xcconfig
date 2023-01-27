@@ -11,4 +11,4 @@ PRODUCT_NAME = Shogi Proverbs
 PRODUCT_BUNDLE_IDENTIFIER = com.defuncart.shogiproverbs
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2021 com.defuncart. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 com.defuncart. All rights reserved.
