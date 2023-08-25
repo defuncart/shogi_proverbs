@@ -1,7 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.defuncart.shogiproverbs">
-   <application
-        android:label="Shogi Proverbs"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="shogi_proverbs"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
