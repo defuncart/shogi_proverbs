@@ -54,6 +54,11 @@ flutter_icons:
   image_path_ios: "assets_dev/app_icon/ios.png"
   adaptive_icon_background: "#E2E3D1"
   adaptive_icon_foreground: "assets_dev/app_icon/android_foreground.png"
+  web:
+    generate: true
+    image_path: "assets_dev/app_icon/ios.png"
+    background_color: "#e2e3d1"
+    theme_color: "#e2e3d1"
   macos:
     generate: true
     image_path: "assets_dev/app_icon/ios.png"
