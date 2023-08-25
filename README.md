@@ -39,10 +39,12 @@ The app is presently optimized for mobile. A web simulation can be found at [htt
 
 If you would like to build the app yourself, then you simply need:
 
-- Flutter >= 3.7
-- Dart >= 2.19
+- Flutter >= 3.13
+- Dart >= 3.1
 - Xcode >= 13.4
-- Android SDK >= 31
+- Android SDK >= 33
+
+To generate app icons, simply run `flutter pub run flutter_launcher_icons`.
 
 ## Contributing
 
