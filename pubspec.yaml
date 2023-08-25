@@ -28,7 +28,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flappy_translator: ^2.0.0
-  flutter_lints:
+  flutter_lints: ^2.0.2
   flutter_launcher_icons:
 
 flutter:
