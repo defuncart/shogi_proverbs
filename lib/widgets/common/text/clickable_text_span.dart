@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -20,7 +21,12 @@ class ClickableTextSpan extends TextSpan {
 
   static Future<void> _openUrl(String url) async {
     if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(Uri.parse(url));
+      await launchUrl(
+        Uri.parse(url),
+        mode: defaultTargetPlatform == TargetPlatform.android
+            ? LaunchMode.externalApplication
+            : LaunchMode.platformDefault,
+      );
     }
   }
 }
