@@ -15,11 +15,11 @@ class ShogiNotationPage3 extends StatelessWidget {
         children: [
           Text(AppLocalizations.shogiNotationPage3Label1),
           const SizedBox(height: 16),
-          Center(
+          const Center(
             child: Wrap(
               spacing: 8.0,
               runSpacing: 4.0,
-              children: const [
+              children: [
                 Text('player'),
                 Text('piece'),
                 // Text('(origin)'),

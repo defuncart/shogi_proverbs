@@ -4,8 +4,8 @@ publish_to: 'none'
 version: 0.2.0+3
 
 environment:
-  sdk: '>=2.19.0 <3.0.0'
-  flutter: ">=3.7.0 <4.0.0"
+  sdk: '>=3.1.0 <4.0.0'
+  flutter: ">=3.13.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -27,8 +27,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flappy_translator: ^2.0.0-nullsafety.3
-  flutter_lints:
+  flappy_translator: ^2.0.0
+  flutter_lints: ^2.0.2
   flutter_launcher_icons:
 
 flutter:
@@ -54,3 +54,11 @@ flutter_icons:
   image_path_ios: "assets_dev/app_icon/ios.png"
   adaptive_icon_background: "#E2E3D1"
   adaptive_icon_foreground: "assets_dev/app_icon/android_foreground.png"
+  web:
+    generate: true
+    image_path: "assets_dev/app_icon/ios.png"
+    background_color: "#e2e3d1"
+    theme_color: "#e2e3d1"
+  macos:
+    generate: true
+    image_path: "assets_dev/app_icon/ios.png"
