@@ -18,9 +18,10 @@ The goal of this open source project is to make this excellent content more acce
 </tr>
 </table>
 
-- 30 proverbs covering individual pieces and openings. The remaining 20 proverbs will follow over the coming weeks.
+- 50 proverbs covering individual pieces, openings, middle-game and end-game.
 - Light/Dark Mode support.
 - Ability to view pieces as 玉/K.
+- Visually distinguish which proverbs have been previously read.
 
 ## Download
 
@@ -48,7 +49,7 @@ To generate app icons, simply run `flutter pub run flutter_launcher_icons`.
 
 ## Contributing
 
-The project isn't actively looking for contributors, however feel free to contact James here on GitHub or [Twitter](https://twitter.com/defuncart).
+If you noticed any notation issues, please open an [issue](https://github.com/defuncart/shogi_proverbs/issues) or create a pull request.
 
 ## Credits
 

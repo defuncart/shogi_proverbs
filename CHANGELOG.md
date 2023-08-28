@@ -1,6 +1,6 @@
 ## [0.3.0] -
 
-* Visually distinguish which proverbs has been previously read.
+* Visually distinguish which proverbs have been previously read.
 
 ## [0.2.0] - 16/01/2022
 

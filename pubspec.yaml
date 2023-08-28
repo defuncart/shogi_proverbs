@@ -1,7 +1,7 @@
 name: shogi_proverbs
 description: A mobile application containing various Shogi proverbs.
 publish_to: 'none'
-version: 0.2.0+3
+version: 0.3.0+5
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
