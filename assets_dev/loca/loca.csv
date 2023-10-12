@@ -60,4 +60,4 @@ proverbTypeopening;Opening
 proverbTypemiddle;Middlegame
 proverbTypeend;Endgame
 proverbTypeother;Other
-proverbDetailsAppBarTitle;Proverb %index$d
+proverbDetailsAppBarTitle;Proverb {index}

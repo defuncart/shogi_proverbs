@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/home_screen/proverbs_tab/proverbs_tab.dart';
 import 'package:shogi_proverbs/widgets/home_screen/settings_tab/settings_tab.dart';
 
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 controller: _searchQueryController,
                 autofocus: true,
                 decoration: InputDecoration(
-                  hintText: AppLocalizations.homeScreenSearchHintText,
+                  hintText: context.l10n.homeScreenSearchHintText,
                   border: InputBorder.none,
                   hintStyle: Theme.of(context).textTheme.titleLarge!.apply(
                         color: Colors.white.withOpacity(0.4),
@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: Theme.of(context).textTheme.titleLarge!.apply(color: Colors.white),
                 onChanged: (value) => setState(() => _searchQuery = value),
               )
-            : Text(AppLocalizations.appTitle),
+            : Text(context.l10n.appTitle),
         actions: [
           if (_canSearch && !_isSearching)
             IconButton(
@@ -78,11 +78,11 @@ class _HomeScreenState extends State<HomeScreen> {
           items: [
             BottomNavigationBarItem(
               icon: const Icon(Icons.book),
-              label: AppLocalizations.homeScreenProversTabTitleText,
+              label: context.l10n.homeScreenProversTabTitleText,
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.settings),
-              label: AppLocalizations.homeScreenSettingsTabTitleText,
+              label: context.l10n.homeScreenSettingsTabTitleText,
             ),
           ],
           currentIndex: _currentIndex,

@@ -17,6 +17,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.4.0"
+  arb_generator:
+    dependency: "direct dev"
+    description:
+      name: arb_generator
+      sha256: "7db57c24a68af05332d4e94757320ea60badbe33040c09c87dd12007717d71d8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.3"
   archive:
     dependency: transitive
     description:
@@ -170,7 +178,7 @@ packages:
     source: hosted
     version: "6.1.4"
   flappy_translator:
-    dependency: "direct dev"
+    dependency: transitive
     description:
       name: flappy_translator
       sha256: e249fe4b9a2f61c50ab28113b1f1e949c224c1e42cb40666bb8b0f2ba4b15bf5

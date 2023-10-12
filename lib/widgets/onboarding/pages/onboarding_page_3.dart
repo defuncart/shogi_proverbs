@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/route_names.dart';
 import 'package:shogi_proverbs/di_container.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 import 'package:shogi_proverbs/widgets/common/buttons/custom_button.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
@@ -14,7 +14,7 @@ class OnboardingPage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContentPage(
-      headline: AppLocalizations.onboardingPage3Headline,
+      headline: context.l10n.onboardingPage3Headline,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -24,7 +24,7 @@ class OnboardingPage3 extends StatelessWidget {
           const SizedBox(height: 16.0),
           Center(
             child: CustomButton(
-              label: AppLocalizations.onboardingPage3ContinueButtonText,
+              label: context.l10n.onboardingPage3ContinueButtonText,
               onPressed: () {
                 DIContainer.get<ISettingsDatabase>().hasSeenOnboarding = true;
                 Navigator.of(context).pushReplacementNamed(RouteNames.homeScreen);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 
 class ShogiNotationPage1 extends StatelessWidget {
@@ -10,12 +10,12 @@ class ShogiNotationPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContentPage(
-      headline: AppLocalizations.shogiNotationPage1Headline,
+      headline: context.l10n.shogiNotationPage1Headline,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            AppLocalizations.shogiNotationPage1Label1,
+            context.l10n.shogiNotationPage1Label1,
             // textAlign: TextAlign.justify,
           ),
           const SizedBox(height: 16),
@@ -30,7 +30,7 @@ class ShogiNotationPage1 extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           Text(
-            AppLocalizations.shogiNotationPage1Label2,
+            context.l10n.shogiNotationPage1Label2,
             // textAlign: TextAlign.justify,
           ),
         ],

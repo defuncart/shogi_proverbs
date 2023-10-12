@@ -1,5 +1,5 @@
 name: shogi_proverbs
-description: A mobile application containing various Shogi proverbs.
+description: A mobile application containing 50 Shogi proverbs.
 publish_to: 'none'
 version: 0.3.0+5
 
@@ -27,25 +27,23 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flappy_translator: ^2.0.0
+  arb_generator:
   flutter_lints: ^2.0.2
   flutter_launcher_icons:
 
 flutter:
   uses-material-design: true
+  generate: true
   assets:
     - assets/images/
 
-flappy_translator:
-  input_file_path: "assets_dev/loca/loca.csv"
-  output_dir: "lib"
-  file_name: "localizations"
-  class_name: "AppLocalizations"
-  delimiter: ";"
-  start_index: 1
-  depend_on_context: false
-  use_single_quotes: true
-  replace_no_break_spaces: false
+arb_generator:
+  input_filepath: "assets_dev/loca/loca.csv"
+  output_directory: "assets_dev/l10n"
+  filename_prepend: "l10n_"
+  csv_settings:
+    delimiter: ";"
+    base_index: 1
 
 flutter_icons:
   android: true

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/external_links.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/text/clickable_text_span.dart';
 
 class DataPrivacyPanel extends StatelessWidget {
@@ -23,10 +23,10 @@ class DataPrivacyPanel extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium,
             children: [
               TextSpan(
-                text: AppLocalizations.dataPrivacyPanelLabel11,
+                text: context.l10n.dataPrivacyPanelLabel11,
               ),
               ClickableTextSpan(
-                text: AppLocalizations.dataPrivacyPanelLabel12,
+                text: context.l10n.dataPrivacyPanelLabel12,
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.secondary,
                   fontWeight: FontWeight.bold,
@@ -34,14 +34,14 @@ class DataPrivacyPanel extends StatelessWidget {
                 url: ExternalLinks.privacyPolicy,
               ),
               TextSpan(
-                text: AppLocalizations.dataPrivacyPanelLabel13,
+                text: context.l10n.dataPrivacyPanelLabel13,
               ),
             ],
           ),
         ),
         SizedBox(height: spacerHeight),
         Text(
-          AppLocalizations.dataPrivacyPanelLabel2,
+          context.l10n.dataPrivacyPanelLabel2,
           textAlign: TextAlign.justify,
           style: Theme.of(context).textTheme.bodyMedium,
         ),

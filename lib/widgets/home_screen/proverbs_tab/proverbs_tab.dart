@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/route_names.dart';
 import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/enums/proverb_type.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs_service.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
@@ -22,7 +22,7 @@ class ProverbsTab extends StatelessWidget {
     final proverbs = ProverbsService.proverbsWithFilter(filterTerm);
     return proverbs.isEmpty
         ? Center(
-            child: Text(AppLocalizations.proverbsTabNoResultsText),
+            child: Text(context.l10n.proverbsTabNoResultsText),
           )
         : ListView(
             children: [
@@ -33,7 +33,7 @@ class ProverbsTab extends StatelessWidget {
                   collapsedTextColor: Theme.of(context).disabledColor,
                   iconColor: Theme.of(context).textTheme.bodyMedium?.color,
                   collapsedIconColor: Theme.of(context).disabledColor,
-                  title: Text(kvp.key.locaString),
+                  title: Text(kvp.key.locaString(context)),
                   children: [
                     for (final proverb in kvp.value) _ProverbTile(proverb: proverb),
                   ],
@@ -108,21 +108,39 @@ class _AskViewTutorialPopup extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      title: Text(AppLocalizations.askSeenTutorialPopupTitle),
+      title: Text(context.l10n.askSeenTutorialPopupTitle),
       content: Text(
-        AppLocalizations.askSeenTutorialPopupDescription,
+        context.l10n.askSeenTutorialPopupDescription,
         textAlign: TextAlign.justify,
       ),
       actions: [
         CustomTextButton(
-          label: AppLocalizations.generalNo.toUpperCase(),
+          label: context.l10n.generalNo.toUpperCase(),
           onPressed: () => Navigator.of(context).pop(false),
         ),
         CustomTextButton(
-          label: AppLocalizations.generalYes.toUpperCase(),
+          label: context.l10n.generalYes.toUpperCase(),
           onPressed: () => Navigator.of(context).pop(true),
         ),
       ],
     );
+  }
+}
+
+extension on ProverbType {
+  /// Returns a localized string for the [ProverbType]
+  String locaString(BuildContext context) {
+    switch (this) {
+      case ProverbType.pieces:
+        return context.l10n.proverbTypepieces;
+      case ProverbType.opening:
+        return context.l10n.proverbTypeopening;
+      case ProverbType.middle:
+        return context.l10n.proverbTypemiddle;
+      case ProverbType.end:
+        return context.l10n.proverbTypeend;
+      case ProverbType.other:
+        return context.l10n.proverbTypeother;
+    }
   }
 }

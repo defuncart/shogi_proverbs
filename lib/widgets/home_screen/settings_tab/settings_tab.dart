@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/external_links.dart';
 import 'package:shogi_proverbs/configs/route_names.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/buttons/custom_button.dart';
 import 'package:shogi_proverbs/widgets/common/buttons/custom_text_button.dart';
 import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
@@ -29,14 +29,14 @@ class SettingsTab extends StatelessWidget {
               const SizedBox(height: 16.0),
               Center(
                 child: CustomButton(
-                  label: AppLocalizations.generalShogiNotation,
+                  label: context.l10n.generalShogiNotation,
                   onPressed: () => Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen),
                 ),
               ),
               const SizedBox(height: 16.0),
               Center(
                 child: CustomButton(
-                  label: AppLocalizations.settingsTabDataPrivacyButtonText,
+                  label: context.l10n.settingsTabDataPrivacyButtonText,
                   onPressed: () => showDialog(
                     context: context,
                     builder: (_) => const _DataPrivacyPopup(),
@@ -46,7 +46,7 @@ class SettingsTab extends StatelessWidget {
               const SizedBox(height: 16.0),
               Center(
                 child: CustomButton(
-                  label: AppLocalizations.settingsTabCreditsButtonText,
+                  label: context.l10n.settingsTabCreditsButtonText,
                   onPressed: () => showDialog(
                     context: context,
                     builder: (_) => const _CreditsPopup(),
@@ -68,14 +68,14 @@ class _DataPrivacyPopup extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      title: Text(AppLocalizations.dataPrivacyPopupTitle),
+      title: Text(context.l10n.dataPrivacyPopupTitle),
       content: const DataPrivacyPanel(),
       actions: <Widget>[
         CustomTextButton(
           label: MaterialLocalizations.of(context).viewLicensesButtonLabel,
           onPressed: () => showLicensePage(
             context: context,
-            applicationName: AppLocalizations.appTitle,
+            applicationName: context.l10n.appTitle,
             applicationVersion: '0.3.0', //TODO use getVersion
             applicationIcon: Image.asset('assets/images/app_icon.png'),
             applicationLegalese: '© 2023 defuncart',
@@ -98,25 +98,25 @@ class _CreditsPopup extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      title: Text(AppLocalizations.creditsPopupTitle),
+      title: Text(context.l10n.creditsPopupTitle),
       content: DefaultTextStyle(
         style: Theme.of(context).textTheme.bodyMedium!,
         textAlign: TextAlign.justify,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(AppLocalizations.creditsPopupLabel1),
+            Text(context.l10n.creditsPopupLabel1),
             const SizedBox(height: 16),
             RichText(
               textAlign: TextAlign.justify,
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: AppLocalizations.creditsPopupLabel21,
+                    text: context.l10n.creditsPopupLabel21,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   ClickableTextSpan(
-                    text: AppLocalizations.creditsPopupLabel22,
+                    text: context.l10n.creditsPopupLabel22,
                     url: ExternalLinks.proverbsContent,
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.secondary,
@@ -124,7 +124,7 @@ class _CreditsPopup extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: AppLocalizations.creditsPopupLabel23,
+                    text: context.l10n.creditsPopupLabel23,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
@@ -136,17 +136,17 @@ class _CreditsPopup extends StatelessWidget {
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: AppLocalizations.creditsPopupLabel31,
+                    text: context.l10n.creditsPopupLabel31,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   TextSpan(
-                    text: AppLocalizations.creditsPopupLabel32,
+                    text: context.l10n.creditsPopupLabel32,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           fontStyle: FontStyle.italic,
                         ),
                   ),
                   TextSpan(
-                    text: AppLocalizations.creditsPopupLabel33,
+                    text: context.l10n.creditsPopupLabel33,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],

@@ -1,0 +1,20 @@
+name: set_up_flutter
+description: Sets up Flutter for CI/CD
+
+runs:
+  using: composite
+
+  steps:
+    - uses: kuhnroyal/flutter-fvm-config-action@v1
+      id: fvm-config-action
+    - uses: subosito/flutter-action@v2
+      with:
+        flutter-version: ${{ steps.fvm-config-action.outputs.FLUTTER_VERSION }}
+        channel: ${{ steps.fvm-config-action.outputs.FLUTTER_CHANNEL }}
+    # the arb files aren't under source control, generate them
+    - name: Generate arb files
+      shell: bash
+      run: dart run arb_generator
+    - name: Install packages
+      shell: bash
+      run: flutter pub get

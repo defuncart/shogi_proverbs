@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/di_container.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 import 'package:shogi_proverbs/widgets/common/page_view_with_indicators.dart';
 import 'package:shogi_proverbs/widgets/shogi_notation/pages/shogi_notation_page_1.dart';
@@ -19,7 +19,7 @@ class ShogiNotationScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.generalShogiNotation),
+        title: Text(context.l10n.generalShogiNotation),
       ),
       body: SafeArea(
         child: PageViewWithIndicators(
