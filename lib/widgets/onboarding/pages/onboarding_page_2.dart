@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/piece_symbol_panel.dart';
@@ -12,7 +12,7 @@ class OnboardingPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContentPage(
-      headline: AppLocalizations.onboardingPage2Headline,
+      headline: context.l10n.onboardingPage2Headline,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,7 +26,7 @@ class OnboardingPage2 extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 32.0),
-          Text(AppLocalizations.onboardingPage2Label1),
+          Text(context.l10n.onboardingPage2Label1),
         ],
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 
 class OnboardingPage1 extends StatelessWidget {
@@ -8,17 +8,17 @@ class OnboardingPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContentPage(
-      headline: AppLocalizations.onboardingPage1Headline,
+      headline: context.l10n.onboardingPage1Headline,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(AppLocalizations.onboardingPage1Label1),
+          Text(context.l10n.onboardingPage1Label1),
           const SizedBox(height: 16),
-          Text(AppLocalizations.onboardingPage1Label2),
+          Text(context.l10n.onboardingPage1Label2),
           const SizedBox(height: 16),
-          Text(AppLocalizations.onboardingPage1Label3),
+          Text(context.l10n.onboardingPage1Label3),
           const SizedBox(height: 16),
-          Text(AppLocalizations.onboardingPage1Label4),
+          Text(context.l10n.onboardingPage1Label4),
         ],
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shogi_proverbs/di_container.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 import 'package:shogi_proverbs/widgets/common/chips/segmented_chips.dart';
 
@@ -18,7 +18,7 @@ class PieceSymbolPanel extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(AppLocalizations.pieceSymbolPanelText),
+        Text(context.l10n.pieceSymbolPanelText),
         Consumer(
           builder: (_, ref, __) => SegmentedChips(
             labels: _languageSymbols,

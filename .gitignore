@@ -45,3 +45,6 @@ app.*.map.json
 
 # FVM
 .fvm/flutter_sdk
+
+# l10n
+assets_dev/l10n/

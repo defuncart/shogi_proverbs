@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/external_links.dart';
-import 'package:shogi_proverbs/localizations.dart';
+import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/text/clickable_text_span.dart';
 
 class DeveloperPanel extends StatelessWidget {
@@ -14,19 +14,19 @@ class DeveloperPanel extends StatelessWidget {
         style: Theme.of(context).textTheme.bodyMedium,
         children: [
           TextSpan(
-            text: AppLocalizations.developerPanelLabel11,
+            text: context.l10n.developerPanelLabel11,
           ),
           TextSpan(
-            text: AppLocalizations.developerPanelLabel12,
+            text: context.l10n.developerPanelLabel12,
             style: const TextStyle(
               color: Colors.red,
             ),
           ),
           TextSpan(
-            text: AppLocalizations.developerPanelLabel13,
+            text: context.l10n.developerPanelLabel13,
           ),
           ClickableTextSpan(
-            text: AppLocalizations.developerPanelLabel14,
+            text: context.l10n.developerPanelLabel14,
             style: TextStyle(
               color: Theme.of(context).colorScheme.secondary,
               fontWeight: FontWeight.bold,
@@ -34,7 +34,7 @@ class DeveloperPanel extends StatelessWidget {
             url: ExternalLinks.sourceCode,
           ),
           TextSpan(
-            text: AppLocalizations.developerPanelLabel15,
+            text: context.l10n.developerPanelLabel15,
           ),
         ],
       ),
