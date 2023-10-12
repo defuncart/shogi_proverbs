@@ -6,17 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: kuhnroyal/flutter-fvm-config-action@v1
-        id: fvm-config-action
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: ${{ steps.fvm-config-action.outputs.FLUTTER_VERSION }}
-          channel: ${{ steps.fvm-config-action.outputs.FLUTTER_CHANNEL }}
-      # the arb files aren't under source control, generate them
-      - name: Generate arb files
-        run: dart run arb_generator
-      - name: Install packages
-        run: flutter pub get
+      - uses: ./.github/actions/set_up_flutter
       - name: Lint
         run: flutter analyze
       - name: Unit tests
@@ -26,15 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: kuhnroyal/flutter-fvm-config-action@v1
-        id: fvm-config-action
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: ${{ steps.fvm-config-action.outputs.FLUTTER_VERSION }}
-          channel: ${{ steps.fvm-config-action.outputs.FLUTTER_CHANNEL }}
-      # the arb files aren't under source control, generate them
-      - name: Generate arb files
-        run: dart run arb_generator
+      - uses: ./.github/actions/set_up_flutter
       - name: Build apk
         run: flutter build apk --release --split-per-abi
   build-iOS:
@@ -42,15 +24,7 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: kuhnroyal/flutter-fvm-config-action@v1
-        id: fvm-config-action
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: ${{ steps.fvm-config-action.outputs.FLUTTER_VERSION }}
-          channel: ${{ steps.fvm-config-action.outputs.FLUTTER_CHANNEL }}
-      # the arb files aren't under source control, generate them
-      - name: Generate arb files
-        run: dart run arb_generator
+      - uses: ./.github/actions/set_up_flutter
       - name: Build ipa
         run: flutter build ios --release --no-codesign
   build-web:
@@ -58,14 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: kuhnroyal/flutter-fvm-config-action@v1
-        id: fvm-config-action
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: ${{ steps.fvm-config-action.outputs.FLUTTER_VERSION }}
-          channel: ${{ steps.fvm-config-action.outputs.FLUTTER_CHANNEL }}
-      # the arb files aren't under source control, generate them
-      - name: Generate arb files
-        run: dart run arb_generator
+      - uses: ./.github/actions/set_up_flutter
       - name: Build web
         run: flutter build web --release

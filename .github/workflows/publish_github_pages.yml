@@ -14,16 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: kuhnroyal/flutter-fvm-config-action@v1
-        id: fvm-config-action
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: ${{ steps.fvm-config-action.outputs.FLUTTER_VERSION }}
-          channel: ${{ steps.fvm-config-action.outputs.FLUTTER_CHANNEL }}
-      # the arb files aren't under source control, generate them
-      - name: Generate arb files
-        run: dart run arb_generator
-      - run: flutter pub get
+      - uses: ./.github/actions/set_up_flutter
       - name: Build + Commit
         run: |
           flutter build web --release
