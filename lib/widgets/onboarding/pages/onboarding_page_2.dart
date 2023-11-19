@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/piece_symbol_panel.dart';
 
 class OnboardingPage2 extends StatelessWidget {
-  const OnboardingPage2({Key? key}) : super(key: key);
+  const OnboardingPage2({super.key});
 
   @override
   Widget build(BuildContext context) {

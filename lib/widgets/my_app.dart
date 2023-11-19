@@ -17,7 +17,7 @@ import 'package:shogi_proverbs/widgets/onboarding/onboarding_screen.dart';
 import 'package:shogi_proverbs/widgets/shogi_notation/shogi_notation_screen.dart';
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -88,8 +88,7 @@ class _FakeMobileWrapper extends StatelessWidget {
   const _FakeMobileWrapper({
     required this.child,
     required this.constraints,
-    Key? key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +109,7 @@ class _FakeMobileWrapper extends StatelessWidget {
 }
 
 class _MyApp extends StatelessWidget {
-  const _MyApp({Key? key}) : super(key: key);
+  const _MyApp();
 
   @override
   Widget build(BuildContext context) {

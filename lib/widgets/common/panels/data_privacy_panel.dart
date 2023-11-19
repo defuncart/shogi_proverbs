@@ -7,9 +7,9 @@ class DataPrivacyPanel extends StatelessWidget {
   final double spacerHeight;
 
   const DataPrivacyPanel({
-    Key? key,
+    super.key,
     this.spacerHeight = 16.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

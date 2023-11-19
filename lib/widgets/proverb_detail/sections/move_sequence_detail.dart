@@ -7,8 +7,8 @@ class MoveSequenceDetail extends StatelessWidget {
 
   const MoveSequenceDetail({
     required this.moveSequence,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -6,10 +6,10 @@ class ContentPage extends StatelessWidget {
   final Widget content;
 
   const ContentPage({
-    Key? key,
+    super.key,
     required this.headline,
     required this.content,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -3,7 +3,7 @@ import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 
 class ShogiNotationPage3 extends StatelessWidget {
-  const ShogiNotationPage3({Key? key}) : super(key: key);
+  const ShogiNotationPage3({super.key});
 
   @override
   Widget build(BuildContext context) {

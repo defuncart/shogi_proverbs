@@ -7,11 +7,11 @@ class SegmentedChips extends StatefulWidget {
   final void Function(int) onSelected;
 
   const SegmentedChips({
-    Key? key,
+    super.key,
     required this.labels,
     this.initiallySelectedIndex = 0,
     required this.onSelected,
-  }) : super(key: key);
+  });
 
   @override
   State<SegmentedChips> createState() => _SegmentedChipsState();

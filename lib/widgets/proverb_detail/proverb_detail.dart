@@ -9,9 +9,9 @@ class ProverbDetail extends StatelessWidget {
   final Proverb proverb;
 
   const ProverbDetail({
-    Key? key,
+    super.key,
     required this.proverb,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

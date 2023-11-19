@@ -7,7 +7,7 @@ import 'package:shogi_proverbs/services/settings_database/i_settings_database.da
 final isDarkModeProvider = StateProvider((_) => DIContainer.get<ISettingsDatabase>().isDarkMode);
 
 class DarkModePanel extends StatelessWidget {
-  const DarkModePanel({Key? key}) : super(key: key);
+  const DarkModePanel({super.key});
 
   @override
   Widget build(BuildContext context) {

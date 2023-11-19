@@ -4,7 +4,7 @@ import 'package:shogi_proverbs/widgets/home_screen/proverbs_tab/proverbs_tab.dar
 import 'package:shogi_proverbs/widgets/home_screen/settings_tab/settings_tab.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
