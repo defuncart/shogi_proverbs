@@ -6,7 +6,6 @@ class AppThemes {
   static const _lightAppColors = _AppColors.light();
 
   static final light = ThemeData.light().copyWith(
-    useMaterial3: true,
     scaffoldBackgroundColor: _lightAppColors.scaffoldBackgroundColor,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
@@ -19,8 +18,6 @@ class AppThemes {
       onSecondary: _lightAppColors.scaffoldBackgroundColor,
       error: Colors.transparent,
       onError: Colors.transparent,
-      background: _lightAppColors.scaffoldBackgroundColor,
-      onBackground: _lightAppColors.accentColor,
       surface: _lightAppColors.scaffoldBackgroundColor,
       onSurface: _lightAppColors.accentColor,
     ),
@@ -42,7 +39,6 @@ class AppThemes {
   static const _darkAppColors = _AppColors.dark();
 
   static final dark = ThemeData.dark().copyWith(
-    useMaterial3: true,
     scaffoldBackgroundColor: _darkAppColors.scaffoldBackgroundColor,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
@@ -55,8 +51,6 @@ class AppThemes {
       onSecondary: _darkAppColors.scaffoldBackgroundColor,
       error: Colors.transparent,
       onError: Colors.transparent,
-      background: _darkAppColors.scaffoldBackgroundColor,
-      onBackground: Colors.white,
       surface: _darkAppColors.scaffoldBackgroundColor,
       onSurface: Colors.white,
     ),
