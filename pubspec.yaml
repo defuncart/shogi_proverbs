@@ -30,6 +30,10 @@ dev_dependencies:
   arb_generator:
   flutter_lints:
   flutter_launcher_icons:
+  app_store_screenshots:
+    git:
+      url: https://github.com/defuncart/app_store_screenshots
+      ref: main
 
 flutter:
   uses-material-design: true
