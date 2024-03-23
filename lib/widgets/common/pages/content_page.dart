@@ -15,7 +15,7 @@ class ContentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -23,9 +23,9 @@ class ContentPage extends StatelessWidget {
             Text(
               headline,
               textAlign: TextAlign.justify,
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
-            const SizedBox(height: 32.0),
+            const SizedBox(height: 16),
             //content
             DefaultTextStyle(
               style: Theme.of(context).textTheme.bodyMedium!,
