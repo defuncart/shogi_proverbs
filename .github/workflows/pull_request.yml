@@ -10,7 +10,7 @@ jobs:
       - name: Lint
         run: flutter analyze
       - name: Unit tests
-        run: flutter test
+        run: flutter test  --exclude-tags app_store_screenshots
   build-Android:
     name: Build Android
     runs-on: ubuntu-latest

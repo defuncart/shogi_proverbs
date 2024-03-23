@@ -45,6 +45,7 @@ app.*.map.json
 
 # l10n
 assets_dev/l10n/
+assets_dev/fonts/
 
 # FVM Version Cache
 .fvm/
