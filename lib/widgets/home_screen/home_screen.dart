@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   hintText: context.l10n.homeScreenSearchHintText,
                   border: InputBorder.none,
                   hintStyle: Theme.of(context).textTheme.titleLarge!.apply(
-                        color: Colors.white.withOpacity(0.4),
+                        color: Color.fromRGBO(255, 255, 255, 0.4),
                       ),
                 ),
                 cursorColor: Colors.white,
