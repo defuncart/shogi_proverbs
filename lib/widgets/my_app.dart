@@ -51,11 +51,7 @@ class _MyAppState extends State<MyApp> {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
           case ConnectionState.active:
-            return Center(
-              child: CircularProgressIndicator(
-                color: AppThemes.light.colorScheme.secondary,
-              ),
-            );
+            return const SizedBox.shrink();
           default:
             if (snapshot.connectionState == ConnectionState.done && snapshot.hasData && snapshot.data == true) {
               return const _MyApp();
