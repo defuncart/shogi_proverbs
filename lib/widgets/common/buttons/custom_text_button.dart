@@ -17,7 +17,7 @@ class CustomTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: ButtonStyle(
-        overlayColor: MaterialStateProperty.all(Colors.transparent),
+        overlayColor: WidgetStatePropertyAll(Colors.transparent),
       ),
       onPressed: onPressed,
       child: Text(
