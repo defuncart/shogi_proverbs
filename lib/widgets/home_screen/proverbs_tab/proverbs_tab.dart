@@ -33,6 +33,7 @@ class ProverbsTab extends StatelessWidget {
                   collapsedTextColor: Theme.of(context).disabledColor,
                   iconColor: Theme.of(context).textTheme.bodyMedium?.color,
                   collapsedIconColor: Theme.of(context).disabledColor,
+                  shape: const Border(),
                   title: Text(kvp.key.locaString(context)),
                   children: [
                     for (final proverb in kvp.value) _ProverbTile(proverb: proverb),
