@@ -11,13 +11,11 @@ class OnboardingPage1 extends StatelessWidget {
       headline: context.l10n.onboardingPage1Headline,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 16,
         children: [
           Text(context.l10n.onboardingPage1Label1),
-          const SizedBox(height: 16),
           Text(context.l10n.onboardingPage1Label2),
-          const SizedBox(height: 16),
           Text(context.l10n.onboardingPage1Label3),
-          const SizedBox(height: 16),
           Text(context.l10n.onboardingPage1Label4),
         ],
       ),

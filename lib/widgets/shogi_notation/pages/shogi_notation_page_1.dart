@@ -13,12 +13,12 @@ class ShogiNotationPage1 extends StatelessWidget {
       headline: context.l10n.shogiNotationPage1Headline,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 16,
         children: [
           Text(
             context.l10n.shogiNotationPage1Label1,
             // textAlign: TextAlign.justify,
           ),
-          const SizedBox(height: 16),
           Center(
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.75,
@@ -28,7 +28,6 @@ class ShogiNotationPage1 extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 16),
           Text(
             context.l10n.shogiNotationPage1Label2,
             // textAlign: TextAlign.justify,

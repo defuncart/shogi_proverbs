@@ -17,11 +17,10 @@ class OnboardingPage3 extends StatelessWidget {
       headline: context.l10n.onboardingPage3Headline,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 16,
         children: [
           const DataPrivacyPanel(),
-          const SizedBox(height: 16.0),
           const DeveloperPanel(),
-          const SizedBox(height: 16.0),
           Center(
             child: CustomButton(
               label: context.l10n.onboardingPage3ContinueButtonText,

@@ -16,6 +16,7 @@ class DataPrivacyPanel extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
+      spacing: spacerHeight,
       children: [
         RichText(
           textAlign: TextAlign.justify,
@@ -39,7 +40,6 @@ class DataPrivacyPanel extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: spacerHeight),
         Text(
           context.l10n.dataPrivacyPanelLabel2,
           textAlign: TextAlign.justify,
