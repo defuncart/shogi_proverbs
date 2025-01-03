@@ -33,6 +33,7 @@ class ProverbsTab extends StatelessWidget {
                   collapsedTextColor: Theme.of(context).disabledColor,
                   iconColor: Theme.of(context).textTheme.bodyMedium?.color,
                   collapsedIconColor: Theme.of(context).disabledColor,
+                  shape: const Border(),
                   title: Text(kvp.key.locaString(context)),
                   children: [
                     for (final proverb in kvp.value) _ProverbTile(proverb: proverb),
@@ -115,11 +116,11 @@ class _AskViewTutorialPopup extends StatelessWidget {
       ),
       actions: [
         CustomTextButton(
-          label: context.l10n.generalNo.toUpperCase(),
+          label: context.l10n.generalNo,
           onPressed: () => Navigator.of(context).pop(false),
         ),
         CustomTextButton(
-          label: context.l10n.generalYes.toUpperCase(),
+          label: context.l10n.generalYes,
           onPressed: () => Navigator.of(context).pop(true),
         ),
       ],

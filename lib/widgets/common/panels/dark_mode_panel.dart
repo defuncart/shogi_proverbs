@@ -22,7 +22,8 @@ class DarkModePanel extends StatelessWidget {
               ref.read(isDarkModeProvider.notifier).state = value;
               DIContainer.get<ISettingsDatabase>().isDarkMode = value;
             },
-            inactiveThumbColor: Theme.of(context).scaffoldBackgroundColor,
+            activeColor: Theme.of(context).scaffoldBackgroundColor,
+            activeTrackColor: Theme.of(context).colorScheme.secondary,
           ),
         ),
       ],

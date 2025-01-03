@@ -144,27 +144,36 @@ class ShogiNotationPage2 extends StatelessWidget {
                     children: [
                       Text(
                         'Piece Name',
-                        style: Theme.of(context).textTheme.bodyLarge,
+                        style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       Center(
                         child: Text(
                           'Board Symbol',
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ),
                       Center(
                         child: Text(
                           'Move Notation',
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ),
                     ],
                   ),
                   const TableRow(
                     children: [
-                      Text(''),
-                      Text(''),
-                      Text(''),
+                      DefaultTextStyle(
+                        style: TextStyle(fontSize: 8),
+                        child: Text(''),
+                      ),
+                      DefaultTextStyle(
+                        style: TextStyle(fontSize: 8),
+                        child: Text(''),
+                      ),
+                      DefaultTextStyle(
+                        style: TextStyle(fontSize: 8),
+                        child: Text(''),
+                      ),
                     ],
                   ),
                   for (final piece in pieces)
@@ -200,18 +209,24 @@ class ShogiNotationPage2 extends StatelessWidget {
                     children: [
                       Text(
                         'Piece',
-                        style: Theme.of(context).textTheme.bodyLarge,
+                        style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       Text(
                         'Alternative Name',
-                        style: Theme.of(context).textTheme.bodyLarge,
+                        style: Theme.of(context).textTheme.bodyMedium,
                       ),
                     ],
                   ),
                   const TableRow(
                     children: [
-                      Text(''),
-                      Text(''),
+                      DefaultTextStyle(
+                        style: TextStyle(fontSize: 8),
+                        child: Text(''),
+                      ),
+                      DefaultTextStyle(
+                        style: TextStyle(fontSize: 8),
+                        child: Text(''),
+                      ),
                     ],
                   ),
                   const TableRow(

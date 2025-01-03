@@ -6,17 +6,34 @@ class AppThemes {
   static const _lightAppColors = _AppColors.light();
 
   static final light = ThemeData.light().copyWith(
+    useMaterial3: true,
     scaffoldBackgroundColor: _lightAppColors.scaffoldBackgroundColor,
-    splashColor: _lightAppColors.accentColor,
-    colorScheme: const ColorScheme.light().copyWith(
+    splashColor: Colors.transparent,
+    highlightColor: Colors.transparent,
+    focusColor: Colors.transparent,
+    colorScheme: ColorScheme(
+      brightness: Brightness.light,
       primary: _lightAppColors.accentColor,
+      onPrimary: _lightAppColors.scaffoldBackgroundColor,
       secondary: _lightAppColors.accentColor,
+      onSecondary: _lightAppColors.scaffoldBackgroundColor,
+      error: Colors.transparent,
+      onError: Colors.transparent,
+      background: _lightAppColors.scaffoldBackgroundColor,
+      onBackground: _lightAppColors.accentColor,
+      surface: _lightAppColors.scaffoldBackgroundColor,
+      onSurface: _lightAppColors.accentColor,
     ),
     appBarTheme: AppBarTheme(
       color: _lightAppColors.appBarColor,
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarBrightness: Brightness.dark,
       ),
+      foregroundColor: Colors.white,
+      surfaceTintColor: Colors.transparent,
+    ),
+    dialogTheme: const DialogTheme(
+      surfaceTintColor: Colors.transparent,
     ),
     //TODO this is because _PackagesView from about.dart uses card color for background color
     cardColor: _lightAppColors.scaffoldBackgroundColor,
@@ -25,19 +42,36 @@ class AppThemes {
   static const _darkAppColors = _AppColors.dark();
 
   static final dark = ThemeData.dark().copyWith(
+    useMaterial3: true,
     scaffoldBackgroundColor: _darkAppColors.scaffoldBackgroundColor,
-    splashColor: _darkAppColors.accentColor,
-    colorScheme: const ColorScheme.light().copyWith(
+    splashColor: Colors.transparent,
+    highlightColor: Colors.transparent,
+    focusColor: Colors.transparent,
+    colorScheme: ColorScheme(
+      brightness: Brightness.dark,
       primary: _darkAppColors.accentColor,
+      onPrimary: _darkAppColors.scaffoldBackgroundColor,
       secondary: _darkAppColors.accentColor,
+      onSecondary: _darkAppColors.scaffoldBackgroundColor,
+      error: Colors.transparent,
+      onError: Colors.transparent,
+      background: _darkAppColors.scaffoldBackgroundColor,
+      onBackground: Colors.white,
+      surface: _darkAppColors.scaffoldBackgroundColor,
+      onSurface: Colors.white,
     ),
     appBarTheme: AppBarTheme(
       color: _darkAppColors.appBarColor,
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarBrightness: Brightness.dark,
       ),
+      foregroundColor: Colors.white,
+      surfaceTintColor: Colors.transparent,
     ),
     disabledColor: _darkAppColors.disabledColor,
+    dialogTheme: const DialogTheme(
+      surfaceTintColor: Colors.transparent,
+    ),
     //TODO this is because _PackagesView from about.dart uses card color for background color
     cardColor: _darkAppColors.scaffoldBackgroundColor,
   );

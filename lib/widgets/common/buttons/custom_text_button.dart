@@ -16,11 +16,16 @@ class CustomTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      style: TextButton.styleFrom(
-        foregroundColor: Theme.of(context).colorScheme.secondary,
+      style: ButtonStyle(
+        overlayColor: MaterialStateProperty.all(Colors.transparent),
       ),
       onPressed: onPressed,
-      child: Text(label),
+      child: Text(
+        label,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     );
   }
 }
