@@ -1,23 +1,11 @@
-import 'dart:io';
-
 import 'package:app_store_screenshots/app_store_screenshots.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shogi_proverbs/configs/app_themes.dart';
 
 const _fontName = 'NotoSans';
 
 void main() {
-  Future<void> loadFont({required String path, required String name}) async {
-    final file = File(path);
-    final byteData = ByteData.view(
-      Uint8List.fromList(file.readAsBytesSync()).buffer,
-    );
-    final fontLoader = FontLoader(name)..addFont(Future.value(byteData));
-    await fontLoader.load();
-  }
-
   setUp(() async {
     await loadFont(
       path: 'assets_dev/fonts/NotoSansJP-RegularLite.otf',

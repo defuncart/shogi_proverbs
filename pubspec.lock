@@ -6,7 +6,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "8c69e3ca52a345fbadee9a0b734c3ae6854c20cd"
+      resolved-ref: ffbbccf68e133cc82469dc9ad9bf42de2bf0b13f
       url: "https://github.com/defuncart/app_store_screenshots"
     source: git
     version: "0.0.1"
