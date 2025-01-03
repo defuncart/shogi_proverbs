@@ -115,11 +115,11 @@ class _AskViewTutorialPopup extends StatelessWidget {
       ),
       actions: [
         CustomTextButton(
-          label: context.l10n.generalNo.toUpperCase(),
+          label: context.l10n.generalNo,
           onPressed: () => Navigator.of(context).pop(false),
         ),
         CustomTextButton(
-          label: context.l10n.generalYes.toUpperCase(),
+          label: context.l10n.generalYes,
           onPressed: () => Navigator.of(context).pop(true),
         ),
       ],
