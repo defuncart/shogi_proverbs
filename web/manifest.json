@@ -1,11 +1,11 @@
 {
-    "name": "shogi_proverbs",
-    "short_name": "shogi_proverbs",
+    "name": "Shogi Proverbs",
+    "short_name": "Shogi Proverbs",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#e2e3d1",
     "theme_color": "#e2e3d1",
-    "description": "A new Flutter project.",
+    "description": "A mobile application containing various Shogi proverbs.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
