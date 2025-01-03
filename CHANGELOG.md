@@ -1,4 +1,9 @@
-## [0.3.0] -
+## [0.4.0] - 10/06/2025
+
+* Update design to match Material 3.
+* Support monochrome app icons.
+
+## [0.3.0] - 28/08/2023
 
 * Visually distinguish which proverbs have been previously read.
 
