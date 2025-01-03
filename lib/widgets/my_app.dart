@@ -128,10 +128,12 @@ class _MyApp extends StatelessWidget {
           ),
           child: AnnotatedRegion<SystemUiOverlayStyle>(
             value: SystemUiOverlayStyle(
+              systemNavigationBarDividerColor:
+                  isDarkMode ? AppThemes.dark.scaffoldBackgroundColor : AppThemes.light.scaffoldBackgroundColor,
               systemNavigationBarColor:
                   isDarkMode ? AppThemes.dark.scaffoldBackgroundColor : AppThemes.light.scaffoldBackgroundColor,
-              statusBarColor: Colors.transparent,
               systemNavigationBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+              statusBarColor: Colors.transparent,
               statusBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
               statusBarBrightness: isDarkMode ? Brightness.dark : Brightness.light,
             ),
