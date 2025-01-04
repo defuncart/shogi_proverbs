@@ -3,7 +3,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/localizations.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi_proverbs/configs/app_themes.dart';
@@ -139,12 +138,7 @@ class _MyApp extends StatelessWidget {
             ),
             child: MaterialApp(
               scrollBehavior: _AppScrollBehavior(),
-              localizationsDelegates: const [
-                AppLocalizations.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
+              localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,
               themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
               theme: AppThemes.light,
