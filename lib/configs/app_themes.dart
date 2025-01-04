@@ -29,6 +29,7 @@ class AppThemes {
       foregroundColor: Colors.white,
       surfaceTintColor: Colors.transparent,
     ),
+    disabledColor: _lightAppColors.disabledColor,
     dialogTheme: const DialogTheme(
       surfaceTintColor: Colors.transparent,
     ),
@@ -80,7 +81,7 @@ class _AppColors {
   const _AppColors.light()
       : scaffoldBackgroundColor = const Color(0xffe2e3d1),
         accentColor = const Color(0xff474838),
-        disabledColor = const Color(0xffafafaf),
+        disabledColor = const Color(0xff7A7B6B),
         appBarColor = const Color(0xff44423d);
 
   const _AppColors.dark()
