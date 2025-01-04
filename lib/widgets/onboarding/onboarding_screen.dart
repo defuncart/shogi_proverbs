@@ -5,7 +5,7 @@ import 'package:shogi_proverbs/widgets/onboarding/pages/onboarding_page_2.dart';
 import 'package:shogi_proverbs/widgets/onboarding/pages/onboarding_page_3.dart';
 
 class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({Key? key}) : super(key: key);
+  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

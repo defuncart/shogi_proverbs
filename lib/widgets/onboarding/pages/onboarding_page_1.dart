@@ -3,7 +3,7 @@ import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 
 class OnboardingPage1 extends StatelessWidget {
-  const OnboardingPage1({Key? key}) : super(key: key);
+  const OnboardingPage1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +11,11 @@ class OnboardingPage1 extends StatelessWidget {
       headline: context.l10n.onboardingPage1Headline,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 16,
         children: [
           Text(context.l10n.onboardingPage1Label1),
-          const SizedBox(height: 16),
           Text(context.l10n.onboardingPage1Label2),
-          const SizedBox(height: 16),
           Text(context.l10n.onboardingPage1Label3),
-          const SizedBox(height: 16),
           Text(context.l10n.onboardingPage1Label4),
         ],
       ),

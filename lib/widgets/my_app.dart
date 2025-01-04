@@ -3,7 +3,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/localizations.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi_proverbs/configs/app_themes.dart';
@@ -17,7 +16,7 @@ import 'package:shogi_proverbs/widgets/onboarding/onboarding_screen.dart';
 import 'package:shogi_proverbs/widgets/shogi_notation/shogi_notation_screen.dart';
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -88,8 +87,7 @@ class _FakeMobileWrapper extends StatelessWidget {
   const _FakeMobileWrapper({
     required this.child,
     required this.constraints,
-    Key? key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +108,7 @@ class _FakeMobileWrapper extends StatelessWidget {
 }
 
 class _MyApp extends StatelessWidget {
-  const _MyApp({Key? key}) : super(key: key);
+  const _MyApp();
 
   @override
   Widget build(BuildContext context) {
@@ -129,21 +127,18 @@ class _MyApp extends StatelessWidget {
           ),
           child: AnnotatedRegion<SystemUiOverlayStyle>(
             value: SystemUiOverlayStyle(
+              systemNavigationBarDividerColor:
+                  isDarkMode ? AppThemes.dark.scaffoldBackgroundColor : AppThemes.light.scaffoldBackgroundColor,
               systemNavigationBarColor:
                   isDarkMode ? AppThemes.dark.scaffoldBackgroundColor : AppThemes.light.scaffoldBackgroundColor,
-              statusBarColor: Colors.transparent,
               systemNavigationBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+              statusBarColor: Colors.transparent,
               statusBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
               statusBarBrightness: isDarkMode ? Brightness.dark : Brightness.light,
             ),
             child: MaterialApp(
               scrollBehavior: _AppScrollBehavior(),
-              localizationsDelegates: const [
-                AppLocalizations.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
+              localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,
               themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
               theme: AppThemes.light,

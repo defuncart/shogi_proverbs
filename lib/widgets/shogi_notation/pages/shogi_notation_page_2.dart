@@ -21,7 +21,7 @@ class _PieceModel {
 }
 
 class ShogiNotationPage2 extends StatelessWidget {
-  const ShogiNotationPage2({Key? key}) : super(key: key);
+  const ShogiNotationPage2({super.key});
 
   String _pieceTypeMultipleOptions(PieceType pieceType, {required bool usesJapanese}) =>
       '${BoardPiece(pieceType: pieceType, position: const Position(column: 1, row: 1)).displayString(usesJapanese: usesJapanese)}/${BoardPiece(pieceType: pieceType, player: PlayerType.gote, position: const Position(column: 1, row: 1)).displayString(usesJapanese: usesJapanese)}';

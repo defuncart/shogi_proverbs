@@ -13,9 +13,9 @@ class ProverbsTab extends StatelessWidget {
   final String filterTerm;
 
   const ProverbsTab({
-    Key? key,
+    super.key,
     required this.filterTerm,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +48,8 @@ class _ProverbTile extends StatelessWidget {
   final Proverb proverb;
 
   const _ProverbTile({
-    Key? key,
     required this.proverb,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +102,7 @@ class _ProverbTile extends StatelessWidget {
 
 /// Returns true if user decides to see tutorial, otherwise false
 class _AskViewTutorialPopup extends StatelessWidget {
-  const _AskViewTutorialPopup({Key? key}) : super(key: key);
+  const _AskViewTutorialPopup();
 
   @override
   Widget build(BuildContext context) {

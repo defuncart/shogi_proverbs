@@ -8,16 +8,16 @@ class CustomTextButton extends StatelessWidget {
   final void Function() onPressed;
 
   const CustomTextButton({
-    Key? key,
+    super.key,
     required this.label,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      style: ButtonStyle(
-        overlayColor: MaterialStateProperty.all(Colors.transparent),
+      style: const ButtonStyle(
+        overlayColor: WidgetStatePropertyAll(Colors.transparent),
       ),
       onPressed: onPressed,
       child: Text(

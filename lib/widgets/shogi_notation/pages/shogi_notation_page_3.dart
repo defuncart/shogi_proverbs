@@ -3,7 +3,7 @@ import 'package:shogi_proverbs/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 
 class ShogiNotationPage3 extends StatelessWidget {
-  const ShogiNotationPage3({Key? key}) : super(key: key);
+  const ShogiNotationPage3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +12,9 @@ class ShogiNotationPage3 extends StatelessWidget {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
+        spacing: 16,
         children: [
           Text(context.l10n.shogiNotationPage3Label1),
-          const SizedBox(height: 16),
           const Center(
             child: Wrap(
               spacing: 8.0,
@@ -29,13 +29,9 @@ class ShogiNotationPage3 extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 16),
           Text(context.l10n.shogiNotationPage3Label2),
-          const SizedBox(height: 16),
           Text(context.l10n.shogiNotationPage3Label3),
-          const SizedBox(height: 16),
           Text(context.l10n.shogiNotationPage3Label4),
-          const SizedBox(height: 16),
           Table(
             border: TableBorder.all(
               color: Theme.of(context).disabledColor,

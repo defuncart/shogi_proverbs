@@ -9,7 +9,7 @@ import 'package:shogi_proverbs/widgets/common/panels/data_privacy_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/developer_panel.dart';
 
 class OnboardingPage3 extends StatelessWidget {
-  const OnboardingPage3({Key? key}) : super(key: key);
+  const OnboardingPage3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +17,10 @@ class OnboardingPage3 extends StatelessWidget {
       headline: context.l10n.onboardingPage3Headline,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 16,
         children: [
           const DataPrivacyPanel(),
-          const SizedBox(height: 16.0),
           const DeveloperPanel(),
-          const SizedBox(height: 16.0),
           Center(
             child: CustomButton(
               label: context.l10n.onboardingPage3ContinueButtonText,

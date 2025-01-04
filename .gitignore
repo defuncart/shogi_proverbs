@@ -48,3 +48,6 @@ assets_dev/l10n/
 
 # FVM Version Cache
 .fvm/
+
+# Debug Targets
+/macos

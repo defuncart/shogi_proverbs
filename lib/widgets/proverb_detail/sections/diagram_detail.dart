@@ -9,8 +9,8 @@ class DiagramDetail extends StatelessWidget {
 
   const DiagramDetail({
     required this.diagram,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

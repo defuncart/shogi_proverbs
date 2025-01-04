@@ -5,10 +5,9 @@ class PageViewWithIndicators extends StatefulWidget {
   final List<Widget> children;
 
   PageViewWithIndicators({
-    Key? key,
+    super.key,
     required this.children,
-  })  : assert(children.isNotEmpty),
-        super(key: key);
+  })  : assert(children.isNotEmpty);
 
   @override
   State<PageViewWithIndicators> createState() => _PageViewWithIndicatorsState();

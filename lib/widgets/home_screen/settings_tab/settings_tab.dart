@@ -11,7 +11,7 @@ import 'package:shogi_proverbs/widgets/common/panels/piece_symbol_panel.dart';
 import 'package:shogi_proverbs/widgets/common/text/clickable_text_span.dart';
 
 class SettingsTab extends StatelessWidget {
-  const SettingsTab({Key? key}) : super(key: key);
+  const SettingsTab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class SettingsTab extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+            children: [
               const SizedBox(height: 16.0),
               const DarkModePanel(),
               const SizedBox(height: 16.0),
@@ -62,7 +62,7 @@ class SettingsTab extends StatelessWidget {
 }
 
 class _DataPrivacyPopup extends StatelessWidget {
-  const _DataPrivacyPopup({Key? key}) : super(key: key);
+  const _DataPrivacyPopup();
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +92,7 @@ class _DataPrivacyPopup extends StatelessWidget {
 }
 
 class _CreditsPopup extends StatelessWidget {
-  const _CreditsPopup({Key? key}) : super(key: key);
+  const _CreditsPopup();
 
   @override
   Widget build(BuildContext context) {

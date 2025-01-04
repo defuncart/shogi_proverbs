@@ -12,9 +12,9 @@ class PageDetail extends StatelessWidget {
   final Page page;
 
   const PageDetail({
-    Key? key,
+    super.key,
     required this.page,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

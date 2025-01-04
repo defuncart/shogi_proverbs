@@ -7,15 +7,16 @@ class DataPrivacyPanel extends StatelessWidget {
   final double spacerHeight;
 
   const DataPrivacyPanel({
-    Key? key,
+    super.key,
     this.spacerHeight = 16.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
+      spacing: spacerHeight,
       children: [
         RichText(
           textAlign: TextAlign.justify,
@@ -39,7 +40,6 @@ class DataPrivacyPanel extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: spacerHeight),
         Text(
           context.l10n.dataPrivacyPanelLabel2,
           textAlign: TextAlign.justify,

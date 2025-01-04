@@ -10,12 +10,10 @@ class ClickableTextSpan extends TextSpan {
   /// [text] and [url] are required.
   /// [style] is optional. If not given, default from theme will be used.
   ClickableTextSpan({
-    required String text,
-    TextStyle? style,
+    required String super.text,
+    super.style,
     required String url,
   }) : super(
-          text: text,
-          style: style,
           recognizer: TapGestureRecognizer()..onTap = () async => await _openUrl(url),
         );
 
