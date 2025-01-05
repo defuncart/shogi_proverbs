@@ -30,6 +30,10 @@ dev_dependencies:
   arb_generator:
   flutter_lints:
   flutter_launcher_icons:
+  app_store_screenshots:
+    git:
+      url: https://github.com/defuncart/app_store_screenshots
+      ref: main
 
 flutter:
   uses-material-design: true
@@ -48,15 +52,15 @@ arb_generator:
 flutter_icons:
   android: true
   ios: true
-  image_path_android: "assets_dev/app_icon/android_old.png"
-  image_path_ios: "assets_dev/app_icon/ios.png"
+  image_path: "assets_dev/app_icons/app_icon.png"
+  image_path_android: "assets_dev/app_icons/android_old.png"
   adaptive_icon_background: "#E2E3D1"
-  adaptive_icon_foreground: "assets_dev/app_icon/android_foreground.png"
+  adaptive_icon_foreground: "assets_dev/app_icons/android_icon_foreground.png"
   web:
     generate: true
-    image_path: "assets_dev/app_icon/ios.png"
-    background_color: "#e2e3d1"
-    theme_color: "#e2e3d1"
+    image_path: "assets_dev/app_icons/app_icon.png"
+    background_color: "#E2E3D1"
+    theme_color: "#E2E3D1"
   macos:
     generate: true
-    image_path: "assets_dev/app_icon/ios.png"
+    image_path: "assets_dev/app_icons/app_icon.png"
