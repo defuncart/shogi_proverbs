@@ -43,9 +43,11 @@ app.*.map.json
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
-# l10n
-assets_dev/l10n/
+# Local Assets
+assets_dev/app_icons/android_icon_foreground.png 
+assets_dev/app_icons/app_icon.png
 assets_dev/fonts/
+assets_dev/l10n/
 
 # FVM Version Cache
 .fvm/
