@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shogi_proverbs/l10n.dart';
+import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/widgets/home_screen/proverbs_tab/proverbs_tab.dart';
 import 'package:shogi_proverbs/widgets/home_screen/settings_tab/settings_tab.dart';
 

@@ -6,3 +6,5 @@ linter:
     prefer_const_declarations: true
     prefer_const_literals_to_create_immutables: true
     use_build_context_synchronously: false
+formatter:
+  page_width: 120

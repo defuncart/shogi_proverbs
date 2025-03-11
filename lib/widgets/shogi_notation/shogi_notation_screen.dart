@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/di_container.dart';
-import 'package:shogi_proverbs/l10n.dart';
+import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 import 'package:shogi_proverbs/widgets/common/page_view_with_indicators.dart';
 import 'package:shogi_proverbs/widgets/shogi_notation/pages/shogi_notation_page_1.dart';

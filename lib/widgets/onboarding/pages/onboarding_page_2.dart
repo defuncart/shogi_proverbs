@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/l10n.dart';
+import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/piece_symbol_panel.dart';

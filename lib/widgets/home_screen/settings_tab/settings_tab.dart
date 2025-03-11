@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/external_links.dart';
 import 'package:shogi_proverbs/configs/route_names.dart';
-import 'package:shogi_proverbs/l10n.dart';
+import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/buttons/custom_button.dart';
 import 'package:shogi_proverbs/widgets/common/buttons/custom_text_button.dart';
 import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
