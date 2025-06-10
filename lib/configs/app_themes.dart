@@ -30,7 +30,7 @@ class AppThemes {
       surfaceTintColor: Colors.transparent,
     ),
     disabledColor: _lightAppColors.disabledColor,
-    dialogTheme: const DialogTheme(
+    dialogTheme: const DialogThemeData(
       surfaceTintColor: Colors.transparent,
     ),
     //TODO this is because _PackagesView from about.dart uses card color for background color
@@ -64,7 +64,7 @@ class AppThemes {
       surfaceTintColor: Colors.transparent,
     ),
     disabledColor: _darkAppColors.disabledColor,
-    dialogTheme: const DialogTheme(
+    dialogTheme: const DialogThemeData(
       surfaceTintColor: Colors.transparent,
     ),
     //TODO this is because _PackagesView from about.dart uses card color for background color
