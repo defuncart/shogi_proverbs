@@ -23,13 +23,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: _canSearch && _isSearching
-            ? BackButton(onPressed: () {
-                _searchQueryController.clear();
-                setState(() {
-                  _isSearching = false;
-                  _searchQuery = '';
-                });
-              })
+            ? BackButton(
+                onPressed: () {
+                  _searchQueryController.clear();
+                  setState(() {
+                    _isSearching = false;
+                    _searchQuery = '';
+                  });
+                },
+              )
             : const SizedBox.shrink(),
         title: _canSearch && _isSearching
             ? TextField(
@@ -39,8 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   hintText: context.l10n.homeScreenSearchHintText,
                   border: InputBorder.none,
                   hintStyle: Theme.of(context).textTheme.titleLarge!.apply(
-                        color: const Color.fromRGBO(255, 255, 255, 0.4),
-                      ),
+                    color: const Color.fromRGBO(255, 255, 255, 0.4),
+                  ),
                 ),
                 cursorColor: Colors.white,
                 style: Theme.of(context).textTheme.titleLarge!.apply(color: Colors.white),

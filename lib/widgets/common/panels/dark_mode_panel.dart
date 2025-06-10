@@ -16,7 +16,7 @@ class DarkModePanel extends StatelessWidget {
       children: <Widget>[
         Text(context.l10n.darkModePanelText),
         Consumer(
-          builder: (_, ref, __) => Switch(
+          builder: (_, ref, _) => Switch(
             value: ref.read(isDarkModeProvider),
             onChanged: (value) {
               ref.read(isDarkModeProvider.notifier).state = value;

@@ -142,8 +142,8 @@ class _CreditsPopup extends StatelessWidget {
                   TextSpan(
                     text: context.l10n.creditsPopupLabel32,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontStyle: FontStyle.italic,
-                        ),
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
                   TextSpan(
                     text: context.l10n.creditsPopupLabel33,

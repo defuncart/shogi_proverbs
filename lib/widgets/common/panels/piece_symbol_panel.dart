@@ -20,7 +20,7 @@ class PieceSymbolPanel extends StatelessWidget {
       children: [
         Text(context.l10n.pieceSymbolPanelText),
         Consumer(
-          builder: (_, ref, __) => SegmentedChips(
+          builder: (_, ref, _) => SegmentedChips(
             labels: _languageSymbols,
             initiallySelectedIndex: ref.read(selectedPieceSymbolProvider),
             onSelected: (selectedIndex) {
