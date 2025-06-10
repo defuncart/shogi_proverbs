@@ -52,5 +52,8 @@ assets_dev/l10n/
 # FVM Version Cache
 .fvm/
 
+# generated assets
+lib/l10n/generated
+
 # Debug Targets
 /macos

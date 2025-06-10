@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/l10n.dart';
+import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 
 class ShogiNotationPage1 extends StatelessWidget {

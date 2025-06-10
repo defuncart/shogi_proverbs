@@ -30,7 +30,7 @@ class AppThemes {
       surfaceTintColor: Colors.transparent,
     ),
     disabledColor: _lightAppColors.disabledColor,
-    dialogTheme: const DialogTheme(
+    dialogTheme: const DialogThemeData(
       surfaceTintColor: Colors.transparent,
     ),
     //TODO this is because _PackagesView from about.dart uses card color for background color
@@ -64,7 +64,7 @@ class AppThemes {
       surfaceTintColor: Colors.transparent,
     ),
     disabledColor: _darkAppColors.disabledColor,
-    dialogTheme: const DialogTheme(
+    dialogTheme: const DialogThemeData(
       surfaceTintColor: Colors.transparent,
     ),
     //TODO this is because _PackagesView from about.dart uses card color for background color
@@ -79,14 +79,14 @@ class _AppColors {
   final Color appBarColor;
 
   const _AppColors.light()
-      : scaffoldBackgroundColor = const Color(0xffe2e3d1),
-        accentColor = const Color(0xff474838),
-        disabledColor = const Color(0xff7A7B6B),
-        appBarColor = const Color(0xff44423d);
+    : scaffoldBackgroundColor = const Color(0xffe2e3d1),
+      accentColor = const Color(0xff474838),
+      disabledColor = const Color(0xff7A7B6B),
+      appBarColor = const Color(0xff44423d);
 
   const _AppColors.dark()
-      : scaffoldBackgroundColor = const Color(0xff252525),
-        accentColor = const Color(0xfffc856d),
-        disabledColor = const Color(0xffafafaf),
-        appBarColor = const Color(0xff131b20);
+    : scaffoldBackgroundColor = const Color(0xff252525),
+      accentColor = const Color(0xfffc856d),
+      disabledColor = const Color(0xffafafaf),
+      appBarColor = const Color(0xff131b20);
 }

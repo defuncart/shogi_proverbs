@@ -18,9 +18,9 @@ class SettingsDatabase implements ISettingsDatabase {
 
   @override
   int get selectedPieceSymbol => _box.get(
-        _Keys.selectedPieceSymbol,
-        defaultValue: _Defaults.selectedPieceSymbol,
-      );
+    _Keys.selectedPieceSymbol,
+    defaultValue: _Defaults.selectedPieceSymbol,
+  );
 
   @override
   set selectedPieceSymbol(int value) => _box.put(_Keys.selectedPieceSymbol, value);

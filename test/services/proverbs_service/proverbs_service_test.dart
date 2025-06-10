@@ -4,9 +4,9 @@ import 'package:shogi_proverbs/services/proverbs_service/proverbs_service.dart';
 
 void main() {
   test('Ensure that all indeces are unique', () {
-    final proverbs = ProverbsService.proverbsWithFilter('')
-        .values
-        .fold<List<Proverb>>([], (previousValue, element) => [...previousValue, ...element]);
+    final proverbs = ProverbsService.proverbsWithFilter(
+      '',
+    ).values.fold<List<Proverb>>([], (previousValue, element) => [...previousValue, ...element]);
     final indeces = proverbs.map((proverb) => proverb.index).toList();
 
     expect(
@@ -25,9 +25,9 @@ void main() {
   });
 
   test('Ensure that filtering works', () {
-    final proverbs = ProverbsService.proverbsWithFilter('king')
-        .values
-        .fold<List<Proverb>>([], (previousValue, element) => [...previousValue, ...element]);
+    final proverbs = ProverbsService.proverbsWithFilter(
+      'king',
+    ).values.fold<List<Proverb>>([], (previousValue, element) => [...previousValue, ...element]);
     expect(proverbs.length, 10);
   });
 }

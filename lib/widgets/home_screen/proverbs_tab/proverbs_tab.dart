@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/route_names.dart';
 import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/enums/proverb_type.dart';
-import 'package:shogi_proverbs/l10n.dart';
+import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/services/proverbs_service/proverbs_service.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
@@ -54,38 +54,39 @@ class _ProverbTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<bool>(
-        initialData: DIContainer.get<ISettingsDatabase>().hasSeenProverb(proverb.index),
-        stream: DIContainer.get<ISettingsDatabase>().watchHasSeenProverb(proverb.index),
-        builder: (context, snapshot) {
-          return Opacity(
-            opacity: (snapshot.data ?? false) ? 0.6 : 1,
-            child: ListTile(
-              title: Text(proverb.title),
-              subtitle: Text(proverb.japaneseTitle),
-              onTap: () async {
-                FocusScope.of(context).unfocus();
+      initialData: DIContainer.get<ISettingsDatabase>().hasSeenProverb(proverb.index),
+      stream: DIContainer.get<ISettingsDatabase>().watchHasSeenProverb(proverb.index),
+      builder: (context, snapshot) {
+        return Opacity(
+          opacity: (snapshot.data ?? false) ? 0.6 : 1,
+          child: ListTile(
+            title: Text(proverb.title),
+            subtitle: Text(proverb.japaneseTitle),
+            onTap: () async {
+              FocusScope.of(context).unfocus();
 
-                if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
-                  final openTutorial = await showDialog(
-                    context: context,
-                    builder: (_) => const _AskViewTutorialPopup(),
-                  );
-                  // user must choose yes/no, dismissing by taping outside of popup doesn't count
-                  if (openTutorial != null) {
-                    DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
-                    if (!openTutorial) {
-                      _openProverbDetail(proverb, context);
-                    } else {
-                      Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
-                    }
+              if (!DIContainer.get<ISettingsDatabase>().hasSeenTutorial) {
+                final openTutorial = await showDialog(
+                  context: context,
+                  builder: (_) => const _AskViewTutorialPopup(),
+                );
+                // user must choose yes/no, dismissing by taping outside of popup doesn't count
+                if (openTutorial != null) {
+                  DIContainer.get<ISettingsDatabase>().hasSeenTutorial = true;
+                  if (!openTutorial) {
+                    _openProverbDetail(proverb, context);
+                  } else {
+                    Navigator.of(context).pushNamed(RouteNames.shogiNotationScreen);
                   }
-                } else {
-                  _openProverbDetail(proverb, context);
                 }
-              },
-            ),
-          );
-        });
+              } else {
+                _openProverbDetail(proverb, context);
+              }
+            },
+          ),
+        );
+      },
+    );
   }
 
   void _openProverbDetail(Proverb proverb, BuildContext context) {

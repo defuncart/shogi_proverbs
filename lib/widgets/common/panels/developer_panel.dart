@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shogi_proverbs/configs/external_links.dart';
-import 'package:shogi_proverbs/l10n.dart';
+import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/text/clickable_text_span.dart';
 
 class DeveloperPanel extends StatelessWidget {

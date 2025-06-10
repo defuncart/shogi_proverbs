@@ -2,12 +2,12 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_gen/gen_l10n/localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi_proverbs/configs/app_themes.dart';
 import 'package:shogi_proverbs/configs/route_names.dart';
 import 'package:shogi_proverbs/di_container.dart';
+import 'package:shogi_proverbs/l10n/generated/localizations.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 import 'package:shogi_proverbs/widgets/common/panels/dark_mode_panel.dart';
 import 'package:shogi_proverbs/widgets/common/panels/piece_symbol_panel.dart';
@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppThemes.light,
-      builder: (_, __) => Scaffold(
+      builder: (_, _) => Scaffold(
         resizeToAvoidBottomInset: false,
         body: LayoutBuilder(
           builder: (_, constraints) => kIsWeb && constraints.maxWidth > 675
@@ -113,24 +113,27 @@ class _MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer(
-      builder: (_, ref, __) {
+      builder: (_, ref, _) {
         final isDarkMode = ref.watch(isDarkModeProvider);
 
         return DefaultShogiBoardStyle(
           style: ShogiBoardStyle(
             maxSize: 500,
-            pieceColor:
-                isDarkMode ? AppThemes.dark.textTheme.bodyLarge!.color! : AppThemes.light.textTheme.bodyLarge!.color!,
+            pieceColor: isDarkMode
+                ? AppThemes.dark.textTheme.bodyLarge!.color!
+                : AppThemes.light.textTheme.bodyLarge!.color!,
             borderColor: isDarkMode ? AppThemes.dark.disabledColor : AppThemes.light.disabledColor,
             usesJapanese: ref.watch(selectedPieceSymbolProvider) == 1,
             coordIndicatorType: CoordIndicatorType.arabic,
           ),
           child: AnnotatedRegion<SystemUiOverlayStyle>(
             value: SystemUiOverlayStyle(
-              systemNavigationBarDividerColor:
-                  isDarkMode ? AppThemes.dark.scaffoldBackgroundColor : AppThemes.light.scaffoldBackgroundColor,
-              systemNavigationBarColor:
-                  isDarkMode ? AppThemes.dark.scaffoldBackgroundColor : AppThemes.light.scaffoldBackgroundColor,
+              systemNavigationBarDividerColor: isDarkMode
+                  ? AppThemes.dark.scaffoldBackgroundColor
+                  : AppThemes.light.scaffoldBackgroundColor,
+              systemNavigationBarColor: isDarkMode
+                  ? AppThemes.dark.scaffoldBackgroundColor
+                  : AppThemes.light.scaffoldBackgroundColor,
               systemNavigationBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
               statusBarColor: Colors.transparent,
               statusBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
@@ -161,7 +164,7 @@ class _MyApp extends StatelessWidget {
 class _AppScrollBehavior extends MaterialScrollBehavior {
   @override
   Set<PointerDeviceKind> get dragDevices => {
-        PointerDeviceKind.touch,
-        PointerDeviceKind.mouse,
-      };
+    PointerDeviceKind.touch,
+    PointerDeviceKind.mouse,
+  };
 }

@@ -4,8 +4,8 @@ publish_to: 'none'
 version: 0.3.0+5
 
 environment:
-  sdk: '>=3.6.0 <4.0.0'
-  flutter: ">=3.27.0 <4.0.0"
+  sdk: ^3.8.0
+  flutter: ^3.32.0
 
 dependencies:
   flutter:
@@ -49,13 +49,14 @@ arb_generator:
     delimiter: ";"
     base_index: 1
 
-flutter_icons:
-  android: true
-  ios: true
+flutter_launcher_icons:
   image_path: "assets_dev/app_icons/app_icon.png"
+  android: true
   image_path_android: "assets_dev/app_icons/android_old.png"
   adaptive_icon_background: "#E2E3D1"
   adaptive_icon_foreground: "assets_dev/app_icons/android_icon_foreground.png"
+  adaptive_icon_monochrome: "assets_dev/app_icons/android_icon_foreground.png"
+  ios: true
   web:
     generate: true
     image_path: "assets_dev/app_icons/app_icon.png"

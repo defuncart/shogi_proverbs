@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart' hide Page;
-import 'package:shogi_proverbs/l10n.dart';
+import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/models/proverb.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/multi_page_detail.dart';
 import 'package:shogi_proverbs/widgets/proverb_detail/page_detail.dart';

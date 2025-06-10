@@ -14,8 +14,8 @@ class ClickableTextSpan extends TextSpan {
     super.style,
     required String url,
   }) : super(
-          recognizer: TapGestureRecognizer()..onTap = () async => await _openUrl(url),
-        );
+         recognizer: TapGestureRecognizer()..onTap = () async => await _openUrl(url),
+       );
 
   static Future<void> _openUrl(String url) async {
     if (await canLaunchUrl(Uri.parse(url))) {

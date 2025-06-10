@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shogi_board/flutter_shogi_board.dart';
 import 'package:shogi/shogi.dart';
-import 'package:shogi_proverbs/l10n.dart';
+import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/widgets/common/pages/content_page.dart';
 import 'package:shogi_proverbs/widgets/common/panels/piece_symbol_panel.dart';
 
@@ -41,7 +41,7 @@ class ShogiNotationPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer(
-      builder: (_, ref, __) {
+      builder: (_, ref, _) {
         final usesJapanese = ref.read(selectedPieceSymbolProvider) == 1;
         final pieceColor = DefaultShogiBoardStyle.of(context).style.pieceColor;
         final promotedPieceColor = DefaultShogiBoardStyle.of(context).style.promotedPieceColor;
