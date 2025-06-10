@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.defuncart.shogi_proverbs"
+    namespace = "com.defuncart.shogiproverbs"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
