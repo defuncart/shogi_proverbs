@@ -22,10 +22,10 @@ class AppThemes {
       onSurface: _lightAppColors.accentColor,
     ),
     appBarTheme: AppBarTheme(
-      color: _lightAppColors.appBarColor,
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarBrightness: Brightness.dark,
       ),
+      backgroundColor: _lightAppColors.appBarColor,
       foregroundColor: Colors.white,
       surfaceTintColor: Colors.transparent,
     ),
@@ -56,10 +56,10 @@ class AppThemes {
       onSurface: Colors.white,
     ),
     appBarTheme: AppBarTheme(
-      color: _darkAppColors.appBarColor,
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarBrightness: Brightness.dark,
       ),
+      backgroundColor: _darkAppColors.appBarColor,
       foregroundColor: Colors.white,
       surfaceTintColor: Colors.transparent,
     ),

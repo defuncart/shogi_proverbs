@@ -27,7 +27,6 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        ndkVersion = "27.0.12077973" // path_provider_android, url_launcher_android require Android NDK 27.0.12077973
     }
 
     buildTypes {
