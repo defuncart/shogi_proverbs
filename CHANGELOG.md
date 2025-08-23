@@ -1,7 +1,11 @@
+## [0.5.0] -
+
+* Support iOS Dark & Tinted icons.
+
 ## [0.4.0] - 10/06/2025
 
 * Update design to match Material 3.
-* Support monochrome app icons.
+* Support Android monochrome app icons.
 
 ## [0.3.0] - 28/08/2023
 

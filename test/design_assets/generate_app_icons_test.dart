@@ -22,7 +22,17 @@ void main() {
     ),
   );
 
-  generateAppIconAndroidForeground(
+  generateAppIconForeground(
+    onBuildIcon: (size) => Theme(
+      data: AppThemes.light,
+      child: AppIcon(
+        size: size,
+        hasTransparentBackground: true,
+      ),
+    ),
+  );
+
+  generateAppIconForegroundTint(
     onBuildIcon: (size) => Theme(
       data: AppThemes.light,
       child: AppIcon(

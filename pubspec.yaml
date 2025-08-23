@@ -54,9 +54,12 @@ flutter_launcher_icons:
   android: true
   image_path_android: "assets_dev/app_icons/android_old.png"
   adaptive_icon_background: "#E2E3D1"
-  adaptive_icon_foreground: "assets_dev/app_icons/android_icon_foreground.png"
-  adaptive_icon_monochrome: "assets_dev/app_icons/android_icon_foreground.png"
+  adaptive_icon_foreground: "assets_dev/app_icons/app_icon_foreground.png"
+  adaptive_icon_monochrome: "assets_dev/app_icons/app_icon_foreground.png"
   ios: true
+  image_path_ios_dark_transparent: "assets_dev/app_icons/app_icon_foreground_tint.png"
+  image_path_ios_tinted_grayscale: "assets_dev/app_icons/app_icon_foreground_tint.png"
+  desaturate_tinted_to_grayscale_ios: true
   web:
     generate: true
     image_path: "assets_dev/app_icons/app_icon.png"
