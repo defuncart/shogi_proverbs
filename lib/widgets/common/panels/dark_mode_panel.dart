@@ -4,7 +4,17 @@ import 'package:shogi_proverbs/di_container.dart';
 import 'package:shogi_proverbs/l10n/l10n.dart';
 import 'package:shogi_proverbs/services/settings_database/i_settings_database.dart';
 
-final isDarkModeProvider = StateProvider((_) => DIContainer.get<ISettingsDatabase>().isDarkMode);
+class DarkModeNotifier extends Notifier<bool> {
+  @override
+  bool build() => DIContainer.get<ISettingsDatabase>().isDarkMode;
+
+  void update(bool value) {
+    state = value;
+    DIContainer.get<ISettingsDatabase>().isDarkMode = value;
+  }
+}
+
+final isDarkModeProvider = NotifierProvider<DarkModeNotifier, bool>(DarkModeNotifier.new);
 
 class DarkModePanel extends StatelessWidget {
   const DarkModePanel({super.key});
@@ -18,10 +28,7 @@ class DarkModePanel extends StatelessWidget {
         Consumer(
           builder: (_, ref, _) => Switch(
             value: ref.read(isDarkModeProvider),
-            onChanged: (value) {
-              ref.read(isDarkModeProvider.notifier).state = value;
-              DIContainer.get<ISettingsDatabase>().isDarkMode = value;
-            },
+            onChanged: ref.read(isDarkModeProvider.notifier).update,
             activeThumbColor: Theme.of(context).scaffoldBackgroundColor,
             activeTrackColor: Theme.of(context).colorScheme.secondary,
           ),
