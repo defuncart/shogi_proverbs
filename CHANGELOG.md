@@ -1,4 +1,4 @@
-## [0.5.0] -
+## [0.5.0] - 15/11/2025
 
 * Update to 16Kb Page Size.
 * Support iOS Dark & Tinted icons.

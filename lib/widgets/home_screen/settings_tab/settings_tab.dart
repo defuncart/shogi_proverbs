@@ -76,7 +76,7 @@ class _DataPrivacyPopup extends StatelessWidget {
           onPressed: () => showLicensePage(
             context: context,
             applicationName: context.l10n.appTitle,
-            applicationVersion: '0.4.0', //TODO use getVersion
+            applicationVersion: '0.5.0', //TODO use getVersion
             applicationIcon: Image.asset('assets/images/app_icon.png'),
             applicationLegalese: '© 2025 defuncart',
           ),
